@@ -1,0 +1,11 @@
+<html>
+<head>
+<script>
+function func(){
+window.location.replace("https://courses.cs.ut.ee/2020/OOP/spring/Main/Advanced");
+}
+</script>
+</head>
+<body onload="func()">
+</body>
+</html>

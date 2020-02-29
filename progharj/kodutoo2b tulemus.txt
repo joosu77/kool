@@ -1,0 +1,28 @@
+Kodutöö nr 2b.                                                     Programmi väljund
+====================================================================================
+
+sumRiemann(12) = 452.754630
+sumRiemann(13) = 452.840237
+Täpsus eps = 0.100000 saavutati [0; 10] jaotamisel 13 osalõiguks
+
+sumRiemann(26) = 453.210059
+sumRiemann(27) = 453.219021
+Täpsus eps = 0.010000 saavutati [0; 10] jaotamisel 27 osalõiguks
+
+sumRiemann(55) = 453.305785
+sumRiemann(56) = 453.306760
+Täpsus eps = 0.001000 saavutati [0; 10] jaotamisel 56 osalõiguks
+
+sumRiemann(119) = 453.327449
+sumRiemann(120) = 453.327546
+Täpsus eps = 0.000100 saavutati [0; 10] jaotamisel 120 osalõiguks
+
+sumRiemann(255) = 453.332052
+sumRiemann(256) = 453.332062
+Täpsus eps = 0.000010 saavutati [0; 10] jaotamisel 256 osalõiguks
+
+sumRiemann(550) = 453.333058
+sumRiemann(551) = 453.333059
+Täpsus eps = 0.000001 saavutati [0; 10] jaotamisel 551 osalõiguks
+
+====================================================================================Joosep Näks                                                  2020-02-27 13:28:01.145

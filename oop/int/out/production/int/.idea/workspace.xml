@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="acc0f921-8e84-4c0c-ae21-060614e72fc5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/Effect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/Fighter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/WeaponAttack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/Wizard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/src.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/libraries/src.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Dude.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Dude.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../tex/.kodutoo1.tex.swp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../tex/kodutoo1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../tex/kodutoo1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../tex/kodutoo1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../../tex/kodutoo1.tex" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1Xdcj7CGuFCyP42eXNH8ifs6GgP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="kylastuseKirjeldused" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.TestUniquePersonList">
+    <configuration name="FailiTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FailiTest" />
+      <module name="int" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="int" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUniquePersonList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestUniquePersonList" />
+      <module name="int" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <module name="int" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scratch" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Scratch" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TestUniquePersonList" />
+        <item itemvalue="Application.FailiTest" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.test" />
+        <item itemvalue="Java Scratch.Scratch" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="acc0f921-8e84-4c0c-ae21-060614e72fc5" name="Default Changelist" comment="" />
+      <created>1581379544397</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581379544397</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="426" y="111" width="848" height="675" key="#Project_Structure" timestamp="1581584538201">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state x="426" y="111" width="848" height="675" key="#Project_Structure/53.24.1547.876@53.24.1547.876" timestamp="1581584538201" />
+    <state x="500" y="121" key="#Scratch" timestamp="1581585720117">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state x="500" y="121" key="#Scratch/53.24.1547.876@53.24.1547.876" timestamp="1581585720117" />
+    <state x="291" y="107" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581586251622">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state x="291" y="107" key="#com.intellij.execution.impl.EditConfigurationsDialog/53.24.1547.876@53.24.1547.876" timestamp="1581586251622" />
+    <state x="535" y="254" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581584258906">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state x="535" y="254" key="#com.intellij.fileTypes.FileTypeChooser/53.24.1547.876@53.24.1547.876" timestamp="1581584258906" />
+    <state x="639" y="168" width="544" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1582795800945">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state x="639" y="168" width="544" height="560" key="#com.intellij.ide.util.MemberChooser/53.24.1547.876@53.24.1547.876" timestamp="1582795800945" />
+    <state x="584" y="310" width="484" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1581585031270">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state x="584" y="310" width="484" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/53.24.1547.876@53.24.1547.876" timestamp="1581585031270" />
+    <state x="564" y="198" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582627264765">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state x="564" y="198" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/53.24.1547.876@53.24.1547.876" timestamp="1582627264765" />
+    <state x="458" y="193" key="FileChooserDialogImpl" timestamp="1582452064858">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state x="458" y="193" key="FileChooserDialogImpl/53.24.1547.876@53.24.1547.876" timestamp="1582452064858" />
+    <state width="1501" height="112" key="GridCell.Tab.0.bottom" timestamp="1582629881657">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state width="1501" height="112" key="GridCell.Tab.0.bottom/53.24.1547.876@53.24.1547.876" timestamp="1582629881657" />
+    <state width="1501" height="112" key="GridCell.Tab.0.center" timestamp="1582629881655">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state width="1501" height="112" key="GridCell.Tab.0.center/53.24.1547.876@53.24.1547.876" timestamp="1582629881655" />
+    <state width="1501" height="112" key="GridCell.Tab.0.left" timestamp="1582629881654">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state width="1501" height="112" key="GridCell.Tab.0.left/53.24.1547.876@53.24.1547.876" timestamp="1582629881654" />
+    <state width="1501" height="112" key="GridCell.Tab.0.right" timestamp="1582629881656">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state width="1501" height="112" key="GridCell.Tab.0.right/53.24.1547.876@53.24.1547.876" timestamp="1582629881656" />
+    <state x="314" y="27" key="SettingsEditor" timestamp="1582452040568">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state x="314" y="27" key="SettingsEditor/53.24.1547.876@53.24.1547.876" timestamp="1582452040568" />
+    <state x="488" y="291" key="com.intellij.ide.util.TipDialog" timestamp="1582023342517">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state x="488" y="291" key="com.intellij.ide.util.TipDialog/53.24.1547.876@53.24.1547.876" timestamp="1582023342517" />
+    <state x="610" y="139" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1582794856432">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state x="610" y="139" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/53.24.1547.876@53.24.1547.876" timestamp="1582794856432" />
+    <state x="140" y="50" key="new project wizard" timestamp="1581584448894">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state x="140" y="50" key="new project wizard/53.24.1547.876@53.24.1547.876" timestamp="1581584448894" />
+    <state x="489" y="201" key="run.anything.popup" timestamp="1582189613314">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state x="489" y="201" key="run.anything.popup/53.24.1547.876@53.24.1547.876" timestamp="1582189613314" />
+    <state x="489" y="221" width="672" height="678" key="search.everywhere.popup" timestamp="1582795809722">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state x="489" y="221" width="672" height="678" key="search.everywhere.popup/53.24.1547.876@53.24.1547.876" timestamp="1582795809722" />
+  </component>
+</project>

@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\begin{document}
+\begin{center}
+\Large\textbf{T\"arn\"ulesanne nr. 32}\\
+\end{center}
+Olgu antud jadad $(x_n)$ ja $(y_n)$, kus $x_1=a\in\mathbb{R}$ ja $y_1=b\in\mathbb{R}$ ning $x_{n+1}=\sqrt{x_n y_n}$ ja $y_{n+1}=\frac{x_n+y_n}{2}$, kui $n\in\mathbb{N}$. T\~oestage, et $\lim x_n=\lim y_n$.\\
+\textbf{Lahendus:}\\
+Juhul, kui a=0: (kuna $x_2$ ja $y_2$ on s\"ummeetrilised a ja b suhtes, on a=0 ja b=0 samav\"a\"arsed)\\
+$x_2=\sqrt{0*b}=0$\\
+$x_n=\sqrt{x_{n-1}*b}=\sqrt{0*b}=0$\\
+Jada $x_n$ esimene liige on 0 ja kui $x_{n-1}=0$ kehtib ka $x_n=0$ seega induktsiooni j\"rgi iga jada $x_n$ liige on 0 ehk ka $\lim x_n=0$.\\
+Kuna iga $x_n$ liige on 0, on iga $y_n$ liige $y_n=\frac{y_{n-1}+0}{2}=\frac{y_{n-1}}{2}$. Seega jada $y_n$ \"uldliige avaldub kujul $y_n=\frac{b}{2^{n-1}}$. Piirv\"a\"artuse definitsiooni kohaselt l\"aheneb see 0le parajasti siis, kui kehtib:\\
+$\forall\varepsilon\ \exists N: \forall n>N\quad |y_N|<\varepsilon$ 
+\end{document}
