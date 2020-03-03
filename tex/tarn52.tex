@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\begin{document}
+\begin{center}
+\Large\textbf{T\"arn\"ulesanne nr. 52}\\
+\end{center}
+Olgu $(a_n)$ positiivsete liikmetega jada nii, et $\displaystyle\lim_n \frac{a_n}{n}=0$ ja\\ $\displaystyle\overline\lim_n \frac{a_1+a_2+...+a_n}{n}\in\mathbb{R}. Leidke \displaystyle\lim_n \frac{a_1^2+a_2^2+...+a_n^2}{n^2}$\\\\
+\textbf{Lahendus:}\\
+Teise ja kolmanda limiidi saan lahti kirjutada summadena:
+\begin{equation*}
+\begin{aligned}
+\lim_n \frac{a_1+a_2+...+a_n}{n}=\lim_{c\to\infty} \sum_{n=1}^c \frac{a_n}{c}\\
+\lim_n \frac{a_1^2+a_2^2+...+a_n^2}{n^2}=\lim_{c\to\infty} \sum_{n=1}^c \frac{a_n^2}{c^2}
+\end{aligned}
+\end{equation*}
+\end{document}
