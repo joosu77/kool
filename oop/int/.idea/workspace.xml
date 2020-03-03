@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="acc0f921-8e84-4c0c-ae21-060614e72fc5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/Effect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/Fighter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/Lahing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/WeaponAttack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/Wizard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/libraries/src.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/libraries/src.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/int/.idea/libraries/src.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/int/.idea/libraries/src.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/int/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/int/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/int/Klient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/int/Klient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/int/META-INF/int.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Dude.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Dude.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../tex/.kodutoo1.tex.swp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../tex/kodutoo1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../tex/kodutoo1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../tex/kodutoo1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../../tex/kodutoo1.tex" afterDir="false" />
-    </list>
+    <list default="true" id="acc0f921-8e84-4c0c-ae21-060614e72fc5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,10 +120,10 @@
       <screen x="53" y="24" width="1547" height="876" />
     </state>
     <state x="535" y="254" key="#com.intellij.fileTypes.FileTypeChooser/53.24.1547.876@53.24.1547.876" timestamp="1581584258906" />
-    <state x="639" y="168" width="544" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1582796518487">
+    <state x="639" y="168" width="544" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1582983483170">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state x="639" y="168" width="544" height="560" key="#com.intellij.ide.util.MemberChooser/53.24.1547.876@53.24.1547.876" timestamp="1582796518487" />
+    <state x="639" y="168" width="544" height="560" key="#com.intellij.ide.util.MemberChooser/53.24.1547.876@53.24.1547.876" timestamp="1582983483170" />
     <state x="584" y="310" width="484" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1581585031270">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
@@ -153,22 +136,22 @@
       <screen x="53" y="24" width="1547" height="876" />
     </state>
     <state x="458" y="193" key="FileChooserDialogImpl/53.24.1547.876@53.24.1547.876" timestamp="1582452064858" />
-    <state width="1501" height="112" key="GridCell.Tab.0.bottom" timestamp="1582802745588">
+    <state width="1501" height="291" key="GridCell.Tab.0.bottom" timestamp="1583074015620">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state width="1501" height="112" key="GridCell.Tab.0.bottom/53.24.1547.876@53.24.1547.876" timestamp="1582802745588" />
-    <state width="1501" height="112" key="GridCell.Tab.0.center" timestamp="1582802745585">
+    <state width="1501" height="291" key="GridCell.Tab.0.bottom/53.24.1547.876@53.24.1547.876" timestamp="1583074015620" />
+    <state width="1501" height="291" key="GridCell.Tab.0.center" timestamp="1583074015617">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state width="1501" height="112" key="GridCell.Tab.0.center/53.24.1547.876@53.24.1547.876" timestamp="1582802745585" />
-    <state width="1501" height="112" key="GridCell.Tab.0.left" timestamp="1582802745584">
+    <state width="1501" height="291" key="GridCell.Tab.0.center/53.24.1547.876@53.24.1547.876" timestamp="1583074015617" />
+    <state width="1501" height="291" key="GridCell.Tab.0.left" timestamp="1583074015616">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state width="1501" height="112" key="GridCell.Tab.0.left/53.24.1547.876@53.24.1547.876" timestamp="1582802745584" />
-    <state width="1501" height="112" key="GridCell.Tab.0.right" timestamp="1582802745587">
+    <state width="1501" height="291" key="GridCell.Tab.0.left/53.24.1547.876@53.24.1547.876" timestamp="1583074015616" />
+    <state width="1501" height="291" key="GridCell.Tab.0.right" timestamp="1583074015619">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state width="1501" height="112" key="GridCell.Tab.0.right/53.24.1547.876@53.24.1547.876" timestamp="1582802745587" />
+    <state width="1501" height="291" key="GridCell.Tab.0.right/53.24.1547.876@53.24.1547.876" timestamp="1583074015619" />
     <state x="314" y="27" key="SettingsEditor" timestamp="1582452040568">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
@@ -189,9 +172,9 @@
       <screen x="53" y="24" width="1547" height="876" />
     </state>
     <state x="489" y="201" key="run.anything.popup/53.24.1547.876@53.24.1547.876" timestamp="1582189613314" />
-    <state x="489" y="221" width="672" height="678" key="search.everywhere.popup" timestamp="1582795809722">
+    <state x="489" y="221" width="672" height="678" key="search.everywhere.popup" timestamp="1583069064966">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state x="489" y="221" width="672" height="678" key="search.everywhere.popup/53.24.1547.876@53.24.1547.876" timestamp="1582795809722" />
+    <state x="489" y="221" width="672" height="678" key="search.everywhere.popup/53.24.1547.876@53.24.1547.876" timestamp="1583069064966" />
   </component>
 </project>
