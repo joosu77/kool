@@ -7,13 +7,28 @@
 \begin{center}
 \Large\textbf{T\"arn\"ulesanne nr. 52}\\
 \end{center}
-Olgu $(a_n)$ positiivsete liikmetega jada nii, et $\displaystyle\lim_n \frac{a_n}{n}=0$ ja\\ $\displaystyle\overline\lim_n \frac{a_1+a_2+...+a_n}{n}\in\mathbb{R}. Leidke \displaystyle\lim_n \frac{a_1^2+a_2^2+...+a_n^2}{n^2}$\\\\
+Olgu $(a_n)$ positiivsete liikmetega jada nii, et $\displaystyle\lim_n \frac{a_n}{n}=0$ ja\\ $\displaystyle\overline\lim_n \frac{a_1+a_2+...+a_n}{n}\in\mathbb{R}$. Leidke $\displaystyle\lim_n \frac{a_1^2+a_2^2+...+a_n^2}{n^2}$\\\\
 \textbf{Lahendus:}\\
-Teise ja kolmanda limiidi saan lahti kirjutada summadena:
+Loon uue jada:
 \begin{equation*}
 \begin{aligned}
-\lim_n \frac{a_1+a_2+...+a_n}{n}=\lim_{c\to\infty} \sum_{n=1}^c \frac{a_n}{c}\\
-\lim_n \frac{a_1^2+a_2^2+...+a_n^2}{n^2}=\lim_{c\to\infty} \sum_{n=1}^c \frac{a_n^2}{c^2}
+p_n:=a_n\iff\\
+\lim_n \frac{p_1+p_2+...+p_n}{n}:=t\iff\\
+P_n:=p_1+p_2+...+p_n=\lim_n tn\\
+\end{aligned}
+\end{equation*}
+T\"ahistan kolmanda limiidi \"umber:
+\begin{equation*}
+\begin{aligned}
+\lim_n \frac{a_1^2+a_2^2+...+a_n^2}{n^2}=\lim_n \frac{a_1*p_1+a_2*p_2+...+a_np_n}{n^2}=\\
+\lim_n t\frac{a_1*p_1+a_2*p_2+...+a_np_n}{tn}=\lim_n t\frac{a_1*p_1+a_2*p_2+...+a_np_n}{nP_n}
+\end{aligned}
+\end{equation*}
+Ning loengu konspekti kaalutud keskmiste kohta k\"aiva lause 2.31 kohaselt:
+\begin{equation*}
+\begin{aligned}
+a_n\rightarrow A\Rightarrow\lim_n \frac{a_1*p_1+a_2*p_2+...+a_np_n}{P_n}\rightarrow A\iff\\
+\\
 \end{aligned}
 \end{equation*}
 \end{document}
