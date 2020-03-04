@@ -7,28 +7,30 @@
 \begin{center}
 \Large\textbf{T\"arn\"ulesanne nr. 52}\\
 \end{center}
-Olgu $(a_n)$ positiivsete liikmetega jada nii, et $\displaystyle\lim_n \frac{a_n}{n}=0$ ja\\ $\displaystyle\overline\lim_n \frac{a_1+a_2+...+a_n}{n}\in\mathbb{R}$. Leidke $\displaystyle\lim_n \frac{a_1^2+a_2^2+...+a_n^2}{n^2}$\\\\
+Olgu $(a_n)$ positiivsete liikmetega jada nii, et $\displaystyle\lim_n \frac{a_n}{n}=0$ ja\\ $\displaystyle\overline\lim_n \frac{a_1+a_2+...+a_n}{n}\in\mathbb{R}$. Leidke $\displaystyle\lim_n \frac{a_1^2+a_2^2+...+a_n^2}{n^2}$.\\\\
 \textbf{Lahendus:}\\
 Loon uue jada:
 \begin{equation*}
 \begin{aligned}
-p_n:=a_n\iff\\
-\lim_n \frac{p_1+p_2+...+p_n}{n}:=t\iff\\
-P_n:=p_1+p_2+...+p_n=\lim_n tn\\
+p_n:&=a_n\\
+t:&=\lim_n \frac{p_1+p_2+...+p_n}{n}\\
+P_n:&=p_1+p_2+...+p_n=\lim_n tn\\
 \end{aligned}
 \end{equation*}
-T\"ahistan kolmanda limiidi \"umber:
+T\"ahistan kolmanda piirv\"a\"artuse \"umber:
 \begin{equation*}
 \begin{aligned}
 \lim_n \frac{a_1^2+a_2^2+...+a_n^2}{n^2}=\lim_n \frac{a_1*p_1+a_2*p_2+...+a_np_n}{n^2}=\\
 \lim_n t\frac{a_1*p_1+a_2*p_2+...+a_np_n}{tn}=\lim_n t\frac{a_1*p_1+a_2*p_2+...+a_np_n}{nP_n}
 \end{aligned}
 \end{equation*}
-Ning loengu konspekti kaalutud keskmiste kohta k\"aiva lause 2.31 kohaselt:
+Ning loengu konspekti kaalutud keskmiste kohta k\"aiva lause 2.31 kohaselt kui $P_n\rightarrow\infty$:
 \begin{equation*}
 \begin{aligned}
-a_n\rightarrow A\Rightarrow\lim_n \frac{a_1*p_1+a_2*p_2+...+a_np_n}{P_n}\rightarrow A\iff\\
-\\
+a_n\rightarrow A\Rightarrow\lim_n \frac{a_1*p_1+a_2*p_2+...+a_np_n}{P_n}= A\iff\\
+\lim_n t\frac{a_1*p_1+a_2*p_2+...+a_np_n}{nP_n}= \frac{tA}{n}\\
 \end{aligned}
 \end{equation*}
+\"Ulesandes on \"oeldud et $\displaystyle\lim_n \frac{a_n}{n}=0$ seega $\frac{tA}{n}=t0$ ning kuna t on reaalarv siis saame \"oelda, et $\displaystyle\lim_n \frac{a_1^2+a_2^2+...+a_n^2}{n^2}= 0$. J\"a\"ab alles veel juht kus $P_n$ ei l\"ahene l\~opmatusele, kuid kuna iga $a_n$ on positiivne, peab see t\"ahendama, et $P_n\in\mathbb{R}_+$, ning sel juhul ei saa summa $P_n$ minna l\~opmatusesse ka juhul kui iga liige ruutu v\~otta ning $\displaystyle\lim_n \frac{k}{n^2}=0\quad k\in\mathbb{R}$.\\
+Seega on k\"usitud piirv\"a\"artus alati 0.
 \end{document}

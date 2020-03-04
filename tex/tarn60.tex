@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\bfloor{\Bigl\lfloor}{\Bigr\rfloor}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\begin{document}
+\begin{center}
+\Large\textbf{T\"arn\"ulesanne nr. 60}\\
+\end{center}
+Leidke j\"argmised piirv\"a\"artused:
+\begin{equation*}
+\lim_{x\to0}\frac{x}{a}\bfloor{\frac{b}{x}},\quad\lim_{x\to0}\frac{\floor {x}}{x}.
+\end{equation*}
+\textbf{Esimese piirv\"a\"artuse lahendus:}\\
+P\~orandafunktsiooni definitsiooni kohaselt $\floor{x}=x-d,\quad 0\leq d<1,\quad \floor{x}\in\mathbb{Z}$, seega
+\begin{equation*}
+\begin{aligned}
+\lim_{x\to0}\frac{x}{a}\bfloor{\frac{b}{x}}&=\lim_{x\to0}\frac{x}{a}\Bigl(\frac{b}{x}-d\Bigr{)},\ 0\leq d<1\\
+&=\lim_{x\to0}\Bigl(\frac{x}{a}\frac{b}{x}-\frac{x}{a}d\Bigr)\\
+&=\lim_{x\to0}\Bigl(\frac{b}{a}-\frac{x}{a}d\Bigr)\\
+\lim_{x\to0}\frac{x}{a}d=0\Rightarrow &=\lim_{x\to0}\Bigl(\frac{b}{a}-\frac{x}{a}d\Bigr)=\frac{b}{a}
+\end{aligned}
+\end{equation*}
+Seega $\displaystyle\lim_{x\to0}\frac{x}{a}\bfloor{\frac{b}{x}}=\frac{b}{a}$.\\\\
+\textbf{Teise piirv\"a\"artuse lahendus:}\\
+Jagan piirv\"a\"artuse kaheks, juhuks $x\to0+$ ja $x\to0-$:
+\begin{equation*}
+\begin{aligned}
+\lim_{x\to0+}\frac{\floor{x}}{x}=\lim_{x\to0+}\frac{0}{x}=0\\
+\lim_{x\to0-}\frac{\floor{x}}{x}=\lim_{x\to0-}\frac{-1}{x}=\infty
+\end{aligned}
+\end{equation*}
+Kuna $\lim_{x\to0+}\frac{\floor{x}}{x}\neq\lim_{x\to0-}\frac{\floor{x}}{x}$ pole $\lim_{x\to0}\frac{\floor{x}}{x}$ m\"a\"aratud.
+\end{document}
