@@ -1,0 +1,59 @@
+Kodutöö nr 3c.                                                     Programmi väljund
+====================================================================================
+
+Antud: [1]; indeksid 0 ... 0
+Kadane         tulemus: [0, 0, 1]
+Jõumeetod      tulemus: [0, 0, 1]
+Tulemused samad. Suurim summa (1) on alamjärjendi [1]; indeksid 0 ... 0
+
+Antud: [1, 2]; indeksid 0 ... 1
+Kadane         tulemus: [0, 1, 3]
+Jõumeetod      tulemus: [0, 1, 3]
+Tulemused samad. Suurim summa (3) on alamjärjendi [1, 2]; indeksid 0 ... 1
+
+Antud: [-2, 1, -3, 4, -1, 2, 1, -5, 4]; indeksid 0 ... 8
+Kadane         tulemus: [3, 6, 6]
+Jõumeetod      tulemus: [3, 6, 6]
+Tulemused samad. Suurim summa (6) on alamjärjendi [4, -1, 2, 1]; indeksid 3 ... 6
+
+Antud: [-2, -1, -3, -4, -1, -2, -1, -5, -4]; indeksid 0 ... 8
+Kadane         tulemus: [1, 1, -1]
+Jõumeetod      tulemus: [1, 1, -1]
+Tulemused samad. Suurim summa (-1) on alamjärjendi [-1]; indeksid 1 ... 1
+
+Antud: [2, 1, -3, 4]; indeksid 0 ... 3
+Kadane         tulemus: [0, 3, 4]
+Jõumeetod      tulemus: [0, 3, 4]
+Tulemused samad. Suurim summa (4) on alamjärjendi [2, 1, -3, 4]; indeksid 0 ... 3
+
+Antud: [42, -62, -73, 93, -68, 53, -67, 70, 78, 68, 62]; indeksid 0 ... 10
+Kadane         tulemus: [3, 10, 289]
+Jõumeetod      tulemus: [3, 10, 289]
+Tulemused samad. Suurim summa (289) on alamjärjendi [93, -68, 53, -67, 70, 78, 68, 62]; indeksid 3 ... 10
+
+Antud: [-27, 20, 66, -74, -27, -37, -48, 0, -6, 43, 39, 12, -16, -34, 77, 0]; indeksid 0 ... 15
+Kadane         tulemus: [9, 14, 121]
+Jõumeetod      tulemus: [9, 14, 121]
+Tulemused samad. Suurim summa (121) on alamjärjendi [43, 39, 12, -16, -34, 77]; indeksid 9 ... 14
+
+Antud: [7, -56, 65, 92, -3, -62, -61, -11, 0, 9, -80, 14, 95, -5, 12, -40, 17, 64]; indeksid 0 ... 17
+Kadane         tulemus: [2, 3, 157]
+Jõumeetod      tulemus: [2, 3, 157]
+Tulemused samad. Suurim summa (157) on alamjärjendi [65, 92]; indeksid 2 ... 3
+
+Antud: [1, 2, 3, -5, 6]; indeksid 0 ... 4
+Kadane         tulemus: [0, 4, 7]
+Jõumeetod      tulemus: [0, 4, 7]
+Tulemused samad. Suurim summa (7) on alamjärjendi [1, 2, 3, -5, 6]; indeksid 0 ... 4
+
+Antud: [1, 2, 3, -15, 6]; indeksid 0 ... 4
+Kadane         tulemus: [0, 2, 6]
+Jõumeetod      tulemus: [0, 2, 6]
+Tulemused samad. Suurim summa (6) on alamjärjendi [1, 2, 3]; indeksid 0 ... 2
+
+Antud: juhujärjend pikkusega 2500 (elemendid lõigust [-999; 999])
+Suurima summaga alamjärjendi summa ja pikkus:
+Kadane:        summa = 14152, pikkus = 294; tööaeg ms = 0.113014
+Jõumtd:        summa = 14152, pikkus = 294; tööaeg ms = 12.945486
+
+====================================================================================Joosep Näks                                                  2020-03-05 19:04:06.46
