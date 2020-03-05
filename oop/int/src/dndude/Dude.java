@@ -41,9 +41,9 @@ public abstract class Dude {
             Effect rynnak = chooseEffect();
             if (rand.nextInt(20) + accuracy + 1 >= attackTarget.armour) {
                 attackTarget.addEffect(rynnak);
-                System.out.printf(rynnak.getPihtaSonum(super.name, target.name));
+                System.out.print(rynnak.getPihtaSonum(name, attackTarget.name));
             } else {
-                System.out.printf(rynnak.getMoodaSonum(super.name, target.name));
+                System.out.print(rynnak.getMoodaSonum(name, attackTarget.name));
             }
             actionPoints -= rynnak.requiredActionPoints();
         }

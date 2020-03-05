@@ -34,11 +34,11 @@ public class Firebolt implements Effect {
     }
 
     @Override
-    String getPihtaSonum(String nimi1, String nimi2){
+    public String getPihtaSonum(String nimi1, String nimi2){
         return String.format("%s lasi tulekuuliga %s pihta ja tegi %d kahju\n", nimi1, nimi2, 2);
     }
     @Override
-    String getMoodaSonum(String nimi1, String nimi2){
+    public String getMoodaSonum(String nimi1, String nimi2){
         return String.format("%s lasi tulekuuliga %s pihta kuid tulekuul susises ohutult %s rüüsse\n", nimi1, nimi2, nimi2);
     }
 

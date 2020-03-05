@@ -12,5 +12,6 @@ public interface Effect {
     boolean isExpired();
 
     String getPihtaSonum(String nimi1, String nimi2);
+
     String getMoodaSonum(String nimi1, String nimi2);
 }

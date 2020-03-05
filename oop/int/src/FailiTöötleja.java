@@ -22,7 +22,7 @@ public class FailiTöötleja implements Runnable {
                 BigInteger summa = BigInteger.ZERO;
                 while (scanner.hasNextBigInteger()) {
                     BigInteger val = scanner.nextBigInteger();
-                    summa.add(val);
+                    summa = summa.add(val);
                     if (suurim == null || suurim.compareTo(val) < 0) {
                         suurim = val;
                     }

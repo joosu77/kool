@@ -1,4 +1,5 @@
 package dndude;
+
 public class Spiderweb implements Effect {
     int turnsLeft = 2;
 
@@ -30,5 +31,15 @@ public class Spiderweb implements Effect {
         } else {
             return false;
         }
+    }
+
+    @Override
+    public String getPihtaSonum(String nimi1, String nimi2) {
+        return String.format("%s lasi ämblikuvõrgu %s pihta ja pani %s lõksu\n", nimi1, nimi2, nimi2);
+    }
+
+    @Override
+    public String getMoodaSonum(String nimi1, String nimi2) {
+        return String.format("%s lasi ämblikuvõrgu %s pihta kuid %s lõikas võrgu poole lennu pealt mõõgaga pooleks\n", nimi1, nimi2, nimi2);
     }
 }

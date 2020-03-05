@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="acc0f921-8e84-4c0c-ae21-060614e72fc5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paralleelarvutused.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paralleelarvutused.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dndude/Effect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dndude/Effect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dndude/Fighter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dndude/Fighter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dndude/Firebolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dndude/Firebolt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dndude/Knockdown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dndude/Knockdown.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dndude/Spiderweb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dndude/Spiderweb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dndude/WeaponAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dndude/WeaponAttack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dndude/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dndude/Wizard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,10 +129,10 @@
       <screen x="53" y="24" width="1547" height="876" />
     </state>
     <state x="535" y="254" key="#com.intellij.fileTypes.FileTypeChooser/53.24.1547.876@53.24.1547.876" timestamp="1581584258906" />
-    <state x="639" y="168" width="544" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1583235092898">
+    <state x="639" y="168" width="544" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1583443752279">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state x="639" y="168" width="544" height="560" key="#com.intellij.ide.util.MemberChooser/53.24.1547.876@53.24.1547.876" timestamp="1583235092898" />
+    <state x="639" y="168" width="544" height="560" key="#com.intellij.ide.util.MemberChooser/53.24.1547.876@53.24.1547.876" timestamp="1583443752279" />
     <state x="584" y="310" width="484" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1581585031270">
       <screen x="53" y="24" width="1547" height="876" />
     </state>

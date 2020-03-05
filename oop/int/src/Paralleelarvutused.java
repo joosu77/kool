@@ -1,28 +1,41 @@
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.*;
 import java.lang.Runtime;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class Paralleelarvutused {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         BlockingQueue<String> failid = new LinkedBlockingQueue<>(Arrays.asList(args));
         BlockingQueue<Tulem> tulemid = new LinkedBlockingQueue<>();
-        for (int i = 0; i < Runtime.getRuntime().availableProcessors(); i++) {
-            new Thread(new FailiTöötleja(failid, tulemid)).start();
-        }
-        final List<Task> taskList = IntStream.range(0, Runtime.getRuntime().availableProcessors())
-                .mapToObj(i -> new Task())
-                .collect(Collectors.toList());
-        final ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
-        for (Task task : taskList) {
-            executorService.submit(task);
-        }
-        executorService.shutdown();
-        executorService.awaitTermination(10, TimeUnit.HOURS);
+        List<Thread> pool = new ArrayList<>();
 
+        for (int i = 0; i < Runtime.getRuntime().availableProcessors(); i++) {
+            pool.add(new Thread(new FailiTöötleja(failid, tulemid)));
+            pool.get(pool.size() - 1).start();
+        }
+        for (Thread thread : pool) {
+            thread.join();
+        }
+
+        BigInteger vahimSum = null;
+        String vahimaFail = null;
+        BigInteger koguSum = BigInteger.ZERO;
+        BigInteger suurim = null;
+        String suurimaFail = null;
+        for (Tulem tulem : tulemid) {
+            koguSum = koguSum.add(tulem.summa);
+            if (vahimSum == null || vahimSum.compareTo(tulem.summa) > 0) {
+                vahimSum = tulem.summa;
+                vahimaFail = tulem.nimi;
+            }
+            if (suurim == null || suurim.compareTo(tulem.maxVal) < 0) {
+                suurim = tulem.maxVal;
+                suurimaFail = tulem.nimi;
+            }
+        }
+        System.out.printf("Kõigi arvude summa on %d,\nsuurim leitud arv %d leiti failist %s,\nväikseima summaga (%d) fail on %s.", koguSum, suurim, suurimaFail, vahimSum, vahimaFail);
     }
 }
 
