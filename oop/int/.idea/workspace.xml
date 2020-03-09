@@ -3,18 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="acc0f921-8e84-4c0c-ae21-060614e72fc5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/int/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/int/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FailiTöötleja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FailiTöötleja.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paralleelarvutused.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paralleelarvutused.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dndude/Dude.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dndude/Dude.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dndude/Effect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dndude/Effect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dndude/Fighter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dndude/Fighter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dndude/Firebolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dndude/Firebolt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dndude/Knockdown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dndude/Knockdown.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dndude/Spiderweb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dndude/Spiderweb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dndude/WeaponAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dndude/WeaponAttack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dndude/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dndude/Wizard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
