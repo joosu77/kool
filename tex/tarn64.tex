@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\bfloor{\Bigl\lfloor}{\Bigr\rfloor}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\newcommand\myeq{\stackrel{\mathclap{\scriptsize\mbox{l'H\^optial}}}{=}}
+\begin{document}
+\begin{center}
+\Large\textbf{T\"arn\"ulesanne nr. 60}\\
+\small{Joosep Näks}
+\end{center}
+Olgu $m,n\in \mathbb{N}$. Leida piirväärtus $\displaystyle\lim_{x\to1}\big{(}\frac{m}{1-x^m}-\frac{n}{1-x^n}\big)$\\
+\textbf{Lahendus:}\\
+Teisendan kasutades l'H\^optiali reeglit: 
+\begin{equation*}
+\begin{aligned}
+\lim_{x\to1}\big{(}\frac{m}{1-x^m}-\frac{n}{1-x^n}\big)&=\lim_{x\to1}\big{(}\frac{m(1-x^n)-n(1-x^m)}{(1-x^m)(1-x^n)}\big)\\
+&=\lim_{x\to1}\big{(}\frac{m-mx^n-n+nx^m}{1-x^m-x^n+x^{n+m}}\big)\\
+&\myeq\lim_{x\to1}\big{(}\frac{-nmx^{n-1}+mnx^{m-1}}{-mx^{m-1}-nx^{n-1}+(m+n)x^{n+m-1}}\big)\\
+&=\lim_{x\to1}\big{(}\frac{-nmx^n+mnx^m}{-mx^m-nx^n+(m+n)x^{n+m}}\big)\\
+&\myeq\lim_{x\to1}\big{(}\frac{-n^2mx^{n-1}+m^2nx^{m-1}}{-m^2x^{m-1}-n^2x^{n-1}+(m+n)^2x^{n+m-1}}\big)\\
+&=\lim_{x\to1}\big{(}\frac{-n^2mx^n+m^2nx^m}{-m^2x^m-n^2x^n+(m+n)^2x^{n+m}}\big)\\
+&=\lim_{x\to1}\big{(}\frac{nm(mx^m-nx^n)}{-m^2x^m-n^2x^n+(m+n)^2x^{n+m}}\big)\\
+&=\frac{nm(m-n)}{-m^2-n^2+(m+n)^2}\\
+&=\frac{nm(m-n)}{-m^2-n^2+m^2+2mn+n^2}\\
+&=\frac{nm(m-n)}{2mn}\\
+&=\frac{m-n}{2}\\
+\end{aligned}
+\end{equation*}
+Piirväärtuse väärtus on $\frac{m-n}{2}$.
+\end{document}
