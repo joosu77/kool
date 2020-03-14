@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\bfloor{\Bigl\lfloor}{\Bigr\rfloor}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\newcommand\myeq{\stackrel{\mathclap{\scriptsize\mbox{l'H\^optial}}}{=}}
+\begin{document}
+\begin{center}
+\Large\textbf{T\"arn\"ulesanne nr. 71}\\
+\small{Joosep N\"aks}
+\end{center}
+Olgu D mingi intervall. \"Oeldakse, et funktsioon $f:D\to R$ on kumer, kui mistahes arvude $x,y\in D$ ja mistahes arvu $\lambda\in [0, 1]$ korral kehtib v\~orratus $f(\lambda x+(1-\lambda)y)\leq\lambda f(x)+(1-\lambda)f(y)$. Olgu $f: [a,b]\to \mathbb{R}$. Kas sellest, et $f$ on kumer l\~oigus $[a,b]$ j\"areldub, et $f$ on pidev l\~oigus $[a,b]$?\\\\
+\textbf{Lahendus:}\\
+Eeldan vastuv\"aiteliselt, et $f$ ei ole pidev l\~oigus $[a,b]$. See t\"ahendab, et leidub mingi punkt a, kus $\displaystyle\lim_{x\to a}f(x)\neq f(a)$. See t\"ahendab, et leidub mingi piirkond $D_1$ punkti a \"umber nii, et kehtib kas $\forall x\in D_1\setminus \{a\}:\ f(x)<f(a)\ (1)$, $\forall x\in D_1\setminus \{a\}:\ f(x)>f(a)\ (2)$ v\~oi $\forall x\in D_1\cap (-\infty, a)\ \forall y\in D_1\cap (a, \infty):\ f(x)>f(a)>f(y)\ (3)$.\\
+Variant 1:\\
+$\forall x\in D_1\setminus \{a\}:\ f(x)<f(a)$ seega kui v\~otta mingi $x_0\in D_1$ nii et leidub ka $2a-x_0\in D_1 $
+\end{document}

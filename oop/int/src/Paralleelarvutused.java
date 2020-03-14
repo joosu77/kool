@@ -11,6 +11,7 @@ public class Paralleelarvutused {
         BlockingQueue<Tulem> tulemid = new LinkedBlockingQueue<>();
         List<Thread> pool = new ArrayList<>();
 
+        
         for (int i = 0; i < Runtime.getRuntime().availableProcessors(); i++) {
             pool.add(new Thread(new FailiTöötleja(failid, tulemid)));
             pool.get(pool.size() - 1).start();

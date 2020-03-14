@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acc0f921-8e84-4c0c-ae21-060614e72fc5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SonumiTootleja.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/int/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/int/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paralleelarvutused.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paralleelarvutused.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +48,7 @@
       <command value="kylastuseKirjeldused" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Client">
+  <component name="RunManager" selected="Application.Paralleelarvutused">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client" />
       <module name="int" />
@@ -101,17 +99,17 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Lahing" />
-      <item itemvalue="Application.Server&amp;Cleint" />
-      <item itemvalue="Application.Lahing (1)" />
-      <item itemvalue="Application.Paralleelarvutused" />
-      <item itemvalue="Application.TestUniquePersonList" />
       <item itemvalue="Application.Client" />
+      <item itemvalue="Application.Lahing (1)" />
+      <item itemvalue="Application.Lahing" />
+      <item itemvalue="Application.Paralleelarvutused" />
+      <item itemvalue="Application.Server&amp;Cleint" />
+      <item itemvalue="Application.TestUniquePersonList" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Client" />
         <item itemvalue="Application.Paralleelarvutused" />
+        <item itemvalue="Application.Client" />
         <item itemvalue="Application.Lahing (1)" />
         <item itemvalue="Application.TestUniquePersonList" />
       </list>
@@ -163,30 +161,30 @@
       <screen x="53" y="24" width="1547" height="876" />
     </state>
     <state x="564" y="198" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/53.24.1547.876@53.24.1547.876" timestamp="1583232442357" />
-    <state x="435" y="24" key="CommitChangelistDialog2" timestamp="1583443921577">
+    <state x="435" y="24" width="782" height="875" key="CommitChangelistDialog2" timestamp="1583916239008">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state x="435" y="24" key="CommitChangelistDialog2/53.24.1547.876@53.24.1547.876" timestamp="1583443921577" />
+    <state x="435" y="24" width="782" height="875" key="CommitChangelistDialog2/53.24.1547.876@53.24.1547.876" timestamp="1583916239008" />
     <state x="458" y="193" key="FileChooserDialogImpl" timestamp="1583836743569">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
     <state x="458" y="193" key="FileChooserDialogImpl/53.24.1547.876@53.24.1547.876" timestamp="1583836743569" />
-    <state width="1501" height="181" key="GridCell.Tab.0.bottom" timestamp="1583836748672">
+    <state width="1501" height="181" key="GridCell.Tab.0.bottom" timestamp="1583879644942">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state width="1501" height="181" key="GridCell.Tab.0.bottom/53.24.1547.876@53.24.1547.876" timestamp="1583836748672" />
-    <state width="1501" height="181" key="GridCell.Tab.0.center" timestamp="1583836748671">
+    <state width="1501" height="181" key="GridCell.Tab.0.bottom/53.24.1547.876@53.24.1547.876" timestamp="1583879644942" />
+    <state width="1501" height="181" key="GridCell.Tab.0.center" timestamp="1583879644941">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state width="1501" height="181" key="GridCell.Tab.0.center/53.24.1547.876@53.24.1547.876" timestamp="1583836748671" />
-    <state width="1501" height="181" key="GridCell.Tab.0.left" timestamp="1583836748671">
+    <state width="1501" height="181" key="GridCell.Tab.0.center/53.24.1547.876@53.24.1547.876" timestamp="1583879644941" />
+    <state width="1501" height="181" key="GridCell.Tab.0.left" timestamp="1583879644941">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state width="1501" height="181" key="GridCell.Tab.0.left/53.24.1547.876@53.24.1547.876" timestamp="1583836748671" />
-    <state width="1501" height="181" key="GridCell.Tab.0.right" timestamp="1583836748672">
+    <state width="1501" height="181" key="GridCell.Tab.0.left/53.24.1547.876@53.24.1547.876" timestamp="1583879644941" />
+    <state width="1501" height="181" key="GridCell.Tab.0.right" timestamp="1583879644942">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state width="1501" height="181" key="GridCell.Tab.0.right/53.24.1547.876@53.24.1547.876" timestamp="1583836748672" />
+    <state width="1501" height="181" key="GridCell.Tab.0.right/53.24.1547.876@53.24.1547.876" timestamp="1583879644942" />
     <state width="1501" height="293" key="GridCell.Tab.1.bottom" timestamp="1583836748654">
       <screen x="53" y="24" width="1547" height="876" />
     </state>

@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acc0f921-8e84-4c0c-ae21-060614e72fc5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SonumiTootleja.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dndude/Effect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dndude/Effect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dndude/Fighter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dndude/Fighter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dndude/Firebolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dndude/Firebolt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dndude/Knockdown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dndude/Knockdown.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dndude/Spiderweb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dndude/Spiderweb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dndude/WeaponAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dndude/WeaponAttack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dndude/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dndude/Wizard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,11 +34,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$USER_HOME$/mustruut/mustruut-gradle" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -53,23 +50,44 @@
       <command value="kylastuseKirjeldused" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Lahing">
-    <configuration name="FailiTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FailiTest" />
+  <component name="RunManager" selected="Application.Paralleelarvutused">
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Client" />
       <module name="int" />
+      <option name="PROGRAM_PARAMETERS" value="kk kk" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Lahing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Lahing (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dndude.Lahing" />
+      <module name="int" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dndude.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Lahing" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Lahing" />
       <module name="int" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test" />
+    <configuration name="Paralleelarvutused" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Paralleelarvutused" />
+      <module name="int" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server&amp;Cleint" type="Application" factoryName="Application" singleton="false">
+      <option name="MAIN_CLASS_NAME" value="Server" />
       <module name="int" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -82,20 +100,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test" />
-      <module name="int" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="Application.Lahing" />
+      <item itemvalue="Application.Server&amp;Cleint" />
+      <item itemvalue="Application.Lahing (1)" />
+      <item itemvalue="Application.Paralleelarvutused" />
+      <item itemvalue="Application.TestUniquePersonList" />
+      <item itemvalue="Application.Client" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Lahing" />
+        <item itemvalue="Application.Paralleelarvutused" />
+        <item itemvalue="Application.Client" />
+        <item itemvalue="Application.Lahing (1)" />
         <item itemvalue="Application.TestUniquePersonList" />
-        <item itemvalue="Application.FailiTest" />
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
@@ -121,10 +139,10 @@
       <screen x="53" y="24" width="1547" height="876" />
     </state>
     <state x="500" y="121" key="#Scratch/53.24.1547.876@53.24.1547.876" timestamp="1581585720117" />
-    <state x="291" y="107" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581586251622">
+    <state x="291" y="107" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583798945909">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state x="291" y="107" key="#com.intellij.execution.impl.EditConfigurationsDialog/53.24.1547.876@53.24.1547.876" timestamp="1581586251622" />
+    <state x="291" y="107" key="#com.intellij.execution.impl.EditConfigurationsDialog/53.24.1547.876@53.24.1547.876" timestamp="1583798945909" />
     <state x="535" y="254" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581584258906">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
@@ -133,6 +151,10 @@
       <screen x="53" y="24" width="1547" height="876" />
     </state>
     <state x="639" y="168" width="544" height="560" key="#com.intellij.ide.util.MemberChooser/53.24.1547.876@53.24.1547.876" timestamp="1583443752279" />
+    <state x="564" y="235" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1583798867794">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state x="564" y="235" key="#com.intellij.ide.util.TreeClassChooserDialog/53.24.1547.876@53.24.1547.876" timestamp="1583798867794" />
     <state x="584" y="310" width="484" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1581585031270">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
@@ -141,30 +163,50 @@
       <screen x="53" y="24" width="1547" height="876" />
     </state>
     <state x="564" y="198" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/53.24.1547.876@53.24.1547.876" timestamp="1583232442357" />
-    <state x="458" y="193" key="FileChooserDialogImpl" timestamp="1582452064858">
+    <state x="435" y="24" key="CommitChangelistDialog2" timestamp="1583443921577">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state x="458" y="193" key="FileChooserDialogImpl/53.24.1547.876@53.24.1547.876" timestamp="1582452064858" />
-    <state width="1501" height="291" key="GridCell.Tab.0.bottom" timestamp="1583074015620">
+    <state x="435" y="24" key="CommitChangelistDialog2/53.24.1547.876@53.24.1547.876" timestamp="1583443921577" />
+    <state x="458" y="193" key="FileChooserDialogImpl" timestamp="1583836743569">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state width="1501" height="291" key="GridCell.Tab.0.bottom/53.24.1547.876@53.24.1547.876" timestamp="1583074015620" />
-    <state width="1501" height="291" key="GridCell.Tab.0.center" timestamp="1583074015617">
+    <state x="458" y="193" key="FileChooserDialogImpl/53.24.1547.876@53.24.1547.876" timestamp="1583836743569" />
+    <state width="1501" height="181" key="GridCell.Tab.0.bottom" timestamp="1583836748672">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state width="1501" height="291" key="GridCell.Tab.0.center/53.24.1547.876@53.24.1547.876" timestamp="1583074015617" />
-    <state width="1501" height="291" key="GridCell.Tab.0.left" timestamp="1583074015616">
+    <state width="1501" height="181" key="GridCell.Tab.0.bottom/53.24.1547.876@53.24.1547.876" timestamp="1583836748672" />
+    <state width="1501" height="181" key="GridCell.Tab.0.center" timestamp="1583836748671">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state width="1501" height="291" key="GridCell.Tab.0.left/53.24.1547.876@53.24.1547.876" timestamp="1583074015616" />
-    <state width="1501" height="291" key="GridCell.Tab.0.right" timestamp="1583074015619">
+    <state width="1501" height="181" key="GridCell.Tab.0.center/53.24.1547.876@53.24.1547.876" timestamp="1583836748671" />
+    <state width="1501" height="181" key="GridCell.Tab.0.left" timestamp="1583836748671">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state width="1501" height="291" key="GridCell.Tab.0.right/53.24.1547.876@53.24.1547.876" timestamp="1583074015619" />
-    <state x="314" y="27" key="SettingsEditor" timestamp="1582452040568">
+    <state width="1501" height="181" key="GridCell.Tab.0.left/53.24.1547.876@53.24.1547.876" timestamp="1583836748671" />
+    <state width="1501" height="181" key="GridCell.Tab.0.right" timestamp="1583836748672">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state x="314" y="27" key="SettingsEditor/53.24.1547.876@53.24.1547.876" timestamp="1582452040568" />
+    <state width="1501" height="181" key="GridCell.Tab.0.right/53.24.1547.876@53.24.1547.876" timestamp="1583836748672" />
+    <state width="1501" height="293" key="GridCell.Tab.1.bottom" timestamp="1583836748654">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state width="1501" height="293" key="GridCell.Tab.1.bottom/53.24.1547.876@53.24.1547.876" timestamp="1583836748654" />
+    <state width="1501" height="293" key="GridCell.Tab.1.center" timestamp="1583836748649">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state width="1501" height="293" key="GridCell.Tab.1.center/53.24.1547.876@53.24.1547.876" timestamp="1583836748649" />
+    <state width="1501" height="293" key="GridCell.Tab.1.left" timestamp="1583836748646">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state width="1501" height="293" key="GridCell.Tab.1.left/53.24.1547.876@53.24.1547.876" timestamp="1583836748646" />
+    <state width="1501" height="293" key="GridCell.Tab.1.right" timestamp="1583836748652">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state width="1501" height="293" key="GridCell.Tab.1.right/53.24.1547.876@53.24.1547.876" timestamp="1583836748652" />
+    <state x="314" y="27" key="SettingsEditor" timestamp="1583836619549">
+      <screen x="53" y="24" width="1547" height="876" />
+    </state>
+    <state x="314" y="27" key="SettingsEditor/53.24.1547.876@53.24.1547.876" timestamp="1583836619549" />
     <state x="488" y="291" key="com.intellij.ide.util.TipDialog" timestamp="1582023342517">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
