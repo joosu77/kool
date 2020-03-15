@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acc0f921-8e84-4c0c-ae21-060614e72fc5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/BroadcastListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Broadcaster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PirateStation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TV.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TVStation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TVTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/int/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/int/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paralleelarvutused.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paralleelarvutused.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +40,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -48,7 +52,7 @@
       <command value="kylastuseKirjeldused" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Paralleelarvutused">
+  <component name="RunManager" selected="Application.TVTest">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client" />
       <module name="int" />
@@ -91,6 +95,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TVTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TVTest" />
+      <module name="int" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestUniquePersonList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TestUniquePersonList" />
       <module name="int" />
@@ -99,15 +110,17 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Lahing" />
+      <item itemvalue="Application.Server&amp;Cleint" />
       <item itemvalue="Application.Client" />
       <item itemvalue="Application.Lahing (1)" />
-      <item itemvalue="Application.Lahing" />
       <item itemvalue="Application.Paralleelarvutused" />
-      <item itemvalue="Application.Server&amp;Cleint" />
       <item itemvalue="Application.TestUniquePersonList" />
+      <item itemvalue="Application.TVTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TVTest" />
         <item itemvalue="Application.Paralleelarvutused" />
         <item itemvalue="Application.Client" />
         <item itemvalue="Application.Lahing (1)" />
@@ -145,10 +158,10 @@
       <screen x="53" y="24" width="1547" height="876" />
     </state>
     <state x="535" y="254" key="#com.intellij.fileTypes.FileTypeChooser/53.24.1547.876@53.24.1547.876" timestamp="1581584258906" />
-    <state x="639" y="168" width="544" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1583443752279">
+    <state x="639" y="168" width="544" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1584212518571">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state x="639" y="168" width="544" height="560" key="#com.intellij.ide.util.MemberChooser/53.24.1547.876@53.24.1547.876" timestamp="1583443752279" />
+    <state x="639" y="168" width="544" height="560" key="#com.intellij.ide.util.MemberChooser/53.24.1547.876@53.24.1547.876" timestamp="1584212518571" />
     <state x="564" y="235" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1583798867794">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
@@ -169,22 +182,22 @@
       <screen x="53" y="24" width="1547" height="876" />
     </state>
     <state x="458" y="193" key="FileChooserDialogImpl/53.24.1547.876@53.24.1547.876" timestamp="1583836743569" />
-    <state width="1501" height="181" key="GridCell.Tab.0.bottom" timestamp="1583879644942">
+    <state width="1501" height="181" key="GridCell.Tab.0.bottom" timestamp="1584214019426">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state width="1501" height="181" key="GridCell.Tab.0.bottom/53.24.1547.876@53.24.1547.876" timestamp="1583879644942" />
-    <state width="1501" height="181" key="GridCell.Tab.0.center" timestamp="1583879644941">
+    <state width="1501" height="181" key="GridCell.Tab.0.bottom/53.24.1547.876@53.24.1547.876" timestamp="1584214019426" />
+    <state width="1501" height="181" key="GridCell.Tab.0.center" timestamp="1584214019422">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state width="1501" height="181" key="GridCell.Tab.0.center/53.24.1547.876@53.24.1547.876" timestamp="1583879644941" />
-    <state width="1501" height="181" key="GridCell.Tab.0.left" timestamp="1583879644941">
+    <state width="1501" height="181" key="GridCell.Tab.0.center/53.24.1547.876@53.24.1547.876" timestamp="1584214019422" />
+    <state width="1501" height="181" key="GridCell.Tab.0.left" timestamp="1584214019422">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state width="1501" height="181" key="GridCell.Tab.0.left/53.24.1547.876@53.24.1547.876" timestamp="1583879644941" />
-    <state width="1501" height="181" key="GridCell.Tab.0.right" timestamp="1583879644942">
+    <state width="1501" height="181" key="GridCell.Tab.0.left/53.24.1547.876@53.24.1547.876" timestamp="1584214019422" />
+    <state width="1501" height="181" key="GridCell.Tab.0.right" timestamp="1584214019424">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state width="1501" height="181" key="GridCell.Tab.0.right/53.24.1547.876@53.24.1547.876" timestamp="1583879644942" />
+    <state width="1501" height="181" key="GridCell.Tab.0.right/53.24.1547.876@53.24.1547.876" timestamp="1584214019424" />
     <state width="1501" height="293" key="GridCell.Tab.1.bottom" timestamp="1583836748654">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
@@ -201,10 +214,10 @@
       <screen x="53" y="24" width="1547" height="876" />
     </state>
     <state width="1501" height="293" key="GridCell.Tab.1.right/53.24.1547.876@53.24.1547.876" timestamp="1583836748652" />
-    <state x="314" y="27" key="SettingsEditor" timestamp="1583836619549">
+    <state x="314" y="27" key="SettingsEditor" timestamp="1584198140488">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state x="314" y="27" key="SettingsEditor/53.24.1547.876@53.24.1547.876" timestamp="1583836619549" />
+    <state x="314" y="27" key="SettingsEditor/53.24.1547.876@53.24.1547.876" timestamp="1584198140488" />
     <state x="488" y="291" key="com.intellij.ide.util.TipDialog" timestamp="1582023342517">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
@@ -221,9 +234,9 @@
       <screen x="53" y="24" width="1547" height="876" />
     </state>
     <state x="489" y="201" key="run.anything.popup/53.24.1547.876@53.24.1547.876" timestamp="1582189613314" />
-    <state x="489" y="221" width="672" height="678" key="search.everywhere.popup" timestamp="1583069064966">
+    <state x="489" y="221" width="672" height="678" key="search.everywhere.popup" timestamp="1584198754931">
       <screen x="53" y="24" width="1547" height="876" />
     </state>
-    <state x="489" y="221" width="672" height="678" key="search.everywhere.popup/53.24.1547.876@53.24.1547.876" timestamp="1583069064966" />
+    <state x="489" y="221" width="672" height="678" key="search.everywhere.popup/53.24.1547.876@53.24.1547.876" timestamp="1584198754931" />
   </component>
 </project>
