@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\begin{document}
+\begin{center}
+\Large\textbf{Kodut\"o\"o nr. 2}\\
+13. variant\\
+\small{Joosep N\"aks}
+\end{center}
+\textbf{1.} Olgu ($x_n$) t\~okestatud arvjada ning olgu $M\in\mathbb{R}$. T\~oestage, et $\displaystyle\overline{\lim_{n\to\infty}}x_n\leq M$ parajasti siis, kui iga $\varepsilon>0$ korral leidub $N\in\mathbb{N}$ nii, et\\
+\begin{equation*}
+x_n<M+\varepsilon\quad \text{iga }n\geq N \text{ korral.}\\
+\end{equation*}
+\textbf{Lahendus:}\\
+\"Ulemise piirv\"a\"artuse definitsiooni kohaselt:\\
+$\displaystyle\overline{\lim_{n\to\infty}}x_n=a\iff\displaystyle\lim_{n\to\infty}\sup x_n=a$\\
+Piirv\"a\"artuse definitsiooni kohaselt:\\
+$\displaystyle\lim_{n\to\infty}\sup x_n=a\iff\forall\varepsilon>0\ \exists N\in\mathbb{N}\quad |\sup \{x_n:\ n\geq N\}-a|<\varepsilon$\\
+Supreenumi definitsiooni kohaselt:\\
+$\sup x_n = a\iff x_n\leq a\ \forall n\in\mathbb{N}\ (1) \text{ ja } \forall\varepsilon>0\ \exists N\in\mathbb{N}\quad a-\varepsilon<x_N\ (2) $\\
+Kasutades piirv\"a\"artusest tulenevaid piiranguid saab v\~orratuse (1) \"umber kirjutada:\\ 
+$\forall\varepsilon>0\ \exists N\in\mathbb{N}: \forall n\geq N\quad x_n\leq a\leq M\iff x_n\leq M\iff x_n<M+\varepsilon$\\
+Mida oligi vaja n\"aidata.\\
+\\\pagebreak\\
+\textbf{2.} L\"ahtudes funktsiooni piirv\"a\"artuse $\varepsilon\text{-}\delta$-definitsioonist, t\~oestage, et\\
+\begin{equation*}
+\lim_{x\to0+}\frac{|\ln x|}{x}=\infty\\
+\end{equation*}
+\textbf{Lahendus:}\\
+Jagan funktsiooni korrutiseks:\\
+$\frac{|\ln x|}{x}=|\ln x| \frac{1}{x}$\\
+N\"aitan n\"u\"ud et m\~olemad korrutatavad l\"ahevenav l\~opmatusle:\\
+$\displaystyle\lim_{x\to0+}|\ln x|=\infty\iff\forall M>0\ \exists \delta>0: [x\leq \mathbb{R}, 0<x<\delta]\Rightarrow |\ln x|>M$\\
+V\~otan $\delta=e^{-M}$, seega $x<\delta\iff x<e^{-M}\iff \ln x<-M$\\
+Kuna on teada, et $x<e^{-M}$, $M>0$, $e^0=1$ ja $e^x$ on rnagelt kasvav, siis kehtib $x<1$ ehk $\ln x<0$ seega:
+$\ln x<-M\iff -|\ln x|<-M\iff |\ln x|>M$\\
+Seega kehtib $\displaystyle\lim_{x\to0+}|\ln x|=\infty$. N\"aitan sama $\frac{1}{x}$ kohta:\\
+$\displaystyle\lim_{x\to0+}\frac{1}{x}=\infty\iff\forall M>0\ \exists \delta>0: [x\leq \mathbb{R}, 0<x<\delta]\Rightarrow |\ln x|>M$\\
+V\~otan $\delta=\frac{1}{M}$, ehk $x<\delta\iff x<\frac{1}{M}\iff \frac{1}{x}>M$\\
+Seega kehtib ka $\displaystyle\lim_{x\to0+}\frac{1}{x}=\infty$. Kuna korrutise m\~olemad pooled l\"ahenevad l\~opmatusele ja tegemist on elementaarfunktsioonidega, l\"aheneb ka korrutis l\~opmatusele.\\\pagebreak\\
+\textbf{3.} Olgu $f:\mathbb{R}\to\mathbb{R}$ pidev funktsioon, mis on 2-perioodiline, st. iga $x\in\mathbb{R}$ korral $f(x+2)=f(x)$. T\~oestage, et\\
+a) $f$ on t\~okestatud ning saavutab oma suurima ja v\"ahima v\"a\"artuse,\\
+b) leidub $x_0$ nii, et $f(x_0+\pi)=f(x_0)$.\\
+\textbf{Lahendus:}\\
+a) V\~otan k\~oigepealt mingi l\~oigu $x\in[0,2]$. Kuna vaatleme l\~oigus pidevat funktsiooni siis Weierstrassi teoreemi kohaselt saavutab funktsioon selles l\~oigus oma suurima ja v\"ahima v\"a\"artuse. Igat v\"a\"artust $x\notin[0,2]$, saab esitada kui $x=x_0+2n\quad x_0\in[0,2]\  n\in\mathbb{N}$. Kuna $f(x)=f(x+2)$ tuleneb sellest, et k\~oik funktsiooni v\"a\"artused esinevad vahemikus $[0,2]$. Seega kui funktsioon saavutab oma piirv\"a\"artused l\~oigus $[0,2]$, siis saavutab ta need ka terves oma m\"a\"aramispiirkonnas.\\
+b) Saab v\~otta sellise $x_0$ et $f(x_0) = \max\{f(x)|x\in[0,2]\}$ (punktis $a$ on n\"aidatud, et funktsioon saavutab oma maksimaalsed v\"a\"artused). N\"u\"ud kehtib $f(x_0)\geq f(x)\quad \forall x\in\mathbb{R}$ seega kehtib ka $f(x_0)\geq f(x_0+\pi)\text{ ja }f(x_0)\geq f(x_0-\pi)$. Vaatlen funktsiooni $g(x)=f(x+\pi)-f(x)$. Kuna $f(x)$ on pidev on ka $g(x)$ pidev. Varem n\"aidatud v\~orduste p\~ohjal $g(x_0)=f(x_0+\pi)-f(x_0)\leq0$ ja $g(x_0-\pi)=f(x_0)-f(x_0-\pi)\geq0$. Kuna pidev funktsioon l\"abib punkti, mis on suurem v\~oi v\~ordne 0ga, ning punkti, mis on v\"aiksem v\~oi v\~ordne 0ga, l\"abib ta Bolzano-Cauchy vahepealsete v\"a\"artuste teoreemi j\"argi ka kohta 0 ning kui $g(x)=0 \text{ siis } f(x+\pi)-f(x)=0\iff f(x+\pi)=f(x)$. 
+\end{document}
