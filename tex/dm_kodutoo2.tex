@@ -1,0 +1,141 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{forest}
+\usepackage{xcolor}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\addtolength{\oddsidemargin}{-1in}
+\addtolength{\evensidemargin}{-1in}
+\addtolength{\textwidth}{1.75in}
+\begin{document}
+\begin{center}
+\Large\textbf{Kodut\"o\"o nr. 2}\\
+Joosep N\"aks
+\end{center}
+\textbf{1.} 
+\begin{equation*}
+\begin{aligned}
+\exists x\color{red}(\color{blue}(\color{black}\forall y B(y)\&C(z)\vee\neg A(x)\color{blue})\color{black}\&(C(z)\Rightarrow A(x)\vee\forall y\neg B(y))\color{red})\color{black}\&\neg\forall q\exists p\neg(A(q)\Leftrightarrow B(p)\&C(z))\\
+\text{Kvantori ja eituse vahetamisseadus:}\\
+\exists x((\forall y B(y)\&C(z)\vee\neg A(x))\&(C(z)\Rightarrow A(x)\vee\forall y\neg B(y)))\&\exists q\forall p(A(q)\Leftrightarrow B(p)\&C(z))\\
+\text{Implikatsiooni definitsioon:}\\
+\exists x((\forall y B(y)\&C(z)\vee\neg A(x))\&(\neg C(z)\vee A(x)\vee\forall y\neg B(y)))\&\exists q\forall p(A(q)\Leftrightarrow B(p)\&C(z))\\
+\text{Seotud muutujat mitte sisaldava valemi kvantori alla toomine:}\\
+\exists x(\forall y (B(y)\&C(z)\vee\neg A(x))\&\forall y(\neg C(z)\vee A(x)\vee\neg B(y)))\&\exists q\forall p(A(q)\Leftrightarrow B(p)\&C(z))\\
+\text{Kvantori distributiivsus:}\\
+\exists x\forall y ((B(y)\&C(z)\vee\neg A(x))\&(\neg C(z)\vee A(x)\vee\neg B(y)))\&\exists q\forall p(A(q)\Leftrightarrow B(p)\&C(z))\\
+\text{Seotud muutujate \"umbernimetamine:}\\
+\exists x\forall y ((B(y)\&C(z)\vee\neg A(x))\&(\neg C(z)\vee A(x)\vee\neg B(y)))\&\exists x\forall y(A(x)\Leftrightarrow B(y)\&C(z))\\
+\text{Disjunktsiooni distributiivsuse j\"argi:}\\
+\exists x\forall y ((B(y)\&C(z))\&(\neg C(z)\vee A(x)\vee\neg B(y))\vee\neg A(x)\&(\neg C(z)\vee A(x)\vee\neg B(y)))\&\exists x\forall y(A(x)\Leftrightarrow B(y)\&C(z))\\
+\text{De Morgani seaduse j\"argi (ja ka konjuktsioonide assotsiatiivsus):}\\
+\exists x\forall y ((B(y)\&C(z))\&(\neg (C(z)\& B(y))\vee A(x))\vee\neg A(x)\&(\neg(C(z)\& B(y))\vee A(x)))\&\exists x\forall y(A(x)\Leftrightarrow B(y)\&C(z))\\
+\text{Konjuktsiooni distributiivsuse j\"argi:}\\
+\exists x\forall y ((B(y)\&C(z))\&\neg (C(z)\& B(y))\vee (B(y)\&C(z))\&A(x))\vee\neg A(x)\&(\neg(C(z)\& B(y))\vee A(x)))\&\exists x\forall y(A(x)\Leftrightarrow B(y)\&C(z))\\
+\text{Valemi konjuktsioon enda eitusega on v\"a\"ar ning valemi disjunktsioon v\"a\"araga on samav\"a\"arne valemi endaga:}\\
+\exists x\forall y ((B(y)\&C(z))\&A(x))\vee\neg A(x)\&(\neg(C(z)\& B(y))\vee A(x)))\&\exists x\forall y(A(x)\Leftrightarrow B(y)\&C(z))\\
+\text{Konjuktsiooni distributiivsus:}\\
+\exists x\forall y ((B(y)\&C(z))\&A(x))\vee\neg A(x)\&\neg(C(z)\& B(y))\vee \neg A(x)\&A(x))\&\exists x\forall y(A(x)\Leftrightarrow B(y)\&C(z))\\
+\text{Valemi konjuktsioon enda eitusega on v\"a\"ar ning valemi disjunktsioon v\"a\"araga on samav\"a\"arne valemi endaga:}\\
+\exists x\forall y ((B(y)\&C(z))\&A(x))\vee\neg A(x)\&\neg(C(z)\& B(y)))\&\exists x\forall y(A(x)\Leftrightarrow B(y)\&C(z))\\
+\text{Ekvivalentsi definitsiooni j\"argi:}\\
+\exists x\forall y (B(y)\&C(z)\Leftrightarrow A(x))\&\exists x\forall y(A(x)\Leftrightarrow B(y)\&C(z))\\
+\text{Valemi konjuktsioon iseendaga on samav\"a\"arne valemi endaga:}\\
+\exists x\forall y (B(y)\&C(z)\Leftrightarrow A(x))\\
+\end{aligned}
+\end{equation*}
+\pagebreak\\
+\textbf{2.} Vahetu arutlusega t\~oesatada j\"argmised j\"areldumised:\\
+\textbf{a)} $\forall x(A(x)\Rightarrow B(x))\Rightarrow C\models \forall x\neg A(x)\Rightarrow C$\\
+Implikatsiooni definitsiooni j\"argi:\\
+$\forall x(A(x)\Rightarrow B(x))\Rightarrow C\equiv\neg\forall x(\neg A(x)\vee B(x))\vee C$\\
+Kvantori ja eituse vahetamise samav\"a\"arsuse j\"argi:\\
+$\neg\forall x(\neg A(x)\vee B(x))\vee C\equiv\exists x\neg(\neg A(x)\vee B(x))\vee C$\\
+De Morgani seaduse j\"argi kehtib:\\
+$\exists x\neg(\neg A(x)\vee B(x))\vee C\equiv\exists x( A(x)\& \neg B(x))\vee C$\\
+Vaatleme j\"argnevat j\"arelduvust:\\
+$\exists x(A(x)\& \neg B(x))\vee C\models\exists x A(x)\vee C$\\
+Vasak pool on t\~oene juhul kui kas $\exists x(A(x)\& \neg B(x))$ on t\~oene (1) v\~oi $C$ on t\~oene (2).\\
+\null\ (1): kui $\exists x(A(x)\& \neg B(x))$ on t\~oene t\"ahendab, et leidub selline $x$, mille puhul on korraga $A(x)$ t\~oene ja $B(x)$ v\"a\"ar. See aga t\"ahendab, et leidub selline x, mille korral $A(x)$ on t\~oene ehk j\"arelduvuse parem pool on t\~oene kuna see on osa parema poole p\~ohidisjunktsioonist.\\
+\null\ (2): kui $C$ on t\~oene, on ka j\"arelduvuse parem pool t\~oene, kuna $C$ on \"uks pool selle p\~ohidisjunktsioonist.\\
+Implikatsiooni definitsiooni j\"argi:\\
+$\exists x A(x)\vee C\equiv \neg\exists x A(x)\Rightarrow C$\\
+Kvantori ja eituse vahetamise samav\"a\"arsuse j\"argi:\\
+$\neg\exists x A(x)\Rightarrow C\equiv \forall x\neg A(x)\Rightarrow C$\\\\
+\textbf{b)}$\forall x(B(x)\Rightarrow A(x)\vee C(x)), \exists x(B(x)\&\neg C(x))\models \exists x A(x)$\\
+Implikatsiooni definitsiooni kohaselt kehtib:\\
+$\forall x(B(x)\Rightarrow A(x)\vee C(x))\equiv\forall x(\neg B(x)\vee A(x)\vee C(x))$\\
+De Morgani seaduse kohaselt kehtib:\\
+$\forall x(\neg B(x)\vee A(x)\vee C(x))\equiv\forall x(\neg (B(x)\&\neg C(x))\vee A(x))$\\
+Viimane valem kehtib vaid siis, kui iga x korral on t\~oene kas $\neg (B(x)\&\neg C(x))$ v\~oi $A(x)$. Teine algne valem on t\~oene vaid juhul, kui mingi x korral $(B(x)\&\neg C(x))$ on t\~oene ehk $\neg (B(x)\&\neg C(x))$ on v\"a\"ar. See aga t\"ahendab, et selle $x$ korral peab $A(x)$ olema t\~oene, et kogu j\"arelduvuse vasak pool t\~oene oleks. Seega kehtib alati $\exists x A(x)$, mida oligi tarvis n\"aidata.\\\\
+\textbf{c)} $\forall x(R(x)\Rightarrow \neg(P(x)\Leftrightarrow Q(x))),\exists xR(x)\&\forall yP(y)\models \exists x\neg Q(x)$\\
+Ekvivalentsi definitsiooni kohaselt kehtib:\\ 
+$\forall x(R(x)\Rightarrow \neg(P(x)\Leftrightarrow Q(x)))\equiv\forall x(R(x)\Rightarrow \neg(P(x)\& Q(x)\vee\neg P(x)\& \neg Q(x)))$\\
+Implikatsiooni definitsiooni kohaselt kehtib:\\
+$\forall x(R(x)\Rightarrow \neg(P(x)\& Q(x)\vee\neg P(x)\& \neg Q(x)))\equiv\forall x(\neg R(x)\vee \neg(P(x)\& Q(x)\vee\neg P(x)\& \neg Q(x)))$\\
+J\"arelduvuse teine eeldus on t\~oene vaid juhul, kui $P(x)$ on samaselt t\~oene ja $R(x)$ on mingi x korral t\~oene. Kasutades esimest informatsioonikildu esimeses valemis saame:\\
+$\forall x(\neg R(x)\vee \neg(t\& Q(x)\vee v\& \neg Q(x)))\equiv\forall x(\neg R(x)\vee \neg(Q(x)))$\\
+Eelduse teise valemi eeldus oli ka et $R(x)$ on mingi x korral t\~oene. See t\"ahendab, et $\neg R(x)$ on mingil v\"a\"artusel v\"a\"ar ehk tuletatud valemi kohaselt peab sellel x v\"a\"artusel $\neg Q(x)$ t\~oene olema. Seega kehtib $\exists x\neg Q(x)$, mida oligi tarvis n\"aidata.
+\pagebreak\\
+\textbf{3.}\\
+\"Uhtegi akrobaatikatrikki, mida pole tsirkuse eeskavas v\"alja kuulutatud, ei p\"u\"ua trupp etenduse ajal sooritada. \"Uhtegi aktrobaatikatrikki, mis sisaldab neljakordset saltot, pole \"uldse v\~oimalik sooritada. \"Uhtegi akrobaatikatrikki, mida pole v\~oimalik sooritada, ei ole tsirkuse eeskavas v\"alja kuulutatud. J\"arelikult \"uhtegi akrobaatikatrikki, mis sisaldab neljakordset saltot, ei p\"u\"ua trupp etenduse ajal sooritada.\\
+\textbf{Defineerin predikaadid:}\\
+$\mathcal{F}_1(x)="x\text{ pole tsirkuse eeskavas v\"alja kuulutatud}"$\\
+$\mathcal{F}_2(x)="\text{Trupp ei esita etenduse ajal }x"$\\
+$\mathcal{F}_3(x)="x\text{ sisaldab neljakordset saltot}"$\\
+$\mathcal{F}_4(x)="x\text{ pole v\~oimalik sooritada}"$\\
+\textbf{Laused predikaatlausetena:}\\
+1) $\forall x(\mathcal{F}_1(x)\Rightarrow \mathcal{F}_2(x))$\\
+2) $\forall x(\mathcal{F}_3(x)\Rightarrow \mathcal{F}_4(x))$\\
+3) $\forall x(\mathcal{F}_4(x)\Rightarrow \mathcal{F}_1(x))$\\
+4) $\forall x(\mathcal{F}_1(x)\Rightarrow \mathcal{F}_2(x)),\ \forall x(\mathcal{F}_3(x)\Rightarrow \mathcal{F}_4(x)), \forall x(\mathcal{F}_4(x)\Rightarrow \mathcal{F}_1(x))\models\forall x(\mathcal{F}_3(x)\Rightarrow \mathcal{F}_2(x))$\\
+Implikatsiooni definitsiooni j\"argi saab viimase \"umber kirjutada nii:\\
+$\forall x(\neg\mathcal{F}_1(x)\vee \mathcal{F}_2(x)),\ \forall x(\neg\mathcal{F}_3(x)\vee \mathcal{F}_4(x)), \forall x(\neg\mathcal{F}_4(x)\vee \mathcal{F}_1(x))\models\forall x(\neg\mathcal{F}_3(x)\vee \mathcal{F}_2(x))$\\
+J\"arelduvuse parem pool on t\~oene vaid siis, kui iga $x$ korral on kas $\mathcal{F}_3(x)$ v\"a\"ar v\~oi $\mathcal{F}_2(x)$ t\~oene.\\
+Vasaku poole teine lause on t\~oene juhul kui iga $x$ korral on kas $\mathcal{F}_3(x)$ v\"a\"ar, ehk parem pool on t\~oene, v\~oi $\mathcal{F}_4(x)$ t\~oene. N\"u\"ud vaatleme, mis juhtub, kui $\mathcal{F}_4(x)$ on t\~oene.\\
+Vasaku poole kolmanda lause kohaselt iga $x$ korral on kas $\mathcal{F}_4(x)$ v\"a\"ar v\~oi $\mathcal{F}_1(x)$ t\~oene. Juhud, kus $\mathcal{F}_4(x)$ on v\"a\"ar on kaetud, kuna siis kas on teine lause v\"a\"ar v\~oi on $\mathcal{F}_3(x)$ v\"a\"ar. Seega huvitab meid juht, kus $\mathcal{F}_1(x)$ on t\~oene.\\
+Vasaku poole esimese lause kohaselt iga $x$ korral on kas $\mathcal{F}_1(x)$ v\"a\"ar v\~oi $\mathcal{F}_2(x)$ t\~oene. Ehk kuna vaatleme juhtu, kus $\mathcal{F}_1(x)$ on t\~oene, peab olema $\mathcal{F}_2(x)$ t\~oene.\\
+Seega olen j\~oudnud j\"arelduseni, et kui k\~oik vasakul olevad valemid on t\~oesed, on iga $x$ korral on kas $\mathcal{F}_3(x)$ v\"a\"ar v\~oi $\mathcal{F}_2(x)$ t\~oene ehk j\"arelduvus kehtib.
+\pagebreak\\
+\textbf{4.} Tuletusreeglid ja nende ratsionaalarvulised seletused:\\
+\begin{equation*}
+\begin{aligned}
+1: \frac{xQy}{xQ+y}\iff& \frac{1}{n}Q\frac{p}{q}\Rightarrow\frac{1}{n}Q\frac{p}{q+1}\\
+2: \frac{xQy}{\diamond xQ+y}\iff& \frac{1}{n}Q\frac{p}{q}\Rightarrow\frac{1}{n+1}Q\frac{p}{q+1}\\
+3: \frac{xQy}{xQy-}\iff& \frac{1}{n}Q\frac{p}{q}\Rightarrow\frac{1}{n}Q\frac{p+1}{q}\\
+\end{aligned}
+\end{equation*}
+\textbf{a)} Kirjutan tuletusreeglid \"umber t\"ahendusega $\frac{1}{n}Q\frac{p}{q}\Leftrightarrow\frac{1}{n}=\frac{p}{q}$ \\
+\begin{equation*}
+\begin{aligned}
+1)& \frac{1}{n}=\frac{p}{q}\Rightarrow\frac{1}{n}=\frac{p}{q+1}\Leftrightarrow\frac{p}{q}=\frac{p}{q+1}\\
+&\text{See reegel kehtib vaid juhul, kui }p=0\text{, kuid - m\"arkide kogus pidi}\\
+&\text{positiivne olema ehk selle peab \"ara j\"atma, et semantika suhtes kehtiks}\\
+&\text{ formaalse aksiomaatilise teooria korrektsus.}\\
+2)& \frac{1}{n}=\frac{p}{q}\Rightarrow\frac{1}{n+1}=\frac{p}{q+1}\Leftrightarrow q=np\Rightarrow q+1=np+p\Leftrightarrow p=1\\
+&\text{Tuletusreegel kehtib vaid }P=1\text{ juhul, seega tuleb see eemaldada}\\
+&\text{et kehtiks teooria korrektsus semantika suhtes}\\
+3)& \frac{1}{n}=\frac{p}{q}\Rightarrow\frac{1}{n}=\frac{p+1}{q}\Leftrightarrow q=np\Rightarrow q=np+n\Leftrightarrow n=0\\
+&\text{See reegel kehtib vaid juhul }n=0\text{, mis pole v\~oimalik kuna }\\
+&\diamond\text{ s\"umboleid peab valemis olema v\"ahemalt 1, seega tuleb}\\
+&\text{valem eemaldada et kehtiks teooria korrektsus semantika suhtes.}
+\end{aligned}
+\end{equation*}
+Kokkuv\~ottes tuleb eemaldada k\~oik tuletusreeglid, et kehtiks teooria korrektsus semantika suhtes.\\\pagebreak\\
+\textbf{b)} Kirjutan tuletusreeglid \"umber t\"ahendusega $\frac{1}{n}Q\frac{p}{q}\Leftrightarrow\frac{1}{n}\geq\frac{p}{q}$ \\
+\begin{equation*}
+\begin{aligned}
+1)& \frac{1}{n}\geq\frac{p}{q}\Rightarrow\frac{1}{n}\geq\frac{p}{q+1}\Leftrightarrow q\geq np\Rightarrow q+1\geq np\\
+&\text{See reegel kehtib alati, kuna kui q-le positiivne arv 1 }\\
+&\text{juurde liita, on ta ikka suurem kui np.}\\
+2)& \frac{1}{n}\geq\frac{p}{q}\Rightarrow\frac{1}{n+1}\geq\frac{p}{q+1}\Leftrightarrow q\geq np\Rightarrow q+1\geq np+p\Leftrightarrow q\geq np\Rightarrow q\geq np+p-1\\
+&\text{Tuletusreegel kehtib vaid juhul, kui q ja np vahe on v\"ahemalt p-1 ehk mitte alati}\\
+&\text{seega tuleb see eemaldada et kehtiks teooria korrektsus semantika suhtes.}\\
+3)& \frac{1}{n}\geq\frac{p}{q}\Rightarrow\frac{1}{n}\geq\frac{p+1}{q}\Leftrightarrow q\geq np\Rightarrow q\geq np+n\\
+&\text{See reegel kehtib vaid juhul, kui q ja np vahe on vähemalt n,}\\
+&\text{seega tuleb valem eemaldada et kehtiks teooria korrektsus semantika suhtes.}
+\end{aligned}
+\end{equation*}
+Kokkuv\~ottes tuleb eemaldada esimene ja kolmas tuletusreegel, et kehtiks teooria korrektsus semantika suhtes.
+\end{document}
