@@ -114,15 +114,14 @@ Seega olen j\~oudnud j\"arelduseni, et kui k\~oik vasakul olevad valemid on t\~o
 &\text{positiivne olema ehk selle peab \"ara j\"atma, et semantika suhtes kehtiks}\\
 &\text{ formaalse aksiomaatilise teooria korrektsus.}\\
 2)& \frac{1}{n}=\frac{p}{q}\Rightarrow\frac{1}{n+1}=\frac{p}{q+1}\Leftrightarrow q=np\Rightarrow q+1=np+p\Leftrightarrow p=1\\
-&\text{Tuletusreegel kehtib vaid }P=1\text{ juhul, seega tuleb see eemaldada}\\
-&\text{et kehtiks teooria korrektsus semantika suhtes}\\
+&\text{Tuletusreegel kehtib vaid }P=1\text{ juhul, vaatlen selle t\"o\"otamist hiljem.}\\
 3)& \frac{1}{n}=\frac{p}{q}\Rightarrow\frac{1}{n}=\frac{p+1}{q}\Leftrightarrow q=np\Rightarrow q=np+n\Leftrightarrow n=0\\
 &\text{See reegel kehtib vaid juhul }n=0\text{, mis pole v\~oimalik kuna }\\
 &\diamond\text{ s\"umboleid peab valemis olema v\"ahemalt 1, seega tuleb}\\
 &\text{valem eemaldada et kehtiks teooria korrektsus semantika suhtes.}
 \end{aligned}
 \end{equation*}
-Kokkuv\~ottes tuleb eemaldada k\~oik tuletusreeglid, et kehtiks teooria korrektsus semantika suhtes.\\\pagebreak\\
+Kokkuv\~ottes tuleb esimene ja kolmas tuletusreegel ei kehti kindlasti ning teine t\"o\"otab vaid juhul kui $p=1$. Ainus aksioom on $\diamond Q+-$ ehk $n=1,\ p=1,\ q=1$. Teine ehk ainus potentsiaalne tuletusreegel suurendab n ja q v\"a\"artusi 1 v\~orra, kuid ei muuda p v\"a\"artust, ehk p on alati 1 ning teine tuletusreegel kehtib alati. Seega peab selleks, et teooria oleks semantikas $S_1$ korrektne, \"ara j\"atma esimese ja kolmanda tuletusreegli. \\\pagebreak\\
 \textbf{b)} Kirjutan tuletusreeglid \"umber t\"ahendusega $\frac{1}{n}Q\frac{p}{q}\Leftrightarrow\frac{1}{n}\geq\frac{p}{q}$ \\
 \begin{equation*}
 \begin{aligned}
@@ -130,12 +129,12 @@ Kokkuv\~ottes tuleb eemaldada k\~oik tuletusreeglid, et kehtiks teooria korrekts
 &\text{See reegel kehtib alati, kuna kui q-le positiivne arv 1 }\\
 &\text{juurde liita, on ta ikka suurem kui np.}\\
 2)& \frac{1}{n}\geq\frac{p}{q}\Rightarrow\frac{1}{n+1}\geq\frac{p}{q+1}\Leftrightarrow q\geq np\Rightarrow q+1\geq np+p\Leftrightarrow q\geq np\Rightarrow q\geq np+p-1\\
-&\text{Tuletusreegel kehtib vaid juhul, kui q ja np vahe on v\"ahemalt p-1 ehk mitte alati}\\
-&\text{seega tuleb see eemaldada et kehtiks teooria korrektsus semantika suhtes.}\\
-3)& \frac{1}{n}\geq\frac{p}{q}\Rightarrow\frac{1}{n}\geq\frac{p+1}{q}\Leftrightarrow q\geq np\Rightarrow q\geq np+n\\
-&\text{See reegel kehtib vaid juhul, kui q ja np vahe on vähemalt n,}\\
-&\text{seega tuleb valem eemaldada et kehtiks teooria korrektsus semantika suhtes.}
+&\text{Seega kehtib tuletusreegel kindlalt juhul, kui }p\leq1\text{, j\"atkan selle reegliga hiljem.}\\
+3)& \frac{1}{n}\geq\frac{p}{q}\Rightarrow\frac{1}{n}\geq\frac{p+1}{q}\\
+&\text{Kui seda reeglit aksioomi peal kasutada, saame:}\\
+& \frac{1}{1}\geq\frac{1}{1}\Rightarrow\frac{1}{1}\geq\frac{2}{1}\\
+&\text{See ei kehti kuna }2=1+1>1.
 \end{aligned}
 \end{equation*}
-Kokkuv\~ottes tuleb eemaldada esimene ja kolmas tuletusreegel, et kehtiks teooria korrektsus semantika suhtes.
+Kokkuv\~ottes kehtib kindlasti esimene reegel, ei kehti kindlalt kolmas reegel ning teine reegel kehtib juhul kui $p\leq1$. Nagu punktis $a$ mainitud, on aksioomis $n=1,\ p=1,\ q=1$. Esimene reegel suurendab q v\"a\"artust \"uhe v\~orra ning teine reegel suurendab n ja q v\"a\"artusi 1 v\~orra kuid p v\"a\"artus j\"a\"ab alati 1ks ehk kehtib alati $p\leq1$ ning seega ka teine tuletusreegel. Seega peab selleks, et teooria oleks semantikas $S_2$ korrektne, \"ara j\"atma vaid kolmanda tuletusreegli.
 \end{document}
