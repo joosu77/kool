@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\addtolength{\oddsidemargin}{-1in}
+\addtolength{\evensidemargin}{-1in}
+\addtolength{\topmargin}{-0.4in}
+\addtolength{\textheight}{1in}
+\addtolength{\textwidth}{1.75in}
+\begin{document}
+\begin{center}
+\Large\textbf{Kontrollt\"o\"o nr. 1}\\
+10. variant\\
+\small{Joosep N\"aks}
+\end{center}
+\textbf{1.} Olgu F korpus ning olgu $a,b\in F,a\neq 0$. Tuginedes ainult korpuse aksioomidele, t\~oestage, et
+\begin{equation*}
+(-a^{-1})b=-(a^{-1}b).
+\end{equation*}
+\textbf{T\~oestus:}
+\begin{equation*}
+\begin{aligned}
+\text{Vaatlen nullelemendi korrutist korpuse elemendiga, millele liidan A3 j\"argi nullelemendi:}\\
+0b=0b+0\\
+\text{A4 j\"argi saan v\~otta, et nullelement on sama, mis }b^2\text{ ja selle vastandelemendi summa:}\\
+0b+0=0b+(b+(-b))\\
+\text{A2 j\"argi muudan liitmisj\"arjekorda:}\\
+0b+0=(0b+b)+(-b)\\
+\text{M3 j\"argi on saan elemendi b l\"abi korrutada \"uhikelemendiga:}\\
+(0b+b)+(-b)=(0b+1b)+(-b)\\
+\text{Distributiivsuse j\"argi v\~otan b sulgude ette:}\\
+(0b+1b)+(-b)=(0+1)b+(-b)\\
+\text{A3 j\"argi saab nullelemendi liitmise \"ara kaotada:}\\
+(0+1)b+(-b)=1b+(-b)\\
+\text{M3 j\"argi saab \"uhikelemendiga korrutamise \"ara kaotada:}\\
+1b+(-b)=b+(-b)\\
+\text{A4 j\"argi on see v\~ordne 0ga:}\\
+b+(-b)=0\\
+\text{Seega olen n\"aidanud, et korpuse elemendi ja nullelemendi korrutis on v\~ordne nullelemendiga.}\\
+\text{Liidan A3 j\"argi t\~oestatava v\~orrandi paremale poolele nullelemendi:}\\
+-(a^{-1}b)=-(a^{-1}b)+0\\
+\text{Varem n\"aidatud omaduse p\~ohjal korrutan nullelemendi l\"abi elemendiga }b\\
+-(a^{-1}b)+0=-(a^{-1}b)+0b\\
+\text{A4 j\"argi kehtib }0=a^{-1}+(-a^{-1})\\
+a^{-1}\text{ on korpuse element, kuna a on korpuse element ning M4 kohaselt on sel}\\
+\text{juhul ka tema p\"o\"ordelement korpuse element. Asendan selle v\~orrandisse.}\\
+-(a^{-1}b)+0b=-(a^{-1}b)+(a^{-1}+(-a^{-1}))b\\
+\text{Distributiivsuse j\"argi teen sulud lahti:}\\
+-(a^{-1}b)+(a^{-1}+(-a^{-1}))b=-(a^{-1}b)+(a^{-1}b+(-a^{-1})b)\\
+\text{A2 j\"argi muudan liitmise j\"arjekorda ning A4 j\"argi kaovad element ja vastandelement}\\
+-(a^{-1}b)+(a^{-1}b+(-a^{-1})b)=0+(-a^{-1})b)\\
+\text{A3 j\"argi saab nullelemendi eemaldada:}\\
+0+(-a^{-1})b)=(-a^{-1})b)\\
+\text{Sellega olen n\"aidanud, et algse v\~orrandi pooled on v\~ordsed.}\\
+\end{aligned}
+\end{equation*}
+\pagebreak\\
+\textbf{2.} Olgu $X$ ja $Y$ sellised mittet\"uhjad reaalarvude hulgad, et iga $x\in X$ ja $y\in Y$ korral $y\geq x$. T\~oestage, et $X$ on \"ulalt ja $Y$ alt t\~okestatud $\inf Y \geq \sup X$.\\
+\textbf{Lahendus:}\\
+Hulk X on \"ulalt t\~okestatud parajasti siis, kui leidub selline naturaalarv $a$, et iga $x\in X$ korral kehtib $x\leq a$. Kuna Y on mittet\"uhi reaalarvude hulk, saab v\~otta sealt suvalise elemendi $y_0\in Y$ ning kuna iga $Y$ elemendi puhul kehtib $y\geq x$, kehtib ka $y_0\geq x$. Seega on $y_0$ hulga $X$ \"ulemine t\~oke.\\
+Hulk Y on alt t\~okestatud parajasti siis, kui leidub selline naturaalarv $a$, et iga $y\in Y$ korral kehtib $y\geq a$. Kuna X on mittet\"uhi reaalarvude hulk, saab v\~otta sealt suvalise elemendi $x_0\in X$ ning kuna iga $X$ elemendi puhul kehtib $y\geq x$, kehtib ka $y\geq x_0$. Seega on $x_0$ hulga $Y$ alumine t\~oke.\\
+T\~oestamaks, et kehtib $\inf Y \geq \sup X$ v\"aidan vastu\"aiteliselt, et $\inf Y < \sup X\Leftrightarrow 0 < \sup X-\inf Y$. Defineerin $\varepsilon_0 :=\sup X-\inf Y$. Infiinumi definitsiooni kohaselt iga positiivse $\varepsilon\in\mathbb{R}$ puhul leidub selline $y_0\in Y$, et $y_0<\inf Y +\varepsilon$. Kui v\~otta $\varepsilon=\varepsilon_0$, saab: $y_0<\inf Y +\varepsilon_0\Leftrightarrow y_0<\inf Y -\inf Y+\sup X\Leftrightarrow y_0<\sup X$. Supreenumi definitsiooni kohaselt iga $c\in\mathbb{R}$ korral, mis rahuldab v\~orratust $c<\sup X$, leidub $x_0\in X$, et $c<x_0$. V\~otan $c=y_0$, varem on n\"aidatud, et kehtib $y_0<\sup X$, seega peab kehtima ka $y_0<x_0$. Kuid \"ulesande p\"ustituse j\"argi iga $x\in X$ ja $y\in Y$ korral $y\geq x$, seega tekkis vastuolu ning $\inf Y < \sup X$ ei saa kehtida ehk kehtib $\inf Y \geq \sup X$.\\\\
+\textbf{3.}
+
+\end{document}

@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage[a4paper,landscape]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{setspace}
+\DeclarePairedDelimiter\bfloor{\Bigl\lfloor}{\Bigr\rfloor}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\addtolength{\oddsidemargin}{-1in}
+\addtolength{\evensidemargin}{-1in}
+\addtolength{\textwidth}{2in}
+\begin{document}
+\begin{center}
+\Large\textbf{T\"arn\"ulesanne nr. 7}\\
+\small{Joosep N\"aks}
+\end{center}
+\begin{center}
+Avaldise $\vdash\lambda f:((a\to a)\to a).\lambda z:a.f((\lambda x:a.\lambda y:a.x)z)$ t\"u\"up on $((a\to a)\to a)\to a\to a$. T\~oesuspuu:
+\end{center}
+\begin{gather*}
+\dfrac{ 
+ \dfrac{
+  \dfrac{
+   \dfrac{
+    \null
+   }{
+    \{f:((a\to a)\to a),z:a\}\vdash f:((a\to a)\to a)
+   }
+   \qquad
+   \dfrac{
+    \dfrac{
+     \dfrac{
+      \{f:((a\to a)\to a),z:a,y:a,x:a\}\vdash x:a
+     }{
+      \{f:((a\to a)\to a),z:a,x:a\}\vdash \lambda y:a.x:a\to a
+     }
+    }{
+     \{f:((a\to a)\to a),z:a\}\vdash (\lambda x:a.\lambda y:a.x):a\to (a\to a)
+    }
+    \qquad
+    \dfrac{
+     \null
+    }{
+     \{f:((a\to a)\to a),z:a\}\vdash z:a
+    }
+   }{
+    \{f:((a\to a)\to a),z:a\}\vdash (\lambda x:a.\lambda y:a.x)z:a\to a
+   }
+  }{
+   \{f:((a\to a)\to a),z:a\}\vdash f((\lambda x:a.\lambda y:a.x)z):a
+  }
+ }{
+  \{f:((a\to a)\to a)\}\vdash\lambda z:a.f((\lambda x:a.\lambda y:a.x)z):a\to a
+ }
+}{
+ \vdash\lambda f:((a\to a)\to a).\lambda z:a.f((\lambda x:a.\lambda y:a.x)z):((a\to a)\to a)\to a\to a
+}
+\end{gather*}
+\end{document}
