@@ -49,9 +49,9 @@ a^{-1}\text{ on korpuse element, kuna a on korpuse element ning M4 kohaselt on s
 \text{Distributiivsuse j\"argi teen sulud lahti:}\\
 -(a^{-1}b)+(a^{-1}+(-a^{-1}))b=-(a^{-1}b)+(a^{-1}b+(-a^{-1})b)\\
 \text{A2 j\"argi muudan liitmise j\"arjekorda ning A4 j\"argi kaovad element ja vastandelement}\\
--(a^{-1}b)+(a^{-1}b+(-a^{-1})b)=0+(-a^{-1})b)\\
+-(a^{-1}b)+(a^{-1}b+(-a^{-1})b=0+(-a^{-1})b\\
 \text{A3 j\"argi saab nullelemendi eemaldada:}\\
-0+(-a^{-1})b)=(-a^{-1})b)\\
+0+(-a^{-1})b=(-a^{-1})b\\
 \text{Sellega olen n\"aidanud, et algse v\~orrandi pooled on v\~ordsed.}\\
 \end{aligned}
 \end{equation*}
@@ -61,6 +61,102 @@ a^{-1}\text{ on korpuse element, kuna a on korpuse element ning M4 kohaselt on s
 Hulk X on \"ulalt t\~okestatud parajasti siis, kui leidub selline naturaalarv $a$, et iga $x\in X$ korral kehtib $x\leq a$. Kuna Y on mittet\"uhi reaalarvude hulk, saab v\~otta sealt suvalise elemendi $y_0\in Y$ ning kuna iga $Y$ elemendi puhul kehtib $y\geq x$, kehtib ka $y_0\geq x$. Seega on $y_0$ hulga $X$ \"ulemine t\~oke.\\
 Hulk Y on alt t\~okestatud parajasti siis, kui leidub selline naturaalarv $a$, et iga $y\in Y$ korral kehtib $y\geq a$. Kuna X on mittet\"uhi reaalarvude hulk, saab v\~otta sealt suvalise elemendi $x_0\in X$ ning kuna iga $X$ elemendi puhul kehtib $y\geq x$, kehtib ka $y\geq x_0$. Seega on $x_0$ hulga $Y$ alumine t\~oke.\\
 T\~oestamaks, et kehtib $\inf Y \geq \sup X$ v\"aidan vastu\"aiteliselt, et $\inf Y < \sup X\Leftrightarrow 0 < \sup X-\inf Y$. Defineerin $\varepsilon_0 :=\sup X-\inf Y$. Infiinumi definitsiooni kohaselt iga positiivse $\varepsilon\in\mathbb{R}$ puhul leidub selline $y_0\in Y$, et $y_0<\inf Y +\varepsilon$. Kui v\~otta $\varepsilon=\varepsilon_0$, saab: $y_0<\inf Y +\varepsilon_0\Leftrightarrow y_0<\inf Y -\inf Y+\sup X\Leftrightarrow y_0<\sup X$. Supreenumi definitsiooni kohaselt iga $c\in\mathbb{R}$ korral, mis rahuldab v\~orratust $c<\sup X$, leidub $x_0\in X$, et $c<x_0$. V\~otan $c=y_0$, varem on n\"aidatud, et kehtib $y_0<\sup X$, seega peab kehtima ka $y_0<x_0$. Kuid \"ulesande p\"ustituse j\"argi iga $x\in X$ ja $y\in Y$ korral $y\geq x$, seega tekkis vastuolu ning $\inf Y < \sup X$ ei saa kehtida ehk kehtib $\inf Y \geq \sup X$.\\\\
-\textbf{3.}
+\textbf{3.} Olgu $(x_n)$ ja $(y_n)$ t\~okestatud arvjadad. T\~oestage, et
+\begin{equation*}
+\lim_{\overline{n\to\infty}}(\min \{x_n,y_n\})=\min\{\lim_{\overline{n\to\infty}} x_n, \lim_{\overline{n\to\infty}} y_n \}
+\end{equation*}
+1) N\"aitan, et kehtib $\displaystyle \lim_{\overline{n\to\infty}}(\min \{x_n,y_n\})\leq\min\{\lim_{\overline{n\to\infty}} x_n, \lim_{\overline{n\to\infty}} y_n \}$:\\\\
+Olgu jada $(\min\{x_n,y_n\})$ osajada $(\min\{x_{n_k},y_{n_k}\})_{k=1}^\infty$ selline, et $\displaystyle\lim_{k\to\infty}(\min\{x_{n_k},y_{n_k}\})= \lim_{\overline{n\to\infty}}(\min \{x_n,y_n\})$. Sellise osajada olemasolu tuleneb loengukonspekti teoreemist 2.22, mis \"utleb, et iga jada osapiirv\"a\"artuste hulgas on olemas v\"ahim, mis on v\~ordne selle jada alumise piirv\"a\"artusega. Kuna jada $(x_{n_k})$ on t\~okestatud, leidub  tal Bolzano-Weierstrassi teoreemi kohaselt koonduv osajada $(x_{n_{k_j}})_{j=1}^\infty$. Kuna $(x_{n_{k_j}})_{j=1}^\infty$ ja $(y_{n_{k_j}})_{j=1}^\infty$ on koonduvad jadad, on nende miinumumi piirv\"a\"artus v\~ordne nende piirv\"a\"artuste miinumumidega. Seega kehtib:\\
+\begin{equation*}
+\lim_{\overline{n\to\infty}}(\min \{x_n,y_n\})=\lim_{{j\to\infty}}(\min \{x_{n_{k_j}},y_{n_{k_j}}\})=\min \{\lim_{{j\to\infty}}x_{n_{k_j}},\lim_{{j\to\infty}}y_{n_{k_j}}\}\geq\min \{\lim_{{\overline{n\to\infty}}}x_n,\lim_{\overline{n\to\infty}}y_n\}
+\end{equation*}\\
+2) N\"aitan, et kehtib $\displaystyle \lim_{\overline{n\to\infty}}(\min \{x_n,y_n\})\geq\min\{\lim_{\overline{n\to\infty}} x_n, \lim_{\overline{n\to\infty}} y_n \}$:\\\\
+Kuna $(x_n)$ ja $(y_n)$ on t\~okestatud, on ka $\min\{x_n,y_n\}$ t\~okestatud, seega on jadade alumised piirv\"a\"artused reaalarvud. Defineerin $u_n:=\displaystyle\inf_{k\geq n} x_k$ ja $v_n:=\displaystyle\inf_{k\geq n} y_k$. Siis kehtib iga $n\in\mathbb{N}$ korral v\~orratus:
+\begin{equation*}
+\min\{u_n,v_n\}\geq\inf\{\min \{x_k,y_k\}:k\geq n\}
+\end{equation*}
+Piirv\"a\"artuse monotoonsuse kohsalt saab v\~otta m\~olemast poolest piirv\"a\"artuse:
+\begin{gather*}
+\min\{\lim_{\overline{n\to\infty}}x_n,\lim_{\overline{n\to\infty}}y_n\}=\min\{\lim_{n\to\infty}u_n,\lim_{n\to\infty}v_n\}=\lim_{n\to\infty}\min\{u_n,v_n\}\geq\\
+\geq\lim_{n\to\infty}\inf\{\min \{x_k,y_k\}:k\geq n\}=\inf_{\overline{n\to\infty}}\{\min \{x_k,y_k\}\}
+\end{gather*}
+\pagebreak\\
+\textbf{4.} L\"ahtudes funktsiooni piirv\"a\"artuse $\varepsilon$-$\delta$-definitsioonist t\~oestage, et
+\begin{equation*}
+\lim_{x\to\infty} \frac{x^2}{4-x}=-\infty
+\end{equation*}
+\textbf{Lahendus:} Funktsiooni piirv\"a\"artuse $\varepsilon$-$\delta$-definitsiooni j\"argi kehtib $\displaystyle\lim_{x\to\infty} f(x)=-\infty$ parajasti siis, kui kehtib
+\begin{equation*}
+\forall M<0\ \exists N>0:[x\in \mathbb{R}, x>N]\Rightarrow f(x)<M
+\end{equation*}
+\begin{gather*}
+M<0\Leftrightarrow 4M<0\\
+x>N>0\Leftrightarrow x>0\\
+\text{Valin } N=\max\{-M,4\}\Leftrightarrow N\geq-M \text{ ja }N\geq 4\\
+x>N\geq-M\Leftrightarrow x+M>0\\
+x(x+M)>0>4M \Leftrightarrow x^2>4M-xM\Leftrightarrow x^2>M(4-x)\\
+x>N\geq4\Leftrightarrow 4-x<0\\
+\frac{x^2}{4-x}<M
+\end{gather*}
+Seega kehtib $\displaystyle\lim_{x\to\infty} \frac{x^2}{4-x}=-\infty$.\\\pagebreak\\
+\textbf{5.} Leida piirv\"a\"artus $\displaystyle\lim_{|x|\to\infty} \bigg( \frac{2x+3}{2x+1}\bigg)^{x+1+\sin 1}$.\\
+\begin{gather*}
+\lim_{|x|\to\infty} \bigg( \frac{2x+3}{2x+1}\bigg)^{x+1+\sin 1}=\lim_{|x|\to\infty} \bigg( \frac{2x+1+2}{2x+1}\bigg)^{x+1+\sin 1}=\lim_{|x|\to\infty} \bigg(1+ \frac{2}{2x+1}\bigg)^{x+1+\sin 1}\\
+\text{Teen muutujavahetuse } u:=\frac{2x+1}{2}\text{, kui kehtib }|x|\to\infty\text{ siis kehtib ka ka }|u|\to\infty\\
+x=u-\frac{1}{2}\\
+\begin{aligned}
+\lim_{|x|\to\infty} \bigg(1+ \frac{2}{2x+1}\bigg)^{x+1+\sin 1}&=\lim_{|u|\to\infty} \bigg(1+ \frac{1}{u}\bigg)^{u-\frac{1}{2}+1+\sin 1}\\
+\lim_{|u|\to\infty} \bigg(1+ \frac{1}{u}\bigg)^{u-\frac{1}{2}+1+\sin 1}&=\lim_{|u|\to\infty} \Bigg(\bigg(1+ \frac{1}{u}\bigg)^u\bigg(1+ \frac{1}{u}\bigg)^\frac{1}{2}\bigg(1+ \frac{1}{u}\bigg)^{\sin1}\Bigg)\\
+\end{aligned}\\\\
+\lim_{|u|\to\infty}f(u)=A\text{ kehtib parajasti siis, kui kehtivad } \lim_{u\to\infty}f(u)=A \text{ ja } \lim_{-u\to\infty}f(u)=A\\
+\shoveleft{\text{Vaatlen juhtu }u\to\infty:}\\
+\begin{aligned}
+\lim_{u\to\infty} \Bigg(\bigg(1+ \frac{1}{u}\bigg)^u\bigg(1+ \frac{1}{u}\bigg)^\frac{1}{2}\bigg(1+ \frac{1}{u}\bigg)^{\sin1}\Bigg)&=\lim_{u\to\infty} \bigg(1+ \frac{1}{u}\bigg)^u\lim_{u\to\infty}\bigg(1+ \frac{1}{u}\bigg)^\frac{1}{2}\lim_{u\to\infty}\bigg(1+ \frac{1}{u}\bigg)^{\sin1}\\
+&=e\bigg(\lim_{u\to\infty}(1+ \frac{1}{u})\bigg)^\frac{1}{2}\bigg(\lim_{u\to\infty}(1+ \frac{1}{u})\bigg)^{\sin1}\\
+&=e(1)^\frac{1}{2}(1)^{\sin1}\\
+&=e
+\end{aligned}\\
+\text{Vaatlen juhtu }-u\to\infty\text{, teen muutujavahetuse }t=-u\\
+\begin{aligned}
+\lim_{t\to\infty} \Bigg(\bigg(1+ \frac{1}{-t}\bigg)^{-t}\bigg(1+ \frac{1}{-t}\bigg)^\frac{1}{2}\bigg(1+ \frac{1}{-t}\bigg)^{\sin1}\Bigg)&=\lim_{t\to\infty} \bigg(1+ \frac{1}{-t}\bigg)^{-t}\lim_{t\to\infty}\bigg(1+ \frac{1}{-t}\bigg)^\frac{1}{2}\lim_{t\to\infty}\bigg(1+ \frac{1}{-t}\bigg)^{\sin1}\\
+&=e^{(-1)(-1)}\bigg(\lim_{t\to\infty}(1+ \frac{1}{-t})\bigg)^\frac{1}{2}\bigg(\lim_{t\to\infty}(1+ \frac{1}{-t})\bigg)^{\sin1}\\
+&=e(1)^\frac{1}{2}(1)^{\sin1}\\
+&=e
+\end{aligned}
+\end{gather*}
+Kuna $\displaystyle\lim_{x\to\infty} \bigg( \frac{2x+3}{2x+1}\bigg)^{x+1+\sin 1}= \displaystyle\lim_{x\to-\infty} \bigg( \frac{2x+3}{2x+1}\bigg)^{x+1+\sin 1}=e$, siis ka $\displaystyle\lim_{|x|\to\infty} \bigg( \frac{2x+3}{2x+1}\bigg)^{x+1+\sin 1}=e$.
+\pagebreak\\
+\textbf{6.} Olgu $f:\mathbb{R}\setminus \{0\}\to \mathbb{R}$. T\~oestage, et $\displaystyle\lim_{x\to0}f(x)=A$ parajasti siis, kui $\displaystyle\lim_{x\to0} f(\tan x)=A$.\\
+\textbf{Lahendus:}\\
+1) N\"aitan, et kehtib $\displaystyle\lim_{x\to0} f(\tan x)=A\Rightarrow\displaystyle\lim_{x\to0}f(x)=A$\\
+\begin{gather*}
+\text{Eeldasin, et kehtib:}\\
+\forall \varepsilon>0\ \exists \delta_0>0:[x\in \mathbb{R}, 0<|x|<\delta_0]\Rightarrow |f(\tan x)-A|<\varepsilon\\
+\text{Fikseerin epsiloni v\"a\"artuse: }\varepsilon_0=\varepsilon\text{. Tean, et kehtib:}\\
+\forall \varepsilon>0\ \exists \delta>0:[x\in \mathbb{R}, 0<|x|<\delta]\Rightarrow |\tan x|<\varepsilon\\
+\text{Valin }\varepsilon = \varepsilon_0\\
+\exists \delta_1>0:[x\in \mathbb{R}, 0<|x|<\delta_1]\Rightarrow |\tan x|<\varepsilon_0\\
+\text{V\~otan }\delta_m=\min\{\delta_0,\delta_1\}\\
+\text{Sel juhul kehtib:}\\
+\forall \varepsilon_0>0\ \exists \delta_m>0:[x\in \mathbb{R}, 0<|x|<\delta_m]\Rightarrow |f(\tan x)-A|<\varepsilon_0 \text{ ja }|\tan x|<\varepsilon_0\quad(1)\\
+\text{Kui eeldada, et }f(x)\text{ piirv\"a\"artus ei ole A, t\"ahendab see, et}\\
+\exists \varepsilon>0\ \forall \delta>0\ \exists x\in \mathbb{R}: 0<|x|<\delta \text{ ja }|f(x)-A|\geq\varepsilon\quad (2)\\
+\text{Kuna v\"aide (1) kehtib iga epsiloni korral, saab v\~otta }\varepsilon_0=\varepsilon\text{, ning kuna (2) kehtib iga delta puhul, saab v\~otta }\delta=\delta_m.\\
+\text{Kuna epsilon ja delta v\"ahenevad ning }|\tan x|<\varepsilon \text { ja }|x|<\delta\text { ning }f(\tan x)\text { koondub, kuid } f(x)\\
+\text{ ei koondu, oleme j\~oudnud vastuoluni. Seega peab kehtima } \lim_{x\to0}f(x)=A.\\
+\end{gather*}
 
+2) N\"aitan, et kehtib $\displaystyle\lim_{x\to0} f(x)=A\Rightarrow\displaystyle\lim_{x\to0}f(\tan x)=A$\\ $\varepsilon$-$\delta$-definitsiooni j\"argi kehtib $\displaystyle\lim_{x\to0} f(x)=A$ parajasti siis, kui kehtib
+\begin{gather*}
+\forall \varepsilon>0\ \exists \delta>0:[x\in \mathbb{R}, 0<|x|<\delta]\Rightarrow |f(x)-A|<\varepsilon\\
+\text{On teada ka et kehtib }\lim_{x\to0} \tan x=0\text{ ehk}\\
+\forall \varepsilon_1>0\ \exists \delta_1>0:[x\in \mathbb{R}, 0<|x|<\delta_1]\Rightarrow |\tan x|<\varepsilon_1\\
+\text{Kuna viimane kehtib iga }\varepsilon_1\text{ korral, saab v\~otta } \varepsilon_1 = \delta:\\
+\exists \delta_1>0:[x\in \mathbb{R}, 0<|x|<\delta_1]\Rightarrow |\tan x|<\delta\\
+\text{Seega eelneva tingimuse p\~ohjal kehtib}\\
+\forall \varepsilon>0\ \exists \delta_1:[x\in \mathbb{R}, 0<|x|<\delta_1]\Rightarrow |f(\tan x)-A|<\varepsilon
+\end{gather*}
+\begin{center}
+Seega kehtib $\displaystyle\lim_{x\to0}f(\tan x)=A$.
+\end{center}
 \end{document}
