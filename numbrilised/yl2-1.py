@@ -1,6 +1,7 @@
 import math
 alfa = 26
 
+
 def f(x):
     return (10+alfa)*x-(1+0.001*alfa)**x
 
