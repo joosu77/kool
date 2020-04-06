@@ -1,0 +1,28 @@
+Kodutöö nr 5b.                                                     Programmi väljund
+====================================================================================
+
+Sagedasemad 5-tähelised sõnad tekstifailis Kõrboja_sisu_puhastekst.txt:
+323 korda: perenaine
+240 korda: oleks
+174 korda: midagi
+158 korda: ütles
+155 korda: ainult
+147 korda: nõnda
+134 korda: vastas
+115 korda: mitte
+108 korda: pärast
+98 korda: vastu
+------------------------------------------------------------------------------------
+Sagedasemad 5-tähelised sõnad tekstifailis KuldninagaMees_est.txt:
+10 korda: jälle
+10 korda: ütles
+9 korda: peigmees
+9 korda: selle
+8 korda: peale
+7 korda: pärast
+6 korda: pruudi
+6 korda: vastu
+5 korda: hüüdis
+5 korda: juure
+====================================================================================
+Joosep Näks                                                  2020-03-26 17:10:59.6
