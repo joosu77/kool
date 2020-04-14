@@ -21,3 +21,38 @@ Processing '/etc/joe/joerc'...
 Processing '/etc/joe/ftyperc'...
 Finished processing /etc/joe/ftyperc
 Finished processing /etc/joe/joerc
+
+*** These modified files were found in JOE when it aborted on Thu Apr  9 16:55:56 2020
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+Math.abs
+
+*** File '(Unnamed)'
+abs
+peigmees
+villu
+villu
+villu
+raamat
+raamat
+mitte
+
+*** File '(Unnamed)'
+kodutoo7b2.java
+kodutoo7b2.java
+kodutoo7b2.java
+kodutoo7b2.java
+kodutoo7b2.java
+/home/joosep/kool/.git/COMMIT_EDITMSG
+yl7.py
+Server.
+Server.java
+kodutoo7b1
+kodutoo7b1.java
+
+*** File '* Startup Log *'
+Processing '/etc/joe/joerc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/joerc

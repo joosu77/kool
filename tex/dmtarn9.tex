@@ -1,0 +1,33 @@
+\documentclass {article}
+\usepackage {tikz}
+\usetikzlibrary {positioning}
+\begin {document}
+\begin{center}
+\Large\textbf{T\"arn\"ulesanne nr. 8}\\
+\small{Joosep N\"aks}
+\end{center}
+V\"aidan, et v\"ahim v\"ahemalt 2 tipuline graaf, mille ainus automorfism on samasusteisendus, on selline 6 tipuline graaf:
+\begin{equation}
+G=(V,E)\quad V=\{A,B,C,D,E\}\quad E=\{\{A,B\},\{A,F\},\{A,C\},\{B,C\},\{B,D\},\{C,D\},\{E,D\},\{E,C\}\}
+\end{equation}
+\begin {center}
+\begin {tikzpicture}[auto, node distance = 1cm and 2cm, on grid, thick, main node/.style ={circle, draw, minimum width = 1cm}]
+	\node[main node] (A) {A};
+	\node[main node] (B) [above left = of A] {B};
+	\node[main node] (C) [below left = of A] {C};
+	\node[main node] (D) [left = of B] {D};
+	\node[main node] (E) [left = of C] {E};
+	\node[main node] (F) [right = of A] {F};
+	\path (C) edge (A);
+	\path (B) edge (A);
+	\path (C) edge (E);
+	\path (D) edge (E);
+	\path (D) edge (C);
+	\path (D) edge (B);
+	\path (C) edge (B);
+	\path (F) edge (A);
+\end{tikzpicture}
+\end{center}
+\textbf{T\~oestus, et n\"aidatud graafi ainus automorfism on samasusteisendus:}\\
+
+\end{document}

@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\bfloor{\Bigl\lfloor}{\Bigr\rfloor}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\begin{document}
+\begin{center}
+\Large\textbf{T\"arn\"ulesanne nr. 104}\\
+\small{Joosep N\"aks}
+\end{center}
+Olgu funktsioon $f$ pidevalt diferentseeruv vahemikus $(a,b)$. Kas iga $c\in(a,b)$ korral leiduvad $x_1,x_2\in(a,b)$ nii, et $x_1<c<x_2$ ja $\displaystyle\frac{f(x_2)-f(x_1)}{x_2-x_1}=f'(c)$?\\
+\textbf{Lahendus:}\\
+Vaatlen funktsiooni $f(x)=x^3$. Tuletise definitsiooni j\"argi on selle funktsiooni tuletis:
+\begin{equation*}
+f'(x)=\lim_{x\to a}\frac{f(x)-f(a)}{x-a}=\lim_{x\to a}\frac{x^3-a^3}{x-a}=\lim_{x\to a}\frac{(x-a)(x^2+xa+a^2)}{x-a}=\lim_{x\to a}x^2+xa+a^2=3x^2
+\end{equation*}
+See on pidev reaalarvude hulgas seega on $f$ diferentseeruv reaalarvude hulgas. V\~otan $c=0$, sel juhul $f'(c)=3*0^2=0$. Selleks et leida $x_1$ ja $x_2$, mille puhul kehtiks $\displaystyle\frac{f(x_2)-f(x_1)}{x_2-x_1}=f'(c)=0$, peab kehtima $f(x_1)-f(x_2)=0$ ehk $f(x_1)=f(x_2)$. Kuid kui $x_1<c=0$, siis ka $x_1^3<0$ ehk $f(x_1)<0$ ning kui $x_2>c=0$ siis ka $x_2^3>0$ ehk $f(x_2)>0$. Seega ei saa $f(x_1)=f(x_2)$ kunagi kehtida.\\
+Kokkuv\~ottes ei, iga $c$ korral ei saa vastavaid $x_1$ ja $x_2$ v\"a\"artuseid leida.
+\end{document}

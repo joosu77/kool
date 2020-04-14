@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\bfloor{\Bigl\lfloor}{\Bigr\rfloor}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\begin{document}
+\begin{center}
+\Large\textbf{T\"arn\"ulesanne diferentssuhted}\\
+\small{Joosep N\"aks}
+\end{center}
+Olgu $f$ n korda pidevalt diferentseeruv. N\"aidake, et iga $k\leq n$ korral\\
+\begin {equation*}
+\lim_{h\to0} f[x,x+h,...,x+kh]=\frac{1}{k!}f^{(k)}(x)
+\end{equation*}
+Diferentssuhte definitsioon:
+\begin{equation*}
+f[x_{i_0},x_{i_1},...,x_{i_k}]=\frac{f[x_{i_1},...,x_{i_k}]-f[x_{i_0},...,x_{i_{k-1}}]}{x_{i_k}-x_{i_0}}
+\end{equation*}
+\textbf{Lahendus:} Lahendan matemaatilise induktsiooniga:\\
+\textbf{Baas:} $k=1$ korral saame v\~orrandi vasakule poolele diferentssuhte definitsioonist tuletise definitsiooni:
+\begin{equation*}
+\lim_{h\to0} f[x,x+h]=\lim_{h\to0}\frac{f[x]-f[x+h]}{x-(x+h)}=\lim_{h\to0}\frac{f[x+h]-f[x]}{h}=f'(x)=\frac{1}{1!}f^{(1)}(x)
+\end{equation*}
+Seega $k=1$ puhul v\~orrand kehtib.\\
+\textbf{Samm:} Eeldame, et $k=t$ puhul kehtib:
+\begin {equation}
+\lim_{h\to0} f[x,x+h,...,x+th]=\frac{1}{t!}f^{(t)}(x)
+\end{equation}
+Sel juhul saab $k=t+1$ lahti kirjutada nii:
+\begin {equation*}
+\begin{aligned}
+\lim_{h\to0} f[x,x+h,...,x+h(t+1)]=&\lim_{h\to0}\frac{f[x+h,...,x+h(t+1)]-f[x,...,x+ht]}{x+h(t+1)-x}\\
+=&\lim_{h\to0}\frac{f[x+h,...,x+h(t+1)]-\frac{1}{t!}f^{(t)}(x)}{h(t+1)}
+\end{aligned}
+\end{equation*}
+Vaatleme kuju $\displaystyle\lim_{h\to0}f[x+h,...,x+h(t+1)]$. Kui siin teha muutujavahetus $u=x+h$, saame $\displaystyle\lim_{h\to0}f[u,u+h,...,u+ht]$ ning eelduse (1) kohaselt on see v\~ordne kujuga $\frac{1}{t!}f^{(t)}(u)=\frac{1}{t!}f^{(t)}(x+h)$.
+\begin {equation*}
+\begin{aligned}
+\lim_{h\to0}\frac{f[x+h,...,x+h(t+1)]-\frac{1}{t!}f^{(t)}(x)}{h(t+1)}=&\lim_{h\to0}\frac{\frac{1}{t!}f^{(t)}(x+h)-\frac{1}{t!}f^{(t)}(x)}{h(t+1)}\\
+=&\lim_{h\to0}\frac{1}{(t+1)!}\frac{f^{(t)}(x+h)-f^{(t)}(x)}{h}\\
+=&\frac{1}{(t+1)!}f^{(t+1)}(x)
+\end{aligned}
+\end{equation*}
+Seega on t\~oestatud, et iga $0<k\leq n$ korral kehtib\\
+\begin {equation*}
+\lim_{h\to0} f[x,x+h,...,x+kh]=\frac{1}{k!}f^{(k)}(x)
+\end{equation*}
+\end{document}
