@@ -1,0 +1,63 @@
+\documentclass {article}
+\usepackage {tikz}
+\usepackage{arrayjobx}
+\usepackage{xparse}
+\usetikzlibrary {positioning}
+
+\ExplSyntaxOn
+\NewDocumentCommand{\setarray}{O{;}mm}
+ {
+  \seq_clear_new:c { g_alexb_array_#2_seq }
+  \seq_gset_split:cnn { g_alexb_array_#2_seq } { #1 } { #3 }
+ }
+\NewDocumentCommand{\getfromarray}{mm}
+ {
+  \seq_item:cn { g_alexb_array_#1_seq } { #2 }
+ }
+\cs_generate_variant:Nn \seq_gset_split:Nnn { c }
+\cs_set_eq:NN \inteval \int_eval:n
+\ExplSyntaxOff
+
+\begin {document}
+\begin{center}
+\Large\textbf{T\"arn\"ulesanne nr. 10}\\
+\small{Joosep N\"aks}
+\end{center}
+S\"o\"ogiahel:
+\setarray{Arr}{Tigu;Konn;Rebane;L\~ovi;Karu;Kits;Kapsas;Arbuus;K\~orvits}
+\begin {center}
+\begin {tikzpicture}[-latex, auto, node distance = 1cm and 2cm, on grid, thick, state/.style ={circle, draw, minimum width = 1cm}]
+\def \n {9}
+\def \radius {3cm}
+\def \margin {15} % margin in angles, depends on the radius
+
+\foreach \s in {1,...,\n} {
+  \node[state] (\s) at ({360/\n * (\s - 1)}:\radius) {\getfromarray{Arr}{\s}};
+}
+%(sööja) -> (söödav)
+\path (2) edge  [bend right](1);
+\path (3) edge  [bend right](2);
+\path (3) edge  [bend right](1);
+\path (4) edge  [bend left](5);
+\path (4) edge  [bend left](6);
+\path (5) edge  [bend left](6);
+\foreach \i in {1,2,5,6} {
+	\foreach \j in {7,8,9}{
+		\if\i5
+			\path (\i) edge  [bend left](\j);
+		\else
+			\if\i6
+				\path (\i) edge  [bend left](\j);
+			\else
+				\path (\i) edge  [bend right](\j);
+			\fi
+		\fi
+	}
+}
+\end{tikzpicture}
+\end{center}
+Defineerin grupid A=\{l\~ovi, karu, kits\}, B=\{rebane, konn, tigu\} ja C=\{kapsas, arbuus, k\~orvits\}.\\
+V\"aidan, et paat ei saa olla mahutavusega 4 objekti + talunik. On n\"aha, et kolmikutest A ja B kummastki ei saa korraga \"uhel kaldal olla \"ule \"uhe liikme. Seega peab alati olema nii grupist A kui ka grupist B \"uks liige mingil kaldal ning \"ulej\"a\"anud 4 liiget A ja B \"uhendist saavad olla kas k\~oik paadis v\~oi kummastki grupist \"ks paadis ja teine teisel kaldal. Selleks, et m\~onda objekti kolmikust C \"ule j\~oe viia, peab paadis olema lisaks gruppide A ja B liikmetele v\"ahemalt 1 vaba koht. Selleks peab aga grupist A v\~oi B olema \"uks liige \"uhel kaldal ning teine liige teisel kaldal, ning kuna paati ei ole v\~oimalik 3 vabat kohta tekitada (alati on 1 A liige ja 1 B liige seal) siis peab mingi C liige eelmisele kaldale maha j\"a\"ama, ehk ta s\"u\"uakse \"ara.\\
+Kui paati mahub lisaks talunikule 5 organismi, siis saab talunik hoida terve aja paadis karu, kitse, konna ja tigu ning teised organismid \"ukshaaval \"ule j\~oe viia, kuna teistest organismidest ei ohusta keegi kedagi.\\
+Seega on talunikul vaja paati, kuhu mahub tema ise ja veel 5 organismi.
+\end{document}

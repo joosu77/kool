@@ -1,0 +1,20 @@
+Kodutöö nr 8b.                                                     Programmi väljund
+====================================================================================
+
+Lähtesõna (ls): salm
+
+Sõnastik (H0):
+[kakk, kass, palk, pall, kaks, toll, taht, küla, pala, naat, palg, kesa, juut, kask, vaba, kaka, kurt, kuru, sõna, koer, mets, kuiv, tige, karv, viis, karu, rõõm, kurg, vara, kong, kaan, eile, kiik, mänd, tõru, kark, tõrv, hurt, kari, kulu, pant, valu, vill, nelk, pann, laba, taru, neli, vilu, sõõm, rahu , tark, vale, kilu, taat, rahe, reha, pank, raha, mõru, pang, kali, räim, sula, salu, silm, vaks, kalm, kile, kelm, suli, kelk, viks, kilk, loll, sale, vesi, koor, lehv, kukk, kala, koos, salm, sile, sada, talu, talv, õige, lehm , rong, siga, pärn, kaos, tuli, sagu, suga, põld, võre, tänu, tala, korv, kõrv, talk, tall, täna, vann, hunt, lubi, sõre, suvi, vaen, kann, juht, sõrm, vaev, riik, riim, jaht, kaev, kuur, kuup, märg, luba, kana, sina, kand, kena, parv, lina, tanu, tuvi, jalg, käsk, part, saar, mess, saan, linn, vihm, paat, vaha, laev, supp, vigu, kolm, lumi, kupp, muru, rada, käsi, viha, kolv, mesi, park, kärn, sugu, mure, sõda, vagu, vaga, kärg, viga, võru, meri, tulu, tulv]
+
+Sihtsõna (ss, sõnastikust): riim
+
+Üldistatud tuletuskäik:
+[salm]->[silm, sale, kalm]->[kelm, sile]->[kile, kelk]->[kilk]->[kiik]->[riik]->[riim]
+
+Tuletuskäigud:
+salm->kalm->kelm->kelk->kilk->kiik->riik->riim
+salm->silm->sile->kile->kilk->kiik->riik->riim
+salm->sale->sile->kile->kilk->kiik->riik->riim
+
+====================================================================================
+Joosep Näks                                                  2020-04-16 17:56:30.43

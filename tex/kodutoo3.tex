@@ -1,0 +1,179 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{pgfplots}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\begin{document}
+\begin{center}
+\Large\textbf{Kodut\"o\"o nr. 3}\\
+13. variant\\
+\small{Joosep N\"aks}
+\end{center}
+\textbf{1.} Leidke $f'(x)$, kui
+\begin{equation*}
+\begin{aligned}
+f(x)=\left\{
+\begin{gathered}
+\cos^2\left(\frac{\pi}{2}-x\right),\quad\text{ kui }x\leq0\\
+x^{1+3x},\qquad\qquad\ \ \text{ kui }x>0
+\end{gathered}
+\right.
+\end{aligned}
+\end{equation*}
+\textbf{Lahendus:} Leian kõigepealt tuletise vahemikus $(-\infty,0)$:
+\begin{equation*}
+\begin{aligned}
+\left(\cos^2\left(\frac{\pi}{2}-x\right)\right)'&=2\cos\left(\frac{\pi}{2}-x\right)\left(-\sin\left(\frac{\pi}{2}-x\right)\right)(-1)\\
+&=\sin\left(2\left(\frac{\pi}{2}-x\right)\right)\\
+&=\sin(\pi-2x)
+\end{aligned}
+\end{equation*}
+J\"argmisena leian tuletise vahemikus $(0,\infty)$. Defineerin selleks funktsiooni $g(x):=\ln(f(x))$ ning leian selle tuletise.
+\begin{equation*}
+\begin{aligned}
+g'(x)&=\left(\ln\left(x^{1+3x}\right)\right)'=\\
+&=\left((1+3x)\ln(x)\right)'\\
+&=3\ln(x)+\frac{1+3x}{x}
+\end{aligned}
+\end{equation*}
+N\"u\"ud kuna $f(x)=e^{g(x)}$, saan $f(x)$ tuletise leida nii:
+\begin{equation*}
+\begin{aligned}
+f'(x)&=\left(e^{g(x)}\right)'\\
+&=g'(x)e^{g(x)}\\
+&=g'(x)f(x)\\
+&=\left(3\ln(x)+\frac{1+3x}{x}\right)\left(x^{1+3x}\right)\\
+&=\left(3x\ln(x)+1+3x\right)x^{3x}
+\end{aligned}
+\end{equation*}
+N\"u\"ud vaatlen diferentseeruvust punktis 0.
+\begin{equation*}
+\begin{aligned}
+\lim_{x\to0-}f(x)&=\cos^2\left(\frac{\pi}{2}-0\right)=0\\
+\lim_{x\to0+}f(x)&=0^{1+3*0}=0\\
+\end{aligned}
+\end{equation*}
+Kuna kehtib $‬\displaystyle\lim_{x\to0-}f(x)=\lim_{x\to0+}f(x)$, on $f$ pidev punktis 0.
+\begin{equation*}
+\begin{aligned}
+\lim_{x\to0-}f'(x)&=\sin(\pi-2*0)=0\\
+\lim_{x\to0+}f'(x)&=\lim_{x\to0+}\left(3*x\ln(x)+1+3*x\right)x^{3*x}\\
+\end{aligned}
+\end{equation*}
+Selle piirv\"a\"artuse leidmiseks leian k\~oigepealt sisemiste funktsioonide piirv\"a\"artused:
+\begin{equation*}
+\begin{aligned}
+\lim_{x\to0+}3x\ln(x)&=3\lim_{x\to0+}\frac{\ln(x)}{\frac{1}{x}}\qquad(\text{kasutan L'H\^opitali reeglit})\\
+&=3\lim_{x\to0+}\frac{\frac{1}{x}}{\frac{1}{2x^2}}\\
+&=\lim_{x\to0+}6x\\
+&=0\\
+\lim_{x\to0+}x^{3x}&=e^{\ln(x^{3x})}\\
+&=\lim_{x\to0+}\exp(3x\ln(x))\\
+&=\exp\left(3\lim_{x\to0+}x\ln(x)\right)\\
+&=\exp\left(3\lim_{x\to0+}\frac{\ln(x)}{\frac{1}{x}}\right)\qquad(\text{kasutan L'H\^opitali reeglit})\\
+&=\exp\left(3\lim_{x\to0+}\frac{\frac{1}{x}}{\frac{1}{2x^2}}\right)\\
+&=\exp \left(6\lim_{x\to0+}x\right)\\
+&=e^0=1
+\end{aligned}
+\end{equation*}
+Saan korrutises korrutatavatest eraldi piirv\"a\"artused v\~otta, kuna need piirv\"a\"artused on t\~okestatud ja pole 0 ning ma saan summas liidetavatest eraldi piirv\"a\"artused v\~otta kuna need piirv\"a\"artused on t\~okestatud. Seega naastes algse piirv\"a\"artuse juurde:\\
+\begin{equation*}
+\begin{aligned}
+\lim_{x\to0+}\left(3*x\ln(x)+1+3*x\right)x^{3*x}&=(0+1+0)1=1\\
+\end{aligned}
+\end{equation*}
+Kuna $f'(0)$ on l\"ahenedes vasakult 0 ja l\"ahenedes paremalt 1, ei ole $f$ punktis 0 diferentseeruv. Seega on $f'(x)$ selline:
+\begin{equation*}
+f'(x)=
+\left\{
+\begin{aligned}
+&\sin(\pi-2x),\qquad\qquad\qquad\text{ kui }x<0\\
+&(3x\ln(x)+1+3x)x^{3x},\quad\ \text{ kui }x>0
+\end{aligned}
+\right.
+\end{equation*}
+\pagebreak\\
+\textbf{2.} Leidke funktsiooni $f(x)=\sqrt[3]{x}$ Taylori valem punktis $a=8$ j\"a\"akliikmega Lagrange'i kujul. Leidke vastava Taylori plo\"unoomi $T_n(x)$ j\"ark $n$, mis l\~oigus $[7,9]$ garanteerib pol\"unoomile $T_n(x)$ l\"ahenemist\"apsuse 0.001. Koostage arvuti abil 2 joonist, kus esimesel joonisel on l\~oigul $[7,9]$ funktsioonide vahe $f(x)-T_n(x)$ graafik ning teisel joonisel l\~oigul $[1,20]$ on samas teljestikus n\"aha funktsiooni $f(x)$ graafik ja pol\~unoomi $T_n(x)$ graafik. Esitage koos joonistega ka k\"asud, mis produtseerisid need joonised.\\
+\textbf{Lahendus:}\\
+Leian k\~oigepealt Taylori pol\"unoomi j\"argu $n$, millega on l\"ahenemist\"apsus l\~oigus $[7,9]$ 0.001. Kasutan selleks teoreemi 4.22 j\"a\"akliikme valemit
+\begin{equation*}
+R_n(a,x)=\frac{f^{(n+1)}(c)}{(n+1)!}(a-x)^{n+1},\ c\in(\min\{a,x\},\max\{a,x\})
+\end{equation*}
+$a$ v\"a\"artuseks on antud 8 ning $x$ v\"a\"artus saab olla l\~oigust $[7,9]$ ehk suurima v\~oimalik vea jaoks valin $x=7$. Proovin j\"arjest $n$ v\"a\"artusi l\"abi:
+\begin{equation*}
+\begin{aligned}
+R_1(8,7)&=\frac{f^{(2)}(c)}{2!}1^2,\ c\in(7,8)\\
+&=-\frac{2}{2*9c^{\frac{5}{3}}}\\
+\end{aligned}
+\end{equation*}
+Kuna j\"a\"akliikme suurus s\~oltub c v\"a\"artusest p\"o\"ordv\~ordeliselt, valin absoluutv\"a\"artuselt suurima j\"a\"akliikme jaoks $c=8$:
+\begin{equation*}
+\begin{aligned}
+R_1(8,7)&=-\frac{2}{2*9*8^{\frac{5}{3}}}=\frac{1}{288}>\frac{1}{1000}=0.001\\
+R_2(8,7)&=\frac{f^{(3)}(c)}{3!}1^3\\
+&=\frac{10}{6*27c^{\frac{8}{3}}}\qquad\text{(valin j\"alle }c=8\text{ suurima R jaoks)}\\
+&=\frac{10}{6*27*8^{\frac{8}{3}}}=\frac{5}{201736}<\frac{1}{1000}=0.001
+\end{aligned}
+\end{equation*}
+Seega $T_2(x)$ on sobiva t\"apsusega. Leian $T_2(x)$:
+\begin{equation*}
+\begin{aligned}
+T_2(x)&=f(a)+f'(a)(x-a)+\frac{f''(a)(x-a)^2}{2}\\
+&=8^{\frac{1}{3}}+\frac{x-8}{3*8^{\frac{2}{3}}}-\frac{2(x-8)^2}{9*8^{\frac{5}{3}}}\\
+&=2+\frac{x}{12}-\frac{2}{3}-\frac{x^2-16x+64}{144}\\
+&=-\frac{x^2}{144}+\frac{7x}{36}+\frac{8}{9}
+\end{aligned}
+\end{equation*}
+\\\pagebreak\\
+Esimene joonis funktsioonide vahega $f(x)-T_2(x)$ vahemikus $[7,9]$:\\
+\begin{tikzpicture}
+    \begin{axis}[xmin=7, xmax=9, ymin=-0.001,ymax=0.005, axis x line=middle, axis y line=middle, axis line style=-latex, xlabel={$x$}, ylabel={$y$}]
+        \addplot [no marks,red] expression[domain=7:9,samples=30]{x^(1/3)-(-x*x/144+7*x/36+8/9)}
+        			node[pos=0.8,anchor=south east]{$y=f(x)-T_2(x)$};
+    \end{axis}
+\end{tikzpicture}\\
+Teine graafik funktsioonidega $f(x)$ ja $T_2(x)$ vahemikus $[1,20]$:\\
+\begin{tikzpicture}
+    \begin{axis}[xmin=0,xmax=20, ymin=0,ymax=4, axis x line=middle, axis y line=middle, axis line style=-latex, xlabel={$x$}, ylabel={$y$}]
+        \addplot [no marks,blue] expression[domain=1:20,samples=100]{(x)^(1/3)} 
+                    node[pos=0.65,anchor=south]{$y=\sqrt[3]{x}$};
+        \addplot [no marks,red] expression[domain=1:20,samples=100]{-x*x/144+7*x/36+8/9}
+        			node[pos=0.65,anchor=north]{$y=-\frac{x^2}{144}+\frac{7x}{36}+\frac{8}{9}$};
+    \end{axis}
+\end{tikzpicture}\\
+\scriptsize{\verb!Esimese graafiku koostamiseks kasutasin latexi kaske:!\\
+\verb!\begin{axis}[xmin=7, xmax=9, ymin=-0.001,ymax=0.005,!\\
+\verb!		     axis x line=middle, axis y line=middle, axis line style=-latex, xlabel={$x$}, ylabel={$y$}]!\\
+\verb!	   \addplot [no marks,red] expression[domain=7:9,samples=30]{x^(1/3)-(-x*x/144+7*x/36+8/9)}!\\
+\verb!		        node[pos=0.8,anchor=south east]{$y=f(x)-T_2(x)$};!\\
+\verb!\end{axis}!\\\\
+\verb!Teise graafiku koostamiseks kasutasin latexi kaske:!\\
+\verb!\begin{axis}[xmin=0,xmax=20, ymin=0,ymax=4,!\\
+\verb!      axis x line=middle, axis y line=middle, axis line style=-latex, xlabel={$x$}, ylabel={$y$}]!\\
+\verb!    \addplot [no marks,blue] expression[domain=1:20,samples=100]{(x)^(1/3)}!\\
+\verb!         node[pos=0.65,anchor=south]{$y=\sqrt[3]{x}$};!\\
+\verb!    \addplot [no marks,red] expression[domain=1:20,samples=100]{-x*x/144+7*x/36+8/9}!\\
+\verb!         node[pos=0.65,anchor=north]{$y=-\frac{x^2}{144}+\frac{7x}{36}+\frac{8}{9}$};!\\
+\verb!\end{axis}!\\
+\verb!Molemad kasutavad pgfplot pakki!}
+\pagebreak\\
+\textbf{3.} Olgu $f: \mathbb{R}\to\mathbb{R}$ l\~opmata palju kordi diferentseeruv, kusjuures $f'(a)=f''(a)=f'''(a)=f^{(4)}(a)=f^{(5)}(a)=0$ ning $f^{(6)}(a)<0$. T\~oestage, et funktsioonil $f$ on punktis $a$ range lokaalne maksimum.\\
+\textbf{Lahendus:} V\~otan funktsiooni $f$ 6 liikmelise Taylori jada $T_5(x)$:\\
+\begin{equation*}
+T_5(x)=\sum_{k=0}^5\frac{f^{(k)}(x-a)^k}{k!}=0
+\end{equation*}
+Kuna $f$ esimesed 5 tuletist on 0, on ka Taylori jada 0. Leian j\"a\"akliikme:
+\begin{equation*}
+R_5(a,x)=\frac{f^{(6)}(c)}{6!}(x-a)^6
+\end{equation*}
+Vaatlen n\"u\"ud funktsiooni piirv\"a\"artusi l\"ahenedes punktile $a$:
+\begin{equation*}
+\begin{aligned}
+\lim_{x\to a+}f(x)=\lim_{x\to a+}T_5(x)+R_5(a,x)=\lim_{x\to a+}\frac{f^{(6)}(c)}{6!}(x-a)^6\\
+\lim_{x\to a-}f(x)=\lim_{x\to a-}T_5(x)+R_5(a,x)=\lim_{x\to a-}\frac{f^{(6)}(c)}{6!}(x-a)^6
+\end{aligned}
+\end{equation*}
+$(x-a)^6$ on igal juhul positiivne, kuna see on tõstetud paarisarvulisele astmele. Samuti on 6! alati positiivne. $f$ on l\~opmata kordi pidevalt diferentseeruv, seega $f^{(6)}$ on pidev ning $f^{(6)}(a)$ on negatiivne, seega kui $x$ l\"aheneb $a$le, siis on ka $f^{(6)}(x)$ negatiivne, seega on ka $f(x)$ negatiivne, kui $x$ l\"aheneb $a$le. Kuna $f(a)=0$ ning $a$ mingis \"umbruses on $f$ negatiivne, on $f(a)$ lokaalne maksimum.
+\end{document}

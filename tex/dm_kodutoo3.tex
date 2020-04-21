@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{forest}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\addtolength{\oddsidemargin}{-1in}
+\addtolength{\evensidemargin}{-1in}
+\addtolength{\textwidth}{1.75in}
+\begin{document}
+\begin{center}
+\Large\textbf{Kodut\"o\"o nr. 3}\\
+Joosep N\"aks
+\end{center}
+\textbf{1.} T\~oestage, et naturaalarvudel on j\"argmine omadus:\\
+\begin{equation*}
+\forall x \forall y (x'\cdot y=x\cdot y+y).
+\end{equation*}
+\textbf{T\~oestus:} T\~oestan induktsiooniga, et j\"argnev valem kehtib iga $y$ korral:\\
+\begin{equation*}
+\begin{aligned}
+\mathcal{F}(y) = \forall x (x'\cdot y=x\cdot y+y).
+\end{aligned}
+\end{equation*}
+\textbf{Alus:}
+\begin{equation*}
+\begin{aligned}
+x'\cdot0&=0\quad(P5)\\
+&=x\cdot0\quad(P5)\\
+&=x\cdot0+0\quad(P3)
+\end{aligned}
+\end{equation*}
+\textbf{Samm:} Eeldan et kehtib $\forall x (x'\cdot y=x\cdot y+y)$, n\"aitan, et sel juhul kehtib $\forall x (x'\cdot y'=x\cdot y'+y')$:
+\begin{equation*}
+\begin{aligned}
+x'\cdot y'&=x'\cdot y+x'\quad(P6)\\
+&=(x\cdot y+ y)+x'\quad(induktsioonieeldus)\\
+&=x\cdot y+ (y+x')\quad(liitmise assotsiatiivsus,\ teoreem\ 1.114)\\
+&=x\cdot y+ (y+x)'\quad(P4)\\
+&=x\cdot y+ (x+y)'\quad(liitmise kommutatiivsus,\ teoreem\ 1.115)\\
+&=x\cdot y+ (x+y')\quad(P4)\\
+&=(x\cdot y+ x)+y'\quad(liitmise assotsiatiivsus,\ teoreem\ 1.114)\\
+&=x\cdot y'+y'\quad(P6)\\
+\end{aligned}
+\end{equation*}
+Seega kehtib $\forall x \forall y (x'\cdot y=x\cdot y+y)$ induktsiooniaksioomi P7 p\~ohjal.
+\pagebreak\\
+\textbf{2.} On antud 9 tipu ja 17 servaga graaf. Seejuures on teada, et graafis iga tipu aste on 3 v\~oi 4. Leidke astmega 3 tippude arv.\\
+\textbf{Lahendus:} V\~otan astmega 3 tippude koguseks q ja astmega 4 tippude koguseks $\varpi$. On teada, et kokku on tippe 9 ehk kehtib $q+\varpi=9$. On teada ka, et k\~oigi tippude astmete summa on v\~ordne kahekordse graafi servade arvuga (loengukonspekti teoreem 2.20), seega kehtib ka $3q+4\varpi=2\cdot17=34$. Lahendan v\~orrandis\"usteemi:
+\begin{equation*}
+\begin{aligned}
+\systeme{
+	q+\varpi=9,
+	3q+4\varpi=34
+}\\
+q=9-\varpi\\
+3(9-\varpi)+4\varpi=34\\
+27-3\varpi+4\varpi=34\\
+\varpi=7\\
+q=2
+\end{aligned}
+\end{equation*}
+Seega on tippude arv, mille aste on 3, 2.
+\pagebreak\\
+\textbf{3.} Tooge n\"aide v\"ahemalt kahe tipuga graafist, mis on isomorfne oma t\"aiendgraafiga. Kirjutage v\"alja nend vaheline isomorfism.\\
+\textbf{Lahendus:} Minu n\"aide on graaf $G=(\{A,B,C,D\},\{\{A,B\},\{B,C\},\{C,D\}\})$, mille t\"aiendgraaf on $G'=(\{A,B,C,D\},\{\{B,D\},\{D,A\},\{A,C\}\})$
+\begin{align*}
+\begin{gathered}
+\textbf{G:}
+\end{gathered}
+&&
+\begin{gathered}
+\textbf{G':}
+\end{gathered}
+\end{align*}
+\begin {center}
+\begin {tikzpicture}[auto, node distance = 2cm and 2cm, on grid, thick, main node/.style ={circle, draw, minimum width = 1cm}]
+        \node[main node] (A) {A};
+        \node[main node] (B) [left = of A] {B};
+        \node[main node] (C) [below = of A] {C};
+        \node[main node] (D) [below= of B] {D};
+        \path (C) edge (D);
+        \path (B) edge (A);
+        \path (C) edge (B);
+\end{tikzpicture}
+\qquad\qquad\qquad\quad
+\begin {tikzpicture}[auto, node distance = 2cm and 2cm, on grid, thick, main node/.style ={circle, draw, minimum width = 1cm}]
+        \node[main node] (A) {A};
+        \node[main node] (B) [left = of A] {B};
+        \node[main node] (C) [below = of A] {C};
+        \node[main node] (D) [below= of B] {D};
+        \path (A) edge (D);
+        \path (A) edge (C);
+        \path (D) edge (B);
+\end{tikzpicture}
+\end{center}
+Graafist G saab v\~otta isomorfismi $A\to B, B\to D, C\to A, D\to C$, siis saame graafi \\$V=(\{A,B,C,D\},\{\{B,D\},\{D,A\},\{A,C\}\})$, mis ongi $G$ t\"aiendgraaf.
+\pagebreak\\
+\textbf{4.} Olgu antud sidus graaf, milles iga tipu aste on 3. On teada, et $u$ on eraldav tipp. T\~oestagem et leidub serv $uv$ nii, et $uv$ on sild.\\
+\textbf{T\~oestus:} Definitsiooni kohaselt on $u$ eraldav tipp parajasti siis, kui tipu $u$ ja temaga indentsete servade eemaldamisel graafi sidususkomponentide arv suureneb. Seega kuna on teada, et iga tipu aste on 3, v\"aljub tipust t\"apselt 3 serva $ua$, $ub$ ja $uc$. Kuna $u$ on eraldav tipp, peavad tippudest $a$, $b$ ja $c$ 2 t\"ukki olema p\"arast $u$ eemaldamist erinevates sidusates komponentides, kuna muidu ei suureneks sidusate komponentide kogus. V\~otan nendeks tippudeks $a$ ja $b$. \\
+Kui tipp $c$ on p\"arast $u$ eemaldamist samas sidusas komponendis nagu $b$, on serv $ua$ sild, kuna $a$ ja $b$ on \"uhendatud vaid tipu $u$ kaudu. \\
+Samal p\~ohjusel, kui tipp $c$ on p\"arast $u$ eemaldamist samas sidusas kpmponendis nagu $a$, on serv $ub$ sild.\\
+ Kui p\"arast $u$ eemaldamist pole $c$ samas sidusas komponendis nagu $a$ ega ka $b$, siis on k\~oik servad $ua$, $ub$ ja $uc$ sillad, kuna nad on \"uhendatud vaid tipu $u$ kaudu. Seega on igal juhul v\"ahemalt \"uks tipuga $u$ indentsetest servadest sild ehk leidub sild $uv$.
+\end{document}
