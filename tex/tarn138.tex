@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\bfloor{\Bigl\lfloor}{\Bigr\rfloor}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\begin{document}
+\begin{center}
+\Large\textbf{T\"arn\"ulesanne nr. 104}\\
+\small{Joosep N\"aks}
+\end{center}
+Vaatleme funktsiooni $f:[0,1]\to\mathbb{R}$, kus
+\begin{gather*}
+f(x)=\left\{
+\begin{aligned}
+&\frac{1}{n},\quad\text{ kui }x=\frac{1}{n}\text{ mingi }n\in\mathbb{N}\text{ korral,}\\
+&0\qquad\text{mujal.}
+\end{aligned}
+\right.
+\end{gather*}
+Kas $f$ on integreeruv?\\
+\textbf{Lahendus:} Loengukonspekti omaduse 5.6 j\"argi on $f$ integreeruv parajasti siis, kui iga $\varepsilon>0$ korral leidub l\~oigu $[a,b]$ selline alajaotus T, et $S(T)-s(T)<\varepsilon$. Antud funktsioonile saan ma l\~oigus $[0,1]$ luua iga epsiloni puhul sellise jaotuse, et esimene osal\~oik on pikkusega $\frac{\varepsilon}{2}$. Sealt edasi j\"a\"ab alles l\~oplik arv $k$ $x$ v\"a\"artuseid, kus kehtib $x=\frac{1}{n},\ n\in\mathbb{N}$. V\~otan iga sellise $x$ v\"a\"artuse \"umber osal\~oigu pikkusega $\frac{\varepsilon}{2k}$. Kui m\~oni nendest osal\~oikudest kattuvad omavahel, \"uhendan need \"uheks osal\~oiguks. K\~oik piirkonnad, mis ei ole praeguseks osal\~oikudega kaetud, v\~otan eraldi osal\~oikudeks. Nendes osal\~oikudes on $f$ v\"a\"artus 0. N\"u\"ud kuna igas osal\~oigus on v\"ahemalt m\~oni v\"a\"artus, kus $x$ ei ole naturaalarvu p\"o\"ordarv, kehtib:
+\begin{gather*}
+s(T)=\sum_{u=1}^v \inf_{x\in[0,1]}f(x) \Delta x_k=0
+\end{gather*}
+Kuna naturaalarvu p\"o\"ordarvud esinevad esimeses osal\~oigus ning k\~oigis nendes maksimaalselt $k$ osal\~oigus, mis ma v\~otsin pikkusega maksimaalselt $\frac{\varepsilon}{2k}$ iga naturaalarvup\"o\"ordarvu kohta, kehtib ka j\"argnev v\~orratus (lihtsustamiseks v\~otan et kui $x$ on naturaalarvu p\"o\"ordarv siis $f$ v\"a\"artus on 1 mitte $x$, nii saan suurema tulemuse ehk v\~orratus ikkagi kehtib):
+\begin{gather*}
+S(T)=\sum_{u=1}^v \sup_{x\in[0,1]}f(x) \Delta x_k\leq\frac{\varepsilon}{2}+k\frac{\varepsilon}{2k}=\varepsilon
+\end{gather*}
+Seega leidub iga $\varepsilon$ jaoks selline jaotus $T$, et kehtib $S(T)-s(T)<\varepsilon-0=\varepsilon$, ehk $f$ on integreeruv.
+\end{document}
