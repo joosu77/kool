@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\bfloor{\Bigl\lfloor}{\Bigr\rfloor}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\begin{document}
+\begin{center}
+\Large\textbf{T\"arn\"ulesanne nr. 104}\\
+\small{Joosep N\"aks}
+\end{center}
+Funktsioon $f$ on pidev l\~oigus $[0,1]$. T\~oestage, et kehtib v\~ordus
+\begin{gather*}
+\int_0^\pi xf(\sin x)dx=\frac{\pi}{2}\int_0^\pi f(\sin x)dx
+\end{gather*}
+\textbf{Lahendus:} Jagan aditiivsuse p\~ohjal algse integraali kaheks:
+\begin{gather*}
+\int_0^\pi xf(\sin x)dx = \int_0^{\frac{\pi}{2}} xf(\sin x)dx+\int_{\frac{\pi}{2}}^\pi xf(\sin x)dx
+\end{gather*}
+Seej\"arel teen teises integraalis muutujavahetuse $u=\pi-x$ ning $du=-dx$:
+\begin{equation*}
+\begin{aligned}
+\int_0^{\frac{\pi}{2}} xf(\sin x)dx+\int_{\frac{\pi}{2}}^\pi xf(\sin x)dx&=\int_0^{\frac{\pi}{2}} xf(\sin x)dx+\int_{\frac{\pi}{2}}^0 (\pi-u)f(\sin (\pi-u))(-du)\\
+&=\int_0^{\frac{\pi}{2}} xf(\sin x)dx+\int_0^{\frac{\pi}{2}} (\pi-u)f(\sin (\pi-u))du
+\end{aligned}
+\end{equation*}
+Kuna $\sin x$ on l\~oigus $[0,\pi]$ punkti $\frac{\pi}{2}$ suhtes s\"ummeetriline, kehtib $\sin x=\sin(\pi-x)$ l\~oigus $[0,\pi]$:
+\begin{equation*}
+\begin{aligned}
+\int_0^{\frac{\pi}{2}} xf(\sin x)dx+\int_0^{\frac{\pi}{2}} (\pi-u)f(\sin (\pi-u))du&=\int_0^{\frac{\pi}{2}} xf(\sin x)dx+\int_0^{\frac{\pi}{2}} (\pi-u)f(\sin u)du\\
+&=\int_0^{\frac{\pi}{2}} xf(\sin x)dx+\int_0^{\frac{\pi}{2}} \pi f(\sin u)du-\int_0^{\frac{\pi}{2}} uf(\sin u)du\\
+&=\int_0^{\frac{\pi}{2}} \pi f(\sin u)du
+\end{aligned}
+\end{equation*}
+Kuna $\sin x$ on l\~oigus $[0,\pi]$ punkti $\frac{\pi}{2}$ suhtes s\"ummeetriline, on selle integraal 0st $\pi$ni sama, mis kaks korda integraal 0st $\frac{\pi}{2}$ni:
+\begin{equation*}
+\begin{aligned}
+\int_0^{\frac{\pi}{2}} \pi f(\sin u)du&=\pi\int_0^{\frac{\pi}{2}} f(\sin u)du\\
+&=\frac{\pi}{2}2\int_0^{\frac{\pi}{2}} f(\sin u)du\\
+&=\frac{\pi}{2}\int_0^\pi f(\sin u)du\\
+&=\frac{\pi}{2}\int_0^\pi f(\sin x)dx\\
+\end{aligned}
+\end{equation*}
+Seega algne v\~ordus kehtib.
+\end{document}
