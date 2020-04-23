@@ -1,0 +1,112 @@
+Kodutöö nr 8b.                                                     Programmi väljund
+====================================================================================
+
+Antud (juhu)kastid:
+A[alus=47.000000x78.000000; h=63.000000; d=0.166667]
+B[alus=71.000000x14.000000; h=57.000000; d=0.125000]
+C[alus=2.000000x31.000000; h=47.000000; d=0.125000]
+D[alus=83.000000x65.000000; h=89.000000; d=0.333333]
+E[alus=94.000000x22.000000; h=1.000000; d=0.200000]
+F[alus=6.000000x63.000000; h=42.000000; d=0.125000]
+G[alus=96.000000x42.000000; h=11.000000; d=0.111111]
+H[alus=66.000000x60.000000; h=64.000000; d=0.200000]
+I[alus=57.000000x40.000000; h=53.000000; d=0.333333]
+J[alus=80.000000x71.000000; h=84.000000; d=0.333333]
+K[alus=2.000000x55.000000; h=75.000000; d=0.333333]
+L[alus=66.000000x2.000000; h=55.000000; d=0.333333]
+M[alus=29.000000x72.000000; h=87.000000; d=1.000000]
+N[alus=47.000000x42.000000; h=87.000000; d=Infinity]
+O[alus=0.000000x67.000000; h=74.000000; d=1.000000]
+P[alus=12.000000x48.000000; h=22.000000; d=Infinity]
+Q[alus=22.000000x83.000000; h=28.000000; d=0.142857]
+R[alus=27.000000x24.000000; h=50.000000; d=0.200000]
+S[alus=57.000000x5.000000; h=46.000000; d=Infinity]
+T[alus=55.000000x54.000000; h=82.000000; d=0.200000]
+
+Sorteeritult kõrguste järgi:
+0. E[alus=94.000000x22.000000; h=1.000000; d=0.200000]
+1. G[alus=96.000000x42.000000; h=11.000000; d=0.111111]
+2. P[alus=12.000000x48.000000; h=22.000000; d=Infinity]
+3. Q[alus=22.000000x83.000000; h=28.000000; d=0.142857]
+4. F[alus=6.000000x63.000000; h=42.000000; d=0.125000]
+5. S[alus=57.000000x5.000000; h=46.000000; d=Infinity]
+6. C[alus=2.000000x31.000000; h=47.000000; d=0.125000]
+7. R[alus=27.000000x24.000000; h=50.000000; d=0.200000]
+8. I[alus=57.000000x40.000000; h=53.000000; d=0.333333]
+9. L[alus=66.000000x2.000000; h=55.000000; d=0.333333]
+10. B[alus=71.000000x14.000000; h=57.000000; d=0.125000]
+11. A[alus=47.000000x78.000000; h=63.000000; d=0.166667]
+12. H[alus=66.000000x60.000000; h=64.000000; d=0.200000]
+13. O[alus=0.000000x67.000000; h=74.000000; d=1.000000]
+14. K[alus=2.000000x55.000000; h=75.000000; d=0.333333]
+15. T[alus=55.000000x54.000000; h=82.000000; d=0.200000]
+16. J[alus=80.000000x71.000000; h=84.000000; d=0.333333]
+17. M[alus=29.000000x72.000000; h=87.000000; d=1.000000]
+18. N[alus=47.000000x42.000000; h=87.000000; d=Infinity]
+19. D[alus=83.000000x65.000000; h=89.000000; d=0.333333]
+
+Mahtuvusrelatsioonid:
+Kast 0. mahub kasti 1.
+Kast 4. mahub kasti 10.
+Kast 4. mahub kasti 11.
+Kast 4. mahub kasti 12.
+Kast 4. mahub kasti 16.
+Kast 4. mahub kasti 17.
+Kast 4. mahub kasti 19.
+Kast 6. mahub kasti 8.
+Kast 6. mahub kasti 10.
+Kast 6. mahub kasti 11.
+Kast 6. mahub kasti 12.
+Kast 6. mahub kasti 15.
+Kast 6. mahub kasti 16.
+Kast 6. mahub kasti 17.
+Kast 6. mahub kasti 18.
+Kast 6. mahub kasti 19.
+Kast 7. mahub kasti 8.
+Kast 7. mahub kasti 11.
+Kast 7. mahub kasti 12.
+Kast 7. mahub kasti 15.
+Kast 7. mahub kasti 16.
+Kast 7. mahub kasti 17.
+Kast 7. mahub kasti 18.
+Kast 7. mahub kasti 19.
+Kast 8. mahub kasti 11.
+Kast 8. mahub kasti 12.
+Kast 8. mahub kasti 16.
+Kast 8. mahub kasti 19.
+Kast 9. mahub kasti 10.
+Kast 9. mahub kasti 11.
+Kast 9. mahub kasti 16.
+Kast 9. mahub kasti 17.
+Kast 9. mahub kasti 19.
+Kast 10. mahub kasti 11.
+Kast 10. mahub kasti 16.
+Kast 10. mahub kasti 17.
+Kast 10. mahub kasti 19.
+Kast 11. mahub kasti 16.
+Kast 11. mahub kasti 19.
+Kast 12. mahub kasti 16.
+Kast 12. mahub kasti 19.
+Kast 13. mahub kasti 16.
+Kast 13. mahub kasti 17.
+Kast 13. mahub kasti 19.
+Kast 14. mahub kasti 16.
+Kast 14. mahub kasti 17.
+Kast 14. mahub kasti 19.
+Kast 15. mahub kasti 16.
+Kast 15. mahub kasti 19.
+Kast 17. mahub kasti 19.
+Mahtuvusseoseid kokku: 50; relatsiooni alamhulki: 2147483647
+
+Leitud pakkimine:
+0. --> 1.
+4. --> 10.
+6. --> 8.
+7. --> 11.
+9. --> 16.
+12. --> 19.
+13. --> 17.
+Tulemus objektide järjendina: 1(0) 2 3 5 8(6) 10(4) 11(7) 14 15 16(9) 17(13) 18 19(12)
+
+====================================================================================
+Joosep Näks                                                  2020-04-23 22:05:15.81
