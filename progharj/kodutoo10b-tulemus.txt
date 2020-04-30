@@ -1,0 +1,13 @@
+Kodutöö nr 8b.                                                     Programmi väljund
+====================================================================================
+
+Antud sõned: a = kaer, b = aekarekae
+Nende ühised osasõned c:
+[kar, kae, aer]
+
+Antud sõned: a = oekorekror, b = koerte
+Nende ühised osasõned c:
+[koer, kore, oere]
+
+====================================================================================
+Joosep Näks                                                  2020-04-30 11:38:24.688

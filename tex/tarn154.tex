@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\bfloor{\Bigl\lfloor}{\Bigr\rfloor}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\begin{document}
+\begin{center}
+\Large\textbf{T\"arn\"ulesanne nr. 154}\\
+\small{Joosep N\"aks}
+\end{center}
+Olgu $f$ reaalteljel pidev funktsioon. Leidke piirv\"a\"artus
+\begin{gather*}
+\lim_{h\to0}\frac{1}{h}\int_a^b(f(x+h)-f(x))dx
+\end{gather*}
+\textbf{Lahendus:} Olgu $F(x)$ funktsiooni $f(x)$ algfunktsioon ehk kehtib $F'(x)=f(x)$. Sel juhul saab integraali lahti kirjutada:
+\begin{equation*}
+\begin{aligned}
+\lim_{h\to0}\frac{1}{h}\int_a^b(f(x+h)-f(x))dx&=\lim_{h\to0}\frac{1}{h}(F(b+h)-F(b))-(F(a+h)-F(a))\\
+&=\lim_{h\to0}\frac{F(b+h)-F(b)}{h}-\frac{F(a+h)-F(a)}{h}
+\end{aligned}
+\end{equation*}
+Tuletise definitsiooni kohaselt on see:
+\begin{equation*}
+\begin{aligned}
+\lim_{h\to0}\frac{F(b+h)-F(b)}{h}-\frac{F(a+h)-F(a)}{h}&=F'(b)-F'(a)\\
+&=f(b)-f(a)
+\end{aligned}
+\end{equation*}
+Seega on selle piirv\"a\"artuse v\"a\"artus $f(b)-f(a)$.
+\end{document}

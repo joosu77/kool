@@ -1,0 +1,11 @@
+Kodutöö nr 10c.                                                     Programmi väljund
+====================================================================================
+
+Antud sõnad: [hiir, kass, pais, paisk, pass, piisk, viir, viis, viisk]
+Leitud tulemus: hiir->viir->viis->viisk->piisk->paisk->pais->pass->kass
+
+Antud sõnad: [hiir, kass, pais, paisk, pass, piisk, kiir, viir, viis, viisk, raisk, kask]
+Leitud tulemus: hiir->kiir->viir->viis->viisk->piisk->paisk->pais->pass->kass->kask
+
+====================================================================================
+Joosep Näks                                                  2020-04-30 13:30:41.572
