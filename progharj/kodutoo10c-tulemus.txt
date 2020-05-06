@@ -8,4 +8,4 @@ Antud sõnad: [hiir, kass, pais, paisk, pass, piisk, kiir, viir, viis, viisk, ra
 Leitud tulemus: hiir->kiir->viir->viis->viisk->piisk->paisk->pais->pass->kass->kask
 
 ====================================================================================
-Joosep Näks                                                  2020-04-30 13:30:41.572
+Joosep Näks                                                  2020-04-30 17:26:57.271
