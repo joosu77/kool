@@ -1,0 +1,213 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{systeme}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\addtolength{\oddsidemargin}{-1in}
+\addtolength{\evensidemargin}{-1in}
+\addtolength{\topmargin}{-0.4in}
+\addtolength{\textheight}{1in}
+\addtolength{\textwidth}{1.75in}
+\begin{document}
+\begin{center}
+\Large\textbf{Kontrollt\"o\"o nr. 2}\\
+8. variant\\
+\small{Joosep N\"aks}
+\end{center}
+\textbf{1.} Olgu funktsioon $f(x)$ 2 korda diferentseeruv l\~oigus $[a,b]$ ja olgu funktsioonil selles l\~oigus 3 erinevat nullkohta. N\"aidata, et leidub v\"ahemlat \"uks punkt $c\in(a,b)$, nii,, et $f''(c)=0$.\\
+\textbf{Lahendus:}\\
+T\"ahistan need kolm nullkohta m, n ja o nii, et kehtib $m< n< o$. Kuna $f$ on diferentseeruv l\~oigus $[a,b]$, on ta ka diferentseeruv vahemikkudes $(m,n)$ ja $(n,o)$. Rolle'i teoreemi j\"argi kuna $f$ on diferentseeruv vahemikus $(m,n)$ ning $f(m)=f(n)$, siis leidub $p\in(m,n)$ nii, et $f'(p)=0$. Samuti kuna $f$ on diferentseeruv vahemikus $(n,o)$ ning $f(n)=f(o)$, siis leidub $q\in(n,o)$ nii, et $f'(q)=0$. Kuna $f$ on 2 korda diferentseeruv l\~oigus $[a,b]$, on $f'$ diferentseeruv l\~oigus $[a,b]$ ehk kuna $p,q\in[a,b]$, siis on $f'$ ka diferentseeruv vahemikus $(p,q)$. Seega Rolle'i teoreemi kohaselt kuna $f'(p)=f'(q)=0$, siis leidub selline $c\in(p,q)$ ehk ka $c\in(a,b)$, et kehtib $f''(c)=0$\\
+\pagebreak\\
+\textbf{2.} Kasutades Taylori valemit, t\~oestage, et
+\begin{equation*}
+\forall x\in(-1,\infty)\setminus\{0\}\quad\text{korral}\quad\ln(1+x)<x-\frac{x^2}{2}+\frac{x^3}{3}.
+\end{equation*}
+\textbf{Lahendus:}
+Leian antud funktsiooni teise astme Taylori pol\"unoomi nii et $a=0$:
+\begin{equation*}
+\begin{aligned}
+T_2(x)&=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)\\
+&=x-\frac{x^2}{2}
+\end{aligned}
+\end{equation*}
+Leian j\"a\"akliikme v\"a\"artuse vahemikus $(0,\infty)$:
+\begin{equation*}
+\begin{aligned}
+|R_2(x)|<\frac{f^{(3)}(c)}{6}x^3, c\in(0,\infty)\\
+f^{(3)}=\frac{2}{(1+x)^3}
+\end{aligned}
+\end{equation*}
+Suurima j\"a\"aliikme leidmiseks proovin leida $f^{(3)}$ ekstreemumeid:
+\begin{equation*}
+(f^{(3)}(x))'=\frac{-6}{(1+x)^4}
+\end{equation*}
+Funktsioonil $f^{(3)}$ ei leidu lokaalseid ekstreemumeid, kuna selleks, et tema tuletis 0 oleks, peaks kehtima $-6=0$, mis ei kehti kunagi. Kuna $f^{(3)}$ on pidev vahemikus $(0,\infty)$ ning ei oma lokaalseid ekstreemumeid, on tema suurim v\"a\"artus selles vahemikus:
+\begin{equation*}
+\begin{aligned}
+\max_{0<c<\infty}|f^{(3)}(c)| &= \lim_{k\to\infty}\max\{|f^{(3)}(0)|,|f^{(3)}(k)|\}\\
+&=\lim_{k\to\infty}\max\{|\frac{2}{1^3}|, |\frac{2}{(1+k)^3}|\}\\
+&=\max\{2,0\} = 2
+\end{aligned}
+\end{equation*}
+Seega kehtib $|R_2(x)|<\frac{2}{6}x^3=\frac{x^3}{3}$ ehk $x-\frac{x^2}{2}-\frac{x^3}{3}<\ln(1+x)<x-\frac{x^2}{2}+\frac{x^3}{3}$. Seega olen vahemikus $(0,\infty)$ n\"aidanud, et kehtib $\ln(1+x)<x-\frac{x^2}{2}+\frac{x^3}{3}$.\\
+Punktis $x=0$ kehtib $\ln(1+x)=\ln(1+0)=0=0-\frac{0^2}{2}+\frac{0^3}{3}=x-\frac{x^2}{2}+\frac{x^3}{3}$. Defineerin funktsiooni $g(x):=\ln(1+x)-x+\frac{x^2}{2}-\frac{x^3}{3}$. Kehtib $g(0)=0$. Punktile $x=\infty$ l\"ahenedes kehtib $\ln(1+x)=\ln(0)=-\infty<-\frac{11}{6}=-1-\frac{1}{2}-\frac{1}{3}=x-\frac{x^2}{2}+\frac{x^3}{3}$ ehk $g(\infty)<0$. Kuna $g(x)$ on pidev funktsioon siis selleks, et kuskil vahemikus $(-1,0)$ ei kehtiks $\ln(1+x)<x-\frac{x^2}{2}+\frac{x^3}{3}$, peab leiduma selline punkt $a\in(-1,0)$, kus $g(a)=0$. Rolle'i teoreemi j\"argi leidub sel juhul punkt $c\in(0,a)$, kus $g'(c)=0$. Proovin seda punkti leida:
+\begin{equation*}
+\begin{aligned}
+g'(x)&=(\ln(1+x)-x+\frac{x^2}{2}-\frac{x^3}{3})'\\
+&=\frac{1}{1+x}-1+x-x^2=0\\
+\text{Kuna }&x\in(0,a)\subset(0,1)\text{, siis }1+x\neq0\\
+0&=1-1-x+x+x^2-x^2+x^3\\
+0&=x^3
+\end{aligned}
+\end{equation*}
+Seega ei leidu sellist punkti $c$ ehk iga $x\in(-1,0)$ korral kehtib $\ln(1+x)<x+\frac{x^2}{2}-\frac{x^3}{3}$. Ning seega kehtib see ka terves vahemikus $(-1,\infty)\setminus\{0\}$, mida oli vaja n\"aidata.\\\pagebreak\\
+\textbf{3.} Leidke funktsiooni\\
+\begin{equation*}
+f(x)=\frac{1-2x^3}{x^2}
+\end{equation*}
+\begin{enumerate}
+	\item m\"a\"aramispiirkonnad;
+	\item katkevuskohad, pidevuspiirkonnad;
+	\item nullkohad, positiivsus- ja negatiivsuspiirkonnad;
+	\item ekstreemumkohad, kasvamis- ja kahanemispiirkonnad;
+	\item k\"a\"anupunktid, graafiku n\~ogusus- ja kumeruspiirkonnad;
+	\item as\"umptoodid;
+\end{enumerate}
+Leitud andmete p\~ohjal skitseerige funktsiooni graafik. Kandke joonisele as\"umptoodid.\\
+\textbf{Lahendus:}
+\begin{enumerate}
+	\item Funktsiooni $f(x)$ saab vaadelda kui funktsioonide $g(x)=1-2x^3$ ja $h(x)=x^2$ jagatist. Funktsioonid $g(x)$ ja $h(x)$ on positiivse astmega pol\"unoomid, seega on nende m\"a\"aramispiirkonnad ja muutumispiirkonnad terve reaalarvude hulk. Funktsiooni $f(x)$ kui jagatise puhul lugeja m\"a\"aramispiirkond on terve reaalarvude hulk ning nimetaja m\"a\"aramispiirkond on terve reaalarvude hulk v\"alja arvatud 0. Seega ei kuulu funktsiooni $f(x)$ m\"a\"aramispiirkonda vaid arvud, mis rahuldavad v\~orrandit $h(x)=x^2=0$. Ainus selline v\"a\"artus on $x=0$. Seega on funktsiooni $f(x)$ m\"a\"aramispiirkond $X=\mathbb{R}\setminus\{0\}$.
+	\item Nagu eelmises punktis n\"aidatud, on ainus katkevuspunkt 0. Kuna funktsioon $f$ on elementaarfunktsioonide liitfunktsioon, on ta terves oma m\"a\"aramispiirkonnas ka pidev.
+	\item Nullkohtade leidmine: funktsiooni $f$ kui jagatise v\"a\"artus on 0 parajasti siis, kui tema lugeja on null. Seega peab nullkoht rahuldama v\~orratust $g(x_0)=1-2x_0^3=0\Leftrightarrow1=2x_0^3\Leftrightarrow x_0=\left(\frac{1}{2}\right)^{\frac{1}{3}}=\frac{1}{\sqrt[3]{2}}$. Seega on reaalarvude hulgas funktsiooni $f$ ainus nullkoht $x_0=\frac{1}{\sqrt[3]{2}}$. Kuna funktsioon $f(x)$ on pidev oma m\"a\"aramispiirkonnas, saab ta m\"arki vahetada vaid katkevuspunktides ning nullkohtades ehk $x$ v\"a\"artustel 0 ja $\frac{1}{\sqrt[3]{2}}$. Seega piisab positiivsus- ja negatiivsuspiirkonna leidmiseks, kui vaatlen vahemikkudes $(-\infty,0)$, $(0,\frac{1}{\sqrt[3]{2}})$ ja $(\frac{1}{\sqrt[3]{2}},\infty)$ iga\"uhes \"uhte punkti.\\
+	\begin{equation*}
+	\begin{aligned}
+	x=-1\in(-\infty,0)&:\ f(-1)=\frac{1-2\cdot(-1)^3}{(-1)^2}=\frac{1+2}{1}=3>0\\
+	x=\frac{1}{2}\in(0,\frac{1}{\sqrt[3]{2}})&:\ f\left(\frac{1}{2}\right)=\frac{1-2\cdot(\frac{1}{2})^3}{(\frac{1}{2})^2}=\frac{1-\frac{1}{4}}{\frac{1}{4}}=\\
+	&\qquad\quad\ =\frac{\frac{3}{4}}{\frac{1}{4}}=\frac{3\cdot4}{4}=3>0\\
+	x=-1\in(\frac{1}{\sqrt[3]{2}},\infty)&:\ f(1)=\frac{1-2\cdot(1)^3}{(1)^2}=\frac{1-2}{1}=-1<0\\
+	\end{aligned}
+	\end{equation*}
+	Seega on funktsiooni $f(x)$ positiivsuspiirkond $(-\infty,\frac{1}{\sqrt[3]{2}})\setminus\{0\}$ ning negatiivsuspiirkond $(\frac{1}{\sqrt[3]{2}},\infty)$.
+	\item Funktsiooni ekstreemumid on punktid, kus funktsiooni tuletis on 0 ning kus teine tuletis ei ole 0. Leian funktsiooni $f$ tuletise: $f'(x)=\displaystyle\frac{-6x^4-2x+4x^4}{x^4}=\frac{-2(x^3+1)}{x^3}$. Leian teise tuletise: $f''(x)=\displaystyle\frac{-2(3x^5-3x^5-3x^2)}{x^6}=\frac{6}{x^4}$. Funktsioon $f'$ on null parajasti siis, kui tema lugeja on null ehk kui kehtib $-2(x_0^3+1)=0\Leftrightarrow x_0=(-1)^{1/3}=-1$. Vaatlen $f''(-1)$ v\"a\"artust: $f''(-1)=\frac{6}{(-1)^{1/3}}=-6\neq0$. Seega on funktsiooni $f(x)$ ainus ekstreemum v\"a\"artusel $x=-1$.\\
+	Funktsiooni $f$ kasvamispiirkond on $f'$ positiivsuspiirkond ning $f$ kahanemispiirkond on $f'$ negatiivsuspiirkond, seega leian kõ\~oigepealt need. Kuna $f'$ on pidev oma m\"a\"aramispiirkonnas ning tema ainus katkevuspunkt on $x=0$ saab $f'$ m\"ark muutuda vaid kohtades $x=0$ ja $x=-1$ ning kuna on teada, et $x=-1$, siis seal muutub kindlalt m\"ark. Seega piisab $f'$ positiivsus- ning negatiivsuspiirkondade leidmiseks, kui vaatlen \"uhte punkti vahemikust $(-\infty, -1)$ ning \"uhte punkti vahemikus $(-1,\infty)\setminus\{0\}$:
+	\begin{equation*}
+	\begin{aligned}
+	x=-2\in(-\infty,-1)&:\ f'(-2)=\frac{-2((-2)^3+1)}{(-2)^3}=\frac{-2(-8+1)}{-8}=\frac{14}{8}=\frac{7}{4}>0\\
+	x=1\in(0,\infty)&:\ f'(1)=\frac{-2((1)^3+1)}{(1)^3}=\frac{-2(1+1)}{1}=-2<0\\
+	\end{aligned}
+	\end{equation*}
+	Seega on $f'(x)$ positiivsuspiirkond ning $f(x)$ kasvamispiirkond $(-1,0)$ ning $f'(x)$ negatiivsuspiirkond ehk $f(x)$ kahanemispiirkond $(-\infty,-1)\cup(0,\infty)$.
+	\item Funktsiooni k\"a\"anukohad on punktid, kus funktsiooni teine tuletis on 0 ning kus kolmas tuletis ei ole 0. Funktsiooni $f$ teine tuletis on leitud eelmises punktis: $f''(x)=\displaystyle\frac{6}{x^4}$. Leian kolmanda tuletise: $f'''(x)=\displaystyle\frac{-24}{x^5}$. Funktsioon $f'$ on null parajasti siis, kui tema lugeja on null ehk kui kehtib $6=0$, kuid see ei kehti kunagi, seega funktsioonil puuduvad k\"a\"anukohad.\\
+	Funktsiooni $f$ graafiku n\~ogususpiirkond on $f''$ positiivsuspiirkond ning $f$ graafiku kumeruspiirkond on $f'$ negatiivsuspiirkond, seega leian k\~oigepealt need. Kuna $x$ paarisarvulise astmega on alati positiivne, on $x^4$ alati positiivne ning kahe positiivse arvu jagatis on positiivne, on $f''(x)$ alati positiivne. Seega on $f''(x)$ positiivsuspiirkond ning $f(x)$ graafiku n\~ogususpiirkond $\mathbb{R}\setminus\{0\}$ ning kumeruspiirkond $f(x)$ graafikul puudub.
+	\item Olgu sirge y=mx+b funktsiooni $f$ kaldas\"umptoot. Loengukonspekti lause 4.17 j\"argi saan kehtib sel juhul $m=\displaystyle\lim_{x\to\infty}\frac{f(x)}{x}=\lim_{x\to\infty}\frac{1-2x^3}{x^3}=\lim_{x\to\infty}\frac{1}{x^3}-2=-2$ ning $b=\displaystyle\lim_{x\to\infty}f(x)-mx=\lim_{x\to\infty}\frac{1-2x^3}{x^2}+2x=\lim_{x\to\infty}\frac{1-2x^3+2x^3}{x^2}=\lim_{x\to\infty}\frac{1}{x^2}=0$. Seega on funktsiooni $f$ kaldas\"umptoodiks sirge $y=mx+b$.\\
+	Proovin leida ka p\"ustas\"umptooti: $x=a$. Funktsioonil $f$ peab olema selles kohas katkevuskoht ning kuna funktsioonil $f$ on vaid \"uks katkevuskoht, saab $a$ v\"a\"artus olla vaid 0. $x=0$ on p\"ustas\"umptoot vaid juhul, kui $\displaystyle\lim_{x\to a+} f(x)$ v\"a\"artus on $\infty$ v\~oi $-\infty$. $\displaystyle\lim_{x\to a+} f(x)=\lim_{x\to a+}\frac{1-x^3}{x^2}=\lim_{x\to a+}\frac{-3x^2}{2x}=\lim_{x\to a+}-\frac{3}{2}x=-\infty$. Seega $x=0$ on funktsiooni $f(x)$ r\~ohkas\"umptoot.
+\end {enumerate}
+Kogutud andmete p\~ohjal skitseeritud funktsiooni graafik:
+\begin{figure}[htbp]
+\hspace{4cm}
+\includegraphics[scale=0.039,angle=90]{skitseering.jpg}
+\end{figure}
+\pagebreak\\
+\textbf{4.} Vaatleme funktsiooni $f:[0,1]\to\mathbb{R}$, kus
+\begin{equation*}
+\begin{aligned}
+f(x)=\left\{
+\begin{aligned}
+\frac{1}{n}&,&&\text{ kui }x\in\left(\frac{1}{n+1},\frac{1}{n}\right] \text{ mingi } n\in\mathbb{N} \text{ korral}\\
+0&,&&\text{ kui }x=0
+\end{aligned}
+\right.
+\end{aligned}
+\end{equation*}
+Kas $f$ on integreeruv l\~oigus $[0,1]$?\\
+\textbf{Lahendus:}\\
+Loegukonspekti teoreemi 5.6 kohaselt on $f$ integreeruv l\~oigus $[0,1]$ parajasti siis, kui iga $\varepsilon>0$ jaoks leidub l\~oigu $[0,1]$ selline alajaotus $T$, et $S(T)-s(T)<\varepsilon$. Fikseerin mingi $\varepsilon_0$ ning loon sellele alajaotuse. Esimene osal\~oik on $(0,\frac{\varepsilon_0}{2})$. Kuna $\varepsilon_0$ on mingi reaalarv, on ka $\frac{2}{\varepsilon_0}$ reaalarv. Seega on mingi l\~oplik arv $k$ naturaalarve, mis on v\"aiksemad kui $\frac{2}{\varepsilon_0}$. Loon iga $n\in\mathbb{N}, \frac{\varepsilon_0}{2}<\frac{1}{n}$ puhul punkti $x=\frac{1}{n}$ \"umber $\frac{\varepsilon_0}{2k}$ pikkuse l\~oigu ning panen need jaotusesse $T$ kokku nii, et kui m\~oned sellised l\~oigud kattuvad, siis \"uhendan nad \"uheks l\~oiguks ning kui kahe sellise j\"arjestikuse l\~oigu vahele j\"a\"ab vahe, teen selle uueks l\~oiguks. Nii saavutan jaotuse $T$. Leian vahe $S(T)-s(T)$:
+\begin{equation*}
+\begin{aligned}
+S(T)-s(T)&=\sum_{k=1}^nM_k\cdot \Delta x_k-\sum_{k=1}^nm_k\cdot \Delta x_k\\
+&=\sum_{k=1}^n(M_k-m_k)\cdot \Delta x_k\\
+M_k&=\sup_{x\in[x_{k-1},x_k]}\{f(x)\}\\
+m_k&=\inf_{x\in[x_{k-1},x_k]}\{f(x)\}
+\end{aligned}
+\end{equation*}
+Hindan lihtsustamiseks $M_1$ v\"a\"artuseks 1. See on suurem kui see p\"ariselt on, kuna selleks, et $f(x)\geq1$ mingi x korral, peaks t\"ahendama, et kehtib $\frac{1}{n}\geq1\Leftrightarrow1\geq n$ kuid \"ukski naturaalarv pole v\"aiksem kui 1. Liikme $m_1$ v\"a\"artus on 0, kuna $f(0)=0$ ja funktsioonil $f$ pole negatiivseid v\"a\"artuseid. Seega on summa esimene liige $(1-0)\frac{\varepsilon_0}{2}=\frac{\varepsilon_0}{2}$ J\"argmiste osal\~oikude hulgas on \"ulimalt $k$ osal\~oiku, mis sisaldavad m\~one naturaalarvu p\"o\"ordarvu. Hindan nende l\~oikude $M$ v\"a\"artusteks samuti 1, mis on j\"alle suuremad kui nad p\"ariselt on. Hindan nende l\~oikude $m$ v\"a\"artusteks 0, mis on v\"aiksemad kui nad p\"ariselt on. Seega on nendele osal\~oikudele vastavate summa liikmete summa \"ulimalt $k\frac{\varepsilon_0}{2k}=\frac{\varepsilon_0}{2}$. \"Ulej\"a\"anud osal\~oikude sees on funktsiooni $f$ v\"a\"artus terve osal\~oigu pikkuses konstantse v\"a\"artusega, seega $m=M$ ehk need summa liikmed tulevad 0. Seega kehtib $S(T)-s(T)\leq\frac{\varepsilon_0}{2}+\frac{\varepsilon_0}{2}=\varepsilon_0$ ehk funktsioon $f$ on integreeruv l\~oigus $[0,1]$.\pagebreak\\
+\textbf{5.} Leidke m\"a\"aratud integraalid
+\begin{equation*}
+\int_{\frac{1}{4}}^{\frac{1}{\pi}}\left\lfloor{\frac{4}{x}}\right\rfloor dx,\qquad \int_0^{\frac{1}{4}}\frac{\arcsin\sqrt{x}}{\sqrt{1-x}}dx
+\end{equation*}
+\textbf{Lahendus:}\\
+Leian k\~oigepealt $\int_{\frac{1}{4}}^{\frac{1}{\pi}}\left\lfloor{\frac{4}{x}}\right\rfloor dx$ v\"a\"artuse. Kuna integreeritav funktsioon sisaldab p\~orandfunktsiooni, jagan integreerimispiirkonna erinevateks t\"ukkideks nii, et igas t\"ukis oleks p\~orandfunktsiooni v\"a\"artus konstantne:
+\begin{equation*}
+\begin{aligned}
+f(x):=\frac{4}{x}\\
+f\left(\frac{1}{4}\right)=\frac{4}{\frac{1}{4}}=16\\
+\left\lfloor f\left(\frac{1}{4}\right) \right\rfloor=16\\
+f\left(\frac{1}{\pi}\right)=\frac{4}{\frac{1}{\pi}}=4\pi\\
+\left\lfloor f\left(\frac{1}{\pi}\right) \right\rfloor=12\\
+\end{aligned}
+\end{equation*}
+Funktsioon $f$ on pidev ja kahanev funktsioon vaadeldavas l\~oigus nii et tema p\~orand peaks saavutama veel v\"a\"artused 13, 14 ja 15. Leian nendele vastavad $x$ v\"a\"artused:
+\begin{equation*}
+\begin{aligned}
+f(x_1)&=\frac{4}{x_1}=13\Leftrightarrow x_1=\frac{4}{13}\\
+f(x_2)&=\frac{4}{x_2}=14\Leftrightarrow x_2=\frac{4}{14}\\
+f(x_3)&=\frac{4}{x_3}=15\Leftrightarrow x_3=\frac{4}{15}\\
+\end{aligned}
+\end{equation*}
+Jagan integraali nendesse l\~oikudesse laiali:
+\begin{equation*}
+\begin{aligned}
+\int_{\frac{1}{4}}^{\frac{1}{\pi}}\left\lfloor{\frac{4}{x}}\right\rfloor dx&=\int_{\frac{1}{4}}^{\frac{4}{15}}\left\lfloor{\frac{4}{x}}\right\rfloor dx+\int_{\frac{4}{15}}^{\frac{4}{14}}\left\lfloor{\frac{4}{x}}\right\rfloor dx+\int_{\frac{4}{14}}^{\frac{4}{13}}\left\lfloor{\frac{4}{x}}\right\rfloor dx+\int_{\frac{4}{13}}^{\frac{1}{\pi}}\left\lfloor{\frac{4}{x}}\right\rfloor dx
+\end{aligned}
+\end{equation*}
+Kuna funktsioon $f$ igas vahemikus terve vahemiku v\"altel kahe mingi t\"aisarvu vahel, on tema p\~orandfunktsioon igas vahemikus konstantne. Seega on iga integraali v\"a\"artus l\~oigu pikkus korda $\floor{f(x)}$ v\"a\"artus suvalises punktis selles vahemikus:
+\begin{equation*}
+\begin{aligned}
+\int_{\frac{1}{4}}^{\frac{1}{\pi}}\left\lfloor{\frac{4}{x}}\right\rfloor dx&=\int_{\frac{1}{4}}^{\frac{4}{15}}\left\lfloor{\frac{4}{x}}\right\rfloor dx+\int_{\frac{4}{15}}^{\frac{4}{14}}\left\lfloor{\frac{4}{x}}\right\rfloor dx+\int_{\frac{4}{14}}^{\frac{4}{13}}\left\lfloor{\frac{4}{x}}\right\rfloor dx+\int_{\frac{4}{13}}^{\frac{1}{\pi}}\left\lfloor{\frac{4}{x}}\right\rfloor dx\\
+&=\left(\frac{4}{15}-\frac{1}{4}\right)15+\left(\frac{4}{14}-\frac{4}{15}\right)14+\left(\frac{4}{13}-\frac{4}{14}\right)13+\left(\frac{1}{\pi}-\frac{4}{13}\right)12\\
+&=\left(\frac{1}{4\cdot15}\right)15+\left(\frac{4}{15\cdot14}\right)14+\left(\frac{4}{13\cdot14}\right)13+\frac{12}{\pi}-\frac{48}{13}\\
+&=\frac{1}{4}+\frac{4}{15}+\frac{4}{14}-\frac{48}{13}+\frac{12}{\pi}\\
+&=\frac{1365+1456+1560-20160}{5460}+\frac{12}{\pi}\\
+&=\frac{12}{\pi}-\frac{15779}{5460}
+\end{aligned}
+\end{equation*}
+\pagebreak\\
+Leian n\"u\"ud $\displaystyle\int_0^{\frac{1}{4}}\frac{\arcsin\sqrt{x}}{\sqrt{1-x}}dx$ v\"a\"artuse. Teen muutujavahetuse $u=\displaystyle\arcsin{\sqrt{x}},\ du=\frac{dx}{2\sqrt{1-x}\sqrt{x}}$. Leian uued rajad: $x=0: u=\arcsin\sqrt0=0,\ x=\frac{1}{4}: u=\arcsin\sqrt{\frac{1}{4}}=\frac{\pi}{6}$ Seega saan:
+\begin{equation*}
+\begin{aligned}
+\int_0^{\frac{1}{4}}\frac{\arcsin\sqrt{x}}{\sqrt{1-x}}dx=\int_0^{\frac{\pi}{6}}u\cdot2\sqrt x\ du=2\int_0^{\frac{\pi}{6}}u\cdot\sin u\ du
+\end{aligned}
+\end{equation*}
+Kasutan ositi integreerimist:
+\begin{equation*}
+\begin{aligned}
+p&=u \qquad\ \qquad dp=du\\
+dv&=\sin u\ du\qquad  v=-\cos u\\
+2\int_0^{\frac{\pi}{6}}u\cdot\sin u\ du&=2((-u\cos u)\Big|_0^{\frac{\pi}{6}}+\int_0^{\frac{\pi}{6}}\cos u\ du)\\
+&=2(-\frac{\pi}{6}\cos \frac{\pi}{6}+0\cos 0+(\sin u)\Big|_0^{\frac{\pi}{6}})\\
+&=2(-\frac{\pi\sqrt3}{12}+(\sin \frac{\pi}{6}-\sin 0))\\
+&=2(-\frac{\pi\sqrt3}{12}+\frac{1}{2})\\
+&=\frac{6-\pi\sqrt3}{6}\\
+\end{aligned}
+\end{equation*}
+\textbf{6.} Arvutage p\"aratu integraali v\"a\"artus (hajuvuse korral t\~oestage tema hajuvus):
+\begin{equation*}
+\int_{-\infty}^\infty\frac{x^3}{x^4+5}dx
+\end{equation*}
+\textbf{Lahendus:}\\
+M\"arkan, et integreeritava funktsiooni saab \"umber kirjutada kui $\displaystyle\frac{x^3}{x^4+5}=\frac{1}{4}\frac{(x^4+5)'}{x^4+5}$ seega tema m\"a\"aramata integraal on $\ln(x^4+5)$. Kasutan seda et leida p\"aratu integraali v\"a\"artus:
+\begin{equation*}
+\begin{aligned}
+\int_{-\infty}^\infty\frac{x^3}{x^4+5}dx&=\int_{-\infty}^0\frac{x^3}{x^4+5}dx+\int_0^\infty\frac{x^3}{x^4+5}dx\\
+&=\frac{1}{4}(\lim_{c\to-\infty}\ln(x^4+5)\Big|_c^0+\lim_{p\to\infty}\ln(x^4+5)\Big|_0^p)\\
+&=\frac{1}{4}(\lim_{c\to-\infty}\ln(5)-\ln(c^4+5)+\lim_{p\to\infty}\ln(p^4+5)-\ln(5))\\
+&=\frac{1}{4}(\lim_{p\to\infty}\ln(p^4+5)-\lim_{c\to-\infty}\ln(c^4+5))\\
+&\lim_{c\to-\infty}\ln(c^4+5)=\infty\\
+&\lim_{p\to\infty}\ln(p^4+5)=\infty
+\end{aligned}
+\end{equation*}
+Integraal ei koondu kuna tekib $\infty-\infty$ m\"a\"aramatus.
+\end{document}

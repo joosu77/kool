@@ -1,0 +1,46 @@
+Põhjendus, miks minu programm leiab suunatud minimaalse toesepuu:
+Suunatud minimaalse toesepuu leidmiseks on vaja leida selline alamgraaf, et
+juurtipust oleks võimalik saada igasse tippu ning et kõigi servade kaalude
+summa oleks minimaalne.
+Vaatlen kõigepealt graafi juhul, kui suunatud
+tsüklid puuduvad. Kuna on teada, et toesepuu juurega 1 leidub, on teada et
+igasse tippu on võimalik jõuda juurest. Seega saan igas tipus vaadata kõiki
+sissetulevaid servi ning valida nendest kõige väiksema kaaluga serv ja
+teised servad eemaldada. Seda saab teha kuna ma tean, et suunatud toesepuus 
+igasse tippu peab sisenema täpselt üks serv, ning serva valimine nende
+hulgast ei mõjuta ülejäänud graafi. Kui seda servade valimist korrata iga
+tipu juures, jääb alles graaf, kus igal tipul (väljaarvatud juurel) on
+täpselt 1 sisendserv, seega kuna suunatud tsüklid puudusid, on tegemist
+puuga. Kuna igasse tippu peab juurest saama ehk igal tipul peab olema
+sissetulev serv, siis ainus viis teistsuguse puu saamiseks on mõnel tipul
+sissetulev serv ära kustutada ning asendada mõne teise servaga, mis
+eelmistel sammudel kustutati, kuid kuna need servad on suurema kaaluga,
+muutuks selle käigus graafi servade kaalude summa suuremaks. Seega on
+tegemist minimaalse suunatud toesepuuga.
+Juhul, kui graaf sisaldab ka tsükleid, võib sellise servade läbikäimise ning
+sissetulevate servade kustutamisel juhtuda, et tekib isoleeritud tsükkel.
+See täidaks tingimust, et igal tipul on üks sisendserv, kuid juurest ei ole
+võimalik igasse tippu jõuda. Kuna puus ei saa tsükleid leiduda, eemaldan
+enne toesepuu ehitamist graafist kõik suunatud tsüklid. Selleks otsin üles
+tsüklid, ning iga tsükli puhul võrdlen iga tipu juures, kui palju raskemaks
+kogu graaf muutuks, kui jätta alles tsüklis sisalduva serva asemel teistest
+servadest kõige kergem serv. Kustutan igast tsüklist selle serva, mille
+puhul muutus muudab graafi kõige vähem raskemaks. Nii olen elimineerinud
+kõik suunatud tsüklid ning saan varem kirjeldatud algoritmiga leida
+toesepuu.
+
+Kirjeldus programmi töökäigust:
+Kui kõik servad oleksid õiget pidi (ehk kujul (u,v), u<v), siis ei leiduks
+graafis suunatud tsükleid, kuna igat serva läbides õiget pidi läheb tipu
+number järjest suuremaks ning juba läbitud tipu arvu uuesti ei saa tekkida.
+Seega ainsad suunatud tsüklid, mis saavad tekkida, tekivad tagurpidi serva
+läbi. Seega kõigi tsüklite leidmiseks läbin graafi alustades tagurpidi
+servast. Kui jõuan tagurpidi servani tagasi, tean, et olen leidnud suunatud
+tsükli. Käin tsüklis kõik tipud läbi ning arvutan iga tipu jaoks, kui suur
+vahe on sellesse tippu siseneval serval, mis sisaldub tsüklis, ning teistest
+sellesse tippu sisenevatest servadest kõige kergemal. Eemaldan selle serva,
+mis on enda tipu teisest servast kõige rohkem raskem. Seejärel alustan
+uuesti tsükliotsingut.
+Kui suunatud tsüklid on leitud ning elimineeritud, käin kõik tipud läbi ning
+iga tipu juures kõik sisenevad servad läbi, ning elimineerin kõik servad
+peale kõige kergema.
