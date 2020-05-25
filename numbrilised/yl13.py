@@ -4,6 +4,9 @@ def f(x):
 
 def g(x):
     return x**2
+    
+def h(x):
+    return (math.sin(x))**2
 
 def ristkylik(a,b,f,n):
     h = float(b-a)/n
@@ -43,3 +46,5 @@ print simpson(2,13,f,100)
 print ristkylik(0,2,g,2)
 print trapets(0,2,g,2)
 print simpson(0,2,g,2)
+
+print ristkylik(0,math.pi/2,h,9)

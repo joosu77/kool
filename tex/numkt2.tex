@@ -1,0 +1,45 @@
+\documentclass{article}
+%\input longdiv.tex
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage{pgfplots}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\begin{document}
+\begin{center}
+\Large\textbf{Kodut\"o\"o}\\
+\small{Joosep N\"aks}
+\end{center}
+T\~oestage, et Taylori valemis
+\begin{equation*}
+f(x)=f(x_0)+f'(x_0)(x-x_0)+...+\frac{f^{(n)}(\xi(x))}{n!}(x-x_0)^n
+\end{equation*}
+on funktsioon $x\to f^{(n)}(\xi(x))$ pidev, kui $f\in C^n[x_0-\delta,x_0+\delta]$ mingi $\delta>0$ korral.\\
+\textbf{Lahendus:}\\
+Avaldan $f^{(n)}(\xi(x))$:
+\begin{equation*}
+\begin{aligned}
+\frac{f^{(n)}(\xi(x))}{n!}(x-x_0)^n=f(x_0)+f'(x_0)(x-x_0)+...+\frac{f^{(n-1)}}{(n-1)!}(x-x_o)^{n-1} -f(x)\\
+f^{(n)}(\xi(x))=\frac{n!}{(x-x_0)^n}\left(f(x_0)+f'(x_0)(x-x_0)+...+\frac{f^{(n-1)}}{(n-1)!}(x-x_o)^{n-1} -f(x)\right)\\
+\end{aligned}
+\end{equation*}
+$f'(x)$ on definitsiooni j\"argi:
+\begin{equation*}
+f'(x)=\lim_{a\to x}\frac{f(x)-f(a)}{x-a}
+\end{equation*}
+Seega kui v\~otta, et $x$ l\"aheneb $x_0$le, siis saan:
+\begin{equation*}
+\begin{aligned}
+f^{(n)}(\xi(x))&=\frac{n!}{(x-x_0)^n}\left(f(x_0)+f'(x_0)(x-x_0)+...+\frac{f^{(n-1)}}{(n-1)!}(x-x_o)^{n-1} -f(x)\right)\\
+&=\lim_{x\to x_0}\frac{n!}{(x-x_0)^{n-1}}\left(\frac{f(x_0)-f(x)}{x-x_0}+f'(x_0)+...+\frac{f^{(n-1)}}{(n-1)!}(x-x_o)^{n-2}\right)\\
+&=\lim_{x\to x_0}\frac{n!}{(x-x_0)^{n-1}}\left(-f'(x)+f'(x_0)+...+\frac{f^{(n-1)}}{(n-1)!}(x-x_o)^{n-2}\right)\\
+&=\lim_{x\to x_0}\frac{n!}{(x-x_0)^{n-2}}\left(\frac{f'(x_0)-f'(x)}{x-x_0}+...+\frac{f^{(n-1)}}{(n-1)!}(x-x_o)^{n-3}\right)\\
+&=\lim_{x\to x_0}\frac{n!}{(x-x_0)^{n-2}}\left(f''(x)+...+\frac{f^{(n-1)}}{(n-1)!}(x-x_o)^{n-3}\right)\\
+&\text{Kui seda j\"atkata kokku n korda, j\~ouan l\~opuks kujuni:}\\
+&=\lim_{x\to x_0}n!f^{(n)}(x)\\
+&= n!f^{(n)}(x) \\
+\end{aligned}
+\end{equation*}
+\end{document}

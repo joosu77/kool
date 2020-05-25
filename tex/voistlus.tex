@@ -1,0 +1,153 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{systeme}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\addtolength{\oddsidemargin}{-1in}
+\addtolength{\evensidemargin}{-1in}
+\addtolength{\topmargin}{-0.4in}
+\addtolength{\textheight}{1in}
+\addtolength{\textwidth}{1.75in}
+\begin{document}
+\begin{center}
+\Large\textbf{V\~oistlus}\\
+\small{Joosep N\"aks}
+\end{center}
+\textbf{1.}\\
+\begin{equation*}
+a_{n+1}=\frac{1+4a_n}{10-9a_n}
+\end{equation*}
+Leian j\"argmise liikme:
+\begin{equation*}
+\begin{aligned}
+a_{n+2}&=\frac{1+4a_{n+1}}{10-9a_{n+1}}\\
+&=\frac{1+4\frac{1+4a_n}{10-9a_n}}{10-9\frac{1+4a_n}{10-9a_n}}\\
+&=\frac{\frac{10-9a_n+4+16a_n}{10-9a_n}}{\frac{100-90a_n-9-36a_n}{10-9a_n}}\\
+&=\frac{10-9a_n+4+16a_n}{100-90a_n-9-36a_n}\\
+&=\frac{14+7a_n}{91-126a_n}\\
+&=\frac{2+a_n}{13-18a_n}\\
+a_{n+4}&=\frac{2+a_{n+2}}{13-18a_{n+2}}\\
+&=\frac{2+\frac{2+a_n}{13-18a_n}}{13-18\frac{2+a_n}{13-18a_n}}\\
+&=\frac{26-36a_n+2+a_n}{169-234a_n-36-18a_n}\\
+&=\frac{28-35a_n}{133-252a_n}\\
+&=\frac{4-5a_n}{19-36a_n}\\
+a_{n+8}&=\frac{4-5a_{n+4}}{19-36a_{n+4}}\\
+&=\frac{4-5\frac{4-5a_n}{19-36a_n}}{19-36\frac{4-5a_n}{19-36a_n}}\\
+&=\frac{76-144a_n-20+25a_n}{361-684a_n-144+180a_n}\\
+&=\frac{56-119a_n}{217-504a_n}\\
+&=\frac{56-119a_n}{217-504a_n}\\
+&=\frac{8-17a_n}{31-72a_n}\\
+\end{aligned}
+\end{equation*}
+M\"arkan, et kui vaadelda murde kujul $\displaystyle a_{n+k}=\frac{b_k+c_ka_n}{d_k+f_ka_n}$, siis tundub, nagu oleksid kordajate \"uldvalemid j\"argmised: $b_n=7n,\ c_n=7(7-3n),\ d_n=7(7+3n)\text{ ning }f_n=-7\cdot9n$ (ning k\~oik saab 7ga l\"abi jagada. Selle testimiseks vaatlen kordajate rekursiivseid valemeid:
+\begin{equation*}
+\begin{aligned}
+a_n&=\frac{b_{n-1}+c_{n-1}a_{n-1}}{d_{n-1}+f_{n-1}a_{n-1}}\\
+a_{n}&=\frac{b_{n-1}+c_{n-1}\frac{1+4a_{n-2}}{10-9a_{n-2}}}{d_{n-1}+f_{n-1}\frac{1+4a_{n-2}}{10-9a_{n-2}}}\\
+b_n&=10b_{n-1}+c_{n-1}\\
+c_n&=4c_{n-1}-9b_{n-1}\\
+d_n&=10d_{n-1}+f_{n-1}\\
+f_n&=-9d_{n-1}+4f_{n-1}
+\end{aligned}
+\end{equation*}
+Asendan pakutud \"uldliikmed sisse:
+\begin{equation*}
+\begin{aligned}
+b_{n+1}&=7\cdot10n+7(7-3n)=7^2(n+1)\\
+c_{n+1}&=4\cdot7(7-3n)-9\cdot7n=7^2(7-3(n+1))\\
+d_{n+1}&=10\cdot7(7+3n)-9\cdot7n=7^2(7+3(n+1))\\
+f_{n+1}&=-9(7+3n)-4\cdot9\cdot7n=7^2(-9(n+1)
+\end{aligned}
+\end{equation*}
+Seega \"uldliikme valemid t\"o\"otavad ehk kui $a_0=0$, siis $\displaystyle a_{2020}=\frac{b_{2020}+c_{2020}0}{d_{2020}+f_{2020}0}=\frac{b_{2020}}{d_{2020}}=\frac{2020}{7+3\cdot2020}=\frac{2020}{6067}$
+\pagebreak\\
+\textbf{2.}\\
+Valin $y=0$:
+\begin{equation*}
+\begin{aligned}
+f(x)^2-f(0)^2 = (x-0)f(x+0)\\
+f(x)^2-f(0)^2 = xf(x)\\
+f(0)^2 = f(x)^2-xf(x)\\
+f(0)^2 = f(x)(f(x)-x)\\
+\end{aligned}
+\end{equation*}
+Kuna $f(0)^2$ on konstantne, peab ka $f(x)(f(x)-x)$ olema konstantne. Kuna see on korrutis, piisab selleks, kui \"uks teguritest on 0, seega saan lahendid $f(x)=0$ ja $f(x)=x$. Proovin neid algsesse v\~orrandisse:
+\begin{equation*}
+\begin{aligned}
+f(x)=0:& f(x)^2-f(y)^2\\
+&=0-0\\
+&=(x-y)0\\
+&=(x-y)f(x+y)\\
+f(x)=x:& f(x)^2-f(y)^2\\
+&=x^2-y^2\\
+&=(x-y)(x+y)\\
+&=(x-y)f(x+y)
+\end{aligned}
+\end{equation*}
+Seega m\~olemad sobivad lahenditeks.
+\iffalse
+V\~otan algse v\~orrandi m\~olemast poolest $y$ j\"argi osatuletise:
+\begin{equation*}
+\begin{aligned}
+\frac{\partial}{\partial y}\left(f(x)^2-f(y)^2\right)&=\frac{\partial}{\partial y}\left((x-y)f(x+y)\right)\\
+-2f(y)f'(y)&=-f(x+y)+(x-y)f'(x+y)\\
+\end{aligned}
+\end{equation*}
+V\~otan $y=0$:
+\begin{equation*}
+\begin{aligned}
+-2f(0)f'(0)&=-f(x+0)+(x-0)f'(x+0)\\
+-2f(0)f'(0)&=-f(x)+xf'(x)\\
+2f(0)f'(0)&=f(x)-xf'(x)\\
+2f(0)f'(0)&=f(x)-xf'(x)\\
+\end{aligned}
+\end{equation*}
+\fi
+\iffalse
+\pagebreak\\
+\textbf{5.}
+\begin{equation*}
+\int_{-\pi/2}^{\pi/2}\ln(\cos x)dx
+\end{equation*}
+Leian m\"a\"aramata integraali ositi kahekordse ositi integreerimisega:
+\begin{gather*}
+u_1=\ln(\cos x)\quad du_1=\frac{\sin x}{\cos x}dx = \tan x\ dx\\
+dv_1=dx\quad v_1=x\\
+\int\ln(\cos x)dx = x\ln(\cos x)-\int x\tan x\ dx\\
+u_2=x\quad du_2=dx\\
+dv_2=\tan x\ dx\quad v_2=\frac{1}{\cos^2 x}\\
+\int x\tan x\ dx = \frac{x}{\cos^2 x} - \int\frac{1}{\cos^2}
+\end{gather*}
+\fi
+\pagebreak\\
+\textbf{4.}\\
+(a) T\~oestan abiomadused:
+\begin{equation*}
+\begin{aligned}
+(i):& \text{Juhul kui }y<z:\\
+&x+y\lor z = x+z\\
+&y<z \Rightarrow x+y<x+z\\
+&(x+y)\lor(x+z)=x+z\\
+& \text{Juhul kui }y>z:\\
+&x+y\lor z = x+y\\
+&y>z \Rightarrow x+y>x+z\\
+&(x+y)\lor(x+z)=x+y\\
+(ii):&\text{Juhul kui }x>y:\\
+&x\lor y+x\land y = x+y\\
+&\text{Juhul kui }x<y:\\
+&x\lor y+x\land y = y+x=x+y\\
+(iii):&\text{Juhul kui }x>y\text{ ehk }-x<-y:\\
+&x\lor y=x=-(-x)=-(-x)\land(-y)\\
+&\text{Juhul kui }x<y\text{ ehkl }-x>-y:\\
+&x\lor y=y=-(-y)=-(-x)\land(-y)\\
+(iv):&\text{Juhul kui }x>0\text{ ehk }-x<0:\\
+&x\lor0+(-x)\lor0=x+0=x\\
+&\text{Transitiivsuse p\~ohjal}x>0>-x\Rightarrow x>-x\\
+&\text{Juhul kui }x<0\text{ ehk }-x>0:\\
+&x\lor0+(-x)\lor0=0+(-x)=-x=-x\lor x\\
+\end{aligned}
+\end{equation*}
+\end{document}
