@@ -4,26 +4,26 @@ import matplotlib.pyplot as plt
 # Lähendatav funktsioon:
 def f(x):
     #return abs(x)
-    if x==0:
-        return 2
-    elif x==1:
-        return 0
-    elif x==2:
-        return 0
-    elif x==3:
-        return 2
-    else:
-        return 0
+    if x==2015:
+        return 418545
+    elif x==2016:
+        return 423420
+    elif x==2017:
+        return 426538
+    elif x==2018:
+        return 430805
+    elif x==2019:
+        return 434562
 
 # Leiab polünoomi ning väljastab selle kordajad:
 def vahimRuutMeetod(m,n,alfa):
     # Sõlmed:
     #x = [-1+2*i/m for i in range(m+1)]
-    x = [0,1,2,3]
+    x = [2015,2016,2017,2018, 2019]
     # maatriks A:
-    A = np.asmatrix([[x[i]**j for j in range(n+1)] for i in range(4)])
+    A = np.asmatrix([[x[i]**j for j in range(n+1)] for i in range(5)])
     D = A.T*A
-    b = A.T * np.asmatrix([f(x[i]) for i in range(4)]).T
+    b = A.T * np.asmatrix([f(x[i]) for i in range(5)]).T
     c = np.linalg.solve(D + np.identity(n+1) * alfa, b)
     return c.T.tolist()[0]
 
@@ -56,11 +56,13 @@ for kolmik in kolmikud:
 # Joonistan antud kolmikutega polünoomid välja:
 
 #joonistatavad = [[24,24,10**(-1)],[24,24,10**(-6)],[24,24,10**(-12)]]
-joonistatavad = [[2,1,0]]
+joonistatavad = [[4,4,0]]
 sis = np.arange(-1,1,0.01)
 for kolmik in joonistatavad:
     kordajad = vahimRuutMeetod(kolmik[0], kolmik[1], kolmik[2])
     plt.plot(sis, polyParser(kordajad, sis), label=" m="+str(kolmik[0])+" n="+str(kolmik[1])+" alfa="+str(kolmik[2]))
-plt.plot(sis, f(sis),label="|x|")
+vals = [2015,2016,2017,2018, 2019]
+vals2 = [[vals[i],f(vals[i])] for i in range(len(vals))]
+plt.plot(vals2)
 plt.legend()
 plt.show()
