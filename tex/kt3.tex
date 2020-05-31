@@ -1,0 +1,228 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{systeme}
+\usepackage{amssymb}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\addtolength{\oddsidemargin}{-0.75in}
+\addtolength{\evensidemargin}{-0.75in}
+\addtolength{\topmargin}{-0.4in}
+\addtolength{\textheight}{1in}
+\addtolength{\textwidth}{1.5in}
+\begin{document}
+\begin{center}
+\Large\textbf{Kontrollt\"o\"o nr. 3}\\
+8. variant\\
+\small{Joosep N\"aks}
+\end{center}
+\textbf{1.} Uurige j\"argmise rea koonduvust:
+\begin{equation*}
+\sum_{k=2}^\infty\frac{1}{\sqrt{k}}\ln\frac{k+1}{k-1}
+\end{equation*}
+\textbf{Lahendus:}\\
+Kasutan koonduvuse hindamiseks integraaltunnust. Selle eeldusteks on vaja n\"aidata, et funktsioon $f(x)=\frac{1}{\sqrt{x}}\ln\frac{x+1}{x-1}$ on piirkonnas $[2,\infty)$ mittenegatiivne ja kahanev.\\
+Funktsiooni osa $\frac{1}{\sqrt{x}}$ on alati positiivne, kuna ruutjuurel ei saa olla reaalarvulist negatiivset v\"a\"artust. Funktsiooni teine pool, $\ln\frac{x+1}{x-1}$ on positiivne parajasti siis, kui kehtib $\frac{x+1}{x-1}>1$. On teada, et $x\geq2$ ehk $x-1$ on alati positiivne, ning sellega saab v\~orratust l\"abi korrutada: 
+\begin{equation*}
+(x-1)\frac{x+1}{x-1}>x-1\Leftrightarrow x+1>x-1\Leftrightarrow 1>-1
+\end{equation*}
+Seega ka teine pool funktsioonist on alati positiivne. Kuna funktsioon $f$ on kahe alati positiivse osa korrutis, on funktsioon alati postiivne.\\
+Funktsiooni osa $\frac{1}{\sqrt{x}}$ on kahanev, kuna see s\~oltub $x$st p\"o\"ordv\~ordeliselt. V\~otan funktsiooni teisest poolest tuletise ning see osa on kahanev parajasti siis, kui tema tuletis on negatiivne:
+\begin{equation*}
+\left(\ln\frac{x+1}{x-1}\right)'=\frac{-2(x-1)}{(x+1)(x-1)^2}=\frac{-2}{x^2-1}
+\end{equation*}
+Kuna $x\geq2$, on $x^2-1$ alati positiivne ehk tuletis on alati negatiivne, seega on see funktsiooni osa kahanev. Kuna funktsioon $f$ on kahe kahaneva funktsiooni korrutis, on $f$ ka ise kahanev vahemikus $[2,\infty)$.\\
+Seega on integraaltunnuse eeldused t\"aidetud ehk summa $\sum_{k=2}^\infty\frac{1}{\sqrt{k}}\ln\frac{k+1}{k-1}$ koondub parajasti siis, kui koondub $\int_{2}^\infty\frac{1}{\sqrt{x}}\ln\frac{x+1}{x-1}dx$. Leian m\"a\"aramata integraali $\int\frac{1}{\sqrt{x}}\ln\frac{x+1}{x-1}dx$:
+\begin{gather*}
+\begin{aligned}
+\text{Integreerin ositi:}\quad u&=\ln\frac{x+1}{x-1}&& du=&\frac{-2}{x^2-1}dx\\
+dv&=\frac{dx}{\sqrt{x}}&& \null\ \ v=&2\sqrt{x}\\
+\end{aligned}\\
+\int\frac{1}{\sqrt{x}}\ln\frac{x+1}{x-1}dx=2\sqrt{x}\ln\frac{x+1}{x-1}+4\int\frac{\sqrt{x}}{x^2-1}dx
+\end{gather*}
+Integraali $\int\frac{\sqrt{x}}{x^2-1}dx$ hindamiseks teen muutujavahetuse $u=\sqrt{x},\ du=\frac{dx}{2\sqrt{x}}$:
+\begin{equation*}
+\int\frac{\sqrt{x}}{x^2-1}dx=2\int\frac{u^2}{u^4-1}du
+\end{equation*}
+Jagan murru $\frac{u^2}{u^4-1}$ osamurdudeks:
+\begin{gather*}
+\frac{u^2}{u^4-1}=\frac{u^2}{(u-1)(u+1)(u^2+1)}=\frac{A}{u-1}+\frac{B}{u+1}+\frac{Cu+D}{u^2+1}\\
+u^2=A(u+1)(u^2+1)+B(u-1)(u^2+1)+(Cu+D)(u^2-1)\\
+u^2=A(u^3+u^2+u+1)+B(u^3-u^2+u-1)+C(u^3-u)+D(u^2-1)\\
+\text{Kuna A, B, C ja D on kordajad, mis ei s\~oltu }t\text{st, saan v\~orrandis\"usteemi:}\\
+\left\{
+\begin{aligned}
+u^3(A+B+C)&=0\\
+u^2(A-B+D)&=u^2\\
+u(A+B-C)&=0\\
+A-B-D&=0
+\end{aligned}
+\right.\\
+\text{V\~orrandis\"usteemi lahendades saan lahendi:}\\
+\left\{
+\begin{aligned}
+A=\frac{1}{4}\\
+B=-\frac{1}{4}\\
+C=0\\
+D=\frac{1}{2}
+\end{aligned}
+\right.\\
+\end{gather*}
+Seega saab integreeritavat murdu esitada summana:
+\begin{equation*}
+\frac{u^2}{u^4-1}=\frac{1}{4(u-1)}-\frac{1}{4(u+1)}+\frac{1}{2(u^2+1)}
+\end{equation*}
+Integreerin selle osadena:
+\begin{equation*}
+\begin{aligned}
+\int\frac{u^2}{u^4-1}du&=\frac{1}{4}\int\frac{1}{u-1}du-\frac{1}{4}\int\frac{1}{u+1}du+\frac{1}{2}\int\frac{1}{u^2+1}du\\
+&=\frac{1}{4}\ln(|u-1|)-\frac{1}{4}\ln(|u+1|)+\frac{1}{2}\arctan(u)+C\\
+\end{aligned}
+\end{equation*}
+Seega on terve algse funktsiooni $f$ integraal:
+\begin{equation*}
+\begin{aligned}
+\int\frac{1}{x}\ln\frac{x+1}{x-1}dx&=2\sqrt{x}\ln\frac{x+1}{x-1}+8\left(\frac{1}{4}\ln|\sqrt{x}-1|-\frac{1}{4}\ln|\sqrt{x}+1|+\frac{1}{2}\arctan\sqrt{x}\right)+C\\
+&=2\sqrt{x}\ln\frac{x+1}{x-1}+2\ln|\sqrt{x}-1|-2\ln|\sqrt{x}+1|+4\arctan\sqrt{x}+C\\
+&=2\sqrt{x}\ln\frac{x+1}{x-1}+2\ln\left|\frac{\sqrt{x}-1}{\sqrt{x}+1}\right|+4\arctan(\sqrt{x})+C\\
+\end{aligned}
+\end{equation*}
+\pagebreak\\
+Leian m\"a\"aratud integraali 2st l\~opmatuseni:
+\begin{equation*}
+\begin{aligned}
+\int_2^\infty\frac{1}{x}\ln\frac{x+1}{x-1}dx&=\left(2\sqrt{x}\ln\frac{x+1}{x-1}+2\ln\left|\frac{\sqrt{x}-1}{\sqrt{x}+1}\right|+4\arctan\sqrt{x}\right)\Big|_2^\infty\\
+&=\lim_{c\to\infty}2\sqrt{c}\ln\frac{c+1}{c-1}+2\ln\left|\frac{\sqrt{c}-1}{\sqrt{c}+1}\right|+4\arctan\sqrt{c}\\
+&\ \ \ -2\sqrt{2}\ln\frac{2+1}{2-1}+2\ln\left|\frac{\sqrt{2}-1}{\sqrt{2}+1}\right|+4\arctan\sqrt{2}\\
+&=\lim_{c\to\infty}2\sqrt{c}\ln\frac{c+1}{c-1}+0+4\frac{\pi}{2}-2\sqrt{2}\ln3+2\ln\left|\frac{\sqrt{2}-1}{\sqrt{2}+1}\right|+4\arctan\sqrt{2}\\
+\end{aligned}
+\end{equation*}
+Leian suuruse $\lim_{c\to\infty}2\sqrt{c}\ln\frac{c+1}{c-1}$:
+\begin{equation*}
+\begin{aligned}
+\lim_{c\to\infty}2\sqrt{c}\ln\frac{c+1}{c-1}&=2\lim_{c\to\infty}\frac{\ln\frac{c+1}{c-1}}{c^{-\frac{1}{2}}}\\
+&=2\lim_{c\to\infty}\frac{\frac{-2}{c^2-1}}{-\frac{1}{2}c^{\frac{-3}{2}}}\\
+&=2\lim_{c\to\infty}\frac{4}{c^{-\frac{3}{2}}(c^2-1)}\\
+&=2\lim_{c\to\infty}\frac{4}{\sqrt{c}-\sqrt{c^3}}=0\\
+\end{aligned}
+\end{equation*}
+Seega integraali v\"a\"artus on:
+\begin{equation*}
+\begin{aligned}
+\int_2^\infty\frac{1}{x}\ln\frac{x+1}{x-1}dx&=2\pi-2\sqrt{2}\ln3+2\ln\frac{\sqrt{2}-1}{\sqrt{2}+1}+4\arctan\sqrt{2}\\
+\end{aligned}
+\end{equation*}
+Kuna integraal koondub, koondub ka summa $\sum_{k=2}^\infty\frac{1}{\sqrt{k}}\ln\frac{k+1}{k-1}$.
+\pagebreak\\
+\textbf{2.} Uurige funktsionaaljada $f_k=\frac{1}{k^3}\ln(1+k^4x^2)$ koonduvust, leides koonduvuspiirkonna ja otsustades, kas koondumine on \"uhtlane.\\
+\textbf{Lahendus:} Koonduvuspiirkonna leidmiseks vaatlen funktsionaaljada k\"aitumist protsessis $k\to\infty$:
+\begin{equation*}
+\begin{aligned}
+\lim_{k\to\infty}\frac{\ln(1+k^4x^2)}{k^3}&\stackrel{L'H}{=}\lim_{k\to\infty}\frac{\frac{4x^2k^3}{1+k^4x^2}}{3k^2}\\
+&=\lim_{k\to\infty}\frac{4x^2k}{3(1+k^4x^2)}\\
+&\stackrel{L'H}{=}\lim_{k\to\infty}\frac{4x^2}{12k^3x^2}\\
+&=\lim_{k\to\infty}\frac{1}{3k^3}\\
+&=0
+\end{aligned}
+\end{equation*}
+Seega koondub $f_k$ tervel reaalteljel funktiooniks $f(x)=0$.\\
+Et koondumine oleks \"uhtlane, peab kehtima j\"argnev:
+\begin{equation*}
+\forall \varepsilon>0\ \exists N=N(\varepsilon)\in\mathbb{N}:k\geq N\Rightarrow [|\frac{1}{k^3}\ln(1+k^4x^2)|<\varepsilon\ \mathbf{iga}\ x\in D\ \mathbf{korral}].
+\end{equation*}
+Kuid iga $\varepsilon$ ja $k$ korral saab valida $x=\sqrt{\frac{e^\varepsilon k^3}{k^4}}$ ehk $\frac{1}{k^3}\ln(1+k^4x^2)=\frac{1}{k^3}\ln(1+k^4\sqrt{\frac{e^\varepsilon k^3}{k^4}}^2)=\varepsilon\nless\varepsilon$, seega ei koondu funktsionaaljada \"uhtlaselt.
+\pagebreak\\
+\textbf{3.} Leidke funktsionaalrea $\sum_{k=0}^\infty\frac{(2x)^k}{(1+x^2)^k}$ koonduvuspiirkond $D$ ja absoluutse koonduvuse piirkond $A$.
+\textbf{Lahendus:}\\
+M\"arkan et tegu on geomeetrilise summaga $\sum_{k=0}^\infty\left(\frac{2x}{1+x^2}\right)^k$ seega koondub summa punktiviisi parajasti siis, kui kehtib $\left|\frac{2x}{1+x^2}\right|<1$. Reaalarvu ruut on alati positiivne seega $1+x^2$ on alati positiivne ehk selle saab absoluutv\"a\"artusest v\"alja tuua ning sellega v\~orratuse m\~olemad pooled l\"abi korrutada: $|2x|<1+x^2$ ehk $0<1-|2x|+x^2$. Juhul, kui $x\geq0$, saan $0<1-2x+x^2=(1-x)^2$. Kuna see on reaalarvu ruut, ainus nullkoht on $x=1$, mille korral rida ei koondu. Juhul, kui $x<0$, saan $0<1+2x+x^2=(x+1)^2$. Kuna see on reaalarvu ruut, ainus nullkoht on $x=-1$, mille korral rida ei koondu. Seega funktsionaalrea koonduvuspiirkond $D=\mathbb{R}\setminus\{-1,1\}$.\\
+Antud funktsionaalrida koondub absoluutselt parajasti siis, kui koondub $\sum_{k=0}^\infty\left|\left(\frac{2x}{1+x^2}\right)^k\right|=\sum_{k=0}^\infty\left(\left|\frac{2x}{1+x^2}\right|\right)^k$ ehk juhul, kui kehtib $\left|\frac{2x}{1+x^2}\right|<1$. See on aga sama tingimus, mis punktiviisi koondumisel, seega on antud funktsionaaljada absoluutse koonduvuse piirkond terve tema koonduvuspiirkond ehk $A=D$.
+\pagebreak\\
+\textbf{4.} Leidke j\"argmise astmerea summa:
+\begin{equation*}
+\sum_{k=1}^\infty(-1)^{k-1}\frac{x^{k+1}}{k(k+1)}.
+\end{equation*}
+\textbf{Lahendus:}\\
+T\"ahistan $s(x)=\sum_{k=1}^\infty(-1)^{k-1}\frac{x^{k+1}}{k(k+1)}$. Teoreemi 6.39 p\~ohjal saan astmerida liikmeti diferentseerida ning tulemuseks saan summafunktsiooni tuletise $s'(x)$. Diferentseerin astmerida liikmeti kaks korda:
+\begin{equation*}
+\begin{aligned}
+s'(x)&=\sum_{k=1}^\infty(-1)^{k-1}\frac{(k+1)x^{k}}{k(k+1)}=\sum_{k=1}^\infty(-1)^{k-1}\frac{x^{k}}{k}\\
+s''(x)&=\sum_{k=1}^\infty(-1)^{k-1}\frac{kx^{k-1}}{k}=\sum_{k=1}^\infty(-1)^{k-1}x^{k-1}=\sum_{k=0}^\infty(-1)^{k}x^{k}
+\end{aligned}
+\end{equation*}
+Saadud arvjada on geomeetriline jada teguriga $-x$, seega arvrea summa on $s''(x)=\frac{1}{1+x}$.\\
+Teoreemi 6.39 p\~ohjal on algse arvrea ja tema liikmeti diferentseerimisel saadud rea koonduvusraadiused samad. Leian koonduvusraadiuse:
+\begin{equation*}
+r=\frac{1}{\lim_{k\to\infty}\sqrt[k]{|-1^k|}}=\frac{1}{1}=1
+\end{equation*}
+Seega on arvrea koonduvuspiirkond $(-1,1)$. V\~otan funktsioonist $s''(x)$ integraali:
+\begin{equation*}
+\begin{aligned}
+s'(x)=\int\frac{1}{1+x}dx=\ln|1+x|+C_1
+\end{aligned}
+\end{equation*}
+Kuna arvreas v\"a\"artuse $x=0$ puhul tekib konstantfunktsioon $s(x)=0$, leian selle p\~ohjal $C_1$:
+\begin{equation*}
+\begin{aligned}
+\ln|1+0|+C_1=0\Leftrightarrow C_1=0
+\end{aligned}
+\end{equation*}
+Kuna astmerida koondub vaid vahemikus $(-1,1)$, on $1+x$ alati positiivne, seega $\ln|1+x|=\ln(1+x)$
+V\~otan uuesti integraali:
+\begin{equation*}
+\begin{aligned}
+s(x)=\int\ln(1+x)dx=(1+x)(\ln(1+x)-1)+C_2\\
+(1+0)(\ln(1+0)-1)+C_2=0\Leftrightarrow C_2=1\\
+s(x)=\ln(1+x)+x\ln(1+x)-x\\
+\end{aligned}
+\end{equation*}
+Seega on astmerea summa $s(x)=\ln(1+x)+x\ln(1+x)-x$.
+\pagebreak\\
+\textbf{5.} Leidke j\"argmistele funktsioonidele Taylori read punktis $a$:\\
+\begin{enumerate}
+\item $f(x)=\left\{\begin{aligned}
+&\frac{e^x-e}{x-1}, && \text{ kui } x\neq1,\\
+&e, && \text{ kui } x=1,
+\end{aligned}\right.\qquad a=1$
+\item $f(x)=\sqrt[3]{4+2x^5},\qquad a=0$\\
+\end{enumerate}
+\textbf{Lahendus:}\\
+\begin{enumerate}
+\item Vaatlen funktsiooni diferentseeruvust punkti $a=1$ \"umbruses:
+\begin{equation*}
+\begin{aligned}
+f'(x)&=\left\{\begin{aligned}
+&\frac{xe^x-2e^x+e}{(x-1)^2}, && \text{ kui } x\neq1,\\
+&0, && \text{ kui } x=1,
+\end{aligned}\right.\\
+f'(1)&=e'=0\\
+\lim_{a\to1}f'(a)&=\lim_{a\to1}\frac{ae^a-2e^a+e}{(a-1)^2}\\
+&\stackrel{L'H}{=}\lim_{a\to1}\frac{ae^a+e^a-2e^a}{2(a-1)}\\
+&\stackrel{L'H}{=}\lim_{a\to1}\frac{ae^a+e^a+e^a-2e^a}{2}\\
+&=\frac{e}{2}
+\end{aligned}
+\end{equation*}
+Seega kuna $f'(1)\neq\lim_{a\to 1}f'(a)$, ei ole $f$ punkti 1 \"umber \"uhtegi korda diferentseeruv, ei leidu tal ka Taylori rida, kuna Taylori rea definitsiooni j\"argi peab $f$ olema vaadeldava punkti \"umbruses l\~opmata kordi diferentseeruv.
+\item Vaatlen k\~oigepealt funktsiooni $g(x)=\sqrt[3]{4+2x}=\sqrt[3]{2}(2+x)^{\frac{1}{3}}$ Taylori rida. Kuna tegu on astmefunktsiooniga, mille sisu tuletis on 1, on selle $n$is tuletis lihtsalt $g^{(n)}(x)=\sqrt[3]{2}\prod_{k=0}^n(\frac{1}{3}-k)(2+x)^{\frac{1}{3}-n}$. Seega on tema Taylori rida $a=0$ juures $\sum_{n=0}^\infty\frac{\sqrt[3]{2}\displaystyle\prod_{k=0}^n(\frac{1}{3}-k)(2)^{\frac{1}{3}-n}}{n!}x^n$. Kuna algset funktsiooni saab esitada kui $f(x)=g(x^5)$, on selle Taylori rida:
+\begin{equation*}
+f(x)=\sum_{n=0}^\infty\frac{\sqrt[3]{2}\displaystyle\prod_{k=0}^n(\frac{1}{3}-k)(2)^{\frac{1}{3}-n}}{n!}x^{5n}
+\end{equation*}
+\pagebreak\\
+Et olla kindel, et saadud jada on funktsiooni Taylori jada, peab kehtima
+\begin{equation*}
+\lim_{n\to\infty}\frac{\sqrt[3]{2}\displaystyle\prod_{k=0}^n(\frac{1}{3}-k)(2)^{\frac{1}{3}-n}}{n!}x^{5n}=0
+\end{equation*}
+Rea liikme lugejas $\prod_{k=0}^n(\frac{1}{3}-k)$ on $n\to\infty$ puhul absoluutv\"a\"artuselt v\"aiksem kui nimetajas olev $n!$, kuna m\~olemad on samasugused korrutised kuid lugeja omas on igast liikmest lahutatud $\frac{1}{3}$. Seega on nende jagatis v\"ahem kui 1 ning see on l\"abi korrutatud $2^{\frac{1}{3}-n}$ga, mis l\"aheneb 0le kui n l\"aheneb l\~opmatusele, seega kogu liige l\"aheneb 0le.
+\end{enumerate}
+\pagebreak
+\textbf{6.} Olgu $f(x)=\sum_{n=0}^{\infty} b_n(x-a)^n$ ja $g(x)=\sum_{n=0}^{\infty} c_n(x-a)^n$, ning olgu nende ridade koonduvusraadiused vastavalt $R_1$ ja $R_2$. N\"aidake, et siis $f(x) g(x)=\sum_{n=0}^{\infty} d_n(x-a)^n$, kus $d_n=\sum_{k=0}^n b_k c_{n-k}$ ning selle rea koonduvusraadius $R \geq \min\{R_1,R_2\}$.\\
+\textbf{Lahendus:}\\
+Taylori rea definitsiooni j\"argi arvjada $a_k$, mille puhul kehtib 
+\begin{equation*}
+\forall x\in U_r(a) f(x)=\sum_{k=0}^\infty a_k(x-a)^k
+\end{equation*}
+on \"uheselt m\"a\"aratud ning kehtib $a_k=\frac{f^{(k)}(a)}{k!}$. Seega saab leida $f$ ja $g$ tuletised: $f^{(n)}(a)=b_nn!$ ning $g^{(n)}(a)=c_nn!$. Nende korrutise Taylori rea kordajad peavad olema $d_n=\frac{(f(a)g(a))^{(n)}}{n!}$, mida saab korrutise tuletise valemi j\"argi \"umber kirjutada kui $d_n=\frac{\displaystyle\sum_{k=0}^n  \frac{n!}{k!(n-k)!} f^{(n-k)} g^{(k)}}{n!}=\sum_{k=0}^n\frac{f^{(n-k)} g^{(k)}}{k!(n-k)!}$ ning kui saadud $f$ ja $g$ tuletised sisse asendada, saan: $d_n=\sum_{k=0}^n\frac{b_{n-k}(n-k)! c_kk!}{k!(n-k)!}=\sum_{k=0}^nb_{n-k}c_k$, nagu oli vaja n\"aidata.\\
+%Kuna funktsioonide $f$ ja $g$ ridade koonduvusraadiused on $R_1$ ja $R_2$, kehtib teoreemi 6.36 j\"argi $\overline{\lim_{k\to\infty}}\sqrt[k]{b_k}=\frac{1}{R_1}$ ja $\overline{\lim_{k\to\infty}}\sqrt[k]{c_k}=\frac{1}{R_2}$. Funktsioonide korrutise rea koonduvusraadiuse leidmiseks leian k\~oigepealt piirv\"a\"artuse $\overline{\lim_{k\to\infty}}\sqrt[k]{\sum_{k=0}^n b_k c_{n-k}}$
+\end{document}
