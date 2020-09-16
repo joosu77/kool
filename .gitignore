@@ -5,3 +5,5 @@ oop/.idea/
 oop/int/out/production/
 oop/stale_outputs_checked
 *.swp
+*.log
+*.aux

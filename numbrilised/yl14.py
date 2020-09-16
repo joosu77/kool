@@ -45,10 +45,10 @@ def runge(a,b,f,valem,eps):
     luger += 1
     uus = integreeria(a,b,f,2**luger)
     while abs((eelmine-uus)/(2**aste-1)) > eps:
-        luger += 2
+        luger += 1
         eelmine = uus
         uus = integreeria(a,b,f,2**luger)
-    return [eelmine, luger]
+    return [uus, 2**(luger)]
 
 print (runge(1,2,f,"ristkylik",10**(-5)))
 print (runge(1,2,f,"trapets",10**(-5)))

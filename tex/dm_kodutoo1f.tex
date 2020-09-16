@@ -1,0 +1,108 @@
+\documentclass[fullpage]{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{forest}
+\addtolength{\oddsidemargin}{-.9in}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\begin{document}
+\begin{center}
+\Large\textbf{Kodut\"o\"o nr. 1}\\
+Joosep N\"aks
+\end{center}
+\textbf{1.} Teisendada arutlusk\"aik s\"umbolkujule:\\
+Me teame, et P\"aike eksisteerib ning et Maa peal on elusolendid olemas. Maa peale paistab p\"aikesevalgus ainult siis, kui P\"aike eksisteerib Maale piisavalt l\"ahedal. Selleks, et Maa peal saaks olla elusolendeid, peab Maa peale paistma p\"aikesevalgust. J\"arelikult on P\"aike Maale piisavalt l\"ahedal.\\\\
+\textbf{Defineerin predikaadid:}\\
+P="P\"aike eksisteerib"\\
+E="Maa peal on elusolendid"\\
+V="Maa peale paistab p\"aikesevalgus"\\
+L="P\"aike on maale piisavalt l\"ahedal"\\\\
+\textbf{Laused s\"umbolkujul:}\\
+Lause 1: $\mathcal{F}_1 = P,\ \mathcal{F}_2 = E$\\
+Lause 2: $\mathcal{F}_3 = V\Leftrightarrow (P\&L)$\\
+Lause 3: $\mathcal{F}_4 = E\Rightarrow V$\\
+Lause 4: $\mathcal{F}_1,\mathcal{F}_2, \mathcal{F}_3, \mathcal{F}_4 \models L$\\\\
+\textbf{2.}V\"aljendage j\"argmised laused predikaatarvutuse valemitega, v\~ottes kasutusele sobivad predikaadid. Proovige v\"aljendada lausete struktuuri v\~oimalikult t\"apselt. Indiviidide piirkonnaks v\~otke k\~oikide inimeste hulk.\\
+\null\quad a) Igal inimesel on s\"unnip\"aev.\\
+\null\quad b) Ei ole \"uhtegi sellist tudengit, kes saaks \"o\"ositi piisavalt kaua magada.\\
+\null\quad c) \"ukski advokaat ei valeta, aga m\~oni advokaat k\"aitub ebaausalt.\\\\
+\textbf{a)} Defineerin predikaadi:\\
+\null\quad\quad A(x)="x omab s\"unnip\"aeva"\\
+\null\quad\ Antud lause predikaatarvutuse valemina:\\
+\null\quad\quad $\forall xA(x)$\\
+\textbf{b)} Defineerin predikaadid:\\
+\null\quad\quad A(x)="x on tudeng"\\
+\null\quad\quad B(x)="x saab \"o\"ositi piisavalt kaua magada"\\
+\null\quad\ Antud lause predikaatarvutuse valemina:\\
+\null\quad\quad $\neg\exists x(A(x)\&B(x))$\\
+\textbf{c)} Defineerin predikaadid:\\
+\null\quad\quad A(x)="x on advokaat"\\
+\null\quad\quad B(x)="x valetab"\\
+\null\quad\quad C(x)="x k\"aitub ebaausalt"\\
+\null\quad\ Antud lause predikaatarvutuse valemina:\\
+\null\quad\quad $\neg\exists x(A(x)\ \&\ B(x))\ \&\ \exists x(A(x)\ \&\ C(x))$\\\\\\\\
+\textbf{3.} Olgu interpretatsiooni kandjaks $\mathbb{N}$. V\"aljendage j\"argmised v\"aited signatuuris $\langle0,1;+,\cdot;=\rangle$.\\
+a) Arv x ei ole suurem kui y.\\
+b) Arv x jagub t\"apselt kahe erineva paarisarvuga.\\
+c) Arv x on v\"ahim algarv, mille ruut on arvu y tegur.\\\\
+\textbf{a)}$\neg\exists k\ (k+y+1=x)$\\
+\textbf{b)}$\exists k\ \exists t\ (\exists d\ (d\cdot t=x)\ \&\ \exists d\ (d\cdot k=x)\ \&\ \neg(k=t)\ \&\\ \null\quad \neg\exists r\ (\exists d\ (d\cdot r=x)\ \&\ \neg(r=k)\ \&\ \neg(r=t))\ \&\\\null\quad \exists d\ ((1+1)\cdot d=k)\ \&\ \exists d\ ((1+1)\cdot d=t))$\\
+\textbf{c)}$\forall k\ (\exists d\ (k\cdot d=x)\Rightarrow (k=1\vee k=x))\ \&\ \exists d\ (d\cdot x\cdot x=y)\ \&\ \neg(x=1)\ \&\\\null\quad \neg(x=0)\ \&\ \neg\exists t\ (\forall k\ (\exists d\ (k\cdot d=t)\Rightarrow (k=1\vee k=t))\ \&\ \exists d\ (d\cdot t\cdot t=y)\ \&\\\null\quad \exists d\ (t+d+1=x)\ \&\ \neg(t=1))$\\\\
+\textbf{5.}Kontrollige t\~oesuspuu meetodil, kas antud valem on samaselt t\~oene, samaselt v\"a\"ar v\~oi ei kumbki.\\\\
+\textbf{Lahendus:}\\
+a) Proovin leida interpretatsiooni, kus valem on v\"a\"ar:\\
+\begin{forest}
+	[$1.\quad \forall x\ \exists y\ ((\neg P(x\text{,}y)\vee P(y\text{,}x))\Rightarrow(P(x\text{,}x)\Rightarrow\neg P(y\text{,}y)))\mathrel{=}0$
+		[$2.\quad \exists y\ ((\neg P(m\text{,}y)\vee P(y\text{,}m))\Rightarrow(P(m\text{,}m)\Rightarrow\neg P(y\text{,}y)))\mathrel{=}0\quad /1/$
+			[$3.\quad (\neg P(m\text{,}m)\vee P(m\text{,}m))\Rightarrow(P(m\text{,}m)\Rightarrow\neg P(m\text{,}m))\mathrel{=}0\quad /2/$
+				[$4.\quad 1\Rightarrow(P(m\text{,}m)\Rightarrow\neg P(m\text{,}m))\mathrel{=}0\quad /3/$
+					[$5.\quad P(m\text{,}m)\Rightarrow\neg P(m\text{,}m)\mathrel{=}0\quad /4/$
+						[$6.\quad P(m\text{,}m)\mathrel{=}1\quad /5/$
+							[$7.\quad \neg P(m\text{,}m)\mathrel{=}0\quad /5/$
+							[$8.\quad P(m\text{,}m)\mathrel{=}1\quad /7/$
+							]
+							]
+						]
+					]
+				]
+			]
+		]
+	]
+\end{forest}\\
+Ainus haru j\"ai lahtiseks seega leidub interpretatisoon, nimelt selline, kus iga P(m,m) on tõene, kus valem on v\"a\"ar ehk valem ei ole samaselt t\~oene.\\\newpage
+b) Proovin leida interpretatsiooni, kus valem on t\~oene:\\
+\begin{center}
+\begin{forest}
+	[$1.\quad \forall x\ \exists y\ ((\neg P(x\text{,}y)\vee P(y\text{,}x))\Rightarrow(P(x\text{,}x)\Rightarrow\neg P(y\text{,}y)))\mathrel{=}1$
+		[$2.\quad \forall x\ \exists y\ (\neg(\neg P(x\text{,}y)\vee P(y\text{,}x))\vee(P(x\text{,}x)\Rightarrow\neg P(y\text{,}y)))\mathrel{=}1\quad /1/$
+			[$3.\quad \forall x\ \exists y\ ((P(x\text{,}y)\ \&\ \neg P(y\text{,}x))\vee(\neg P(x\text{,}x)\vee\neg P(y\text{,}y)))\mathrel{=}1\quad /2/$
+				[$4.\quad \forall x\ (\exists y\ (P(x\text{,}y)\ \&\ \neg P(y\text{,}x))\vee\exists y\ \neg P(x\text{,}x)\vee\exists y\ \neg P(y\text{,}y))\mathrel{=}1\quad /3/$
+					[$5.\quad \forall x\ \exists y\ (P(x\text{,}y)\ \&\ \neg P(y\text{,}x))\vee\forall x\ \exists y\ \neg P(x\text{,}x)\vee\forall x\ \exists y\ \neg P(y\text{,}y)\mathrel{=}1\quad /4/$
+						[$6.\quad \forall x\ \exists y\ (P(x\text{,}y)\ \&\ \neg P(y\text{,}x))\mathrel{=}1\quad /5/$
+							[$9.\quad \forall x\ \exists y\ P(x\text{,}y)\ \&\ \forall x\ \exists y\ \neg P(y\text{,}x)\mathrel{=}1\quad /6/$
+								[$12.\quad \forall x\ \exists y\ P(x\text{,}y)\mathrel{=}1\quad /9/$
+								[$14.\quad \forall x\ \exists y\ \neg P(y\text{,}x)\mathrel{=}1\quad /12/$
+								]
+								]
+							]
+						]
+						[$7.\quad \forall x\ \exists y\ (\neg P(x\text{,}x))\mathrel{=}1\quad /5/$
+						[$10.\quad \forall x\ (\neg P(x\text{,}x))\mathrel{=}1\quad /7/$
+						]
+						]
+						[$8.\quad \forall x\ \exists y\ (\neg P(y\text{,}y))\mathrel{=}1\quad /5/$
+						[$11.\quad \exists y\ (\neg P(y\text{,}y))\mathrel{=}1\quad /8/$
+						[$13.\quad P(n\text{,}n))\mathrel{=}0\quad /11/$
+						]
+						]
+						]
+					]
+				]
+			]
+		]
+	]
+\end{forest}
+\end{center}
+K\~oik harud j\"aid lahtiseks seega leidub interpretatisoon, näiteks selline, kus mingi n korral P(n,n)=0, kus valem on t\~oene ehk valem ei ole samaselt v\"a\"ar.\\
+Seega kokkuv\~ottes ei ole valem ei samaselt t\~oene ega samaselt v\"a\"ar.
+\end{document}
