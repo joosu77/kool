@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage{pgfplots}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\begin{document}
+\begin{center}
+\Large\textbf{Kodutöö nr. 1}\\
+7. variant\\
+\small{Joosep Näks}
+\end{center}
+\textbf{1. } Olgu $A$ mittetühi hulk. Defineerime hulgal $A\times A$ tehte $*$ võrdusega
+\begin{equation*}
+(a,b)*(c,d)=(a,d).
+\end{equation*}
+Teha kindlaks, kas see tehe on algebraline tehe, kas ta on assotsiatiivne, kommutatiivne, kas tema suhtes leidub ühikelement, millised elemendid on pööratavad. Millise algebralise struktuuriga on tegemist?\\
+\\\textbf{Lahendus:}\\
+Tehe on algebraline, kuna elemendid $a$ ja $d$ on hulga $A$ liikmed, seega element $(a,d)$ kuulub hulka $A\times A$.\\
+Assotsiatiivsuse kontrollimiseks valin suvalised elemendid $(a,b),(c,d),(e,f)\in A\times A$. Et tehe oleks assotsiatiivne, peab kehtima $((a,b)*(c,d))*(e,f)=(a,b)*((c,d)*(e,f))$.
+\begin{gather*}
+\begin{aligned}
+((a,b)*(c,d))*(e,f)&=(a,d)*(e,f)\\
+&=(a,f)\\
+&=(a,b)*(c,f)\\
+&=(a,b)*((c,d)*(e,f))
+\end{aligned}
+\end{gather*}
+Seega on tehe assotsiatiivne.\\
+Kommutatiivsuse jaoks peab suvaliste elementide $(a,b),(c,d)\in A\times A$ korral kehtima $(a,b)*(c,d)=(c,d)*(a,b)$. Kontrollin seda:
+\begin{gather*}
+\begin{aligned}
+(a,b)*(c,d)&=(a,d)\\
+(c,d)*(a,b)&=(c,b)\\
+(a,d)&\neq(c,b)
+\end{aligned}
+\end{gather*}
+Seega tehe ei ole kommutatiivne.\\
+Et leiduks ühikelement, peab leiduma element $(e,f)\in A\times A$, mille korral kehtib $(a,b)*(e,f)=(a,b)=(e,f)*(a,b)$ iga elemendi $(a,b)\in A\times A$ korral. Võrdus $(a,b)*(e,f)=(a,b)$ kehtib aga ainult juhul, kui $f=b$, ehk $(e,f)$ väärtus sõltub alati teisest elemendist, nii et ühikelementi ei leidu.\\
+Kuna ühikelementi ei leidu, ei saa ka elemendid olla pööratavad.\\
+Seega on tehe algebraline ning sellel on vaid assotsiatiivsuse omadus ehk struktuur $(A\times A,*)$ on poolrühm.\pagebreak\\
+\textbf{2.} Olgu $G$ rühm. Tõestada, et kui mistahes $g,h\in G$ korral $gh^2=g$, siis $G$ on Abeli rühm.\\\\
+\textbf{Lahendus:}\\
+Ainus omadus, mis on Abeli rühmal, kuid ei ole rühmal, on kommutatiivsus, seega üritan näidata, et kui kehtib $gh^2=g$, siis kehtib ka $gh=hg$ suvaliste elementide $g,h\in G$ korral.\\
+Rühmas on iga element pööratav, seega võtan elemendi $g$ pöördelemendi $g^{-1}$ ning korrutan sellega võrduse $gh^2=g$ mõlemat poolt vasakult poolt.
+\begin{gather*}
+\begin{aligned}
+g^{-1}gh^2&=g^{-1}g\\
+h^2&=1\qquad\quad(1)
+\end{aligned}
+\end{gather*}
+Seega on iga elemendi ruut võrdne ühikelemendiga.\\
+Näitan nüüd, et kehtib $gh=hg$.\\
+Ühikelemendi definitsiooni järgi asendan korrutises $gh$ elemendi $g$ tema enda ja ühikelemendi korrutisega: $gh=g1h$.\\
+Omaduse $(1)$ põhjal asendan ühikelemendi ära elemendi $gh$ ruuduga: $g1h=g(gh)^2h$.\\
+Teen ruudu lahti: $g(gh)^2h=gghghh=g^2hgh^2$.\\
+Omaduse $(1)$ põhjal asendan elementide $g$ ja $h$ ruudud ühikelemendiga: $g^2hgh^2=1hg1=hg$.\\
+Seega jõudsin tulemuseni, et suvaliste elementide korral kehtib $gh=hg$ ehk G on kommutatiivne ehk G on Abeli rühm.
+\end{document}
