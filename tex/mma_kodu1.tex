@@ -83,6 +83,12 @@ Funktsiooni $\frac{x+y^2}{y^4}$ saab ümber kirjutada kujule: $\frac{x+y^2}{y^4}
 Lisan lisatingimuse, et $\delta\leq1$. Kuna kehtib $|x-1|<\delta$, saame $|x-1|<1\Leftrightarrow -1<x-1<1\Leftrightarrow 0<x<2$. Seega saame $\frac{x}{\delta^4}+\frac{1}{\delta^2}>\frac{0}{\delta^4}+\frac{1}{\delta^2}=\frac{1}{\delta^2}$\\
 Seega kui valida $\delta=\min\{1,\frac{1}{\sqrt{\varepsilon}}\}$, saab väita et kui kehtib $d((x,y),(1,0))<\delta$, siis kehtib ka $\frac{x+y^2}{y^4}<\frac{1}{\delta^2}=\frac{1}{(\frac{1}{\sqrt{\varepsilon}})^2}=\varepsilon$, mida oligi tarvis tõestada.
 \pagebreak\\
+% Kiisu:       _
+%             / )
+%   /\___/\  ( (
+%  /  0 0  \  \ \
+%  \ ~(*)~ /   ) )
+%   \  ^  /   / /
 \textbf{3.} Teha kindlaks, kas funktsioon $f$ on pidev punktis $(0,0)$, kui
 \begin{equation*}
 f(x,y)=
@@ -96,8 +102,13 @@ f(x,y)=
 \textbf{Lahendus:}\\
 Pidevuse definitsiooni järgi on funktsioon $f$ pidev punktis $(0,0)$ parajasti siis, kui kehtib $\lim_{x,y\to 0,0}f=f(0,0)$. Kontrollin selle tõesust.\\
 $f(0,0)=0$ kuna $0^2+0^2=0$.\\
-$\lim_{x,y\to 0,0}f=0$ saab definitsiooni järgi lahti kirjutada kui:\\
-$\forall\varepsilon>0\ \exists\delta>0: [(x,y)\in\mathbb{R}^2, 0<d((x,y),(0,0))<\delta]\Rightarrow |f(x,y)|<\varepsilon$\\
-Kuna $d((x,y),(0,0))>0$ ei ole $x^2+y^2=0$, kuna ainsad reaalarvud, mille puhul see võrdus kehtib, on $(0,0)$. Seega $f(x,y)=\frac{x^2y^3}{x^4+y^4}$.\\
-Kauguse võrratuse saab ümber kirjutada: $d((x,y),(0,0))<\delta \Leftrightarrow \sqrt{x^2+y^2}<\delta \Leftrightarrow x^2+y^2<\delta^2$ ehk $|x|<\delta$ ja $|y|<\delta$
+Viin piirväärtuse $\lim_{x,y\to 0,0}f=\lim_{x,y\to 0,0}\frac{x^2y^3}{x^4+y^4}$ polaarkoordinaatide süsteemi muutujavahetustega $x=r\cos \varphi$ ja $y=r\sin\varphi$:
+\begin{gather*}
+\begin{aligned}
+\lim_{x,y\to 0,0}\frac{x^2y^3}{x^4+y^4}&=\lim_{r\to 0}\frac{r^2(\cos^2\varphi)\ r^3(\sin^3\varphi)}{r^4\cos^4\varphi+r^4\sin^4\varphi}\\
+&=\lim_{r\to 0}\frac{r^5\cos^2\varphi\ \sin^3\varphi}{r^4(\cos^4\varphi+\sin^4\varphi)}\\
+&=\lim_{r\to 0}r\frac{\cos^2\varphi\ \sin^3\varphi}{\cos^4\varphi+\sin^4\varphi}
+\end{aligned}
+\end{gather*}
+Saadud murru nimetaja on tõkestatud ja selle väärtus ei ületa kindlasti 1, kuna siinus ja koosinus funktsioonid ei ületa 1. Murru lugeja on suurem kui null kuna see on summa kahest arvust, mis on paarisarvulises astmes, nii et kumbki et saa negatiivne olla ja siinus ja koosinusfunktsioon ei saa korraga 0 olla. Seega on terve murd tõkestatud ja tõkestatud arv korda nullile lähenev väärtus on 0, seega piirväärtus on null. Ehk kehtib $\lim_{x,y\to 0,0}f=\lim_{x,y\to 0,0}\frac{x^2y^3}{x^4+y^4}=0=f(0,0)$, mida oligi tarvis näidata.
 \end{document}
