@@ -76,6 +76,28 @@ Seega ei ole funktsiooni $f$ määramispiirkond ei kinnine ega lahtine.\pagebrea
 \textbf{Lahendus:}\\
 Funktsiooni piirväärtuse definitsiooni kohaselt kehtib see piirväärtus parajasti siis, kui kehtib
 \begin{equation*}
-\forall N>0\ \exists\delta>0:[0<d((x,y),(0,1))<\delta\Rightarrow\frac{x+y^2}{y^4}>N]
-\end{equation*} 
+\forall N>0\ \exists\delta>0:[(x,y)\in\mathbb{R}^2,0<d((x,y),(1,0))<\delta]\Rightarrow\frac{x+y^2}{y^4}>N
+\end{equation*}
+$d((x,y),(1,0))<\delta$ saab ümber kirjutada kui $\sqrt{(x-1)^2+y^2}<\delta$ ehk $(x-1)^2+y^2<\delta^2$, millest saame, et $(x-1)^2<\delta^2\Leftrightarrow |x-1|<\delta\Rightarrow x-1<\delta$ ning $|y|<\delta\Rightarrow y<\delta$.\\
+Funktsiooni $\frac{x+y^2}{y^4}$ saab ümber kirjutada kujule: $\frac{x+y^2}{y^4}=\frac{x}{y^4}+\frac{1}{y^2}>\frac{x}{\delta^4}+\frac{1}{\delta^2}$.\\
+Lisan lisatingimuse, et $\delta\leq1$. Kuna kehtib $|x-1|<\delta$, saame $|x-1|<1\Leftrightarrow -1<x-1<1\Leftrightarrow 0<x<2$. Seega saame $\frac{x}{\delta^4}+\frac{1}{\delta^2}>\frac{0}{\delta^4}+\frac{1}{\delta^2}=\frac{1}{\delta^2}$\\
+Seega kui valida $\delta=\min\{1,\frac{1}{\sqrt{\varepsilon}}\}$, saab väita et kui kehtib $d((x,y),(1,0))<\delta$, siis kehtib ka $\frac{x+y^2}{y^4}<\frac{1}{\delta^2}=\frac{1}{(\frac{1}{\sqrt{\varepsilon}})^2}=\varepsilon$, mida oligi tarvis tõestada.
+\pagebreak\\
+\textbf{3.} Teha kindlaks, kas funktsioon $f$ on pidev punktis $(0,0)$, kui
+\begin{equation*}
+f(x,y)=
+\left\{
+\begin{aligned}
+&\frac{x^2y^3}{x^4+y^4}, && \text{kui } x^2+y^2\neq0;\\
+&0, && \text{kui } x^2+y^2=0.
+\end{aligned}
+\right.
+\end{equation*}
+\textbf{Lahendus:}\\
+Pidevuse definitsiooni järgi on funktsioon $f$ pidev punktis $(0,0)$ parajasti siis, kui kehtib $\lim_{x,y\to 0,0}f=f(0,0)$. Kontrollin selle tõesust.\\
+$f(0,0)=0$ kuna $0^2+0^2=0$.\\
+$\lim_{x,y\to 0,0}f=0$ saab definitsiooni järgi lahti kirjutada kui:\\
+$\forall\varepsilon>0\ \exists\delta>0: [(x,y)\in\mathbb{R}^2, 0<d((x,y),(0,0))<\delta]\Rightarrow |f(x,y)|<\varepsilon$\\
+Kuna $d((x,y),(0,0))>0$ ei ole $x^2+y^2=0$, kuna ainsad reaalarvud, mille puhul see võrdus kehtib, on $(0,0)$. Seega $f(x,y)=\frac{x^2y^3}{x^4+y^4}$.\\
+Kauguse võrratuse saab ümber kirjutada: $d((x,y),(0,0))<\delta \Leftrightarrow \sqrt{x^2+y^2}<\delta \Leftrightarrow x^2+y^2<\delta^2$ ehk $|x|<\delta$ ja $|y|<\delta$
 \end{document}
