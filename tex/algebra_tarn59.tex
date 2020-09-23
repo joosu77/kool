@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage{pgfplots}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\begin{document}
+\begin{center}
+\Large\textbf{Tärnülesanne nr. 59}\\
+\small{Joosep Näks}
+\end{center}
+Olgu $p$ ja $q$ kompleksarvud, kusjuures $q\neq 0$. Tõestage, et kui ruutvõrrandi $x^2+px+q^2=0$ lahendite moodulid on võrdsed, siis $\frac{p}{q}$ on reaalarv.\\
+\textbf{Lahendus:}\\
+Olgu ruutvõrrandi lahendid $x_1$ ja $x_2$, seega peab kehtima $x-x_1=0$ ja $x-x_2=0$ ehk ka $(x-x_1)(x-x_2)=0\Leftrightarrow x^2-x(x_1+x_2)+x_1x_2=0$. Sellest järeldub, et algses võrrandis $p=-x_1-x_2$ ja $q^2=x_1x_2$.\\
+Esitan lahendid eksponentkujul kompleksarvudena: $x_1=me^{ia}$, $x_2=me^{ib}$ (ülesande tekstis on antud, et moodulid on võrdsed).\\
+Vaja on näidata, et $\frac{p}{q}$ on reaalarv, see on aga sama, mis $\frac{-x_1-x_2}{\sqrt{x_1x_2}}=\frac{-me^{ia}-me^{ib}}{\sqrt{me^{ia}me^{ib}}}=\frac{-m(e^{ia}+e^{ib})}{me^{i\frac{a+b}{2}}}=-\frac{e^{ia}}{e^{i\frac{a+b}{2}}}-\frac{e^{ib}}{e^{i\frac{a+b}{2}}}=-e^{i\frac{a-b}{2}}-e^{i\frac{b-a}{2}}=-e^{i\frac{a-b}{2}}-e^{-i\frac{a-b}{2}}$.\\
+Viin saadud summa trigonomeetrilisele kujule:\\
+\begin{gather*}
+\begin{aligned}
+-e^{i\frac{a-b}{2}}-e^{-i\frac{a-b}{2}}&=-\left(\cos{\frac{a-b}{2}}+i\sin{\frac{a-b}{2}}+\cos{-\frac{a-b}{2}}+i\sin{-\frac{a-b}{2}}\right)\\
+&=-\left(\cos{\frac{a-b}{2}}+i\sin{\frac{a-b}{2}}+\cos{\frac{a-b}{2}}-i\sin{\frac{a-b}{2}}\right)\\
+&=-2\cos{\frac{a-b}{2}}\\
+\end{aligned}
+\end{gather*}
+Ning kuna $a$ ja $b$ olid võrrandi lahendite argumendid, on need reaalarvud ehk ka $\frac{p}{q}=-2\cos\frac{a-b}{2}$ on reaalarv.
+\end{document}
