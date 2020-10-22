@@ -20,7 +20,38 @@
 \textbf{Lahendus:}\\
 Kirjutan võrrandi mõlemad pooled kompleksarvu juure definitsiooni järgi hulkadena lahti:
 \begin{gather*}
-\sqrt[n]{-z^nw}=\{q\in\mathbb{C}\ |\ q^n=-z^nw\}\\
--z\sqrt[n]{w}=\{-zq\in\mathbb{C}\ |\ q^n=w\}\\
+\sqrt[n]{-z^nw}=\{q\ |\ q,z,w\in\mathbb{C}, n=2k+1, k\in\mathbb{N}:\ q^n=-z^nw\}\\
+-z\sqrt[n]{w}=\{-zq\ |\ q,z,w\in\mathbb{C}, n=2k+1, k\in\mathbb{N}:\ q^n=w\}\\
 \end{gather*}
+Kui parema poole hulga definitsiooni võrduses mõlemad pooled $(-z)^n$-ga läbi korrutada (kuna $n$ on paaritu naturaalarv, kehtib $(-z)^n=-z^n$), saab
+\begin{gather*}
+-z\sqrt[n]{w}=\{-zq\ |\ q,z,w\in\mathbb{C}, n=2k+1, k\in\mathbb{N}:\ (-zq)^n=-z^nw\}\\
+\end{gather*}
+Teen asenduse $p=-zq$:
+\begin{gather*}
+-z\sqrt[n]{w}=\{p\ |\ p,z,w\in\mathbb{C}, n=2k+1, k\in\mathbb{N}:\ p^n=-z^nw\}\\
+\end{gather*}
+Ning see on sama hulk nagu algse võrrandi vasaku poole hulk, seega kehtib $\sqrt[n]{-z^nw}=-z\sqrt[n]{w}$.
+\pagebreak\\
+\textbf{2.} Tõestada, et hulk
+\begin {gather*}
+A=\{z\in\mathbb{C}:|z|=1\}
+\end{gather*}
+on rühma $(\mathbb{C}\setminus\{0\},\cdot)$ alamrühm.\\
+\textbf{Lahendus:}\\
+Et hulk $A$ oleks alamrühm, peavad kehtima tingimused
+\begin{gather}
+\forall x,y\in A\quad x\cdot y\in A\\
+\forall x\in A\ \exists y\in A:\ x+y=y+x=1
+\end{gather}
+(kuna 1 on kompleksarvude ühikelement). Suvalist elementi hulgas $A$ saab esitada kui $e^{ia}, a\in\mathbb{R}$, kuna suvalist kompleksarvu saab esitada kui $re^{ia}$, kus $r$ on tema moodul, kuid hulgas $A$ on kõigi elementide moodul 1. Näitan tingimuse (1) kehtivust:
+\begin{gather*}
+\forall e^{ia},e^{ib}\in A\quad e^{ia}\cdot e^{ib}=e^{i(a+b)}
+\end{gather*}
+Ning kuna $a+b\in\mathbb{R}$, on $e^{i(a+b)}$ hulga $A$ liige.\\
+Tingimuse 2 korral saab iga $e^{ia}$ jaoks valida pöördelemendi $e^{i(-a)}$. $-a\in\mathbb{R}$, seega see element on hulgas $A$ ja kehtib
+\begin{gather*}
+e^{ia}\cdot e^{i(-a)}=e^{i(-a)}\cdot e^{ia}=e^{i(a-a)}=e^0=1
+\end{gather*}
+Seega on $A$ rühma $(\mathbb{C}\setminus\{0\},\cdot)$ alamrühm.
 \end{document}

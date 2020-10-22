@@ -107,13 +107,14 @@ Kontrollin nende pidevust, teisendan selleks funktsioonid polaarkoordinaatidesse
 \begin{aligned}
 \lim_{(x,y)\to(0,0)}\frac{-y^4x^2+y^6}{(x^2+y^2)^2}&=\lim_{(x,y)\to(0,0)}\frac{r^6(-\sin^4\varphi\cos^2\varphi+\sin^6\varphi)}{r^4(\cos^2\varphi+\sin^2\varphi)}\\
 &=\lim_{(x,y)\to(0,0)}r^2(-\sin^4\varphi\cos^2\varphi+\sin^6\varphi)\\
-&=0=\p{x}f(0,0)\\
+&=0\\
 \lim_{(x,y)\to(0,0)}\frac{4y^3x^3+2y^5x}{(x^2+y^2)^2}&=\lim_{(x,y)\to(0,0)}\frac{r^6(4\sin^3\varphi\cos^3\varphi+2\sin^5\varphi\cos\varphi)}{r^4(\cos^2\varphi+\sin^2\varphi)}\\
 &=\lim_{(x,y)\to(0,0)}r^2(4\sin^3\varphi\cos^3\varphi+7\sin^5\varphi\cos\varphi)\\
-&=0=\p{y}f(0,0)
+&=0
 \end {aligned}
 \end{gather*}
-(Piirväärtuste tulemused on 0 kuna mõlemal osatuletisel oli viimane piirväärtus hääbuva ja tõkestatud väärtuse korrutis, $f$ on punktis $(0,0)$ konstantfunktsioon seega on kõik tuletised seal 0)\\
+(Piirväärtuste tulemused on 0 kuna mõlemal osatuletisel oli viimane piirväärtus hääbuva ja tõkestatud väärtuse korrutis)\\
+Mõlemad piirväärtused leiduvad seega on mõlemad osatuletised pidevad.\\
 Kuna mõlemad piirväärtused on pidevad, on $f$ diferentseeruv.\\
 Leian osatuletiste osatuletised:
 \begin{gather*}
@@ -142,15 +143,15 @@ Kontrollin nende pidevust (teisendan selleks funktsioonid polaarkoordinaatidesse
 \lim_{(x,y)\to(0,0)}f_{x,x}''&=\lim_{(x,y)\to(0,0)}\frac{2y^4x^3-6y^6x}{(x^2+y^2)^3}\\
 &=\lim_{r\to 0}\frac{r^7(2\sin^4\varphi \cos^3\varphi-6\sin^6\varphi\cos\varphi)}{r^3}\\
 &=\lim_{r\to 0}r^4(2\sin^4\varphi \cos^3\varphi-6\sin^6\varphi\cos\varphi)\\
-&=0=f_{x,x}''(0,0)\\
+&=0\\
 \lim_{(x,y)\to(0,0)}f_{y,x}''=\lim_{(x,y)\to(0,0)}f_{x,y}''&=\lim_{(x,y)\to(0,0)}\frac{-4y^3x^4+6y^5x^2+2y^7}{(x^2+y^2)^3}\\
 &=\lim_{r\to 0}\frac{r^7(-4\sin^3\varphi\cos^4\varphi+6\sin^5\varphi\cos^2\varphi+2\sin^7\varphi)}{r^3}\\
 &=\lim_{r\to 0}r^4(-4\sin^3\varphi\cos^4\varphi+6\sin^5\varphi\cos^2\varphi+2\sin^7\varphi)\\
-&=0=f_{y,x}''(0,0)=f_{x,y}''(0,0)\\
+&=0\\
 \lim_{(x,y)\to(0,0)}f_{y,y}''&=\lim_{(x,y)\to(0,0)}\frac{12y^2x^5+6y^4x^3+2y^6x}{(x^2+y^2)^3}\\
 &=\lim_{r\to 0}\frac{r^7(12\sin^2\varphi\cos^5\varphi+6\sin^4\varphi\cos^3\varphi+2\sin^6\varphi\cos\varphi)}{r^3}\\
 &=\lim_{r\to 0}r^4(12\sin^2\varphi\cos^5\varphi+6\sin^4\varphi\cos^3\varphi+2\sin^6\varphi\cos\varphi)\\
-&=0=f_{y,y}''(0,0)\\
+&=0\\
 \end{aligned}
 \end{gather*}
 Kuna kõik teist järku osatuletised on pidevad, on $f$ punktis $(0,0)$ kaks korda diferentseeruv.\\
@@ -159,7 +160,7 @@ Leian puutujatasandi. Loengukonspekti teoreemi 1.7 põhjal on puutujatasandi võ
 \begin{gather*}
 z-f(0,0)=\p{x}(0,0)(x)+\p{y}(0,0)(y)\\
 \end{gather*}
-Kuna osatuletised ja funktsioon ise on punktis $(0,0)$ väärtusega 0, on puutujatasandi võrrand $z=0$.\\
+Kuna osatuletised ja funktsioon ise on punktis $(0,0)$ väärtusega 0, on puutujatasandi võrrand $z=0$.\\\pagebreak\\
 $z=f(x,y)$ graafik punkti $(0,0)$ ümbruses:
 \begin{center}
 \begin{tikzpicture}
@@ -201,6 +202,27 @@ Seega $(3,01)^2(0,97)^3\approx 8,25$.\\
 Leian funktsiooni teist järku osatuletised:
 Jääkliikme hinnang Lagrange'i kuju abil:
 \begin{gather*}
-\alpha_1=
+\alpha_1=\frac{d^{1+1}f(R)}{(1+1)!}=\frac{d^2f(R)}{2}
 \end{gather*}
+Kus $R=(x_0+\theta\Delta x, y_0+\theta\Delta y),\ \theta\in(0,1)$.\\
+Leian teist järku osatuletised:
+\begin{gather*}
+f_{x,x}''=\p{x}2xy^3=2y^3\\
+f_{y,x}''=\p{y}2xy^3=6xy^2\\
+f_{x,y}''=\p{x}3x^2y^2=6xy^2\\
+f_{y,y}''=\p{y}3x^2y^2=6x^2y\\
+\end{gather*}
+Seega on jääkliige:
+\begin{gather*}
+\alpha_1=\frac{2(y_0+\theta\Delta y)^3d^2x+12(x_0+\theta\Delta x)(y_0+\theta\Delta y)^2dxdy+6(x_0+\theta\Delta x)^2(y_0+\theta\Delta y)d^2y}{2}
+\end{gather*}
+Hindan jääkliikme absoluutväärtust:
+\begin{gather*}
+|\alpha_1|=\left|\frac{2(1-0.03\theta)^3(0.01)^2+12(3+0.01\theta)(1-0.03\theta)^2(0.01)(-0.03)+6(3+0.01\theta)^2(1-0.03\theta)(-0.03)^2}{2}\right|\\
+\leq\left|(1-0.03\theta)^3(0.01^2)\right|+\left|6(3+0.01\theta)(1-0.03\theta)^2(0.01)(0.03)\right|+\left|3(3+0.01\theta)^2(1-0.03\theta)(0.03)^2\right|\\
+\leq\left|0.0001\right|+\left|18.06\cdot0.0003\right|+\left|27.1803\cdot0.0009\right|\\
+=0.0001+0.005418+0.02446227\\
+=0.02998027
+\end{gather*}
+Seega $(3,01)^2(0,97)^3=8.25\pm 0.02998027$.
 \end{document}
