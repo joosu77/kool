@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage{pgfplots}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\begin{document}
+\begin{center}
+\Large\textbf{Tärnülesanne 50}\\
+\small{Joosep Näks}
+\end{center}
+Olgu antud kahe muutuja funktsioon $f:D\to\mathbb{R}$ ning $A\in D^\circ$. Ülesande 45 põhjal on teada, et kehtivad implikatsioonid
+\begin{gather*}
+f\text{ on diferentseeruv punktis }A\quad\Rightarrow\quad \forall \vec{s}=(s_1,s_2)\neq \vec0\quad \exists\frac{\partial f}{\partial\vec s}(A)\in\mathbb{R}\\
+f\text{ on diferentseeruv punktis }A,\quad\frac{\partial f}{\partial x}(A)=\frac{\partial f}{\partial y}(A)=0\quad\Rightarrow\quad \forall \vec{s}=(s_1,s_2)\neq \vec0\quad \exists\frac{\partial f}{\partial\vec s}(A)=0.
+\end{gather*}
+Kas emb-kumb neist implikatsioonidest on üldiselt pööratav?\\\\
+\textbf{Lahendus:}
+Kumbki implikatsioon ei ole pööratav. Näitan seda vastunäitega. Vaatlen funktisooni $f(x,y)=\frac{x^3}{x^2+y^2}$ diferentseeruvust punktis $(0,0)$. Sellel leidub tuletis igas suunas:
+\begin{gather*}
+\forall\vec{s}=(s_1,s_2)\neq\vec0\quad \frac{\partial f}{\partial\vec s}(0,0)=\lim_{t\to0}\frac{\frac{t^3s_1^3}{t^2s_1^2+t^2s_2^2}}{t}=\frac{s_1^3}{s_1^2+s_2^2}\in\mathbb{R}
+\end{gather*}
+\end{document}

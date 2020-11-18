@@ -1,0 +1,127 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage{pgfplots}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\newcommand\q[1]{\overline{#1}}
+\begin{document}
+\begin{center}
+\Large\textbf{Kodutöö nr. 3}\\
+3. variant\\
+\small{Joosep Näks}
+\end{center}
+\textbf{1. }Teha kindlaks, kas vektorruumi $\mathbb{R}^\mathbb{R}$ vektorite süsteem $\cos x, \cos 2x, \cos^2x$ on lineaarselt sõltumatu.\\\\
+\textbf{Lahendus:}\\
+Definitsiooni kohaselt on antud süsteem lineaarselt sõltumatu parajasti siis, kui võrrand $$a\cos x+ b\cos 2x+ c\cos^2x=0$$ kehtib vaid juhul, kui $a,b,c=0$. Trigonimeetriliste funktsioonide omaduste põhjal saab võrrandit teisendada:
+\begin{gather*}
+a\cos x+ b(\cos^2 x-\sin^2x)+ c\cos^2x=0\\
+a\cos x+ (b+c)\cos^2 x-b\sin^2x=0\\
+a\cos x+ (b+c)\cos^2 x-b(1-\cos^2x)=0\\
+a\cos x+ (2b+c)\cos^2 x-b1=0\\
+\end{gather*}
+See aga on ruutvõrrand vektori $\cos x$ ümber ehk kui ruutliikme kordaja ei võrdu nulliga ehk $2b+c\neq0$, siis kehtib see võrrand parajasti siis, kui kehtib $$\cos x=\frac{-a\pm\sqrt{a^2+4(2b+c)}}{2(2b+c)}1$$ See aga tähendab, et vektor $\cos x$ on konstantfunktsioon, kuid see ei ole tõene. Kui $2b-c=0$ kehtib aga $a\neq0$, taandub ruutliige võrrandist välja ning saan $$\cos x=\frac{b}{a}1$$mis jällegi näitab, et $\cos x$ on konstantfunktsioon. Seega jääb järgi ainult võimalus, kui $2b+c=0$ ja $a=0$, sel juhul taanduvad välja nii ruutliige kui ka lineaarlige ning alles jääb vaid $-b=0$. Sellest saan, et ka $b=0$ ja $c=0$. Seega olen jõudnud tulemuseni, et $a\cos x+ b\cos 2x+ c\cos^2x=0$ kehtib vaid juhul, kui kõik kordajad on 0 ehk antud vektorite süsteem on lineaarselt sõltumatu.\pagebreak\\
+\textbf{2. }Leida homogeense lineaarvõrrandisüsteemi, mille maatriks on $A\in \text{Mat} _{3,4}(\mathbb{Z}_5)$, lahendite arv sõltuvalt parameetrite $a,b\in\mathbb{Z}_5$ väärtustest, kui
+\begin{align}
+A&=\begin{pmatrix}
+\q{4} & a+\q{1} & \q{1} & \q{-2}\\
+\q{2} & \q{1} & a+\q{2} & a+b\\
+\q{b} & \q{-1} & \q{4}b & \q{1}\notag
+\end{pmatrix}
+\end{align}\\\\
+\textbf{Lahendus:}\\
+Loengukonspekti teoreemi 8.17 kohaselt on $n$ tundmatuga homogeense lineaarvõrrandisüsteemi, mille süsteemi maatriksi astak on $r$, lahendite fundamentaalsüsteemis $n-r$ lahendit.
+Leian maatriksi astaku.
+Loengukonspekti lause 7.18 kohaselt kui leidub r-ndat järku nullist erinev miinor, mille kõik ääristavad miinorid on võrdsed nulliga, siis maatriksi astak on r. Vaatlen selleks teist järku miinorit $$M_{2,3}^{1,2}=\begin{vmatrix}\q{2} & \q{1}\\\q{b} & \q{-1}\end{vmatrix}=\q{3}-\q{b}$$ ning teda ääristavaid miinoreid: 
+\begin{gather*}
+\begin{aligned}
+M_{1,2,3}^{1,2,3}&=\begin{vmatrix}\q{4} &a+\q{1} & \q{1}\\\q{2} & \q{1} & a+\q{2}\\\q{b} & \q{-1} & \q{4}b\end{vmatrix}\\
+&\begin{aligned}
+&\stackrel{\text{T}}{=}\begin{vmatrix}\q{4} &\q{2} & \q{b}\\a+\q{1} & \q{1} & \q{-1}\\\q{1} & a+\q{2} & \q{4}b\end{vmatrix}
+ & \begin{matrix}\\\\+\text{I} \end{matrix}\end{aligned}\\
+&=\begin{vmatrix}\q{4} &\q{2} & \q{b}\\a+\q{1} & \q{1} & \q{-1}\\\q{0} & a+\q{4} & \q{0}\end{vmatrix}\\
+&=(a+\q{4})(-1)\begin{vmatrix}\q{4} & \q{b}\\a+\q{1} & \q{-1}\end{vmatrix}\\
+&=(a+\q{4})(-1)(\q{1}-b(a+\q{1}))\\
+&=(a+\q{4})(ab+b+\q{4})
+\end{aligned}
+\end{gather*}
+\begin{gather*}
+\begin{aligned}
+M_{1,2,4}^{1,2,3}
+&\begin{aligned}
+&=\begin{vmatrix}\q{4} &a+\q{1} & \q{-2}\\\q{2} & \q{1} & a+b\\\q{b} & \q{-1} & \q{1}\end{vmatrix}
+ & \begin{matrix}\\\\+\text{II} \end{matrix}\end{aligned}\\
+&=\begin{vmatrix}\q{4} &a+\q{1} & \q{-2}\\\q{2} & \q{1} & a+b\\\q{b}+\q{2} & \q{0} & a+b+\q{1}\end{vmatrix}\\
+&=(b+\q{2})\begin{vmatrix}a+\q{1} & \q{-2}\\\q{1} & a+b\end{vmatrix}+(a+b+\q{1})\begin{vmatrix}\q{4} & a+\q{1}\\\q{2} & \q{1}\end{vmatrix}\\
+&=(b+\q{2})((a+\q{1})(a+b)+\q{3})+(a+b+\q{1})(\q{4}-\q{2}(a+\q{1}))\\
+&=a^2b+ab+ab^2+b^2+\q{2}b+\q{2}a+\q{3}\\
+&=(a+b)(ab+b+\q{4})+\q{3}(a+b+\q{1})
+\end{aligned}
+\end{gather*}
+Juhul kui $M_{2,3}^{1,2}\neq0$ ehk $b\neq3$, on eelmainitud lause kohaselt maatriksi astak 2, kui $M_{1,2,3}^{1,2,3}=0$ ja $M_{1,2,4}^{1,2,3}=0$, ning 3, kui kumbki neist ei ole null, kuna maatriksi ridade arv on 3 ehk selle astak ei saa olla suurem kui 3. Lahendan võrrandisüsteemi
+\begin{gather*}
+\left\{
+\begin{aligned}
+&(a+\q{4})(ab+b+\q{4})=\q{0}\\
+&(a+b)(ab+b+\q{4})+\q{3}(a+b+\q{1})=\q{0}
+\end{aligned}\right.
+\end{gather*}
+Esimene võrrand kehtib parajasti siis, kui $a+\q{4}=0$ või $ab+b+\q{4}=0$. Asendan kõigepealt $a+\q{4}=0$ ehk $a=\q{1}$ teise võrrandisse:
+\begin{gather*}
+(\q{1}+b)(b+b+\q{4})+\q{3}(\q{1}+b+\q{1})=\q{0}\\
+\q{2}b^2+\q{4}b=\q{0}\\
+\q{2}b(b-\q{2})=\q{0}
+\end{gather*}
+Seega sain siit lahendid $a=\q{1}$ ja $b=\q{0}$ ning $a=\q{1}$ ja $b=\q{2}$. Mõlema puhul $b\neq\q{3}$, seega nendel tingimustel on astak 2. Asendan nüüd $ab+b+\q{4}=0$ ehk $a=\frac{\q{1}-b}{b}$ ($b=0$ puhul tekib $\q{4}=\q{0}$ seega $b$ ei ole null) teise võrrandisse:
+\begin{gather*}
+(a+b)0+\q{3}(\frac{\q{1}-b}{b}+b+\q{1})=\q{0}\\
+\frac{\q{1}-b}{b}+b+\q{1}=\q{0}\\
+\q{1}-b+b^2+b=\q{0}\\
+(\q{1}-b)(\q{1}+b)=\q{0}
+\end{gather*}
+Seega saan siit lahendid $a=\q{0}$ ja $b=\q{1}$ ning $a=\q{3}$ ja $b=\q{4}$. Mõlemal puhul $b\neq3$ seega astak on 2.\\
+Seega olen leidnud, et juhul, kui $b\neq3$, siis kui $(a,b)\in\{(\q{1},\q{0}),(\q{1},\q{2}),(\q{0},\q{1}),(\q{3},\q{4})\}$, on maatriksi astak 2, ning muudel väärtustel on maatirksi astak 3.\\
+Vaatlen nüüd juhtu, kui $b=3$. Saan maatriksi:
+\begin{align}
+\begin{pmatrix}
+\q{4} & a+\q{1} & \q{1} & \q{3}\\
+\q{2} & \q{1} & a+\q{2} & a+\q{3}\\
+\q{3} & \q{4} & \q{2} & \q{1}\notag
+\end{pmatrix}&\begin{matrix}+2\cdot\text{III}\\+\text{III} \\ \\\end{matrix}=
+\begin{pmatrix}
+\q{0} & a+\q{4} & \q{0} & \q{0}\\
+\q{0} & \q{0} & a+\q{4} & a+\q{4}\\
+\q{3} & \q{4} & \q{2} & \q{1}\notag
+\end{pmatrix}
+\end{align}
+Vaatlen miinorit $$M_{2,3}^{2,3}=\begin{vmatrix}\q{0} & a+\q{4}\\\q{4} & \q{2}\end{vmatrix}=\q{4}(a+\q{4})$$ning tema ääristavaid miinoreid
+\begin{gather*}
+\begin{aligned}
+M_{1,2,3}^{1,2,3}&=\begin{vmatrix}\q{0} &a+\q{4} & \q{0}\\\q{0} & \q{0} & a+\q{4}\\\q{3} & \q{4} & \q{2}\end{vmatrix}\\
+&=\q{3}\begin{vmatrix}a+\q{4} & \q{0}\\\q{0} & a+\q{4}\end{vmatrix}\\
+&=\q{3}(a+\q{4})^2
+\end{aligned}
+\end{gather*}
+\begin{gather*}
+\begin{aligned}
+M_{2,3,4}^{1,2,3}
+&=\begin{vmatrix}a+\q{4} & \q{0} & \q{0}\\\q{0} & a+\q{4} & a+\q{4}\\\q{4} & \q{2} & \q{1}\end{vmatrix}\\
+&=(a+\q{4})\begin{vmatrix}a+\q{4} & a+\q{4}\\\q{2} & \q{1}\end{vmatrix}\\
+&=(a+\q{4})(a+\q{4}-\q{2}a-\q{3})\\
+&=(a+\q{4})(\q{4}a+\q{1})
+\end{aligned}
+\end{gather*}
+Seega kui $b=\q{3}$ ja $a\neq\q{1}$, siis on maatriksi astak 3, kui $\q{3}(a+\q{4})^2=0$ ja $(a+\q{4})(\q{4}a+\q{1})=0$. Siit on aga näha, et esimene võrrand kehtib vaid juhul, kui $a=\q{1}$, mis käib vastu eeldusele, et $a\neq\q{1}$, seega kui $b=\q{3}$ ja $a\neq\q{1}$, siis on maatriksi astak alati 2. Kui kehtib $a=\q{1}$, on näha varem leitud maatriksist
+\begin{align}
+\begin{pmatrix}
+\q{0} & a+\q{4} & \q{0} & \q{0}\\
+\q{0} & \q{0} & a+\q{4} & a+\q{4}\\
+\q{3} & \q{4} & \q{2} & \q{1}\notag
+\end{pmatrix}
+\end{align}
+et esimesed kaks rida on kõik nullid, seega maatriksi astak ei saa olla üle ühe, ning viimases reas on konstandid, ehk suvaline kolmanda rea element on nullist erinev ehk astak on 1.\\
+Seega olen saanud tulemuse, et maatriksi astak on 3, kui $(a,b)\in\{(\q{1},\q{0}),(\q{1},\q{2}),(\q{0},\q{1}),(\q{3},\q{4})\}$, 1, kui $b=\q{3}$ ja $a\neq\q{1}$, ning 2 igal muul juhul. See tähendab, et algul mainitud teoreemi põhjal on võrrandisüsteemil $4-3=1$ lahend, kui $(a,b)\in\{(\q{1},\q{0}),(\q{1},\q{2}),(\q{0},\q{1}),(\q{3},\q{4})\}$, $4-2=2$ lahendit, kui $b=\q{3}$ ja $a\neq\q{1}$ ning igal muul juhul 3 lahendit lahendite fundamentaalsüsteemis.
+\end{document}
