@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage{pgfplots}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\newcommand\q[1]{\overline{#1}}
+\begin{document}
+\begin{center}
+\Large\textbf{Kodutöö nr. 4}\\
+1. variant\\
+\small{Joosep Näks}
+\end{center}
+Olgu $$f=15X^5+7X^4+18X^3+14X^2+4X+5,\quad g=25X^4-25X^3+39X^2-22X+10$$ Ringides $\mathbb{Z}_7[X]$ ja $\mathbb{Q}[X]$ leida
+\begin{itemize}
+\item Eukleidese algoritmi abil polünoomide $f$ ja $g$ suurim ühistegur $d$,
+\item polünoomid $u$ ja $v$ nii, et $d=u\cdot f+v\cdot g$,
+\item polünoomide $f$ ja $g$ vähim ühiskordne.
+\end{itemize}
+Eukleidese algoritmi sammud peavad lahenduskäigus näha olema, jagamisprotseduur ise ei pea. Vahetulemusi valida otstarbekalt, korrutades neid vajadusel pööratava elemendiga.\\\\
+\textbf{Lahendus:}\\
+Vaatlen kõigepealt ringi $\mathbb{Z}_7[X]$. Lihtsustan $f$ ja $g$:$$f=X^5+0X^4+4X^3+0X^2+4X+5,\quad g=4X^4+3X^3+4X^2+6X+3$$. Kasutan Eukleidese algoritmi: $$f=g\cdot(2X+2)+4X^3+X^2+6$$$$g=(4X^3+X^2+6)(X+4)+0$$ Seega SÜT$(f,g)=4X^3+X^2+6$.\\
+Algoritmist on näha, et $$d=4X^3+X^2+6=f-g\cdot(2X+2)=f\cdot1+g\cdot(5X+5)$$ seega kui $u=1$ ja $v=5X+5$ siis $d=f\cdot u+g\cdot v$.\\
+Loengukonspekti teoreemi 9.26 järgi kui $m=$VÜK$(f,g)$ ja $fg=md$, siis $d=$SÜT$(f,g)$. Seega $$\text{VÜK}(f,g)=m=\frac{fg}{d}=X^6+4X^5+4X^4+2X^3+4X^2+6.$$
+Kordan nüüd samme ringis $\mathbb{Q}[X]$. Eukleidese algoritm: $$f=g\cdot\left(\frac{3}{5}X+\frac{22}{25}\right)+\frac{83}{5}X^3-\frac{178}{25}X^2+\frac{434}{25}X-\frac{19}{5}$$$$g=\left(\frac{83}{5}X^3-\frac{178}{25}X^2+\frac{434}{25}X-\frac{19}{5}\right)\left(\frac{125}{83}X-\frac{5925}{6889}\right)+\left(\frac{46375}{6889}X^2-\frac{9275}{6889}X+\frac{46375}{6889}\right)$$
+$$\frac{83}{5}X^3-\frac{178}{25}X^2+\frac{434}{25}X-\frac{19}{5}=\left(\frac{46375}{6889}X^2-\frac{9275}{6889}X+\frac{46375}{6889}\right)\left(\frac{571787}{231875}X-\frac{130891}{231875}\right)+0$$ Seega $$\text{SÜT}(f,g)=\frac{46375}{6889}X^2-\frac{9275}{6889}X+\frac{46375}{6889}=(5X^2-X+5)\left(\frac{9275}{6889}\right)\sim 5X^2-X+5$$
+Kui algoritmi esimene rida teise asendada, saab võrrandi $$g=\left(f-g\cdot\left(\frac{3}{5}X+\frac{22}{25}\right)\right)\left(\frac{125}{83}X-\frac{5925}{6889}\right)+ d$$ $$d=f\cdot\left(-\frac{125}{83}X+\frac{5925}{6889}\right)+g\cdot\left(\frac{75}{83}X^2+\frac{5635}{6889}X+\frac{1763}{6889}\right)$$ seega kui $u=-\frac{125}{83}X+\frac{5925}{6889}$ ja $v=\frac{75}{83}X^2+\frac{5635}{6889}X+\frac{1763}{6889}$ siis $d=f\cdot u+g\cdot v$.\\
+Vähima ühiskordse leian sarnaselt eelnevaga: $$\text{VÜK}(f,g)=\frac{f\cdot g}{d}\sim 75X^7-25X^6+92X^5+12X^4+37X^2-12X+10$$
+\end{document}
