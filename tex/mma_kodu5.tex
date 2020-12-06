@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage{pgfplots}
+\usepackage[shortlabels]{enumitem}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\newcommand{\p}[1]{\frac{\partial}{\partial #1}}
+\begin{document}
+\begin{center}
+\Large\textbf{Kodutöö nr. 5}\\
+3. variant\\
+\small{Joosep Näks}
+\end{center}
+\textbf{1. }Leida tasandiline esimest liiki joonintegraal $$\int_Lx\ ds,$$kui $L$ on logaritmilise spiraali $r=a^{k\phi},\ (k,a>0)$ kaar, kus $\phi\in[0,\pi]$.\\\\
+\textbf{Lahendus:}\\
+Spiraali saab esitada parameetrilisel kujul $$x(\phi)=r\cos\phi=a^{k\phi}\cos\phi$$$$y(\phi)=r\sin\phi=a^{k\phi}\sin\phi$$ Seega esimest liiki joonintegraali arvutusvalemi järgi saab integraali leida järgmiselt:
+\begin{gather*}
+\begin{aligned}
+\int_Lx\ ds =& \int_0^\pi a^{k\phi}\cos\phi\sqrt{(k\ln|a|\ a^{k\phi}\cos\phi-a^{k\phi}\sin\phi)^2+(k\ln|a|\ a^{k\phi}\sin\phi+a^{k\phi}\cos\phi)^2}d\phi\\
+=&\int_0^\pi a^{2k\phi}\cos\phi\sqrt{(k\ln|a|)^2+1}d\phi\\
+=&\sqrt{(k\ln|a|)^2+1}\int_0^\pi a^{2k\phi}\cos\phi\ d\phi\\
+=&\sqrt{(k\ln|a|)^2+1}\left(\frac{a^{2k\phi}}{(2k\ln|a|)^2+1}(2k\ln|a|\cos\phi+\sin\phi)\right)\Bigg|_0^\pi\\
+=&\sqrt{(k\ln|a|)^2+1}\left(\frac{a^{2k\pi}}{(2k\ln|a|)^2+1}(-2k\ln|a|)-\frac{1}{(2k\ln|a|)^2+1}(2k\ln|a|)\right)\\
+=&-\frac{(a^{2k\pi}+1)\sqrt{(k\ln|a|)^2+1}(2k\ln|a|)}{(2k\ln|a|)^2+1}
+\end{aligned}
+\end{gather*}
+\pagebreak\\
+\textbf{2.} Teist liiki joonintegraalil üldiselt ei ole "tavalise" integraali, mis on seotud järjestusega. Tuua konkreetne kontranäide (koos tõestusega) tükiti siledast kaarest $AB$ ja sellel määratud pidevast funktsioonist $f$, mille jaoks järgmine võrratus EI KEHTI: $$\left|\int_{AB}f(x,y)\ dy\right|\leq\int_{AB}|f(x,y)|\ dy.$$\\\\
+\textbf{Lahendus:}\\
+Võtan funktsiooni $f(x,y)=1$ ning kaar $AB$ on defineeritud funktsioonidega $$x(t)=0,\quad y(t)=-t,\quad t\in[0,1].$$ Sel juhul saab võrratuse vasakuks pooleks $$\left|\int_{AB}f(x,y)\ dy\right|=\left|\int_0^1-1\ dt\right|=|-1|=1$$ Ning paremaks pooleks $$\int_{AB}|f(x,y)|\ dy=\int_0^1|1|\cdot-1\ dt=\int_0^1-1\ dt=-1$$ seega $$\left|\int_{AB}f(x,y)\ dy\right|>\int_{AB}|f(x,y)|\ dy$$ ehk võratus ei kehti.
+\pagebreak\\
+\textbf{3.} Greeni valemi abil leida tasandiline teist liiki joonintegraal $$\int_L(y^3-xy^2)dx+3xy^2\ dy,$$kus $L$ on ringjoon $x^2+y^2=2y$.\\\\
+\textbf{Lahendus:}\\
+Greeni valemi järgi $F=y^3-xy^2$ ja $G=3xy^2$. Leian nende osatuletised:
+\begin{gather*}
+\frac{\partial G}{\partial x}=3y^2\\
+\frac{\partial F}{\partial y}=3y^2-2xy
+\end{gather*}
+Seega Greeni valemi järgi saab integraali teisendada:
+\begin{gather*}
+\int_L(y^3-xy^2)dx+3xy^2\ dy=\iint\limits_{B((0,1),1)}\left(3y^2-3y^2+2xy\right)dx\ dy
+\end{gather*}
+Lähen integraali arvutamiseks üle polaarkoordinaatidele teisendusega $x=r\cos\phi$ ja $y=r\sin\phi$. Ringjoone võrrandisse teisenduse sisse asendades saab $r$ ülemise raja $r=2\sin\phi$. Ring paikneb täielikult $x$ teljest positiivses suunas mööda $y$ telge seega võtan $\phi\in[0,\pi]$. Jakobiaan on $r$ ehk korrutan integreeritava funktsiooni sellega läbi.\\
+Seega saab integraali:
+\begin{gather*}
+\begin{aligned}
+\iint\limits_{B((0,1),1)}\left(3y^2-3y^2+2xy\right)dx\ dy=&\int_0^\pi\int_0^{2\sin\phi} r\cdot2r\cos\phi\cdot r\sin\phi\ dr\ d\phi\\
+=&\int_0^\pi \left(\frac{r^4}{4}\cdot2\cos\phi\cdot \sin\phi\right)\bigg|_0^{2\sin\phi}\ d\phi\\
+=&\int_0^\pi \frac{(2\sin\phi)^4}{4}\cdot2\cos\phi\cdot \sin\phi\ d\phi\\
+=&8\int_0^\pi \cos\phi\cdot \sin^5\phi\ d\phi\\
+=&8\int_0^\pi \sin^5\phi\ d(\sin\phi)\\
+=&8 \frac{\sin^6\phi}6\Bigg|_0^\pi\\
+=&0
+\end{aligned}
+\end{gather*}
+\pagebreak\\
+\textbf{4.} Keha liigub tasandil jõuvälja $F=(3x^2+2y, 2(x+y))$ mõjul punktist $A=(-1,-2)$ punkti $B=(1,3)$ mööda joonisel näidatud trajektoori. Leida selle liikumise käigus jõu $F$ poolt tehtud töö.\\\\
+\textbf{Lahendus:}\\
+Jõu töö arvutamise valemi järgi saab töö arvutada integraaliga $$m\int_{AB} (3x^2+2y)dx+2(x+y)dy$$ Selle integraali väärtus ei sõltu integreerimisteekonnast parajasti siis, kui integreeritava funktsiooni osa $P=3x^2+2y$ osatuletis $y$ järgi ja $Q=2(x+y)$ osatuletis $y$ järgi on võrdsed. Leian osatuletised: $$\frac{\partial P}{\partial y}=2$$$$\frac{\partial Q}{\partial x}=2$$ Seega ei sõltu integraal integreerimisteekonnast. Saan funktsiooni $U=\frac34x^4+2xy+y^2$, mille täisdiferentsiaal on integreeritav funktsioon: $dU=(3x^2+2y)dx+2(x+y)dy$. Seega integraali väärtus on: 
+\begin{gather*}
+\begin{aligned}
+\int_{AB} (3x^2+2y)dx+2(x+y)dy=&\left(\frac34x^4+2xy+y^2\right)\Bigg|_{(-1,-2)}^{(1,3)}\\
+=&\left(\frac34+2\cdot3+3^2-\frac34-2\cdot(-1)\cdot(-2)-(-2)^2\right)\\
+=&7
+\end{aligned}
+\end{gather*}
+Ehk jõu poolt tehtud töö on $7m$, kus $m$ on keha mass.
+\end{document}
