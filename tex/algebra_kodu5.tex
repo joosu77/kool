@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage{pgfplots}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\newcommand\q[1]{\overline{#1}}
+\begin{document}
+\begin{center}
+\Large\textbf{Kodutöö nr. 5}\\
+1. variant\\
+\small{Joosep Näks}
+\end{center}
+Vektorruumil $\mathbb{R}^4$ üle $\mathbb{R}$ on defineeritud skalaarkorrutamine järgmise valemiga: $$\langle(x_1,x_2,x_3,x_4),(y_1,y_2,y_3,y_4)\rangle=x_1y_1+x_1y_2+x_2y_1+2x_2y_2+x_3y_3+2x_3y_4+2x_4y_3+5x_4y_4.$$
+Ortonormeerida Gram-Schmidti protsessiga vektorsüsteem $$a_1=(2,4,3,4),\quad a_2=(0,1,0,2),\quad a_3=(5,4,1,4)$$selle skalaarkorrutamise suhtes.\\\\
+\textbf{Lahendus:}\\
+Kõigepealt võtan uue süsteemi esimeseks vektoriks vana süsteemi esimese vektori: $b_1=a_1=(2,4,3,4)$. Teine vektor esitub kujul $b_2=k_1b_1+a_2$, kuna ta peab kuuluma algse võrrandisüsteemi lineaarkattesse, ning et ta oleks vektoriga $b_1$ ortogonaalne, peab kehtima $\langle b_1,k_1b_1+a_2\rangle=0$. Leian sealt kordaja $k_1$:
+\begin{gather*}
+\begin{aligned}
+k=&-\frac{\langle b_1,a_2\rangle}{\langle b_1, b_1\rangle}=-\frac{\langle(2,4,3,4),(0,1,0,2)\rangle}{\langle(2,4,3,4),(2,4,3,4)\rangle)}\\
+=&-\frac{2+2\cdot4+2\cdot6+5\cdot8}{4+8+8+2\cdot16+9+2\cdot12+2\cdot12+5\cdot16}\\
+=&-\frac{62}{209}
+\end{aligned}
+\end{gather*}
+Seega teine vektor on $$b_2=-\frac{62}{209}b_1+a_2=\left(-\frac{124}{209},-\frac{39}{209},-\frac{186}{209},-\frac{170}{209}\right)=-\frac{1}{209}(124,39,186,170).$$ Viimane vektor esitub sarnaselt kujul $b_3=k_2b_2+a_3$ ning kordaja saab leida:
+\begin{gather*}
+\begin{aligned}
+k_2=&-\frac{\langle b_2,a_3\rangle}{\langle b_2,b_2\rangle}\\
+=&-\frac{-\frac{1}{209}\langle(124,39,186,170)(5,4,1,4)\rangle}{\left(-\frac{1}{209}\right)^2\langle(124,39,186,170)(124,39,186,170)\rangle}\\
+=&\frac{209\langle(124,39,186,170)(5,4,1,4)\rangle}{\langle(124,39,186,170)(124,39,186,170)\rangle}\\
+=&\frac{209\cdot7037}{333666}=\frac{1470733}{333666}
+\end{aligned}
+\end{gather*}
+Seega kolmas vektor on
+\begin{gather*}
+b_3=\frac{1470733}{333666}b_2+a_3=\left(\frac{795742}{333666},\frac{1060221}{333666},-\frac{975216}{333666},-\frac{138374}{333666}\right)\\
+=\frac{1}{333666}(795742,1060221,-975216,-138374)
+\end{gather*}
+Seega sain ortonormeeritud süsteemiks$$b_1\sim(2,4,3,4),\quad b_2\sim(124,39,186,170),\quad b_3\sim(795742,1060221,-975216,-138374)$$
+\end{document}
