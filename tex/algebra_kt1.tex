@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage{pgfplots}
+\usepackage[shortlabels]{enumitem}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\newcommand{\p}[1]{\frac{\partial}{\partial #1}}
+\begin{document}
+\begin{center}
+\Large\textbf{Kontrolltöö nr. 1 järeltöö}\\
+\small{Joosep Näks}
+\end{center}
+\textbf{1. } Et $(X, \circ)$ oleks rühm, (1) peab ta olema assiotsiatiivne, (2) temal peab leiduma ühikelement ning (3) iga tema element peab olema pööratav. Kontrollin neid:
+\begin{enumerate}
+\item Olgu $f,g,h\in X$ ning $x\in\mathbb{R}$, siis $((f\circ g)\circ h) (x)=(f\circ g)(5^{a_h}x)=5^{a_f}(5^{a_g}(5^{a_h}x))=5^{a_f}(5^{a_g}(5^{a_h}x))=f(( g\circ h)(x))=(f\circ (g\circ h)) (x)$\\
+\item Ühikelemendiks sobib $e(x)=5^0x=x$ kuna ta on ka ühikelement kõigi teisenduste hulga peal.
+\item Iga elemendi $f\in X, f(x)=5^ax$ saab valida pöördelemendiks $f^{-1}(x)=5^{-a}x$, kuna nende kompositsioon on: $(f\circ f^{-1})(x)=5^a(5^{-a}x)=x=5^{-a}(5^ax)=(f^{-1}\circ f)(x)$
+\end{enumerate}
+Seega on $(X, \circ)$ rühm. et ta oleks ka Abeli rühm, peab ta olema ka kommutiivne. Kontrollin seda:\\
+Olgu $f,g\in X, x\in \mathbb{R}$, siis $(f\circ g)(x) = 5^{a_f}(5^{a_g}x)=5^{a_g}(5^{a_f}x)=(g\circ f)(x)$\\
+Ehk see on kommutiivne ja on ka Abeli rühm.
+\pagebreak\\
+\textbf{2.} Kui viia kompleksarv $z$ eksponentsiaalkujule, saab võrrandi vasaku poole esitada nii: $\overline{z^3}^2=\overline{(re^{i(\phi+2n\pi)})^3}^2=\overline{(r^3e^{3i(\phi+2n\pi)})}^2=(r^3e^{-3i(\phi+2n\pi)})^2=r^6e^{-6i(\phi+2n\pi)}$ ning parema poole saab esitada: $(re^{i(\phi+2k\pi)})^5=r^5e^{i5(\phi+2k\pi)}$. Et kompleksarvud võrdsed oleksid, peavad olema võrdsed nii nende moodulid kui ka argumendid, ehk peavad kehtima võrrandid $r^6=r^5$ ja $-6(\phi+2n\pi)=5(\phi+2k\pi)$. Esimesest võrrandist on näha, et sobilike kompleksarvude moodul peab olema 0 või 1. Teisest võrrandist saab teisendades $\phi=\frac{2\pi}{11}(5k+6k)$.\\
+Seega on võrrandil 12 lahendit: 0 ja kõik kompleksarvud kujul $e^{in\frac{2\pi}{11}},\ n\in\mathbb{Z}$
+\pagebreak\\
+\textbf{3.} Leian alamringi $R$. Et $R$ oleks $\mathbb{C}$ alamring, peab ta sisaldama $\mathbb{C}$ ühikelementi 1 ja nullelementi 0. $R$ peab olema liitmise suhtes kinnine, seega kõik naturaalarvud sisalduvad ringis $R$, kuna need on kõik mingi koguse ühikelemendi endale juurde liitmisel saadud arvud. $R$ peab olema kinnine ka vastandarvu võtmise suhtes, seega peavad ka kõigi naturaalarvude vastandarvud sisalduma ringis $R$, ehk kõik täisarvud sisalduvad ringis $R$. On teada, et $\mathbb{Z}$ on ring, seega $\mathbb{Z}$ on korpuse $\mathbb{R}$ vähim alamring.\\
+Lisan ringi $R$ ka elemendi $6i-2$. Et ring on liitmise suhtes kinnine, peavad sisalduma seal ka iga imaginaararvu $a+ib,\ a,b\in\mathbb{Z}$ puhul kõik arvud kujul $a+ib+c,\ c\in\mathbb{Z}$ ehk $ib+d,\ \forall d\in\mathbb{Z}$. Et ring on korrutamise suhtes kinnine, peavad seal leiduma kõik 6 kordse imaginaarliikme kordajaga imaginaararvud, kuna neid saab arvu $6i$ läbi korrutamisel erinevate täisarvudega ning seejärel mingi täisarvu juurde liitmisel.\\
+Saadud imaginaararvude liitmisel saab ikkagi vaid 6 kordse imaginaarliikmega arve, mis on juba ringis. Saadud imaginaararvude korrutamisel saab arve kujul: $(6ai+b)(6ci+d)=-36ac+6i(d+b)+db$, kus imaginaarliikme kordaja on ikkagi 6 kordne.\\
+Seega on vähim sobiv alamring $R=\mathbb{Z}\cup\{6ai+b\ |\ a,b\in\mathbb{Z}\}$.
+\pagebreak\\
+\textbf{4.} Definitsiooni kohaselt on maatriksi $A\in Mat_n(K)$, kus $A=(a_{ij})$ determinant $|A|=\sum_{\sigma\in S_n}\text{sign}(\sigma)\cdot a_{1\sigma(1)}\cdot a_{2\sigma(2)}\cdot ...\cdot a_{n\sigma(n)}$\\
+Kui vahetada ära read $(a_{ki})_{i=1..n}$ ja $(a_{ti})_{i=1..n}$, on see sama, mis substitutsioonides ära vahetada nendele ridadele vastavad teisendused ning jätta alles algne maatriks. Ehk kui algses maatriksis mingi substitutsioon on 
+\begin{gather*}
+\sigma = \begin{pmatrix}
+\begin{aligned}
+1 && 2 && .. && k && .. && t && .. && n\\
+\sigma(1) && \sigma(2) && .. && \sigma(k) && .. && \sigma(t) && .. && \sigma(n)\\
+\end{aligned}
+\end{pmatrix}
+\end{gather*}
+siis see sama substitsioon uues maatriksis oleks
+\begin{gather*}
+\sigma' = \begin{pmatrix}
+\begin{aligned}
+1 && 2 && .. && k && .. && t && .. && n\\
+\sigma(1) && \sigma(2) && .. && \sigma(t) && .. && \sigma(k) && .. && \sigma(n)\\
+\end{aligned}
+\end{pmatrix}
+\end{gather*}
+Kuna substitutsiooni alumises reas toimus transpositsioon, muutus substitutsiooni paarsus.\\
+Seega on uue maatriksi determinant \begin{gather*}
+\begin{aligned}
+|A'|=&\sum_{\sigma\in S_n}\text{sign}(\sigma')\cdot a_{1\sigma'(1)}\cdot ...\cdot a_{k\sigma'(k)}\cdot...\cdot a_{t\sigma'(t)}\cdot ...\cdot a_{n\sigma'(n)}\\
+=&\sum_{\sigma\in S_n}-\text{sign}(\sigma)\cdot a_{1\sigma(1)}\cdot ...\cdot a_{k\sigma(t)}\cdot...\cdot a_{t\sigma(k)}\cdot ...\cdot a_{n\sigma(n)}\\
+=&-|A|
+\end{aligned}
+\end{gather*}
+\pagebreak\\
+\textbf{5.} Kontrollin kas vektorruumi tingimused jäävad püsima:
+\begin{enumerate}
+\item Liitmise assotsiatiivsus jääb püsima, kuna liitmist et muudetud
+\item Nullelemendi olemasolu jääb püsima, kuna liitmist ei muudetud
+\item Vastandelemendi olemasolu jääb püsima, kuna liitmist ei muudetud.
+\item liitmise kommutatiivsus jääb püsima, kuna liitmist et muudetud.
+\item skalaariga vektorite summa korrutamise distributiivsus jääb püsima, kuna $\lambda\circ (a+b)=\overline{\lambda}\cdot (a+b)$ on sama, nagu see, kui valida skalaariks $\lambda$ asemele $\overline{\lambda}$ ning teha esialgselt defineeritud skalaariga korrutamist.
+\item vektoriga skalaaride summa korrutamise distributiivsus jääb püsima, kuna kompleksarvude kaaskompleksarvude summa on sama, nagu nende kompleksarvude summa kaaskompleks
+\item skalaaride korrutamise assotsiatiivsus jääb püsima, kuna kompleksarvude kaaskomplekside korrutis on sama mis nende kompleksarvude korrutise kaaskompleks
+\end{enumerate}
+\end{document}
