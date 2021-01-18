@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage{pgfplots}
+\usepackage[shortlabels]{enumitem}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\newcommand{\p}[1]{\frac{\partial}{\partial #1}}
+\begin{document}
+\begin{center}
+\Large\textbf{Eksam}\\
+\small{Joosep Näks}
+\end{center}
+\textbf{1. } Vektorid $\vec{a}+2\vec b+\lambda\vec c,\ 4\vec{a}+5\vec b+6\vec c,\ 7\vec a+8\vec b+\lambda^2\vec{c}$ on komplanaarsed parajasti siis, kui leiduvad skalaarid $d,e,f\neq0$ nii, et $d(\vec{a}+2\vec b+\lambda\vec c)+e(4\vec{a}+5\vec b+6\vec c)+f(7\vec a+8\vec b+\lambda^2\vec{c})=0$. Võrrandi $d$ga läbi jagades saan $(\vec{a}+2\vec b+\lambda\vec c)+\frac e d(4\vec{a}+5\vec b+6\vec c)+\frac f d(7\vec a+8\vec b+\lambda^2\vec{c})=0$. Defineerin uued muutujad $k:=\frac e d$ ja $t:=\frac f d$. Kuna $\vec a, \vec b,\vec c$ on mittekomplanaarsed, ei saa ühtegi neist avaldada teiste kaudu ehk ma saan leitud võrrandi teha lahti võrrandisüsteemiks algsete vektorite kaupa:
+\begin{gather*}
+\begin{aligned}
+\left\{\begin{aligned}
+1+k\cdot4+t\cdot7=0\\
+2+k\cdot5+t\cdot8=0\\
+\lambda+k\cdot6+t\cdot\lambda^2=0
+\end{aligned}\right.
+\end{aligned}
+\end{gather*}
+Esimesest kahest võrrandist saan, et $t=1$ ja $k=-2$ ning viimasesse võrrandisse tekkivast ruutvõrrandist saan et sobivad $\lambda$ väärtused on 3 ja -4.\\\\
+\textbf{2. }Leian punkti $M$ projektsiooni tasandile $\mathfrak{B}$. Kuna punkti $M$ ja tema projektsiooni $M'$ vaheline vektor peab olema tasandiga risti, on see normaalvektoriga paralleelne. Seega on projektsiooni kohavektor esitatav kujuna $\vec{r_0}'=\vec{r_0}+k\cdot \vec{N}$, kus $k$ on mingi reaalarv. $k$ leidmiseks kasutan ära seda, et projektsioon asub tasandil $\mathfrak{B}$ ehk kehtib $\langle\vec{r_0}',\vec{N}\rangle=D \Leftrightarrow \langle\vec{r_0}+k\cdot\vec{N},\vec{N}\rangle=D \Leftrightarrow \langle\vec{r_0},\vec{N}\rangle+k\langle\vec{N},\vec{N}\rangle=D \Leftrightarrow k=\frac{D-\langle\vec{r_0},\vec{N}\rangle}{|\vec{N}|^2}$.\\
+Seega kokkuvõttes punkti $M$ projektsiooni tasandile $\mathfrak{B}$ kohavektor on\\ $\vec{r_0}'=\vec{r_0}+\frac{D-\langle\vec{r_0},\vec{N}\rangle}{|\vec{N}|^2}\vec{N}$\\\\
+\textbf{3.} Leian kõigepealt sirgete $L_1$ ja $L_2$ sihivektorid. $\vec{s_1}=(1,1,-1)\times(2,-1,5)=(4,-7,-3)$ ja $\vec{s_2}=(-1,1,0)\times(5,1,-1)=(-1,-1,-6)$.\\
+Leitav tasand $\pi$ on antud sirgetega paralleelne, seega on tema normaalvektor sirgete sihivektoritega risti. Leian tasandi normaalvektori: $\vec{n}=\vec{s_1}\times\vec{s_2}=(4,-7,-3)\times(-1,-1,-6)=(39,27,-11)$.\\
+Seega on tasandi üldvalem $39x+27y-11z+D=0$. $D$ leidmiseks asendan sisse punkti $A$ koordinaadid: $39\cdot1+27\cdot3-11\cdot0+D=0 \Leftrightarrow D=-39-27=-66$ ehk tasandi üldvalem on $39x+27y-11z-66=0$.
+Leian punkti  $B(\frac13,\frac13,0)$ kauguse tasandist: $d=\frac{|39\cdot\frac13+27\cdot\frac13-11\cdot0-66|}{\sqrt{39^2+27^2+(-11)^2}}=\frac{44}{\sqrt{2371}}$\pagebreak\\
+\textbf{4.} Sirged lõikuvad parajasti siis kui leiduvad sellised $t_1$ ja $t_2$ väärtused, et kehtib $\vec{r_1}(t_1)=\vec{r_2}(t_2)$. Väärtuste leidmiseks koostan võrrandisüsteemi:
+\begin{gather*}
+\begin{aligned}
+\left\{\begin{aligned}
+4-4t_1&=-3+t_2\\
+1+4t_1&=-1+2t_2\\
+-5+7t_1&=-4+2t_2
+\end{aligned}\right.
+\end{aligned}
+\end{gather*}
+Selle lahendades saan $t_1=1$ ja $t_2=3$. Need sisse asendades saan $\vec{r_1}(1)=(0,5,2)$ ja $\vec{r_2}(3)=(0,5,2)$ ehk sirged lõikuvad punktis $(0,5,2)$.\\
+Kuna võrdkülgse trapetsi diagonaalid on nurgapoolitajad, saan leida nurgapoolitaja sihivektori liites kokku võrdsete pikkustega sirgete sihivektorid. Leian mõlema sirge sihivektorid: $\vec{s_1}=\vec{r_1}(1)-\vec{r_1}(0)=(-4,4,7)$ ja $\vec{s_2}=\vec{r_2}(1)-\vec{r_2}(0)=(1,2,2)$. Samapikkuste sihivektorite saamiseks normaliseerin need: $\vec{s_1^0}=\frac{\vec{s_1}}{|\vec{s_1}|}=\frac{(-4,4,7)}{9}=\left(-\frac49,\frac49,\frac79\right)$ ja $\vec{s_2^0}=\frac{\vec{s_2}}{|\vec{s_2}|}=\frac{(1,2,2)}{3}=\left(\frac13,\frac23,\frac23\right)$. Võimalikude nurgapoolitajate sihivektorid on $\vec{s_1^0}+\vec{s_2^0}$ ja $\vec{s_1^0}-\vec{s_2^0}$, et teada saada, kumb neist õige on, võrdlen nende pikkuseid, kuna võrdkülgses trapetsis on teravnurga poolitaja pikem diagonaal.\\ $|\vec{s_1^0}+\vec{s_2^0}|=\left|\left(-\frac49+\frac13,\frac49+\frac23,\frac79+\frac23\right)\right|=\left|\left(-\frac19,\frac79,\frac{10}{9}\right)\right|=\frac{150}{81}=\frac{50}{27}$\\
+$|\vec{s_1^0}-\vec{s_2^0}|=\left|\left(-\frac49-\frac13,\frac49-\frac23,\frac79-\frac23\right)\right|=\left|\left(-\frac79,-\frac29,\frac19\right)\right|=\frac{54}{81}=\frac{18}{27}$\\
+Summa $\vec{s_1^0}+\vec{s_2^0}$ on suurema pikkusega, seega on see ka tervanurga poolitaja. Nurgapoolitaja peab läbima ka varem leitud sirgete lõikumispunkti $(0,5,2)$, seega on nurgapoolitaja kanooniline võrrand $\frac{x}{-\frac19}=\frac{y-5}{\frac79}=\frac{z-2}{\frac{10}9}$.
+\pagebreak\\
+\textbf{5.} Puutujate võrrandite leidmiseks leian kõigepealt ellipsi parameetrilise kuju:
+$x(t)=\sqrt{30}\cos(t),\quad y(t)=\sqrt{24}\sin(t)$.\\
+Leian puutuja parameetrilise võrrandi punktis $t_0$:\\
+$\hat{x}_{t_0}(t)=x'(t_0)t+x(t_0)=\sqrt{30}(-\sin(t_0)t+\cos(t_0))$\\
+$\hat{y}_{t_0}(t)=y'(t_0)t+y(t_0)=\sqrt{24}(\cos(t_0)t+\sin(t_0))$\\
+Leian puutuja sirge kanoonilise võrrandi:
+$\frac{\hat{x}_{t_0}-\sqrt{30}\cos(t_0)}{-\sqrt{30}\sin(t_0)}=\frac{\hat{y}_{t_0}-\sqrt{24}\sin(t_0)}{\sqrt{24}\cos(t_0)}$ ehk puutuja punktis $t_0$ sihivektor on $(-\sqrt{30}\sin(t_0),\sqrt{24}\cos(t_0))$.\\
+Sirgeid, mis on antud sirgega $45^\circ$ nurga all, on kaks tükki, üks on ühes suunas $45^\circ$ pööratud ja teine teises suunas. Olemas on antud sirge normaalvektor on $(1,3)$. Kuna normaalvektor on sihivektorist $90^\circ$ pööratud, siis kui puutuja ja antud sirge sihivektorid moodustavad $45^\circ$ nurga, siis puutuja sihivektor ja antud sirge normaalvektor moodustavad $-45^\circ$ nurga ning kui sihivektorid moodustavad $-45^\circ$ nurga, siis sihivektor ja normaalvektor moodustavad $45^\circ$ nurga.\\
+Leian sobivad puutujavektorid skalaarkorrutise abil:\\
+\begin{gather*}
+\begin{aligned}
+\langle \vec{s_1},\vec{n}\rangle&=|\vec{s_1}|\cdot|\vec{n}|\cdot\cos(45^\circ)\\
+\langle (-\sqrt{30}\sin(t_0),\sqrt{24}\cos(t_0)),(1,3)\rangle&=|(-\sqrt{30}\sin(t_0),\sqrt{24}\cos(t_0))|\cdot|(1,3)|\cdot\frac{\sqrt{2}}{2}\\
+-\sqrt{30}\sin(t_0)+3\sqrt{24}\cos(t_0)&=\sqrt{54}\cdot2\cdot\frac{\sqrt{2}}{2}\\
+\end{aligned}
+\end{gather*}
+(Ei jõudnud ülesannet lõpuni teha aja puuduse tõttu)
+\pagebreak\\
+\textbf{7. }Ellipsi üks pooltelg läheb mööda polaartelge ehk selle kahekordne pikkus on ellipsi läbimõõt mööda polaartelge ehk $r(0)-r(-\pi)=\frac{3\sqrt2}{2-\cos0}-\frac{3\sqrt2}{2-\cos(-\pi)}=3\sqrt2-\frac{3\sqrt2}{3}=2\sqrt{2}$.\\
+Ellipsi teine pooltelg on sellega risti ja algab ellipsi keskpunktist. Ellipsi keskpunkt asub vastavas ristkoordinaatteljestikus asukohas $x=\frac{r(0)-r(-\pi)}2-r(-\pi)=2\sqrt2-\sqrt2=\sqrt2$ ja $y=0$. Defineerin ellipsi keskpunkti ja koordinaattasandi keskpunkti vaheliseks kauguseks $k=\sqrt2$ ning koordinaattasandi ja teise pooltelje pikkuseks $b$.\\
+Seega saab Pythagorose teoreemi põhjal võrrandi $r^2=k^2+b^2$, kus $r$ on teise pooltelje tipu kaugus koordinaattasandi keskpunktist ja koosinuse definitsiooni põhjal võrrandi $\cos\theta=\frac k r$. Asendades teise saadud võrrandi algsesse ellipsi võrrandisse sisse saan $r=\frac{3\sqrt2}{2-\frac k r}$ ehk $(2-\frac k r)r=3\sqrt2$ ehk $2r-\sqrt2=3\sqrt2$ ehk $r=\frac{4\sqrt{2}}{2}=2\sqrt2$. Kui see Pythagarose teoreemist saadud võrrandisse sisse asendada, saab $(2\sqrt2)^2=(\sqrt2)^2+b^2$ ehk $b=\pm\sqrt6$ ning kuna pooltelje pikkus saab olla vaid positiivne, on teise pooltelje pikkus $\sqrt6$.\\
+Seega on antud ellipsi pooltelgede pikkused $a=\sqrt2$ ja $b=\sqrt6$.\\
+Ellipsi fookused asuvad selle keskpunktist $c=\sqrt{a^2-b^2}$ kaugusel mööda pikemat pooltelge ehk fookuste vaheline kaugus on\\
+$2c=2\sqrt{|a^2-b^2|}=2\sqrt{|2-6|}=2\sqrt{4}=4$
+\end{document}
