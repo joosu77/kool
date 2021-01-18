@@ -1,0 +1,121 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage{pgfplots}
+\usepackage[shortlabels]{enumitem}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+% matrix ilma äärteta, vmatrix det, pmatrix tavaien
+\newcommand\q[1]{\overline{#1}}
+\begin{document}
+\begin{center}
+\Large\textbf{Kontrolltöö nr. 3}\\
+\small{Joosep Näks}
+\end{center}
+\textbf{1.}
+\textbf{Lahendus:}\\
+Kontrollin liitmise säilivust:
+\begin{gather*}
+\varphi(f+g)(x)=x\cdot(f+g)'(x)=x f'(x)+xg'(x) = \varphi(f)(x)+\varphi(g)(x)
+\end{gather*}
+Kontrollin skalaariga korrutamise säilivust:
+\begin{gather*}
+\varphi(kf)(x)=x\cdot(kf)'(x)=kx f'(x) = k\varphi(f)(x)
+\end{gather*}
+Kuna teisendus säilitab liitmise ja skalaariga korrutamise, on tegu lineaarteisendusega.
+\begin{enumerate}[(a)]
+\item Leian baasi teisendused:
+\begin{gather*}
+\begin{aligned}
+\varphi(e_1)=\varphi(1)=0X=0\cdot X^3+0\cdot X^2+0\cdot X+0\\
+\varphi(e_2)=\varphi(3X-1)=3X=0\cdot X^3+0\cdot X^2+3\cdot X+0\\
+\varphi(e_3)=\varphi((3X-1)^2)=18X^2-6X=0\cdot X^3+18\cdot X^2-6\cdot X+0\\
+\varphi(e_3)=\varphi((3X-1)^3)=81X^3-54X^2+9X=81\cdot X^3-54\cdot X^2+9\cdot X+0\\
+\end{aligned}
+\end{gather*}
+Seega on teisenduse maatriks järgnev:
+\begin{gather*}
+A=
+\begin{pmatrix}
+0 && 0 && 0 && 0\\
+0 && 0 && 3 && 0\\
+0 && 18 && -6 && 0\\
+81 && -54 && 9 && 0\\
+\end{pmatrix}
+\end{gather*}
+\item Teisenduse tuumaks on polünoomid $a\in R_3[X]$, mille puhul $\varphi(a)=0$. Juhul, kui $x=0$, võrdus kehtib, kuna $\varphi(f)(x)=xf'(x)=0$. Muudel juhtudel saab pooled $x$ga läbi jagada ning saame tingimuse $f'(x)=0$, see kehtib parajasti siis, kui $a$ konstantfunktsioon. Seega $Ker\  \varphi = R_0[X]$.\\
+Teisenduse kujutiseks on $Im\ \varphi=\left\{a_3X^3+a_2X^2+a_1X\ |\ a_1,a_2,a_3\in\mathbb{R}\right\}$ kuna nagu teisenduse maatriksist on näha, saab sobiva kordajaga $\varphi(e_4)$ kõik $X^3$ kordajad kätte, $\varphi(e_3)$ kordajatega kõik $X^2$ kordajad kätte ning $\varphi(e_2)$ kõik $X$ kordajad kätte, kuid vabaliige on alati 0.
+\end{enumerate}
+\pagebreak
+\textbf{2. Lahendus:}\\
+Omaväärtuste leidmiseks leian kõigepealt karakteristliku polünoomi:
+\begin{gather*}
+\begin{aligned}
+a=&
+\begin{vmatrix}
+-1-\lambda && 0 && 0 && 1\\
+0 && 1-\lambda && 0 && 2\\
+0 && 0 && 1-\lambda && 0\\
+1 && 0 && 0 && -1-\lambda\\
+\end{vmatrix}\\
+=&(1-\lambda)
+\begin{vmatrix}
+-1-\lambda && 0 && 1\\
+0 && 1-\lambda && 0\\
+1 &&0 && -1-\lambda\\
+\end{vmatrix}\\
+=&(1-\lambda)^2
+\begin{vmatrix}
+-1-\lambda && 1\\
+1 && -1-\lambda\\
+\end{vmatrix}\\
+=&(1-\lambda)^2((-1-\lambda)^2-1)\\
+=&(1-\lambda)^2((1+2\lambda+\lambda^2-1)\\
+=&\lambda(1-\lambda)^2(2+\lambda)\\
+\end{aligned}
+\end{gather*}
+Selle juured on 0, 1, -2, mis on ka teisenduse omaväärtused, millest 1 on kahekordne ning teised on ühekordsed.\\
+\pagebreak\\
+\textbf{3. Lahendus:}\\
+Kontrollin ega üleliigseid  moodustajaid pole:
+\begin{gather*}
+\begin{aligned}
+\begin{pmatrix}
+1 && -2 && 3 && -4\\
+4 && -3 && 2 && -1\\
+4 && -4 && 4 && -4\\
+\end{pmatrix}\rightarrow
+\begin{pmatrix}
+1 && -2 && 3 && -4\\
+4 && -3 && 2 && -1\\
+0 && -1 && 2 && -3\\
+\end{pmatrix}\rightarrow\\
+\begin{pmatrix}
+1 && -2 && 3 && -4\\
+0 && 5 && -10 && 15\\
+0 && -1 && 2 && -3\\
+\end{pmatrix}\rightarrow
+\begin{pmatrix}
+1 && -2 && 3 && -4\\
+0 && 5 && -10 && 15\\
+0 && 0 && 0 && 0\\
+\end{pmatrix}
+\end{aligned}
+\end{gather*}
+Seega saab $a_3$ välja jätta. Ortogonaliseerin $L$ baasi. Ortogoneerimiseks võtan projektsiooni esimeseks vektoriks $b_1=a_1=(4,-3,2,-1)$. Ortogoneeritud süsteemi vektorid peavad kuuluma algse süsteemi lineaarkattesse, seega peab kehtima $a_1+k\cdot a_2=b_2$. Samuti peab olema süsteem ortogonaalne, millest saab tingimuse $\langle b_1,b_2\rangle=0$. Need kokku pannes saab kordaja leida järgnevalt $$k=-\frac{\langle a_1,b_1\rangle}{\langle a_1,a_2\rangle}=-\frac{30}{19}$$ Seega $b_2=(1,-2,3,-4)-\frac{30}{19}(4,-3,2,-1)=\frac{1}{19}(-101,52,-3,-46)\sim(-101,52,-3,-46)$.
+Vektori $u$ projektsioon on 
+\begin{gather*}
+\begin{aligned}
+c=&\langle u,\frac{b_1}{|b_1|}\rangle\frac{b_1}{|b_1|}+\langle u,\frac{b_2}{|b_2|}\rangle\frac{b_2}{|b_2|}\\
+=&\langle (2,1,-5,4),\frac{(1,-2,3,-4)}{30}\rangle\frac{(1,-2,3,-4)}{30}\\
+&+\langle (2,1,-5,4),\frac{(-101,52,-3,-46)}{15030}\rangle\frac{(-101,52,-3,-46)}{15030}\\
+=&-\frac{31}{30}(1,-2,3,-4)-\frac{9}{15030}(-101,52,-3,-46)\\
+=&-\frac{1}{10}\left(\frac{31}{3}(1,-2,3,-4)+\frac{1}{167}(-101,52,-3,-46)\right)\\
+=&-\frac{1}{10}\left(4874,-10198,31053,-41278\right)\\
+\end{aligned}
+\end{gather*}
+Ning tema ortogonaalne täiend on $u-c=\frac1{10}(4894,-10188,31003,-41238)$.\\
+\end{document}
