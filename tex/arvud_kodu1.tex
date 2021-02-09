@@ -1,0 +1,111 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[estonian]{babel}
+\usepackage{t1enc}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{lscape}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage{pgfplots}
+\usepackage[shortlabels]{enumitem}
+\usepackage[a4paper,margin=1in,footskip=0.25in]{geometry}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\newcommand{\p}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\topmargin-3em
+\oddsidemargin0cm
+\textwidth16cm
+%\textheight27cm
+\evensidemargin-2cm
+\begin{document}
+\begin{center}
+\Large\textbf{Kodutöö nr. 1}\\
+\small{Joosep Näks ja Uku Hannes Arismaa}
+\end{center}
+\textbf{1.} Tõestada, et kui $a,b,c,d\in\mathbb{Z}$ ja $ad>bc+1$, siis vähemalt üks arvudest $a$, $b$, $c$ või $d$ ei jagu arvuga $ad-bc$. Kas väide jääb kehtima ka eeldusel $ad>bc$?
+
+\bigskip
+Tähistame $x$ on $ad-bc$. Eeldame vastuväiteliselt, et $x$ jagab kõiki arve. Siis $x^2$ jagab $ad$ ja $bc$, seega ka $ad-bc$, seega $cx^2=x$, kust $x$ taandades saame $cx=1$, seega $x$ saab olla kas $1$ või $-1$. Mõlemal juhul ei kehti tingimus $ad>bc+1$. Kui võtta $a=3,d=5,b=2,c=7$, saame $15>14$ ja $15-14=1$ jagab kõiki arve $a,b,c,d$.
+
+\bigskip
+\noindent\textbf{2.} Tõestada, et iga naturaalarvu $n$ korral $15\ |\ n^7+2n^5+4n^3+8n$.
+
+\bigskip
+
+Kõigepealt märkan, et antud polünoomi saab tegurdada järgnevalt: $n^7+2n^5+4n^3+8n=n(n^2+2)(n^4+4)$. Et see jaguks 15ga, peab ta jaguma 3 ja 5ga. Kirjutan välja nende jäägitabelid:\\
+\begin{tabular}{|c|c|c|c|}
+\hline
+$n \mod 3$&0&1&2\\
+\hline
+$n^2 \mod 3$&0&1&1\\
+\hline
+\end{tabular}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$n \mod 5$&0&1&2&3&4\\
+\hline
+$n^2 \mod 3$&0&1&4&4&1\\
+\hline
+$n^4 \mod 3$&0&1&1&1&1\\
+\hline
+\end{tabular}\\
+On näha, et antud polünoom jagub iga $n$ korral 3ga, kuna kui arvu $n$ 3ga jagamisel on jääk 0, siis jagub tegur $n$ 3ga ning kui jääk on 1 või 2, siis jagub tegur $(n^2+2)$ 3ga. Polünoom jagub ka iga $n$ puhul 5ga, kuna kui $n$ 5ga jagamisel on jääk 0, jagub tegur $n$ 5ga ning iga muu jäägi puhul jagub tegur $(n^4+4)$ 5ga.
+
+\bigskip
+
+\noindent \textbf{3.} Leida kõik täisarvud $a$, mille korral $a+4\mid a^4+2$.
+
+\bigskip
+$a+4 \mid (a+4)^4\Rightarrow a+4\mid(a+4)^4-a^4-2=16a^3+96a^2+256a+254$
+
+$a+4 \mid (a+4)^3\Rightarrow a+4\mid16(a+4)^3-16a^3-96a^2-256a-254=96a^2+512a+770$
+
+$a+4 \mid (a+4)^2\Rightarrow a+4\mid96(a+4)^2-96a^2-512a-770=256a+766$
+
+$a+4 \mid (a+4)\Rightarrow a+4\mid256(a+4)-256a-766=258$
+
+Vaadates läbi kõik 258 tegurid ja neist 4 lahutades, saame arvud 
+
+$-262,-133,-90,-47,-10,-7,-6,-5,-3,-2,-1,2,39,82,125,254$\\
+\bigskip
+
+\noindent \textbf{4.} Tõestada, et iga täisarvu ruut on kujul $4k$ või $8k+1$.
+\bigskip
+
+Kui vaadeldav täisarv $n$ on paarisarv, on tema tegurite hulgas 2, ehk $n=2t$ ning $n^2=(2t)^2=4t^2$.\\
+Kui vaadeldav täisarv $n$ on paaritu, esitub ta kujul $n=2t+1$ ehk tema ruut esitub kujul $n^2=(2t+1)^2=4t^2+4t+1=4(t^2+t)+1$. Kuna $t$ ja $t^2$ paarsused on samad, on nende summa paarisarv ehk $4(t^2+t)+1 = 4(2k)+1=8k+1$
+\bigskip
+
+\noindent \textbf{5.} Leida vähim naturaalarv $n$, mille üleskirjutamiseks on kasutatud ainult numbreid 3 ja 5 (aga mitte vaid ühte neist) ning mis jagub arvudega 3 ja 5. 
+
+\bigskip
+Selleks, et kümnendsüsteemi arv jaguks 3-ga, peab selle ristsumma jaguma kolmega. Kuna 3 lisamine arvu ei muuda selle ristsummajaguvust 3-ga, ei pea rohkem, kui 1 3 kasutama, küll aga kuna on kasutatud ühte 5t peab lisama veel 2. Selleks, et arv jaguks viiega, peab see lõppema 0i või 5ga, seda annab korraldada. Selleks, et 3st 5st ja 1st 3st koosnev arv oleks minimaalne, peab 3 olema esimene number. Seega on vastus 3555.
+\bigskip
+
+\noindent\textbf{6.} Piki ringjoont kirjutatakse järjestikku arvud 1 kuni 2024. Alustades arvust 1, tõmmatakse maha iga kaheksas arv. Ringjoont pidi liigutakse senikaua, kuni arv 1 saab teist korda maha tõmmatud. Seejärel korratakse protsessi iga üheteistkümnenda arvu jaoks. Mitu arvu jääb maha tõmbamata?
+
+\bigskip
+
+Arv 2024 jagub nii 8 kui ka 11ga, seega mõlema arvu puhul tehakse ringjoonele vaid üks ring peale. Seega tõmmatakse esimesel läbi käimisel $\frac{2024}8=253$ ning teisel $\frac{2024}{11}=184$ arvu maha. Kattuvateks arvudeks on kõik $[8,11]=88$ kordsed arvud, neid on $\frac{2024}{88}=23$. seega jääb kokku maha tõmbamata $2024-253-184+23=1610$ arvu.\\\\
+
+\noindent \textbf{7.} Tõestada, et ükski arv jadas $6,66,666,6666, \ldots$ ei ole täisruut. 
+
+\bigskip
+Kuna need arvud jaguvad 2ga, peab ka arv, mille täisruut üks nendest on, jaguma kahega. Taandades kahe saame arvud kujul 3, 33, 333, 3333,..., mis ei jagu kahega teist korda, seega ei saa see olla 2ga jaguva arvu täisruut, seega ei saa need olla ühegi arvu täisruudud.
+\bigskip
+
+\noindent\textbf{8.} Leida vähim naturaalarv $n$, mille jagajate üheliste numbrid katavad ära kõik võimalused nullist üheksani.
+
+\bigskip
+
+Märkan kõigepealt, et $n$ peab jaguma 2ga, kuna kõik 2ga lõppevad arvud jaguvad 2ga ehk $n$ peab jaguma mingi 2ga jaguva arvuga. Samuti peab $n$ jaguma 5ga, kuna kõik 5ga lõppevad arvud on ka 5ga jaguvad.\\
+Väidan et otsitav arv on 270. Selle tegurite üheliste numbrid katavad kõik võimalused ära: see jagub 10, 1, 2, 3, 54, 5, 6, 27, 18 ja 9ga.\\
+Kuna on teada, et $n$ tegurite hulgas peavad olema 2 ja 5, siis selleks, et leiduks arv, mis täidab tindimused ning on väiksem kui 270, peaks leiduma mingi $k$ nii, et $10k$ täidab tingimusi ning $k<27$. Vaatlen 9 katmist. Kõik 2 kordsed arvud lõppevad paarisarvulise numbriga ning kõik 5 kordsed arvud lõppevad 0 või 5ga ehk tegur, mis lõppeb 9ga, peab jagama arvu $k$. Kuna $k<27$, on selleks vaid kaks võimalust, kas 9 või 19. Kui valida 19, peab $k=19$, kuna ükskõik millise 1st suurema täisarvuga läbi 19 korrutades muutuks $k$ suuremaks kui 24. See aga ei sobi, kuna $2\cdot5\cdot19=190$ ei täida tingimusi, näiteks ei lõppe ükski selle tegur 3ga. Seega peab 9 olema $n$ tegurite hulgas.\\
+Olen jõudnud et minimaalselt peavad tegurite hulgas olema 2, 5 ja 9. Nende VÜK on 90, kuid selle tegurid veel ei kata numbrit 7. Vähim tegur, mida lisada saab, on 2, kuid see ei kata ikka numbrit 7 ära. Järgmiseks teguriks on 3, ning kui see lisada, ongi tulemus 270. Seega on vähim võimalik $n$ väärtus 270.
+\end{document}
