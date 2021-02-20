@@ -1,0 +1,61 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[estonian]{babel}
+\usepackage{t1enc}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{lscape}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage{pgfplots}
+\usepackage[shortlabels]{enumitem}
+\usepackage[a4paper,margin=1in,footskip=0.25in]{geometry}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\newcommand{\p}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\topmargin-3em
+\oddsidemargin0cm
+\textwidth16cm
+%\textheight27cm
+\evensidemargin-2cm
+\begin{document}
+\begin{center}
+\Large\textbf{Kodutöö nr. 2}\\
+\small{Joosep Näks ja Uku Hannes Arismaa}
+\end{center}
+\textbf{1.}
+
+\bigskip
+
+\bigskip
+\noindent\textbf{2.} Tõestada, et mistahes $a,b,c\in\mathbb{N}$ korral $(a,b,c)(ab,ac,bc)=(a,b)(a,c)(b,c)$.
+\begin{gather*}
+\begin{aligned}
+(a,b,c)(ab,ac,bc)=&(a,b,c)(a(b,c),bc)=(a,b,c)(a(b,c),(b,c)[b,c])\\
+=&(a,(b,c))(a,[b,c])(b,c)=(a^2,a(b,c),a[b,c],bc)(b,c)\\
+=&(a^2,bc,(a(b,c),a[b,c]))(b,c)=(a^2,bc,a((b,c),[b,c]))(b,c)\\
+=&(a^2,bc,a(b,c))(b,c)=(a^2,bc,ab,ac)(b,c)\\
+=&(a(a,c),b(a,c))(b,c)=(a,b)(a,c)(b,c)
+\end{aligned}
+\end{gather*}
+\bigskip
+
+\noindent\textbf{4.} Olgu $a,b\in\mathbb{N},\ (a,b)=1$. Defineerime jada $z_n$ rekursiivselt seostega $z_0=z_1=1, z_{n+1}=az_n+bz_{n-1}$. Tõestada, et $(z_n,z_{n+1})=1$ mistahes $n\in\mathbb{N}$ korral.
+\bigskip
+
+Kasutan induktsiooni. Baasiks leian 3 esimest $z$ väärtust: $z_0=1,\ z_1=1,\ z_2=az_1+bz_0=a+b$. Kuna $z_1=1$, siis $(z_0,z_1)=(z_1,z_2)=1$ ehk baas kehtib.\\
+Sammuks eeldan, et $(z_{n-1},z_{n-2})=1$ ja näitan, et $(z_n,z_{n-1})=1$. $$(z_n,z_{n-1})=(az_{n-1}+bz_{n-2},z_{n-1})=(bz_{n-2},z_{n-1})$$ Kuna $(z_{n-1},z_{n-2})=1$, siis $(bz_{n-2},z_{n-1})=(b,z_{n-1})$. Eeldan vastuväiteliselt, et $d:=(b,z_{n-1})\neq1$. On teada, et $z_{n-1}=az_{n-2}+bz_{n-3}$. Kuna $d|z_{n-1}$ ja $d|bz_{n-3}$ siis $d|z_{n-1}-bz_{n-3}=az_{n-2}$. Kuid kui $(d,a)\neq1$, siis $(d,a)=((a,b),z_{n-1})\neq1$ ehk $(a,b)\neq1$, mis on vastuolus ülesande püstitusega, ning kui $(d,z_{n-2})\neq1$ siis $(b,(z_{n-1},z_{n-2}))\neq1$ ehk $(z_{n-1},z_{n-2})\neq1$, mis on induktsiooni eeldusega vastuolus. Seega $(d,az_{n-2})=1$ ehk $d\nmid az_{n-2}$ ehk $(z_n,z_{n-1})=(b,z_{n-1})=d=1$ ehk induktsiooni samm kehtib.
+\bigskip
+
+\noindent\textbf{6.} Mitmel eri viisil on võimalik maksta 8 naela, 8 šillingit ja 6 penni poolekrooniste ja kolmandikginiste müntidega? (1 gini - 21šillingit, 1 nale - 20 šillingit, 1 kroon = 5 šillingit, 1 šilling = 12 penni)
+
+\bigskip
+Vaja on leida võrrandi $$8\text{ naela} + 8\text{ šillingit}+6\text{ penni}=x\cdot\frac12\text{ krooni}+y\cdot\frac13\text{ gini}$$ positiivsete lahendite kogus. Šillingitesse ümber kirjutades on see: $$160+8+\frac12=\frac52x+7y$$ ehk $$333=5x+14y.$$ $(5,14)=1$ ja peale vaadates on näha, et võrrandi $1=5x+14y$ üks lahend on $x=3\text{ ja }y=-1$, seega algse võrrandi üks lahend on $x=999\text{ ja }y=-333$. Võrrandi kõik lahendid on seega $x=999-\frac{14}{(5,14)}t=999-14t\text{ ja }y=-333+\frac{5}{(5,14)}t=-333+5t$ erinevate $t\in\mathbb{Z}$ puhul. Et nii $x$ kui ka $y$ oleks mittenegatiivsed (kuna negatiivse koguse rahaga ei saa maksta) peavad kehtima võrratused $999-14t\geq0$ ja $-333+5t\geq0$ ehk $t\leq71+\frac5{14}$ ja $t\geq 66+\frac35$. Sellesse vahemikku sobib 5 $t$ väärtust ehk etteantud tingimustel leidub 5 erinevat viisi maksmiseks.
+\bigskip
+
+\end{document}
