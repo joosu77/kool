@@ -28,8 +28,23 @@
 \Large\textbf{Kodutöö nr. 2}\\
 \small{Joosep Näks ja Uku Hannes Arismaa}
 \end{center}
-\textbf{1.}
+\noindent \textbf{1.} Leida täisarvud $u$ ja $v$ nii, et $$(-8142,-9756)=u\cdot 8142+v\cdot 9756.$$
 
+\smallskip
+\begin{center}
+\begin{tabular}{ |c|c|c| } 
+ \hline
+ 9756 & 1 & 0 \\ 
+ 8142 & 0 & 1 \\ 
+ 1614 & 1 & -1 \\ 
+ 72&-5&6\\
+ 30&111&-133\\
+ 12&-227&272\\
+ 6&565&-677\\
+ \hline
+\end{tabular}
+\end{center}
+Seega saame $v=565$ ning $u=-677$
 \bigskip
 
 \bigskip
@@ -45,6 +60,12 @@
 \end{gather*}
 \bigskip
 
+\noindent \textbf{3.} Leida, mitu nulli on arvu $2021!$ lõpus.
+
+\bigskip
+See, et arvu lõpus on null, on samaväärne arvu jagumisega kümnega. Selleks, et arv jaguks kümnega, peab see jaguma kahe ja viiega. Paneme tähele, et kahega jagub iga teine ning viiega iga viies arv, seega on kahega jaguvaid arve rohkem. Seega taandub ülesanne sellele, kui mitu korda 2021! jagub viiega. Vähemalt üks kord viiega jaguvaid arve on 2021 täisosa viiega jagamisel, kuna viiega jagub viiest arvust kõige viimane ühest lugedes. Seega on neid arve 404. Iga viies nendest jagub kaks korda viiega ehk 80 arvu. Nii jätkates, saame, et kolm korda jaguvad viiega 16, 4 korda 3 ning 5 ja enam korda 0 arvu antud vahemikus. Seega saame, et kokku jagub 2021! 5 ja seega kümnega $404+80+16+3=503$ korda.
+\bigskip
+
 \noindent\textbf{4.} Olgu $a,b\in\mathbb{N},\ (a,b)=1$. Defineerime jada $z_n$ rekursiivselt seostega $z_0=z_1=1, z_{n+1}=az_n+bz_{n-1}$. Tõestada, et $(z_n,z_{n+1})=1$ mistahes $n\in\mathbb{N}$ korral.
 \bigskip
 
@@ -53,10 +74,28 @@ Sammuks eeldan, et $(z_{n-1},z_{n-2})=1$ ja näitan, et $(z_n,z_{n-1})=1$. $$(z_
 Kuna $(z_{n-1},z_{n-2})=1$, siis $(bz_{n-2},z_{n-1})=(b,z_{n-1})$. Eeldan vastuväiteliselt, et $d:=(b,z_{n-1})\neq1$. On teada, et $z_{n-1}=az_{n-2}+bz_{n-3}$. Kuna $d|z_{n-1}$ ja $d|bz_{n-3}$ siis $d|z_{n-1}-bz_{n-3}=az_{n-2}$. Kuid kui $(d,a)\neq1$, siis $(d,a)=((a,b),z_{n-1})\neq1$ ehk $(a,b)\neq1$, mis on vastuolus ülesande püstitusega, ning kui $(d,z_{n-2})\neq1$ siis $(b,(z_{n-1},z_{n-2}))\neq1$ ehk $(z_{n-1},z_{n-2})\neq1$, mis on induktsiooni eeldusega vastuolus. Seega $(d,az_{n-2})=1$ ehk $d\nmid az_{n-2}$ ehk $(z_n,z_{n-1})=(b,z_{n-1})=d=1$ ehk induktsiooni samm kehtib.
 \bigskip
 
+\pagebreak
+\noindent \textbf{5.} Leida  $(2^{202}+1,2^{19}+1)$ ilma suuremahuliste arvutusteta. 
+
+\bigskip
+$(2^{202}+1,2^{19}+1)\mid 2^{202}+1-(2^{19}+1)\cdot(2^{19}-1)\cdot(2^{164}+2^{126}+2^{88}+2^{50}+2^{12})=2^{12}+1=4097=17\cdot 241$
+
+$(2^{202}+1,2^{19}+1)\mid
+-(2^{19}+1)+(2^{12}+1)\cdot2^7=2^7-1=127$
+
+$(2^{202}+1,2^{19}+1)\mid(127,4097)=1\Rightarrow (2^{202}+1,2^{19}+1)=1$
+
+\bigskip
+
 \noindent\textbf{6.} Mitmel eri viisil on võimalik maksta 8 naela, 8 šillingit ja 6 penni poolekrooniste ja kolmandikginiste müntidega? (1 gini - 21šillingit, 1 nale - 20 šillingit, 1 kroon = 5 šillingit, 1 šilling = 12 penni)
 
 \bigskip
 Vaja on leida võrrandi $$8\text{ naela} + 8\text{ šillingit}+6\text{ penni}=x\cdot\frac12\text{ krooni}+y\cdot\frac13\text{ gini}$$ positiivsete lahendite kogus. Šillingitesse ümber kirjutades on see: $$160+8+\frac12=\frac52x+7y$$ ehk $$333=5x+14y.$$ $(5,14)=1$ ja peale vaadates on näha, et võrrandi $1=5x+14y$ üks lahend on $x=3\text{ ja }y=-1$, seega algse võrrandi üks lahend on $x=999\text{ ja }y=-333$. Võrrandi kõik lahendid on seega $x=999-\frac{14}{(5,14)}t=999-14t\text{ ja }y=-333+\frac{5}{(5,14)}t=-333+5t$ erinevate $t\in\mathbb{Z}$ puhul. Et nii $x$ kui ka $y$ oleks mittenegatiivsed (kuna negatiivse koguse rahaga ei saa maksta) peavad kehtima võrratused $999-14t\geq0$ ja $-333+5t\geq0$ ehk $t\leq71+\frac5{14}$ ja $t\geq 66+\frac35$. Sellesse vahemikku sobib 5 $t$ väärtust ehk etteantud tingimustel leidub 5 erinevat viisi maksmiseks.
 \bigskip
+
+\noindent \textbf{7.} Odava nõelaga saab ampullist kätte 12 doosi ja korraliku nõelaga 15 doosi vaktsiini. Leida parema nõelaga vaktsineeritute arv, kui mõlema nõela korral kasutati ära algarv ampulle ja kokku vaktsineeriti 2019 inimest.
+
+\bigskip
+Kerge vaevaga saame, et valemi $15x+12y=2019$ lahenditeks sobib $x=673+4t, y=-673-5t$. Proovides sobivaid $t$ väärtuseid leiame $t=-144$ ning $x=673-4*144=97,y=-673+144*5=47$, mis sobivad vastuseks.
 
 \end{document}
