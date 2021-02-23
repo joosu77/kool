@@ -97,5 +97,19 @@ Vaja on leida võrrandi $$8\text{ naela} + 8\text{ šillingit}+6\text{ penni}=x\
 
 \bigskip
 Kerge vaevaga saame, et valemi $15x+12y=2019$ lahenditeks sobib $x=673+4t, y=-673-5t$. Proovides sobivaid $t$ väärtuseid leiame $t=-144$ ning $x=673-4*144=97,y=-673+144*5=47$, mis sobivad vastuseks.
+\bigskip
 
+\noindent \textbf{8.} Olgu $a$ ja $b$ samamärgilised täisarvud ning $n\in\N$. Tõestada, et leidub $c\in\Z$ nii, et võrrandil $ax+by=c$ on täpselt $n$ erinevat negatiivset lahendit, st. lahendipaari $(x,y)$, kus $x<0$ ja $y<0$. Kas väide jääb kehtima ka vastasmärgiliste $a$ ja $b$ korral?
+
+
+\bigskip
+
+Vaatame juhtu, kus $a$ ja $b$ on negatiivsed ja $c$ on positiivne. Positiivsete $a$ ja $b$ korral on lahendus analoogne.
+
+$[a,b]$ saame moodustada sellel kujul kahel viisil: $a\cdot k_a+0\cdot b$ , $a\cdot 0+b\cdot k_b$, kus $k_a:=\frac{b}{(a,b)}$ ja $k_b:=\frac{a}{(a,b)}$ (murruga on tähistatud taandamine, mida saab teha kuna $a$ ja $b$ ei ole ülesande teksti põhjal 0 ja SÜT definitsiooni järgi $(a,b)|a$). Kui oleks mingi kolmas viis $ak_3+bk_3$, siis saame $a|k_3-k_a|=b\cdot k_3=:x$, kuna muidu ei moodustaks see $[a,b]$. Seega kehtib, et $a\mid x$ ning  $b\mid x$ ning $x<[a,b]$. (Kui $x=[a,b]$, siis on näha, et kolmas viis peab olema sama ühega eelnevatest. ) See on vastuolus VÜK definitsiooniga, kuna $[a,b]\mid x$ ei saa enam kehtida. 
+
+
+Seega iga $a$ ja $b$ puhul saame valida $c=(n+1)[a,b]$, Saades $q-1$ lahendit kujudel $a\cdot(k_a\cdot (q-1))+b\cdot (1\cdot k_b),\ a\cdot(k_a\cdot (q-2))+b\cdot (2),\ \dots,\ a\cdot(1)+b\cdot ((q-1)\cdot k_b)$.
+
+Kui $a$ ja $b$ võivad olla erimärgilised, saame võtta $a=-1,b=1$, millisel juhul on iga $c$ korral lõpmata palju lahendeid, näiteks kui $c=1$ siis on negatiivseteks lahenditeks kõik paarid kujul $x=-2-t$ ja $y=-1-t, t\in\mathbb{N}$ ja .
 \end{document}
