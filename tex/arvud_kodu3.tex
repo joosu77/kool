@@ -1,0 +1,78 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[estonian]{babel}
+\usepackage{t1enc}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{lscape}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage{pgfplots}
+\usepackage[shortlabels]{enumitem}
+\usepackage[a4paper,margin=1in,footskip=0.25in]{geometry}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\newcommand{\p}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\topmargin-3em
+\oddsidemargin0cm
+\textwidth16cm
+%\textheight27cm
+\evensidemargin-2cm
+\begin{document}
+\begin{center}
+\Large\textbf{Kodutöö nr. 3}\\
+\small{Joosep Näks ja Uku Hannes Arismaa}
+\end{center}
+
+\bigskip
+
+\noindent 1. Leida k\~oik algarvud lõigus $[360, 460]$. Põhjendada, et saadud arvud on tõesti algarvud ja ükski ei ole puudu. Kas selles lõigus esineb alg\-arvukaksikuid?
+
+\bigskip
+
+\noindent 2. Olgu $n\in\N$ selline, et ülimalt üks selle {\bf erinevatest} algteguritest $p$ rahuldab tingimust $p\leq \sqrt[4]{n}$. (St võib olla, et ükski algtegur seda tingimust ei rahulda, või ongi ainult üks, aga mitmekordne algtegur, mis seda rahuldab.) Leida kõik erinevad võimalused arvu $n$ algteguriteks lahutada (st üldkujud \'a la $p^kq$) ja tuua iga juhu kohta arvuline näide. 
+
+\bigskip
+
+On ilmne, et kõik üldkujud $n=p^k$ (näide: $n=32=2^5$) ja $n=1$ sobivad, kuna neis ei ole rohkem kui üks erinev algtegur. Sobivad ka kindlad arvud üldkujuga $n=p^k\cdot q$ (näide: $n=48=2^4\cdot3$, kus $2^4=16<48<81=3^4$), arvud $n=p^k\cdot q\cdot w$ (näiteks: $n=60=2^2\cdot3\cdot5$, kus $2^4=16<60<81=3^4$) ja $n=p^k\cdot q\cdot w\cdot r$ (näiteks: $n=490=2\cdot5\cdot7\cdot7$, kus $2^4=16<490<625=5^4$). (Mainitud kujudes $q$, $w$ ja $r$ võivad ka võrdsed olla)\\
+Üle kolme algteguri, mis oleks suurem kui $\sqrt[4]n$, ei saa arvul $n$ olla, kuna sel juhul kehtiks $n=p^k\cdot q\cdot w\cdot r\cdot m>p^k\cdot\sqrt[4]n\cdot\sqrt[4]n\cdot\sqrt[4]n\cdot\sqrt[4]n=p^k\cdot n$ ehk isegi kui $k=0$, siis jääb võrratuseks $n>n$, mis ei ole tõene.
+
+\bigskip
+
+\noindent 3. Tõestada, et kui $n!+n^2+1$ on algarv, siis ka $n^2+1$ on algarv. 
+
+\bigskip
+
+Kui $n^2+1$ on kordarv, saab teda tegurdada $n^2+1=p\cdot a$, kus $p$ on algarv, nii et $p\leq\sqrt{n^2+1}$ (kui arvul oleks mitu algarvulist tegurit, mis oleks suurem kui arvu juur, tuleks nende korrutis arvust suurem, ning kui arvul on vaid üks algarvuline tegur, on ta algarv). Kuna $n^2$ on täisruut ja ühegi kahe täisruudu vahe ei ole 1 ega vähem, kehtib ka $p\leq n$ ehk $p|n!$. Seega kuna $p$ jagab nii $n!$ kui ka $n^2+1$, jagab ta ka $n!+n^2+1$, ehk $n!+n^2+1$ ei saa olla algarv.\\
+Seega kui $n!+n^2+1$ on algarv, peab ka $n^2+1$ olema algarv.
+
+\bigskip
+
+\noindent 4. Tõestada, et kahe järjestikuse paaritu algarvu summal on alati vähemalt kolm (mitte tingimata erinevat) algtegurit. 
+
+\bigskip
+
+\noindent 5. T\~oestada ilma Dirichlet' teoreemi kasutamata, et leidub l\~opmata palju algarve, millel on kuju $6k+5$, kus $k\in \N$. 
+
+\bigskip
+
+\noindent 6. Tõestada, et iga naturaalarvu on võimalik üles kirjutada summana, mille liidetavad on kõik {\bf erinevad} ja kas algarvud või arv 1. Summa võib koosneda ka ühestainsast liidetavast. 
+
+\bigskip
+
+\noindent 7. Leida kõik algarvukolmikud $(p,q,r)$, mille korral $pq + pr + qr > pqr$. 
+
+\bigskip
+
+\noindent 8. Tõestada, et aritmeetilises jadas vahega $b<2021$ ei saa olla 12 järjestikust algarvu. 
+
+\bigskip
+
+
+
+\end{document}
