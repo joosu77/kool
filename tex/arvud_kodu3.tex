@@ -73,6 +73,7 @@ Seega kui $n!+n^2+1$ on algarv, peab ka $n^2+1$ olema algarv.
 
 \bigskip
 
-
+Et aritmeetilises jadas vahega $b$ oleks $n$ järjestikust algarvu, peab kehtima $(b,n)>1$, kuna vastasel juhul kui $(b,n)=1$ ja mingi jada liige $a_i$ on algarv, siis jäägiga jagades saan $a_i=q_1\cdot n+r_1,\ r_1<n$. Kuna $(b,n)=1$, leiduvad $x$ ja $y$ nii, et $xb+yn=1$, korrutan selle $r_1$ga: $xbr_1+ynr_1=r_1$. Teostan veel kord jäägiga jagamist: $xr_1=n\cdot q_2+r_2,\ r_2<n$. Need kokku pannes saab, et $n|r_1-xbr_1+b(xr_1-r_2)=r_1-br_2$ ehk $n|a_i-r_1+r_1-br_2=a_i-br_2=a_{i-r_2}$, samuti $n|a_i-br_2+bn=a_{i-r_2+n}$. Ehk iga algarvulise liikme ümber leiduvad liikmed, mis jaguvad arvuga $n$, mille vahele jääb vaid $n-1$ liiget.\\
+\indent Seega selleks, et mingi $b$ korral saaks 12 järjestikust arvu leiduda, peab kehtima $(b,12)>1$, kuid kuna seal peab sisalduma ka 11, 10, .., 2 järjestikust algarvu, peab $b$ suurim ühistegur kõigi arvudega 2, .., 12 olema suurem kui 1. Selleks peab $b$ vähemalt olema sama suur, nagu seal vahemikus paiknevate algarvude korrutis, kuna kui $b$ suurim ühistegur mingi algarvuga on suurem kui 1, peab see olema võrdne selle algarvuga, kuna algarvul pole rohkem tegureid kui 1 ja tema ise. Nende algarvude korrutis on $2\cdot3\cdot5\cdot7\cdot11=2310>2021$, ehk 2021 sammuga aritmeetilises jadas ei saa leiduda 12 järjestikust algarvu.
 
 \end{document}
