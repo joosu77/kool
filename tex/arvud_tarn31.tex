@@ -1,0 +1,37 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[estonian]{babel}
+\usepackage{t1enc}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{lscape}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage{pgfplots}
+\usepackage[shortlabels]{enumitem}
+\usepackage[a4paper,margin=1in,footskip=0.25in]{geometry}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\newcommand{\p}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\topmargin-3em
+\oddsidemargin0cm
+\textwidth16cm
+\evensidemargin-2cm
+\begin{document}
+\begin{center}
+\Large\textbf{Kodutöö nr. 3 esimene tärnülesanne}\\
+\small{Joosep Näks}
+\end{center}
+
+
+\noindent Leida vähim naturaalarv $n$, mille korral $2099^{2099^{2099}}\ |\ n!$.\\
+
+\bigskip
+Kontrollides arvu 2099 jaguvust algarvudega kuni 43, on näha, et ükski neist ei jaga seda arvu ning kuna järgmise algarvu ruut on suurem kui 2099: $47^2=2209$, on 2099 algarv. Seega on vaja leida $n$ nii, et selle faktoriaali algtegurites oleks 2099 esindatud $2099^{2099}$ korda.\\
+Kui $n!$ liikmeid vaadata, siis nende hulgas 2099 kordsed lisavad igaüks vähemalt ühe 2099 teguri korrutisse ning neid on $\left\lfloor\frac n{2099}\right\rfloor$ tükki, $2099^2$ kordsed lisavad igaüks vähemalt kaks 2099 tegurit korrutisse ning on kõik ise 2099 kordsed ja neid on $\left\lfloor\frac n{2099^2}\right\rfloor$ tükki jne ehk otsitava tegurite koguse saab leida summaga $\sum_{i=1}^\infty \left\lfloor\frac {n}{2099^i}\right\rfloor$. Siin saab märgata, et kui $n=q\cdot2099^k,\ q<2099$, siis on summa väärtuseks $\sum_{i=1}^\infty \left\lfloor\frac {q\cdot2099^k}{2099^i}\right\rfloor=\sum_{i=1}^k q\cdot2099^{k-i}=q\sum_{i=0}^{k-1} 2099^i=q\frac{2099^{k-1}-1}{2099-1}$. Kui võtta $q=2098$ ja $k=2100$, saab vastusele väga lähedale: $q\frac{2099^{k-1}-1}{2099-1}=2098\frac{2099^{2099}-1}{2098}=2099^{2099}-1$. See on vaid 1 võrra vähem kui vaja on. Seega on vastuseks järgmine $n$ väärtus, mis lisab vähemalt ühe 2099 teguri faktoriaali juurde. Selleks peab ta olema 2099 kordne, ning kuna $2098\cdot2099^{2100}$ ise on 2099 kordne, on järgmine 2099 kordne $n=2098\cdot2099^{2100}+2099$, mis ongi vastus.
+\end{document}
