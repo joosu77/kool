@@ -31,11 +31,14 @@
 
 \bigskip
 
-\noindent 1. Leida k\~oik algarvud lõigus $[360, 460]$. Põhjendada, et saadud arvud on tõesti algarvud ja ükski ei ole puudu. Kas selles lõigus esineb alg\-arvukaksikuid?
+\noindent \textbf{1.} Leida k\~oik algarvud lõigus $[360, 460]$. Põhjendada, et saadud arvud on tõesti algarvud ja ükski ei ole puudu. Kas selles lõigus esineb alg\-arvukaksikuid?
 
 \bigskip
+Kerge vaevaga saame leida vahemikust arvud, mis jaguvad 2,3 või 5-ga ning need eemaldada valikust. Alles jäävad arvud 361, 367, 371, 373, 377, 379, 383, 389, 391, 397, 401, 403, 407, 409, 413, 419, 421, 427, 431, 433, 437, 439, 443, 449, 451, 457. Paneme tähele, et arvud 371, 413, 427 jaguvad 7ga, seega pole algarvud. 11ga jaguvad 407 ning 451. 13ga 377 ja 403. 17ga 391. 19ga 361 ja 437. Ülejäänud arvud ei jagu 22st ehk enda ruutjuurest väiksemate algarvudega, seega on algarvud (367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457
+). Esinevad algarvukaksikud 419 ja 421 ning 431 ja 433.
+\bigskip
 
-\noindent 2. Olgu $n\in\N$ selline, et ülimalt üks selle {\bf erinevatest} algteguritest $p$ rahuldab tingimust $p\leq \sqrt[4]{n}$. (St võib olla, et ükski algtegur seda tingimust ei rahulda, või ongi ainult üks, aga mitmekordne algtegur, mis seda rahuldab.) Leida kõik erinevad võimalused arvu $n$ algteguriteks lahutada (st üldkujud \'a la $p^kq$) ja tuua iga juhu kohta arvuline näide. 
+\noindent \textbf{2.} Olgu $n\in\N$ selline, et ülimalt üks selle {\bf erinevatest} algteguritest $p$ rahuldab tingimust $p\leq \sqrt[4]{n}$. (St võib olla, et ükski algtegur seda tingimust ei rahulda, või ongi ainult üks, aga mitmekordne algtegur, mis seda rahuldab.) Leida kõik erinevad võimalused arvu $n$ algteguriteks lahutada (st üldkujud \'a la $p^kq$) ja tuua iga juhu kohta arvuline näide. 
 
 \bigskip
 
@@ -44,7 +47,7 @@ On ilmne, et kõik üldkujud $n=p^k$ (näide: $n=32=2^5$) ja $n=1$ sobivad, kuna
 
 \bigskip
 
-\noindent 3. Tõestada, et kui $n!+n^2+1$ on algarv, siis ka $n^2+1$ on algarv. 
+\noindent \textbf{3.} Tõestada, et kui $n!+n^2+1$ on algarv, siis ka $n^2+1$ on algarv. 
 
 \bigskip
 
@@ -53,23 +56,39 @@ Seega kui $n!+n^2+1$ on algarv, peab ka $n^2+1$ olema algarv.
 
 \bigskip
 
-\noindent 4. Tõestada, et kahe järjestikuse paaritu algarvu summal on alati vähemalt kolm (mitte tingimata erinevat) algtegurit. 
+\noindent \textbf{4.} Tõestada, et kahe järjestikuse paaritu algarvu summal on alati vähemalt kolm (mitte tingimata erinevat) algtegurit. 
 
 \bigskip
 
-\noindent 5. T\~oestada ilma Dirichlet' teoreemi kasutamata, et leidub l\~opmata palju algarve, millel on kuju $6k+5$, kus $k\in \N$. 
+Kahe paaritu arvu summa on paaris, seega on summal algtegur 2. Kuna summa ei saa olla 2, peab olema veel mõni algtegur. Kui on ainult üks algtegur, siis saame, et kahe järjestikuse paaritu algarvu summa taandatud kahega on algarv, kuna omab ainult ühte algtegurit ning asub esialgse kahe paaritu algarvu vahel, kuna on nende aritmeetiline keskmine, mis ei saa olla, kuna algarvud pidid olema järjestikused, seega peab nende summal ikkagi olema vähemalt 3 algtegurit.
+\bigskip
+
+\noindent \textbf{5.} T\~oestada ilma Dirichlet' teoreemi kasutamata, et leidub l\~opmata palju algarve, millel on kuju $6k+5$, kus $k\in \N$. 
+
+\bigskip
+Kui leidub suurim algarv kujul $6k+5$, siis saame kokku korrutada selle algarvu temast väiksemate algarvudega ($a:=2\cdot 3\cdot ... \cdot (6k+5)$) ning lahutada sellest 1. Saame arvu kujul $6k+5$. Kui see arv juba on algarv, siis on see suurem eelmsiest ja saime vastuolu. On teada, et kõik algarvud esituvad kas kujul $6k+5$ või $6k+1$. Arvu $a$ algtegurid ei saa kõik olla kujul $6k+1$, kuna selliste arvude omavahel korrutamisel jääb jääk 6ga jagades alati 1ks, seega peab leiduma vähemalt üks algtegur kujul $6k+5$. Algtegur $6k+5$ ei saa olla võrdne ega väiksem algse suurima algarvuga kujul $6k+5$, kuna kõik sellised algarvud annavad arvu $a$ jagades jäägi -1, ning tegur ei saa ka olla suurem kui algne suurim sellisel kujul algarv, sest see on vastuolus väitega, et tegu on suurima sellise algarvuga. Seega ei saa sobivaid tegureid leiduda ehk oleme jõudnud vastuoluni ning sellisel kujul algarve peab olema lõpmatult.
+
+\bigskip
+\pagebreak
+\noindent \textbf{6.} Tõestada, et iga naturaalarvu on võimalik üles kirjutada summana, mille liidetavad on kõik {\bf erinevad} ja kas algarvud või arv 1. Summa võib koosneda ka ühestainsast liidetavast. 
 
 \bigskip
 
-\noindent 6. Tõestada, et iga naturaalarvu on võimalik üles kirjutada summana, mille liidetavad on kõik {\bf erinevad} ja kas algarvud või arv 1. Summa võib koosneda ka ühestainsast liidetavast. 
+Kasutan tugevat induktsiooni, baasiks vaatlen esimest 6 naturaalarvu. 1, 2, 3 ja 5 on ise algarvud või 1 ehk nad on ise sobivad summad. Alles jäävad $4=1+3$ ja $6=1+5$.\\
+Samm: eeldan et kõiki arve, mis on väiksemad  või võrdsed arvuga $\left\lceil \frac n2\right\rceil$, on võimalik summaks jagada. Tšebõšovi teoreemi järgi leidub iga $\left\lceil \frac n2\right\rceil=:k>3$ puhul vahemikus $(k,2k-2)$ vähemalt üks algarv. Võtan sellest vahemikust viimase algarvu ning lahutan ta arvust $n$. $n-p$ on vähemalt 1, kuna selle alumine piir on on $n-(2k-2)>n-2\left\lceil \frac n2\right\rceil+2\geq-1+2=1$ ning selle ülemine piir on $n-k<n-\left\lceil \frac n2\right\rceil= \left\lfloor \frac n2\right\rfloor\leq\left\lceil \frac n2\right\rceil$, seega induktsiooni eelduse järgi leidub arvule $n-p$ vastav summa. Selles summas on ka kõik liikmed väiksemad kui $p$, kuna $p$ on tervest summast suurem: $p\geq\left\lceil \frac n2\right\rceil\geq\left\lfloor \frac n2\right\rfloor> n-p$. Seega saab võtta arvule $n$ vastavaks summaks arvule $n-p$ vastav summa, millele on liidetud $p$.
 
 \bigskip
 
-\noindent 7. Leida kõik algarvukolmikud $(p,q,r)$, mille korral $pq + pr + qr > pqr$. 
+\noindent \textbf{7.} Leida kõik algarvukolmikud $(p,q,r)$, mille korral $pq + pr + qr > pqr$.
 
 \bigskip
 
-\noindent 8. Tõestada, et aritmeetilises jadas vahega $b<2021$ ei saa olla 12 järjestikust algarvu. 
+Vaatleme ainult selliseid algarvu kolmikuid, et $p\leq q\leq r$. Kõik algarvukolmikud saab neid ümber järjestades. Kui $p=q=2$, siis saame tingimuse $4r+4>4r$, mis kehtib iga algarvu r korral, seega sobivad kõik algarvukolmikud kujul $(2,2,r)$. Kui võtta $p=2,q=3$, siis saame tingimuse $5r+6>6r\Rightarrow 6>r$ ehk $r$ saab olla kas 3 või 5. Kui võtta $p=2,q=5$ ning ka suuremate $q$ korral saame tingimused $2(r+q)>qr,r\geq q$, mille puhul näeme, et kui see ei kehti mingite $q$ ja $r$ korral ei kehti see ka suuremate korral, kuna parem pool kasvab kummagi kasvades 2 võrra, aga vasak $q>2$ või $r>2$ võrra ning $2,5,5$ korral see juba ei kehti. Sarnaselt arutledes saame sama tulemuse ka $p=3,q=3$ ning arvukolmiku $(3,3,3)$ korral ning ei sobi suuremate väärtuste korral.\\
+Kokkuvõttes sobivad kolmikud $(2,2,r)$, $(2,3,3)$, $(2,3,5)$, $(3,3,3)$ ning kõik nende permutatsioonid.
+
+\bigskip
+
+\noindent \textbf{8.} Tõestada, et aritmeetilises jadas vahega $b<2021$ ei saa olla 12 järjestikust algarvu. 
 
 \bigskip
 
