@@ -1,0 +1,89 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[estonian]{babel}
+\usepackage{t1enc}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{lscape}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage{pgfplots}
+\usepackage[shortlabels]{enumitem}
+\usepackage[a4paper,margin=1in,footskip=0.25in]{geometry}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\newcommand{\p}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\topmargin-3em
+\oddsidemargin0cm
+\textwidth16cm
+%\textheight27cm
+\evensidemargin-2cm
+\begin{document}
+\begin{center}
+\Large\textbf{Kodutöö nr. 4}\\
+\small{Joosep Näks ja Uku Hannes Arismaa}
+\end{center}
+
+\bigskip
+\bigskip
+
+\noindent 1. Tõestada, et kui $a\equiv b\pmod{n}$, siis ka $a^n\equiv b^n\pmod{n^2}$. Kas astendajat 2 on võimalik veel suurendada? Põhjendada. 
+
+\bigskip
+
+\noindent 2. Leida j\"a\"ak, mis tekib arvu $(2019^{64}+2021^{7})^{33}$ jagamisel arvuga $21$.
+
+\bigskip
+
+Jagan 21 algteguriteks: $21=3\cdot7$. Kontrollin antud arvu jääki eraldi jagamisel mõlema teguriga. Kasutan järgnevas arutluses omadust, et kui $a\equiv b\pmod m$, siis $a^n\equiv b^n\pmod m$, mis järeldub otseselt konspekti lausest 3.7 korrutamise kohta.\\
+\indent 2019 jagub arvuga 3 ehk ka $2019^{64}$ annab jäägiks 0. 2021 annab jäägiks 2, võttes selle seitsmendasse astmesse, saan 128, mis annab arvuga 3 jagades jäägiks 2. Seega on $2019^{64}+2021^7$ jääk kolmega jagades 2. Fermat' väikese teoreemi põhjal $2^{3-1}\equiv1\pmod 3$ ehk $2^{32}=(2^2)^{16}\equiv1^{16}\pmod 3$ ning $2^{33}=2^{32}\cdot2\equiv1\cdot2\pmod 3$ ehk kokku on antud arvu jääk arvuga kolm jagades 2.\\
+\indent 2019 annab arvuga 7 jagades jäägi 3. Kasutades Fermat' väikest teoreemi saan $3^{60}=(3^{7-1})^{10}\equiv1^{10}\pmod 7$. Siit edasi $3^{64} = 3^4\cdot3^{60}\equiv3^4\pmod 7\equiv4\pmod7$. 2021 annab jäägiks 5 ning $5^7\equiv5\pmod7$. Seega on $2019^{64}+2021^7$ jääk seitsmega jagades $4+5=9\equiv2\pmod7$. $2^{30}=(2^6)^5\equiv1\pmod7$ ja $2^{33}=2^{30}\cdot2^3\equiv2^3\pmod7\equiv1\pmod7$.\\
+Kuna $(3,7)=1$ ja $3\cdot7=21$, on teoreemi 4.5 põhjal kujutus $f:\Z_{21}\rightarrow\Z_3\times\Z_7$, $f(\overline a)=(\overline a_1,\overline a_2)$ bijektiivne. Seega kuna $f(\overline{(2019^{64}+2021^{7})^{33}})=f(\overline{(2019^{64}+2021^{7})^{33}},\overline{(2019^{64}+2021^{7})^{33}})=(\overline2,\overline1)=f(\overline8)$ ja $8<21$, siis $(2019^{64}+2021^{7})^{33}$ jääk arvuga 21 jagades on 8.
+
+\bigskip
+
+\noindent 3. Tõestada, et kui $n\in\N$ ja $(n,6)=1$, siis $24\mid n^2-1$.
+
+\bigskip
+
+\noindent 4. Tõestada, et kui täisarv $a$ on korraga täiskuup ja mõne teise täisarvu viies
+aste, siis $a\equiv 0,1,21,22,34,43,55,56,76\pmod{77}$.
+
+\bigskip
+
+\noindent 5. Kas võrrandil $x^3+y^4=2022$ leidub naturaalarvulisi lahendipaare $x,y$?
+
+\bigskip
+
+\noindent 6. Olgu $p$ algarv. Leida jääk, mis tekib binoomkordaja ${2p \choose p}$ \mbox{jagamisel arvuga $p$.}
+
+\bigskip
+
+\noindent 7. 990 perearsti süstisid kõik ära sama koguse vaktsiini. Terviseamet kaotas aga saatedokumendid ära ja kui need üles leiti, olid paberid lumes ära vettinud ja sealt võis vaid välja lugeda, et kokku oli sel päeval perearstidele välja jagatud $\bullet\hskip-2pt\hskip-1pt\bullet\hskip-1pt\hskip-1pt46\bullet\hskip-1pt\hskip-1pt\bullet\hskip-2pt$ doosi. Aidake Üllar Lannol oma töökohta säilitada ja leidke suurim, vähim ja keskmine (kui võimalusi on paarisarv, siis kaks keskmist) võimalik vaktsiinidooside koguarv. 
+
+\bigskip
+
+\noindent 8. Arvud 202020 kuni 212121 kirjutatakse järjest üles. Kas niiviisi saadav täisarv $$202020202021\ldots212120212121$$ \vskip-1em\noindent jagub arvuga 13?
+
+\bigskip
+
+\noindent 9${^*}$. Tähistagu $F_i$ Fibonacci arve, st $F_0=0$, $F_1=1$, $F_{i+1}=F_{i}+F_{i-1}$, $i\in\N$. Leida, milliste parameetrite $j,a,b$ korral on kongruentside süsteem \[
+\left\{
+\begin{array}{lcll}
+F_j&\equiv  &a& \pmod{p}\\
+F_{j+1}&\equiv  &b& \pmod{p}\\
+\end{array}
+\right.
+\]
+lahenduv vaid lõpliku arvu {\bf alg}arvuliste moodulite $p$ jaoks. 
+
+\smallskip
+
+\noindent 10${^{**}}$. Leida kõik naturaalarvud $x$ ja $y$ nii, et $x^{y+1}-(x+1)^y=2001$. 
+
+\end{document}
