@@ -71,6 +71,19 @@ aste, siis $a\equiv 0,1,21,22,34,43,55,56,76\pmod{77}$.
 \noindent 8. Arvud 202020 kuni 212121 kirjutatakse järjest üles. Kas niiviisi saadav täisarv $$202020202021\ldots212120212121$$ \vskip-1em\noindent jagub arvuga 13?
 
 \bigskip
+Arvu saab ümber kirjutada summana 
+\begin{gather*}
+\begin{aligned}
+\sum_{i=0}^{10100010100}(202020202021+i)\cdot& (10^{12})^{10100010100-i}\equiv\sum_{i=0}^{10100010100}(202020202021+i)\cdot (1)^{10100010100-i}\pmod{13}\\
+=&\sum_{i=0}^{10100010100}(202020202021+i)\\
+=&202020202021\cdot(1010010100+1)+\sum_{i=0}^{10100010100}i\\
+=&202020202021\cdot1010010101+\frac{10100010100(10100010100+1)}{2}\\
+=&1010010101\cdot(202020202021+505005050)\\
+=&1010010101\cdot202525207071\equiv9\cdot5\pmod{13}\equiv6\pmod{13}\\
+\end{aligned}
+\end{gather*}
+Ehk antud arv annab arvuga 13 jagades jäägi 6.
+\bigskip
 
 \noindent 9${^*}$. Tähistagu $F_i$ Fibonacci arve, st $F_0=0$, $F_1=1$, $F_{i+1}=F_{i}+F_{i-1}$, $i\in\N$. Leida, milliste parameetrite $j,a,b$ korral on kongruentside süsteem \[
 \left\{
