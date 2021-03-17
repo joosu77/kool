@@ -98,7 +98,7 @@ Element saab olla pööratav parajasti siis, kui $\Z_6$ ja $\Z_4$ osad on mõlem
 \noindent \textbf{6.} Tõestada, et ringi $\Z_n$ ei ole võimalik isegi osaliselt järjestada nii, et tekkiv järjestus oleks liitmisega kooskõlas (va triviaalne järjestus ehk võrdusseos). 
 
 \bigskip
-Vaatlen kõigepealt paarisarvulisi $n$ väärtuseid, defineerides $2k:=n$. Võtan kaks elementi, $a=\w0$ ja $b=\w k$. Trihhotoomia põhjal peab kehtima $a=b$, $a<b$ või $a>b$. Esimene ei saa kehtida kuna kui $n>0$, siis $0<k<2k$ ehk tegu on erinevate elementidega. Eeldame et kehtib $a<b$. Siis saab monotoonsuse põhjal mõlemale poole liita juurde elemendi $k$ ilma et märk muutuks: $b=k=a+k<b+k=2k=0=a$ ehk $b<a$, kuid see on vastuolus eeldusega, et $a<b$. Kui eeldada et $a>b$, saab sama arutluskäiguga vastuolu, et $b>a$. Seega ei ole võimalik $Z_n$ paarisarvuliste $n$ puhul järjestada.
+Võtan kaks arvu $\w a$ ja $\w b$ nii et $\w a<\w b$ ja $\w a \neq \w b$. Kui võrratuses mõlemale poolele liita $\w{b-a}$, saab et $\w b<\w{2b-a}$. Kui seda sama suurust mõlemale poole liita $n-1$ korda ning kõik võrratused transitiivsusega üksteise otsa panna, saab $\w a < \w b < \w {2b-a} < .. < \w{b+(n-1)(b-a)}=\w{b-b+a+n(b-a)}=\w a$ ehk $\w a<\w a$, mis on vastuolu. Seega ei saa jäägiklassi võimalik järjestada.
 \bigskip
 
 \noindent \textbf{7.} Jäägiklassiringi $\Z_n$ elementi $\overline{m}$ nimetatakse \emph{idempotentseks} või \emph{idempotendiks}, kui $\overline{m}^2=\overline{m}$. Leida ringi $\Z_n$ idempotentide arv. 
