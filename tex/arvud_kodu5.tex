@@ -18,6 +18,7 @@
 \newcommand{\p}[1]{\frac{\partial}{\partial #1}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\N}{\mathbb{N}}
+\newcommand{\w}{\overline}
 \topmargin-3em
 \oddsidemargin0cm
 \textwidth16cm
@@ -25,98 +26,96 @@
 \evensidemargin-2cm
 \begin{document}
 \begin{center}
-\Large\textbf{Kodutöö nr. 4}\\
+\Large\textbf{Kodutöö nr. 5}\\
 \small{Joosep Näks ja Uku Hannes Arismaa}
 \end{center}
 
 \bigskip
 \bigskip
 
-\noindent \textbf{1.} Tõestada, et kui $a\equiv b\pmod{n}$, siis ka $a^n\equiv b^n\pmod{n^2}$. Kas astendajat 2 on võimalik veel suurendada? Põhjendada. 
-
-\bigskip
-Võttes $a=q_1n+r_1$ ning $b=q_2n+r_2$ nii, et $r_1,r_2<n$, saame, et $a^n$ ja $b^n$ on kujul $(qn+r)^n$. Iga liige lõplikus summas on saadud mingi arvu $qn$ ja mingi arvu $r$ korrutamisel. Kui korrutatud on 2 või rohkem liiget $qn$, siis liidetav on kongruentne $0\pmod{n^2}$. Kui korrutatud on üks liige $qn$, siis selliste liidetavate summeerimisel saame, kuna neid on $n$ tükki (1 iga korra kohta, kui on võimlaik $r$ asemel $qn$ valida), $nqnr$, mis on samuti kongruentne $0\pmod{n^2}$. Jääb ainult liige $r^n(qn)^0$ ning see liige  $a$ ja $b$ korral sama, kuna $r_1=r_2$, kuna $a$ ja $b$ on kongruentsed. Kui võtta $n=3$ ning $a=1$ ja $b=4$, siis saame $a^n=1,b^n=64$ ning kui astendaja on 3, siis saame $1\equiv 27\cdot 2+10 \pmod{27}$, mis ei kehti.
 \bigskip
 
-\noindent \textbf{2.} Leida j\"a\"ak, mis tekib arvu $(2019^{64}+2021^{7})^{33}$ jagamisel arvuga $21$.
+\noindent \textbf{1.} Koostada ringi $\Z_{15}$ korrutustabel ilma {\bf kõiki} korrutisi välja arvutamata. 
 
 \bigskip
+Kuna ringis $\Z_{15}$ on korrutamine kommutatiivne ning kahe elemendi vastandelementide korrutis on sama, mis elmenetide oma, ning elemendi korrutised vastand elemendiga, on samad, mis elemendi endaga, ainult vastandmärgilised, saame välja kirjutada järgmise osa (jäägiklasside korrutus-) tabelist.
 
-Jagan 21 algteguriteks: $21=3\cdot7$. Kontrollin antud arvu jääki eraldi jagamisel mõlema teguriga. Kasutan järgnevas arutluses omadust, et kui $a\equiv b\pmod m$, siis $a^n\equiv b^n\pmod m$, mis järeldub otseselt konspekti lausest 3.7 korrutamise kohta.\\
-\indent 2019 jagub arvuga 3 ehk ka $2019^{64}$ annab jäägiks 0. 2021 annab jäägiks 2, võttes selle seitsmendasse astmesse, saan 128, mis annab arvuga 3 jagades jäägiks 2. Seega on $2019^{64}+2021^7$ jääk kolmega jagades 2. Fermat' väikese teoreemi põhjal $2^{3-1}\equiv1\pmod 3$ ehk $2^{32}=(2^2)^{16}\equiv1^{16}\pmod 3$ ning $2^{33}=2^{32}\cdot2\equiv1\cdot2\pmod 3$ ehk kokku on antud arvu jääk arvuga kolm jagades 2.\\
-\indent 2019 annab arvuga 7 jagades jäägi 3. Kasutades Fermat' väikest teoreemi saan $3^{60}=(3^{7-1})^{10}\equiv1^{10}\pmod 7$. Siit edasi $3^{64} = 3^4\cdot3^{60}\equiv3^4\pmod 7\equiv4\pmod7$. 2021 annab jäägiks 5 ning $5^7\equiv5\pmod7$. Seega on $2019^{64}+2021^7$ jääk seitsmega jagades $4+5=9\equiv2\pmod7$. $2^{30}=(2^6)^5\equiv1\pmod7$ ja $2^{33}=2^{30}\cdot2^3\equiv2^3\pmod7\equiv1\pmod7$.\\
-Kuna $(3,7)=1$ ja $3\cdot7=21$, on teoreemi 4.5 põhjal kujutus $f:\Z_{21}\rightarrow\Z_3\times\Z_7$, $f(\overline a)=(\overline a_1,\overline a_2)$ bijektiivne. Seega kuna $f(\overline{(2019^{64}+2021^{7})^{33}})=f(\overline{(2019^{64}+2021^{7})^{33}},\overline{(2019^{64}+2021^{7})^{33}})=(\overline2,\overline1)=f(\overline8)$ ja $8<21$, siis $(2019^{64}+2021^{7})^{33}$ jääk arvuga 21 jagades on 8.
-
-\bigskip
-
-\noindent \textbf{3.} Tõestada, et kui $n\in\N$ ja $(n,6)=1$, siis $24\mid n^2-1$.
-
-\bigskip
-$n^2-1=(n+1)(n-1)$. Kuna  $(n,6)=1$, siis ei jagu $n$ 2 ja 3ga. Kuna $n$ , $n-1$ ja $n+1$ näol on tegemist kolme järjestikuse arvuga, siis peab üks nendest jaguma kolmega. Kuna $n$ on paaritu on ülejäänud paaris, kusjuures üks jagub vähemalt 4ga, kuna tegemist on järjestikuste paarisarvudega. Seega $(n+1)(n-1)$ peab jaguma 3 ning $4\cdot 2$ga ehk kokku 24ga.
-\bigskip
-\pagebreak
-
-\noindent \textbf{4.} Tõestada, et kui täisarv $a$ on korraga täiskuup ja mõne teise täisarvu viies
-aste, siis $a\equiv 0,1,21,22,34,43,55,56,76\pmod{77}$.
-
-\bigskip
-
-Kuna $a$ on nii mingi arvu kuup kui ka mingi teise arvu viies aste, peavad $a$ standardkujus kõigi algtegurite astmed jaguma nii 3 kui ka 5ga, ehk need astmed peavad olema 15 kordsed. Kuna $77=7\cdot11$, vaatlen eraldi jääki 7 ja 11ga jagamisel. Arvu $a$ suvalise teguri $p^{15k}$ jääk 7ga jagamisel: kõigepealt jagan algtegurit ennast $p=7q+r$, seejärel $(7q+r)^{15k}\equiv ((r^{6})^2\cdot r^3)^k\equiv(r^3)^k \pmod 7$. Vaatlen kõiki võimalikke $r^{3}\pmod7$ väärtuseid: 
-\begin{tabular}{c|c|c|c|c|c|c}
-0&1&2&3&4&5&6\\
+\begin{center}
+\begin{tabular}{c| c c c c c c c }
+&1&2&3&4&5&6&7\\
 \hline
-0&1&1&-1&1&-1&-1
-\end{tabular}\\
-Vaatlen samamoodi suvalise teguri $p^{15k}$ arvuga 11 jagamisel tekkivad jääki. Kõigepealt jagan algtegurit ennast: $p=11q+r$, seejärel astendatuna: $(11q+r)^{15k}\equiv (r^{10}\cdot r^5)^k\equiv(r^5)^k \pmod {11}$. Kõik võimalikud $r^5\pmod {11}$ väärtused:
+ 1&1&2&3&4&5&6&7 \\ 
+  2&&4&6&-7&-5&-3&-1\\  
+  3&&&-6&-3&0&3&6\\
+  4&&&&1&5&-6&-2\\
+  5&&&&&-5&0&5\\
+  6&&&&&&6&-3\\
+  7&&&&&&&4
+\end{tabular}
+\end{center}
+Täis tabeli saab antud tabeli peegeldamisel parema ääre suhtes kõiki elemente -1ga korrutades ning seejärel saadud kumbagi diagonaali mööda peegeldades.
+\bigskip
 
-\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c}
-0&1&2&3&4&5&6&7&8&9&10\\
-\hline
-0&1&-1&1&1&1&-1&-1&-1&1&-1
-\end{tabular}\\
-\bigskip\\
-Seega on kõigi sobilike arvude puhul iga teguri jääk nii 7 kui ka 11ga jagamisel -1, 0 või 1 ning kui neid omavahel korrutada, jääb tulemus ikkagi nende 3 valiku hulka. Kui vaadata antud jääkide, mis peaksid tekkima 77ga jagamisel, jääke 7 ja 11 järgi, siis need on vastavalt $0\to(0,0), 1\to(1,1), 21\to(0,-1), 22\to(1,0), 34\to(-1,1), 43\to(1,-1), 55\to(-1,0), 56\to(0,1), 76\to(-1,-1)$, ehk kõik võimalikud kombinatsioonid -1, 0 ja 1st. Seega kuna $(7,11)=1$ ja $7\cdot11=77$, on $\Z_7\times \Z_{11}\to \Z_{77}$ kujutis bijektsioon ning kuna kõik sobilikud arvud annavad 7 ja 11ga jagamisel jäägi -1, 0 või 1, annavad nad ka arvuga 77 jagamisel sobiva jäägi.
+\noindent \textbf{2.} Leida k\~oik ringi $\Z_{28}$ p\"o\"oratavad elemendid. 
 
 \bigskip
 
-\noindent \textbf{5.} Kas võrrandil $x^3+y^4=2022$ leidub naturaalarvulisi lahendipaare $x,y$?
-
-\bigskip
-Naturaalarvude kuubid, mis on väiksemad kui 2022 ehk mida veel saaks kasutada summas on 1, 8, 27, 64, 125, 216, 343, 512, 729, 1000, 1331 ning 1728. Sobivad neljandada astmed on 1, 16, 81, 256, 625, 1296.
-1728ga ei saa sellsst summat moodustada, kuna pole sobivat 4. astet, mis lõppeks 4ga. 1331 puhul sobiks viimase numbri puhul 81 ja 1, mis on liiga väikesed. 1000 puhul pole ühtegi 2ga lõppevat 4. astet. Läbivaatluse põhjal 729 ja 1296 ei sobi ning väiksemate $x$ ja $y$ valikute korral on summa 2022st väiksem.
-\bigskip
-
-\noindent \textbf{6.} Olgu $p$ algarv. Leida jääk, mis tekib binoomkordaja ${2p \choose p}$ \mbox{jagamisel arvuga $p$.}
+Teoreem 4.10 põhjal on $\Z_{28}$ ringi pööratavate elementide hulk $\{\overline{a}\in\Z_{28}\ |\ (a,28)=1\}$. Seega on pööratavad elemendid kõik elemendid, mis ei oma arvuga 28 ühistegureid. 28 algtegurid on 2 ja 7 ehk ainsad elemendid, mis omavad arvuga 28 ühistegureid on 2 ja 7 kordsed arvud, kui need välja jätta, jäävad alles elemendid $\{\w1,\w3,\w5,\w9,\w{11},\w{13},\w{15},\w{17},\w{19},\w{23},\w{25},\w{27}\}$, mis ongi kõik pööratavad elemendid.
 
 \bigskip
 
-Binoomkordaja saab ümber kirjutada kui $\frac{(2p)!}{p^2(p-1)!(p-1)!}$. Kuna vaja on leida jääki selle jagamisel arvuga $p$, saab tegeleda jäägiklassis $Z_p$, mis on korpus, kuna $p$ on algarv. Seega on kõik selle elemendid peale nullelemendi pööratavad ehk saab igale $(p-1)!$ tegurile leida pöördarvu teisest $(p-1)!$ korrutisest. Kuna jagamine on sama, mis pöördarvuga korrutamine, saab võtta korrutisest $(p-1)!^2$ arvude ja pöördarvude paarid ning kuna arvu pöördarvu pöördarvu ja arvu pöördarvu korrutis on 1, on ka kõigi tekkivate paaride korrutis 1.\\
-Seega jääb binoomkordajast alles $\frac{(2p)!}{p^2}$. Arvuga $p$ jagamisel saab ülemisest korrutisest maha taandada $p$ ja $2p$ ehk alles jääb $\prod_{i=1}^{p-1} i\cdot\prod_{i=1}^{p-1}(p+i)\cdot 2$. Kuna $p+i\equiv i\pmod p$, on korrutis sama, mis $2(p-1)!^2$, kuid $(p-1)!^2$ sisaldab jällegi arvude ja nende pöördarvude paare ehk binoomkordajat arvuga $p$ jagades on jääk alati 2.
+\noindent \textbf{3.} Leida elementide $\overline{12}$, $\overline{13}$, $\overline{14}$, $\overline{15}$, $\overline{20}$, $\overline{21}$ ja $\overline{22}$ vastandelemendid ning (kui need on olemas) pöördelemendid  ringis $\Z_{336}$. 
+
 
 \bigskip
-\pagebreak
+Vastandelemndid on $\overline{-12}$, $\overline{-13}$, $\overline{-14}$, $\overline{-15}$, $\overline{-20}$, $\overline{-21}$, $\overline{-22}$. Kuna  12, 14, 15, 0, 21 ja 22 omavad 336ga ühest suuremat ühiskordset, siis neil pöördelemente pole. $\overline{13}$ pöördelemendi leiame Eukleidese algoritmiga.
+\begin{center}
+\begin{tabular}{ c c c}
+336&1&0\\
+13&0&1\\
+11&1&-25\\
+2&-1&26\\
+1&6&-155
+\end{tabular}
+\end{center}
+Seega saime, et $\overline{13}$ pöördelement on $\overline{-155}$.
+\bigskip
 
-\noindent \textbf{7.} 990 perearsti süstisid kõik ära sama koguse vaktsiini. Terviseamet kaotas aga saatedokumendid ära ja kui need üles leiti, olid paberid lumes ära vettinud ja sealt võis vaid välja lugeda, et kokku oli sel päeval perearstidele välja jagatud $\bullet\hskip-2pt\hskip-1pt\bullet\hskip-1pt\hskip-1pt46\bullet\hskip-1pt\hskip-1pt\bullet\hskip-2pt$ doosi. Aidake Üllar Lannol oma töökohta säilitada ja leidke suurim, vähim ja keskmine (kui võimalusi on paarisarv, siis kaks keskmist) võimalik vaktsiinidooside koguarv. 
+\noindent \textbf{4.} Leida {\bf mõlema} ringi $\Z_{24}$ ja $\Z_{8}\times\Z_{3}$ jaoks k\~oik p\"o\"oratavad elemendid ning k\~oik nulli\-tegurid koos vastavate nulli tegurdustega (st. nulliteguri $a$ jaoks tuleb leida $b$ nii, et $ab=0$). Kas ringid $\Z_{24}$ ja $\Z_8\times\Z_{3}$ on isomorfsed? Miks?
 
 \bigskip
-Tähistan arvu kui $\overline{ab46cd}$. Kuna kõk süstisid sama arvu, peab lõplik süstimiste arv olema 990 kordne, seega ka 10 korde, seega $d=0$. Ülejäänud numbrite puhul peame vaatama, et saadav arv jaguks 99ga. Seega peab summa $\overline{0a}+\overline{b4}+\overline{6c}$ jaguma 99ga, kuna $100\equiv1\pmod{99}$. Ainus variant on see, et kogu summa on 99, sest 198 pole saavutatav. Summa saab ümber tõsta nõnda: $\overline{0a}+\overline{b4}+\overline{6c}=64+\overline{ba}+c$. Selleks peab $\overline{ba}$ ja $c$ summa olema $99-64=35$. Arvu $c$ väärtused saavad olla $0..9$, nendele vastavad $\overline{ba}$ väärtused on $35..26$. Kuna esialgse arvu kümnendesitluses on nad järjestuses $a, b, c$, saab lõplike vastuste järjekorra määramiseks kasutada $a$ väärtust ning kui $a$ on sama, siis $b$ väärtust. Võimalikud $\overline{ab}$ väärtused on järjestatuna $13,23,33,43,53,62,72,82,92$ Seega on suureim võimalik vaktsiinide arv 924660, vähim 134640 ja keskmine 534600.
+Teoreem 4.10 põhjal on $\Z_{24}$ ringi pööratavate elementide hulk $\{\overline{a}\in\Z_{24}\ |\ (a,24)=1\}$. Seega on pööratavad elemendid kõik elemendid, mis ei oma arvuga 24 ühiseid tegureid. 24 algtegurid on 2 ja 3 ehk ainsad elemendid, mis omavad arvuga 24 ühiseid tegureid on 2 ja 3 kordsed arvud, kui need välja jätta, jäävad alles $\{\w1,\w5,\w7,\w{11},\w{13},\w{17},\w{19},\w{23}\}$, mis ongi kõik pööratavad elemendid.\\
+Kuna $(8,3)=1$ ja $8\cdot3=24$, on teoreemi 4.5 eeldused täidetud ehk $\Z_{24}$ ja $\Z_8\times\Z_3$ on isomorfsed.\\
+Nende isomorfsuse tõttu on ka nende pööratavad elemendid samad, ehk $\Z_8\times\Z_3$ pööratavad elemendid on $\{(\w1,\w1),(\w5,\w2),(\w7,\w1),(\w{3},\w2),(\w{5},\w1),(\w{1},\w2),(\w{3},\w1),(\w{7},\w2)\}$.
 \bigskip
 
-\noindent \textbf{8.} Arvud 202020 kuni 212121 kirjutatakse järjest üles. Kas niiviisi saadav täisarv $$202020202021\ldots212120212121$$ \vskip-1em\noindent jagub arvuga 13?
+\noindent \textbf{5.} Leida ringi $\Z_{6}\times\Z_{4}$ k\~oik p\"o\"oratavad elemendid. Kas ringid $\Z_{24}$ ja $\Z_{6}\times\Z_{4}$ on isomorfsed? Põhjendada vastust.
 
 \bigskip
-Arvu saab ümber kirjutada summana 
-\begin{gather*}
-\begin{aligned}
-\sum_{i=0}^{10100010100}(202020202021+i)\cdot& (10^{12})^{10100010100-i}\equiv\sum_{i=0}^{10100010100}(202020202021+i)\cdot (1)^{10100010100-i}\pmod{13}\\
-=&\sum_{i=0}^{10100010100}(202020202021+i)\\
-=&202020202021\cdot(1010010100+1)+\sum_{i=0}^{10100010100}i\\
-=&202020202021\cdot1010010101+\frac{10100010100(10100010100+1)}{2}\\
-=&1010010101\cdot(202020202021+505005050)\\
-=&1010010101\cdot202525207071\equiv9\cdot5\equiv6\pmod{13}\\
-\end{aligned}
-\end{gather*}
-Ehk antud arv annab arvuga 13 jagades jäägi 6.
+Element saab olla pööratav parajasti siis, kui $\Z_6$ ja $\Z_4$ osad on mõlemad pööratavad, vastasel juhul ei saa ühte nendest vastava ringi ühikelemendiks muuta. $\Z_6$ pööratavad elemendid on $\overline{1}$, $\overline{5}$, jäägiklassis $\Z_4$  $\overline{1}$ ja $\overline{3}$. Seega on $\Z_6\times\Z_4$ pööratavd elemendid ( $\overline{1}$, $\overline{1}$),( $\overline{1}$, $\overline{3}$),( $\overline{5}$, $\overline{1}$),( $\overline{5}$, $\overline{3}$). Need pole isomorfsed, kuna isomorfism peab ühikelemendi ühikelemendiks teisendama ning ühikelemendile iseennast 12 korda liites saame jääägiklassis $\Z_{24}$ $\overline{13}$ ning $\Z_6\times\Z_4$s ($\overline{1}$,$\overline{1}$), mis on juba oli esialgne ühikelement, seega pole teisendus injektiivne, seega pole ka isomorfism.
+\bigskip
+
+\noindent \textbf{6.} Tõestada, et ringi $\Z_n$ ei ole võimalik isegi osaliselt järjestada nii, et tekkiv järjestus oleks liitmisega kooskõlas (va triviaalne järjestus ehk võrdusseos). 
+
+\bigskip
+Vaatlen kõigepealt paarisarvulisi $n$ väärtuseid, defineerides $2k:=n$. Võtan kaks elementi, $a=\w0$ ja $b=\w k$. Trihhotoomia põhjal peab kehtima $a=b$, $a<b$ või $a>b$. Esimene ei saa kehtida kuna kui $n>0$, siis $0<k<2k$ ehk tegu on erinevate elementidega. Eeldame et kehtib $a<b$. Siis saab monotoonsuse põhjal mõlemale poole liita juurde elemendi $k$ ilma et märk muutuks: $b=k=a+k<b+k=2k=0=a$ ehk $b<a$, kuid see on vastuolus eeldusega, et $a<b$. Kui eeldada et $a>b$, saab sama arutluskäiguga vastuolu, et $b>a$. Seega ei ole võimalik $Z_n$ paarisarvuliste $n$ puhul järjestada.
+\bigskip
+
+\noindent \textbf{7.} Jäägiklassiringi $\Z_n$ elementi $\overline{m}$ nimetatakse \emph{idempotentseks} või \emph{idempotendiks}, kui $\overline{m}^2=\overline{m}$. Leida ringi $\Z_n$ idempotentide arv. 
+
+\bigskip
+Vaadates isomorfset ringi, mis koosneb $\Z_{p^k}$de otsekorrutisest, kus $p^k$ on $n$ algtegurduses olev algarvu aste, saame, et element on idempotentne esialgses ringis parajasti siis, kui temale vastava otsekorrutise iga liige on vastavas jäägiklassiringis ka idempotentne. Vastasel juhul vähemalt ühe jäägiklassiringi element muutuks ruutu võttes ning seega ka kogu arv, kuna muidu poleks see otsekorrutis algse jäägiklassiringiga isomorfne.
+
+Igas otsekorrutise osas saab see olla kas vastava jäägiklassiringi null- või ühikelement. Vastasel juhul mingi $\Z_{p^k}$ korral leidub mingi muu idempotentne element, mille puhul kehtib, et $\overline{m}^2=\overline{m}$, kust ringi omadusi kasutades saame $(\overline{m}-\overline{1})\overline{m}=\overline{0}$. See aga tähendaks, et korrutis peab jaguma $p^k$ga. Seega peab seda tegema ka kas $m$ või $m-1$ (kuni kumbki 0 pole), kuna iga jagaja puhul (peale 1) annavad need erineva jäägi, annavad need ka erineva jäägi $p$ga jagades, seega saab ainult üks jaguda $p$ ning seega $p^k$ga, mis on aga võimatu, sest valides esindajad $0\leq m<p^k$ on kõik $m$ liiga väiksed, et jaguda $p^k$ga.
+
+Seega saab idempotentsele elemendile vastava otsekorrutise iga liiga olla kas $\overline{0}$ või $\overline{1}$, seega iga algtegurduses esineva algarvu kohta lisandub uus liige ning võimaluste arv kahekordistub. Seega, kui $n$l on $x$ unikaalset algtegurit, siis on $\Z_n$s $2^x$ idempotentset elementi.
+\bigskip
+
+\noindent \textbf{8.} Leida ringi $\Z_n$ kõigi {\bf mitte}pööratavate elementide summa. 
+
+\bigskip
+Märkan, et element $\w{-1}$ on alati pööratav, kuna teda iseendaga korrutades saab $\w1$. Samuti kui mingi element $\w a\in\Z_n$ on pööratav, siis on ka tema vastandelement pööratav, sest $\w a^{-1}\cdot \w{-1}^{-1}=(\w a\cdot\w{-1})^{-1}=\w{-a}^{-1}$. See aga tähendab, et kui element on mittepööratav, siis tema vastandelement on ka mittepööratav, ning kuna elemendi ja tema vastandelemendi summa on 0, on seega kõigi endast erineva vastandelemendiga mittepööratavate elementide summa 0. Erandiks on paarisarvulised $n$ väärtused, kus on element $\frac n2$, mis on ise enda vastandelement. See element on ka alati pööratav kui $n>2$, kuna teoreemi 4.10 järgi on mittepööratavad elemendid elemendid, mis omavad arvuga $n$ suurimat ühistegurit, mis erineb ühest, ning kuna $2\cdot\frac n2=n$, siis $\frac n2\ |\ n$ ehk $(\frac n2,n)=\frac n2$ ja see on 1 vaid juhul kui $n=2$.\\
+Seega on $n=2$ ja paarituarvuliste $n$ väärtuste puhul summaks 0 ning paarisarvuliste $n$ väärtuste puhul on summaks $\frac n2$.
 \bigskip
 
 \end{document}
