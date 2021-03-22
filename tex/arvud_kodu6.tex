@@ -1,0 +1,71 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[estonian]{babel}
+\usepackage{t1enc}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{lscape}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage[shortlabels]{enumitem}
+\usepackage[a4paper,margin=1in,footskip=0.25in]{geometry}
+\usepackage{pgffor}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\newcommand{\p}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\w}{\overline}
+\topmargin-3em
+\oddsidemargin0cm
+\textwidth16cm
+%\textheight27cm
+\evensidemargin-2cm
+\begin{document}
+\begin{center}
+\Large\textbf{Kodutöö nr. 6}\\
+\small{Joosep Näks ja Uku Hannes Arismaa}
+\end{center}
+
+
+\noindent \textbf{1.} Millega on v\~ordne summa  {\small \[S=\varphi (2)+\varphi (3)+\varphi (4)+\varphi (5)+\varphi (6)+\varphi (7)+\varphi (8)+\varphi (10)+\varphi (20)+\varphi(25)+\varphi(40)+\varphi (50)+\varphi(100)?\]}
+
+\vskip-1.25em
+
+\noindent \textbf{2.} Kui palju on selliseid naturaalarve, mis ei ole suuremad kui $2121$ ja mille 
+suurim \"uhistegur arvuga $2020$ ei ületa arvu $20$?
+
+\bigskip
+Võtan suvalise arvu $a=p_1^{k_1}\cdot p_2^{k_2}\cdot...\cdot p_n^{k_n}$ ning $2020=p_1^{l_1}\cdot p_2^{l_2}\cdot...\cdot p_n^{l_n}$, nii et $p_1,...,p_n$ on erinevad algarvud. Siis $(a,2020)=p_1^{\min(p_1,l_1)}\cdot p_2^{\min(p_2,l_2)}\cdot...\cdot p_n^{\min(p_n,l_n)}$. Kuna arvu 2020 standardkuju on $2^2\cdot5^1\cdot101^1$, on kõik muudele algarvudele vastavad $l_i$ väärtused 0 ning suurima ühisteguri saab taandada arvuks $(a,2020)=2^{\min(2,l_1)}\cdot 5^{\min(1,l_2)}\cdot 101^{\min(1,l_n)}$ ehk kõik erinevad võimalikud suurimad ühistegurid on $1,2,4,5,10,20$ ja lisaks kõik loetletud arvud läbi korrutatud arvuga 101. Märkan, et kõik loetletud arvud on mitte suuremad kui 20, kuid kui neid arvuga 101 läbi korrutada, on nad suuremad kui 101. Sellest järeldub, et arvu $a$ suurim ühistegur arvuga 2020 on suurem kui 20 parajasti siis, kui $101|a$. Seega on arvude kogus, mille suurim ühistegur arvuga 2020 ei ületa arvu 20, kõigi arvude kogus miinus 101 kordsed arvud. 101 kordseid arve, mis ei ole suuremad kui 2121 on $\left\lfloor\frac {2121}{101}\right\rfloor=21$ ning seega otsitav kogus on 2121-21=2100.
+\bigskip
+
+\noindent \textbf{3.} Leida arvu $$2022^{(2021^{(2020^{\ldots^{2^1}})})}$$ neli viimast kümnendnumbrit.
+
+\bigskip
+Arvu viimase nelja kümnendnumbri leidmine on samaväärne arvu esindaja leidmisega jäägiklassis $\Z_{10000}$. Teoreemi 4.5 põhjal kuna $(16,625)=1$ ja $16\cdot625=10000$ siis $\Z_{10000}$ ja $\Z_{16}\times \Z_{625}$ on isomorfsed, seega leian arvu esindaja ringis $\Z_{16}\times \Z_{625}$. Märkan et $2022\equiv6\pmod{16}$ ja $6^4\equiv0\pmod{16}$ ehk kuna antud arvus on 2022 astendaja suurem kui 4, on jäägiklassis $\Z_{16}$ selle esindaja $\w0$.\\
+Jäägiklassi $\Z_{625}$ jaoks leian, et $\varphi(625)=500$, ning kuna $(625,2022)=1$, saan ma Euleri teoreemi põhjal, et $2022^{500}\equiv1\pmod{625}$ ehk kui jagada jäägiga $2021^{(2020^{\ldots^{2^1}})}= 500q+r$, siis $2022^{(2021^{(2020^{\ldots^{2^1}})})}\equiv2022^{500q}\cdot2022^r\equiv2022^r\pmod{625}$. Arvu $r$ leidmiseks saab jällegi kasutada Euleri teoreemi, kuna $(2021,500)=1$ ja $\varphi(500)=200$, ehk $2021^{200}\equiv1\pmod{500}$. Arvu 2021 astendajat algses arvus vaadates saab aga märgata, et $2020\equiv20\pmod {200}$ ning $20^2=400\equiv0\pmod{200}$ ehk kuna algses arvus on 2020 astendaja suurem kui 2, saab võtta $2020^{(2019\dots^{(2^1)})}=2020^2\cdot2020^{(2019\dots^{(2^1)})-2}\equiv0\pmod{200}$. See tähendab, et algses arvus arvu 2021 astendaja jagub arvuga 200 ning $2021^{(2020^{\ldots^{2^1}})}=(2020^200)^k\equiv1\pmod{500}$ ehk $r=1$. Ning lõpuks $2022^{(2021^{(2020^{\ldots^{2^1}})})}\equiv2022^1\pmod {625}=147$.\\
+Seega on antud arvu esindaja ringis $\Z_{16}\times\Z_{625}$ element $(\w0,\w{147})$. Leian jäägid $625\equiv1\pmod{16}$ ja $147\equiv3\pmod{16}$ ehk otsitav esindaja jäägiklassis $Z_{10000}$ on $625\cdot13+147=8272$.
+\bigskip
+
+\noindent \textbf{4.} Tõestada, et \mbox{$a^{37}\equiv a\pmod{1995}$} iga $a\in\Z$ korral.  
+
+\bigskip
+
+\noindent \textbf{5.} Leida kõik naturaalarvud $n$, mille korral $\varphi(n)=6$. 
+
+\bigskip
+
+\noindent \textbf{6.} Olgu $n\in\N$. Leida $\sum\limits_{d\mid n}\mu(d)\sigma(\frac{n}{d})$. 
+
+\bigskip
+
+\noindent \textbf{7.} Leida kõik täiuslikud paarisarvud, mis ei ole avaldatavad järjestikuste kuupide summana. 
+
+\bigskip
+
+\noindent \textbf{8.} Tõestada, et igal paaritul täiuslikul arvul on vähemalt kolm erinevat algtegurit. 
+
+\end{document}
