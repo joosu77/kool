@@ -35,6 +35,12 @@
 
 \vskip-1.25em
 
+\begin{align*} 
+S=\sum_{d\mid 200}\varphi(d)-\varphi(1)-\varphi(200)+\varphi(3)+\varphi(6)+\varphi(7)&=\\\\ 
+200-1-2^{3-1}(2-1)5^{2-1}(5-1)+2+2+6&=129
+\end{align*}
+\bigskip
+
 \noindent \textbf{2.} Kui palju on selliseid naturaalarve, mis ei ole suuremad kui $2121$ ja mille 
 suurim \"uhistegur arvuga $2020$ ei ületa arvu $20$?
 
@@ -53,14 +59,18 @@ Seega on antud arvu esindaja ringis $\Z_{16}\times\Z_{625}$ element $(\w0,\w{147
 \noindent \textbf{4.} Tõestada, et \mbox{$a^{37}\equiv a\pmod{1995}$} iga $a\in\Z$ korral.  
 
 \bigskip
+Samaväärne oleks tõestada $a^{37}=a, a\in\Z_{1995}$, mis omakorda on samaväärne $a^{37}=a, a\in\Z_{19}\times\Z_3\times\Z_5\times\Z_7$. Vaadates $a$ osi eraldi, saame Fermat' väikese teoreemipõhjal, et näiteks $a_1\in\Z_{19}$ puhul $a_1^{19-1}=a_1^{18}=\overline{1}\Rightarrow a_1^{2\cdot18}=\overline{1}^2=\overline{1}\Rightarrow a_1^{37}=\overline{1}a_1=a_1$. Sarnase tulemuseni jõuame ka teistes jäägi\-klassi\-ringides, kuna $37\equiv 1 \pmod{3-1}$, $37\equiv 1 \pmod{5-1}$ ning $37\equiv 1 \pmod{7-1}$. Kui mõni $a_n=0$, siis Fermat' väike teoreem ei kehti, aga $\overline{0}^{37}=\overline{0}$ igas jäägiklassiringis, seega ikkagi $a_n^{37}=a_n$ ning seega ka $a^{37}=a$.
+\bigskip
 
 \noindent \textbf{5.} Leida kõik naturaalarvud $n$, mille korral $\varphi(n)=6$. 
 
 \bigskip
+$6=2\cdot 3$
+
+$\varphi$ arvutamisel saavad need tegurid tulla kahest kohast: tegur $(p-1)$ või tegur $p^{k-1}$. Kui 2 tuleb $(p-1)$st, siis saame $p=3$. Kui siis 3 tuleb $p^{k-1}$st, saame, et arv on $3^2=9$. 3 ei saa tulla $(p-1)$st, sest 4 ei ole algarv. Kui 2 tuleb $2^{2-1}$ st, siis peaks 3 tulema $3^{2-1}$st, aga siis peaks tulemus veel olema korrutatud $(3-1)$ga, seega nii ei saa. On ka võimalus, et $(p-1)=6$ ehk sobib arv 7. Lisaks 7 ja 9le sobivad ka 14 ja 18, kuna 2ga läbi korrutamisel korrutame me $\varphi$ läbi $2^{1-1}=1$ ning $(2-1)=1$ga.
+\bigskip
 
 \noindent \textbf{6.} Olgu $n\in\N$. Leida $\sum\limits_{d\mid n}\mu(d)\sigma(\frac{n}{d})$. 
-
-\bigskip
 
 \noindent \textbf{7.} Leida kõik täiuslikud paarisarvud, mis ei ole avaldatavad järjestikuste kuupide summana. 
 
@@ -68,4 +78,7 @@ Seega on antud arvu esindaja ringis $\Z_{16}\times\Z_{625}$ element $(\w0,\w{147
 
 \noindent \textbf{8.} Tõestada, et igal paaritul täiuslikul arvul on vähemalt kolm erinevat algtegurit. 
 
+\bigskip
+Vaatlen alustuseks ühe erineva algteguriga täiuslikke arve. Teoreemi 5.21 põhjal saab nad avaldada kujul $2n=2p^k=\sigma(n)=\frac{p^{k+1}-1}{p-1}$. Korrutan võrrandi $2p^k=\frac{p^{k+1}-1}{p-1}$ mõlemad pooled läbi $p-1$ga, mis pole 0, kuna p on algarv ehk 2 või suurem. Saan $2p^{k+1}-2p^k=p^{k+1}-1$ ehk $p^k(2-p)=1$. Kuid selleks, et võrrandi vasak pool positiivne oleks, peaks $p$ olema väiksem kui 2 ning selliseid algarve ei leidu.\\
+Avaldan sarnaselt kahe erineva algteguriga täiusliku arvu: $2n=2p^k\cdot q^t=\sigma(n)=\frac{p^{k+1}-1}{p-1}\cdot\frac{q^{t+1}-1}{q-1}$. Jagan mõlemad pooled läbi arvuga $n$: $2=\frac{p-p^{-k}}{p-1}\cdot\frac{q-q^{-t}}{q-1}=\left(\frac{p}{p-1}-\frac{p^{-k}}{p-1}\right)\cdot\left(\frac{q}{q-1}-\frac{q^{-t}}{q-1}\right)$. Eelduste kohaselt on $p$ ja $q$ algarvud ja $k$ ja $t$ naturaalarvud ehk $0<p^{-k}<1<p$ ehk viimatise korrutise tegurid on positiivsed, ning kui mõlemale tegurile juurde liita positiivne arv, on tulemuseks saadud korrutise väärtus suurem algsest korrutisest ehk $$\left(\frac{p}{p-1}-\frac{p^{-k}}{p-1}\right)\cdot\left(\frac{q}{q-1}-\frac{q^{-t}}{q-1}\right)<\frac{p}{p-1}\cdot\frac{q}{q-1}=\frac{1}{1-\frac{1}{p}}\cdot\frac{1}{1-\frac 1q}$$ Kui saadud kujus võtta $p$ ja $q$ kõige väiksemateks võimalikeks algarvudeks $p=3$ ja $q=5$ (2 ei ole võimalik kuna vaatleme vaid paarituid täiuslikke arve), on selle väärtus $\frac{15}8<2$ ning on näha, et $p$ ja $q$ suurendamisel väheneb väärtus, ehk selle kuju väärtus on alati väiksem kui 2, kuid see annab vastuolu, kuna see peaks olema rangelt suurem kui 2, et $n$ oleks täiuslik arv.
 \end{document}
