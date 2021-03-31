@@ -1,0 +1,147 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[estonian]{babel}
+\usepackage{t1enc}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{lscape}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage[shortlabels]{enumitem}
+\usepackage[a4paper,margin=1in,footskip=0.25in]{geometry}
+\usepackage{pgffor}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\newcommand{\p}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\w}{\overline}
+\topmargin-3em
+\oddsidemargin0cm
+\textwidth16cm
+%\textheight27cm
+\evensidemargin-2cm
+\begin{document}
+\begin{center}
+\Large\textbf{Kodutöö nr. 7}\\
+\small{Joosep Näks ja Uku Hannes Arismaa}
+\end{center}
+
+\noindent 1. Lahendada lineaarkongruents $2021x+6590\equiv 2022 \pmod{2020}.$
+
+\bigskip
+$2021x+6590\equiv 2022 \pmod{2020}\Leftrightarrow x\equiv 1492 \pmod{2020} $
+\bigskip
+
+\noindent 2. Lahendada lineaarkongruentside s\"usteem 
+\[
+\left\{
+\begin{array}{ll}
+3x\equiv 7 & \pmod{25}\\
+7x\equiv 8 & \pmod{20}\\
+11x\equiv 10 & \pmod{15}.
+\end{array}
+\right.
+\]
+
+\bigskip
+Et kasutada Hiina jäägiteoreemi, tahan viia süsteemi kujule, kus võrrandite moodulite vähim ühistegur oleks paarikaupa 1. Et lahendini jõuda, tahan ka, et moodulitesse jääksid alles kõik algtegurid, mis seal on, nende maksimaalsetes astmetes. Seega kuna $25=5^2$, $20=2^2\cdot5$ ja $15=3\cdot5$, muudan teise mooduli 4ks ja kolmanda mooduli 3ks. Mooduleid saab muuta kuna kui $20|8-7x$ ja $4|20$ siis transitiivsuse tõttu ka $4|8-7x$ ehk $7x\equiv8\pmod4$ ning analoogselt saab näidata et kolmas võrrand kehtib mooduli 3 järgi.
+
+Eemaldan nüüd tundmatute eest kordajad. On näha, et $25\cdot2+1=51$ jagub kolmega, täpsemalt $51=3\cdot17$ ehk ringis $\Z_{25}$ on $\w3^{-1}=\w{17}=\w{-8}$ ehk esimeses võrrandis saab mõlemad pooled arvuga -8 läbi korrutada ja saab $-8\cdot3x\equiv-8\cdot7\pmod{25}$ ehk $x\equiv-6\pmod{25}$. Teises võrrandis kõigepealt saab uue mooduli tõttu teisendada võrrandi uuele kujule $-x\equiv0\pmod4$ ehk $x\equiv0\pmod4$. Kolmandas võrrandis teisendan võrrandi jällegi uue mooduli järgi ning saan $2x\equiv1\pmod3$, võtan pöördelemendi: $\w2^{-1}=\w2$ ehk $x\equiv2\pmod3$. Seega olen jõudnud uue võrrandisüsteemini:
+\[
+\left\{
+\begin{array}{ll}
+x\equiv -6 & \pmod{25}\\
+x\equiv 0 & \pmod{4}\\
+x\equiv 2 & \pmod{3}.
+\end{array}
+\right.
+\]
+Ning selle peal saab rakendada Hiina jäägiteoreemi. Leian esiteks vajalikud moodulite korrutiste pöördelemendid.\\ $m_1=4\cdot3=12$ ehk kuna $-2\cdot12=-24\equiv1\pmod{25}$, saan $\w{k_1}=\w{m_1^{-1}}=\w{-2}$\\ Teise võrrandi kordajaid pole mõtet leida kuna $a_2$ on 0.\\
+$m_3=25\cdot4=100$ ehk $\w{k_3}=\w{m_3}^{-1}=\w{1}^{-1}=\w{1}$\\
+Ning seega on lahend $x=-6\cdot(-2)\cdot12+0+2\cdot100\cdot1=344$ kõigi moodulite korrutise mooduli järgi ehk kokkuvõttes on süsteemi lahend $x\equiv344\equiv44\pmod{300}$
+\bigskip
+
+\noindent 3. Lahendada lineaarkongruentside s\"usteem 
+$$
+\left\{
+\begin{array}{ll}
+3x\equiv 7 & \pmod{25}\\
+7x\equiv 8 & \pmod{20}\\
+11x\equiv 9 & \pmod{15}.
+\end{array}
+\right.
+$$
+
+\bigskip
+Selle jaoks on eelmises ülesandes juba eeltöö tehtud, ainus asi mis muutus on kolmanda võrrandi vabaliige, seega kui kolmas võrrand uue vabaliikmega teisendada mooduli kolm järgi saab $2x\equiv0\pmod3$ ehk $x\equiv0\pmod3$. Ning olengi saavutanud võrrandi, mille peal Hiina jäägiteoreemi kasutada:
+\[
+\left\{
+\begin{array}{ll}
+x\equiv -6 & \pmod{25}\\
+x\equiv 0 & \pmod{4}\\
+x\equiv 0 & \pmod{3}.
+\end{array}
+\right.
+\]
+Erinevus eelmisest ülesandest on vaid see, et nüüd on ka lahendi summa kolmas liige 0 ehk lahendiks on $x=144+0+0$ ehk $x\equiv144\pmod{300}$.
+\bigskip
+
+\pagebreak
+
+\noindent 4. Lahendada kongruents $2022^{\left(2021^{2020}\right)} \pmod{1995}$.
+
+\bigskip
+Vaatame arvu $x:=2022^{\left(2021^{2020}\right)}$ moodulite 3,5,7,19 järgi. Saame järgmised tulemused:
+
+$x\equiv 0 \pmod{3}$
+
+$2^4 \equiv 1 \pmod{5}\Rightarrow x\equiv 2^{1^{2020}}\equiv 2 \pmod{5}$
+
+$x\equiv -1^{2021^{2020}}\equiv -1 \pmod{7}$
+
+$8^6 \equiv 1 \pmod{19} \Rightarrow x\equiv 8^{-1^{2020}}\equiv 8 \pmod{19}$
+
+Siit saame HJT järgi, et $x \equiv 2\cdot399\cdot (-1) -285\cdot3+8\cdot105\cdot2=27$
+\bigskip
+
+\noindent 5. Leida suuruselt 2019-s selline naturaalarv $n$, mille korral nii $n$ kui $n^2$ annavad arvuga 891 jagades ühe ja sama jäägi. 
+
+\bigskip
+Märkame, et lahendada $n^2\equiv n \pmod{891}$ on ekvivalentne ülesandele
+\[
+\left\{
+\begin{array}{ll}
+n(n-1)\equiv 0 & \pmod{81}\\
+n(n-1)\equiv 0 & \pmod{11}\
+\end{array}
+\right.
+\]
+Mõlema võrrandi puhul on ainsad lahendid 1 ja 0, kuna kõrvuti olevad arvud ei saa mõlemad jagada sama algarvu.
+Märkame, et $11\cdot -22\equiv 1 \pmod {81}$ ning $81\cdot 3 \equiv 1 \pmod{11}$, seega saame HJTst võimalikeks lahenditeks $x\equiv 0, x\equiv 649, x\equiv 243$ ning $x\equiv 1 \pmod{891}$. Iga suuruselt 4. selline naturaalarv on 891 kordne, seega 2020. arv oleks $891\cdot 505$, seega 2019. on $891\cdot 504+649=449713$.
+\bigskip
+
+\noindent 6. \mbox{Tõestada, et kahe järjestikuse ruuduvaba arvu vahe võib olla kuitahes suur.}
+
+\bigskip
+Kui tahta leida sellist arvu $x$, millest järgmised $n$ tükki kõik sisaldavad oma tegurite hulgas ruute, saab koostada võrrandisüsteemi kujul $x+i\equiv 0\pmod {p_i^2}$ ehk $i$ ümber tõstes $x\equiv -i\pmod {p_i^2}$ kus $i=1,..,n$ ja $p_i,..,p_n$ on vabalt valitud erinevad algarvud. Kuna $p_i$ on kõik erinevad algarvud, pole neil paarikaupa ühistegurit ehk Hiina jäägiteoreemi põhjal leidub süsteemil lahend. Seega saab valida kuitahes suure arvu $n$ ning leidub selline arv $x$, millest järgmine ruuduvaba arv on vähemalt $n$ arvu kaugusel.
+\bigskip
+
+\noindent 7. Leida vähim \emph{naturaal}arv, mis on korraga kahekordne täisruut, kolmekordne täiskuup ja 1999-kordne 1999-s aste. 
+
+\bigskip
+
+\noindent 8. Tõestada, et iga paarisarvu $m=2k\in\Z$ ja naturaalarvu $n$ korral leiduvad $a,b\in\Z$ nii, et $m=a-b$ ja $(a,n) = (b,n) = 1$. 
+
+\bigskip
+Tegurdan $m$ ja $n$ algteguriteks nii, et $p_i$ on tegurid, mis jagavad nii $n$ kui ka $m$, $q_i$ jagavad vaid arvu $m$ ning $r_i$ vaid arvu $n$. Saan $m=\prod_ip_i^{u_i}\cdot\prod_iq_i^{v_i}$ ja $n=\prod_ip_i^{u_i}\cdot\prod_ir_i^{z_i}$. 
+
+Leian iga $i$ jaoks saab leida sellise $a_i$ väärtuse, et $a_i\not\equiv0\pmod{r_i}$ ja $a_i\not\equiv-\prod_ip_i^{u_i}\pmod{r_i}$. Sellised $a_i$ väärtused leiduvad, kuna $r_i$ on alati suurem kui 2 ehk jäägiklassiringis $\Z_{r_i}$ on vähemalt 3 liiget (kui $n$ jagub 2ga, on 2 $p_i$ väärtuste hulgas, kuna on teada et $m$ on paarisarv). Koostan võrrandisüsteemi võrranditega $x\equiv a_i\pmod{r_i}$ ja $x\equiv1\pmod{p_i}$. Hiina jäägiteoreemi põhjal leidub sellel lahend kuna $r_i$ ja $p_i$ on paarikaupa ühistegurita.
+
+Võtan nüüd $a=x$ ja $b=m-a$. Arv $x$ ehk ka arv $a$ ei oma arvuga $n$ ühistegurit, kuna võrrandid, mille järgi $x$ leitud sai, ütlevad et ükski arvu $n$ tegur ei jaga arvu $x$. Arv $b$ ei jagu ühegi algarvuga $p_i$, kuna $b= m-x\equiv 0-a_i\not\equiv0\pmod{p_i}$ ning ta ei jagu ka ühegi algarvuga $r_i$, kuna $b=m-x\equiv$
+
+
+\end{document}
