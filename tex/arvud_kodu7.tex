@@ -134,6 +134,13 @@ Kui tahta leida sellist arvu $x$, millest järgmised $n$ tükki kõik sisaldavad
 
 \bigskip
 
+Arv, mis me valime peab olema 2 3 ja 1999 kordne, seega kujul $2^i3^j1999^kx$. Selleks, et arv oleks täisaste, peavad kõik algtegurid eraldi olema selles astmes, seega kui $x>1$, siis see ei mõjuta arvu esimest poole täisaste olemist, seega kui leida vähimad $i,j,k$ nii, et arvu esimene pool vastab tingimustele, pole mõtet seda enam $x>1$ läbi korrutada, kuna see teeks arvu asjatult suuremaks.
+
+Et arv $n$ oleks kahekordne kuup, peab kehtima $n=2w^2=2\cdot2^{i-1}3^j1999^k$ ehk $j$ ja $k$ peavad kahega jaguma ning $i$ peab jäägiks andma 1. Sama saab arvugeda 3 ja 1999 teha ning saame tingimused $i\equiv 1,j\equiv0,k\equiv0 \pmod{2}$, $i\equiv 0,j\equiv1,k\equiv0 \pmod{3}$, $i\equiv 0,j\equiv0,k\equiv1 \pmod{1999}$. HJTst saame $i\equiv 1\cdot 3\cdot 1999\cdot 1=5997$, $j \equiv 1\cdot 2\cdot 1999\cdot 2=7996$, $k \equiv 2\cdot 3\cdot 1000\cdot 1333\equiv 9996 \pmod{2\cdot3\cdot 1999}$. Asendades need algsesse kujusse saamegi vähima sellise arvu: $2^{5997}\cdot3^{7996}\cdot1999^{9996}$.
+
+\bigskip
+\pagebreak
+
 \noindent 8. Tõestada, et iga paarisarvu $m=2k\in\Z$ ja naturaalarvu $n$ korral leiduvad $a,b\in\Z$ nii, et $m=a-b$ ja $(a,n) = (b,n) = 1$. 
 
 \bigskip
@@ -142,6 +149,18 @@ Tegurdan $m$ ja $n$ algteguriteks nii, et $p_i$ on tegurid, mis jagavad nii $n$ 
 Leian iga $i$ jaoks saab leida sellise $a_i$ väärtuse, et $a_i\not\equiv0\pmod{r_i}$ ja $a_i\not\equiv-\prod_ip_i^{u_i}\pmod{r_i}$. Sellised $a_i$ väärtused leiduvad, kuna $r_i$ on alati suurem kui 2 ehk jäägiklassiringis $\Z_{r_i}$ on vähemalt 3 liiget (kui $n$ jagub 2ga, on 2 $p_i$ väärtuste hulgas, kuna on teada et $m$ on paarisarv). Koostan võrrandisüsteemi võrranditega $x\equiv a_i\pmod{r_i}$ ja $x\equiv1\pmod{p_i}$. Hiina jäägiteoreemi põhjal leidub sellel lahend kuna $r_i$ ja $p_i$ on paarikaupa ühistegurita.
 
 Võtan nüüd $b=x\cdot\prod_iq_i^{v_i}$ ja $a=m+b$. Arv $x$ ei oma arvuga $n$ ühistegurit, kuna võrrandid, mille järgi $x$ leitud sai, ütlevad et ükski arvu $n$ tegur ei jaga arvu $x$ ning ükski $q_i$ ei jaga arvu $n$ seega $n$ ja $b$ ei oma ühistegurit. Arv $a$ ei jagu ühegi algarvuga $p_i$, kuna $a= m+x\cdot\prod_iq_i^{v_i}\equiv 0+a_i\cdot\prod_iq_i^{v_i}\not\equiv0\pmod{p_i}$. Viimane kehtib seepärast, et $q_i$ ja $p_i$ on alati erinevad algarvud ehk nende suurim ühistegur on 1. Ta ei jagu ka ühegi algarvuga $r_i$, kuna $a=\prod_ip_i^{u_i}\cdot\prod_iq_i^{v_i}+x\cdot\prod_iq_i^{v_i}=\prod_iq_i^{v_i}(\prod_ip_i^{u_i}+x)$ ning on teada et arvud $q_i$ korrutis ei jagu arvudega $r_i$ ning eelduste kohaselt $\prod_ip_i^{u_i}+x\not\equiv\prod_ip_i^{u_i}-\prod_ip_i^{u_i}=0\pmod{r_i}$ ehk ka korrutise teine pool ei saa jaguda ühegi arvuga $r_i$.
+
+\bigskip
+
+\noindent 9. Koostada tekst\"ulesanne, mida saab lahendada Hiina \mbox{j\"a\"agiteoreemi} abil. \\(\"Ulesande tekst ja 
+selle {\bf lahendus} tuleb esitada kirjalikult. Põhimõtteliselt vale lahendusega ülesanne annab 0 punkti. K\~oige originaalsema üles\-ande
+ja kõige raskema \"ulesande koostajad saavad kumbki 3-5 punkti sõltuvalt ülesande tasemest. Kloonitud \"ulesannete 
+esitajad saavad 0 punkti.)
+
+\bigskip
+Ülesanne: Rabamatkal märkad, et teepeale jäävad jõhvikad on 10m vahedega ning murakad 19m vahedega. Olles kõndinud 87m viimasest kohast, kus murakas ja jõhvikas olid kõrvuti, märkad, et nüüd, kus raba hakkab otsa lõppema, on iga jõhvikas 12m kaugusel eelmisest ning iga murakas 23m kaugusel eelmisest. Kui mitme meetri pärast sa jälle murakat ja jõhvikat lähestikku näed?\\
+
+Lahendus: Leian kõigepealt viimaste jõhvika ja muraka asukohad enne rabast väljumist, $87\equiv7\pmod{10}$ ja $87\equiv11\pmod{19}$ ehk viimasest jõhvikast on möödas 7m ja viimasest murakast 11m. Nüüd uute vahedega saan võrrandid $x\equiv-7\pmod{12}$ ja $x\equiv-11\pmod{23}$, kus $x$ on läbitud tee alates tihedama raba lõpust. Süsteemi lahendades saan $x=23\cdot(-1)\cdot(-7)+12\cdot(-11)\cdot2=-103\equiv173\pmod{12\cdot23}$. Ehk järgmine kord oli murakat ja jõhvikat korraga näha 87+173=260m peale algust.
 
 
 \end{document}
