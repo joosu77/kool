@@ -127,7 +127,7 @@ Märkame, et $11\cdot -22\equiv 1 \pmod {81}$ ning $81\cdot 3 \equiv 1 \pmod{11}
 \noindent 6. \mbox{Tõestada, et kahe järjestikuse ruuduvaba arvu vahe võib olla kuitahes suur.}
 
 \bigskip
-Kui tahta leida sellist arvu $x$, millest järgmised $n$ tükki kõik sisaldavad oma tegurite hulgas ruute, saab koostada võrrandisüsteemi kujul $x+i\equiv 0\pmod {p_i^2}$ ehk $i$ ümber tõstes $x\equiv -i\pmod {p_i^2}$ kus $i=1,..,n$ ja $p_i,..,p_n$ on vabalt valitud erinevad algarvud. Kuna $p_i$ on kõik erinevad algarvud, pole neil paarikaupa ühistegurit ehk Hiina jäägiteoreemi põhjal leidub süsteemil lahend. Seega saab valida kuitahes suure arvu $n$ ning leidub selline arv $x$, millest järgmine ruuduvaba arv on vähemalt $n$ arvu kaugusel.
+Kui tahta leida sellist arvu $x$, millest järgmised $n$ tükki kõik sisaldavad oma tegurite hulgas ruute, saab koostada võrrandisüsteemi kujul $x+i\equiv 0\pmod {p_i^2}$ ehk $i$ ümber tõstes $x\equiv -i\pmod {p_i^2}$ kus $i=1,..,n$ ja $p_1,..,p_n$ on vabalt valitud erinevad algarvud. Kuna $p_i$ on kõik erinevad algarvud, pole neil paarikaupa ühistegurit ehk Hiina jäägiteoreemi põhjal leidub süsteemil lahend. Seega saab valida kuitahes suure arvu $n$ ning leidub selline arv $x$, millest järgmine ruuduvaba arv on vähemalt $n$ arvu kaugusel.
 \bigskip
 
 \noindent 7. Leida vähim \emph{naturaal}arv, mis on korraga kahekordne täisruut, kolmekordne täiskuup ja 1999-kordne 1999-s aste. 
@@ -141,7 +141,7 @@ Tegurdan $m$ ja $n$ algteguriteks nii, et $p_i$ on tegurid, mis jagavad nii $n$ 
 
 Leian iga $i$ jaoks saab leida sellise $a_i$ väärtuse, et $a_i\not\equiv0\pmod{r_i}$ ja $a_i\not\equiv-\prod_ip_i^{u_i}\pmod{r_i}$. Sellised $a_i$ väärtused leiduvad, kuna $r_i$ on alati suurem kui 2 ehk jäägiklassiringis $\Z_{r_i}$ on vähemalt 3 liiget (kui $n$ jagub 2ga, on 2 $p_i$ väärtuste hulgas, kuna on teada et $m$ on paarisarv). Koostan võrrandisüsteemi võrranditega $x\equiv a_i\pmod{r_i}$ ja $x\equiv1\pmod{p_i}$. Hiina jäägiteoreemi põhjal leidub sellel lahend kuna $r_i$ ja $p_i$ on paarikaupa ühistegurita.
 
-Võtan nüüd $a=x$ ja $b=m-a$. Arv $x$ ehk ka arv $a$ ei oma arvuga $n$ ühistegurit, kuna võrrandid, mille järgi $x$ leitud sai, ütlevad et ükski arvu $n$ tegur ei jaga arvu $x$. Arv $b$ ei jagu ühegi algarvuga $p_i$, kuna $b= m-x\equiv 0-a_i\not\equiv0\pmod{p_i}$ ning ta ei jagu ka ühegi algarvuga $r_i$, kuna $b=m-x\equiv$
+Võtan nüüd $b=x\cdot\prod_iq_i^{v_i}$ ja $a=m+b$. Arv $x$ ei oma arvuga $n$ ühistegurit, kuna võrrandid, mille järgi $x$ leitud sai, ütlevad et ükski arvu $n$ tegur ei jaga arvu $x$ ning ükski $q_i$ ei jaga arvu $n$ seega $n$ ja $b$ ei oma ühistegurit. Arv $a$ ei jagu ühegi algarvuga $p_i$, kuna $a= m+x\cdot\prod_iq_i^{v_i}\equiv 0+a_i\cdot\prod_iq_i^{v_i}\not\equiv0\pmod{p_i}$. Viimane kehtib seepärast, et $q_i$ ja $p_i$ on alati erinevad algarvud ehk nende suurim ühistegur on 1. Ta ei jagu ka ühegi algarvuga $r_i$, kuna $a=\prod_ip_i^{u_i}\cdot\prod_iq_i^{v_i}+x\cdot\prod_iq_i^{v_i}=\prod_iq_i^{v_i}(\prod_ip_i^{u_i}+x)$ ning on teada et arvud $q_i$ korrutis ei jagu arvudega $r_i$ ning eelduste kohaselt $\prod_ip_i^{u_i}+x\not\equiv\prod_ip_i^{u_i}-\prod_ip_i^{u_i}=0\pmod{r_i}$ ehk ka korrutise teine pool ei saa jaguda ühegi arvuga $r_i$.
 
 
 \end{document}
