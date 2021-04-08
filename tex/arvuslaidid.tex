@@ -1,0 +1,111 @@
+\documentclass{beamer}
+
+\makeatletter
+\setbeamertemplate{theorem begin}
+{%
+\begin{\inserttheoremblockenv}
+{%
+\inserttheoremaddition%
+}%
+}
+\setbeamertemplate{theorem end}{\end{\inserttheoremblockenv}}
+\makeatother
+
+\newcommand{\w}{\overline}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+\usetheme{Boadilla}
+\usecolortheme{orchid}
+\usefonttheme[onlymath]{serif}
+\usepackage{color}
+\usepackage{graphicx}
+\newtheorem*{dfn}{A Reasonable Definition}
+\title{Algjuurte leidmine}
+\author{Joosep Näks}
+\institute{Tartu Ülikool}
+\AtBeginSection[]{
+\begin{frame}
+\frametitle{Presentation Outline}
+\tableofcontents[currentsection]
+\end{frame}
+}
+
+\begin{document}
+
+\begin{frame} 
+\titlepage
+\end{frame}
+
+\begin{frame}
+
+\begin{theorem}[Teoreem 7.19]
+  Kui $a$ on algjuur mooduli $p^k$ järgi, kus $p>2$ on algarv, siis üheks algjuureks mooduli $2p^k$ järgi on paaritu arv arvudest $a$ ja $a+p^k$.
+\end{theorem}
+\textbf{Tõestus:} Eeldame et $a$ on paaritu (vastasel juhul toimib analoogselt arvuga $a+p^k$). Kuna $\w{a}$ on algjuur $p^k$ järgi, on ta $\Z_{p^k}$ pööratav element ehk $(a,p^k)=1$. Samuti $(a,2)=1$. Seega $(a,2p^k)=1$ ehk $\w a\in U(\Z_{2p^k})$. Kuna $a$ on algjuur mooduli $p^k$ järgi, on $\w a$ järk $U(\Z_{p^k})$ rühmas $m=|U(\Z_{p^k})|=p^{k-1}(p-1)$. Olgu $n$ elemendi $\w a$ järk rühmas $U(\Z_{2p^k})$, siis $n||U(\Z_{2p^k})|=p^{k-1}(p-1)=m$ ehk $n\leq m$.\\ Teiselt poolt $a^n\equiv1\pmod{2p^k} \Rightarrow a^n\equiv1\pmod{p^k}$ ehk lemma 7.6 põhjal $m\leq n$. Seega kehtib $n=m$, mis tähendabki et $a$ on algjuur mooduli $2p^k$ järgi.\qed
+\end{frame}
+
+\begin{frame}
+\begin{theorem}[Teoreem 7.21]
+Mooduli $n$ järgi leidub algjuuri parajasti siis, kui $n$ on kujul $2, 4, p^k\text{ või } 2p^k$, kus $p>2$ on algarv.
+\end{theorem}
+\textbf{Tõestus:} Ühtepidi tuleb lausest 7.11, et kui $n$ järgi leidub algjuuri, on $n$ sellisel kujul.\\
+Teistpidi järelduse 7.13 põhjal leidub algarvulise mooduli $p$ järgi $\varphi(p-1)$ algjuurt, mis on rohkem kui 0.\\
+Kui juba $p$ järgi on algjuur olemas, aitab teoreem 7.14 leida $p^2$ järgi algjuure, teoreem 7.18 $p^k$ järgi ja teoreem 7.19 $2p^k$ järgi algjuure.\\
+Seega kui $n$ on sellisel kujul, leidub tema järgi algjuuri.\qed
+\end{frame}
+
+\begin{frame}
+\begin{theorem}[Teoreem 7.22]
+Olgu $G$ lõplik rühm, mille järk $|G|=n=p_1^{k_1}...p_s^{k_s}$ on antud standardkujul. Iga $a\in G$ korral, $\langle a\rangle\neq G$ parajasti siis, kui leidub selline $i\in\{1,...,s\}$, et $a^{\frac{n}{p_i}}=1$.
+\end{theorem}
+\textbf{Tõestus:}\\ Tarvilikkus: Oletame et $\langle a\rangle\neq G$. Olgu $m$ elemendi $a$ järk. Siis $m|n$ ning seega $m=p_1^{l_1}...p_s^{l_s}$, kus $0\leq l_i\leq k_i$ iga $i\in\{1,...,s\}$ korral. Kuna $\langle a\rangle\neq G$, on $m<n$ ehk peab leiduma $i$, mille korral $l_i<k_i$. Sellisel juhul $m|\frac{n}{p_i}$ ja seega $a^{\frac{n}{p_i}}=1$.\\
+Piisavus: Olgu $a^{\frac{n}{p_i}}=1$, siis lemma 7.6 põhjal elemendi $a$ järk jagab arvu $\frac{n}{p_i}$ ehk $a$ järk on väiksem kui $n$ ning järelikult $\langle a\rangle \neq G$.\qed
+\end{frame}
+
+\begin{frame}
+\begin{theorem}[Järeldus 7.23]
+Olgu $G$ lõplik rühm, mille järk $|G|=n=p_1^{k_1}...p_s^{k_s}$ on antud standardkujul. Iga $a\in G$ korral $\langle a\rangle=G$ parajasti siis, kui iga $i\in\{1,...,s\}$ korral $a^{\frac{n}{p_i}}\neq 1$.
+\end{theorem}
+\begin{theorem}[Järeldus 7.24]
+Olgu $p>2$ algarv. Siis $a$ on algjuur mooduli $p$ järgi parajasti siis, kui arvu $p-1$ iga algteguri $q$ korral $a^{\frac{p-1}{q}}\not\equiv1\pmod p$.
+\end{theorem}
+\end{frame}
+
+\begin{frame}
+\begin{theorem}[Lause 7.26]
+Olgu $n$ naturaalarv. Siis $n$-elemendilisel tsüklilisel rühmal on täpselt $\varphi(n)$ moodustajat.
+\end{theorem}
+\only<1>{
+\textbf{Tõestus:}\\
+Olgu $G=\{1,a,a^2,...,a^{n-1}\}$ tsükliline rühm, kus $a^n=1$. Esitame $n$ standardkujul $n=p_1^{k_1}...p_s^{k_s}$. Piisab näidata et iga $k\in\{1,...,n\}$ korral $\langle a^k\rangle=G$ parajasti siis, kui $(k,n)=1$. Tõestame selleks, et $\langle a^k\rangle\neq G$ parajasti siis, kui $(k,n)\neq1$.
+}
+\only<2>{
+\textbf{Tõestus (jätk):}\\
+Tarvilikkus: Eeldame, et $\langle a^k\rangle\neq G$. Lemma 7.22 põhjal leidub siis selline $i\in\{1,...,s\}$, et $(a^k)^{\frac{n}{p_i}}=1$ rühmas G. Lemma 7.6 põhjal $n|\frac{kn}{p_i}$ ehk leidub selline $u\in\N$ et $nu=\frac{kn}{p_i}$. Seega $up_i=k$, millest saame, et $p_i|k$. Seega $(n,k)\geq p_i>1$.\\
+Piisavus: Eeldame, et $(k,n)=d>1$. Siis leidub selline $i\in\{1,...,s\}$, et $p_i|d$ ning seega ka $p_i|k$. Olgu $k=p_ik'$, siis $(a^k)^{\frac{n}{p_i}}=a^{k'n}=(a^n)^{k'}=1$ ehk lemma 7.22 põhjal $\langle a^k\rangle\neq G$.\qed
+}
+\end{frame}
+
+\begin{frame}
+\begin{theorem}[Teoreem 7.27]
+Kui mooduli $n$ järgi leidub algjuuri, siis on neid täpselt $\varphi(\varphi(n))$ tükki.
+\end{theorem}
+\textbf{Tõestus:}\\
+Jäägiklassiringi $\Z_n$ pööratavate elementide arv on Euleri funktsiooni definitsiooni põhjal $\varphi(n)$ ning rakendades lauset 7.26 rühma $U(\Z_n)$ peal saame, et algjuurte kogus on $\varphi(|U(\Z_n)|)=\varphi(\varphi(n))$.\qed
+\end{frame}
+
+\begin{frame}
+\textbf{Näide $\bf{2\cdot19^{2021}}$ algjuure leidmisest:}\\
+Leian kõigepealt ühe $19$ algjuure, pakun algjuureks 2.\\
+$\varphi(19)=19-1=18=2\cdot3^2$\\
+$2^6=64\equiv7\not\equiv1\pmod{19}$\\
+$2^9=7\cdot2^3=56\equiv-1\not\equiv1\pmod{19}$\\
+Seega 2 on algjuur mooduli 19 järgi. Algjuur $19^2$ järgi on $2$ või $2+19$.\\
+$2^{19-1}=2^9\cdot2^9\equiv151\cdot151=22801\equiv58\not\equiv1\pmod{361}$\\
+Ehk $2$ on algjuur ka $19^2$ järgi ning ka $19^{2021}$ järgi.\\
+Kuna 2 on paarisarv, on $2\cdot19^{2021}$ järgi algjuur $2+19^{2021}$.
+\end{frame}
+
+\end{document}
+
