@@ -1,0 +1,121 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[estonian]{babel}
+\usepackage{t1enc}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{lscape}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{diagbox}
+\usepackage[official]{eurosym}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage[shortlabels]{enumitem}
+\usepackage[a4paper,margin=1in,footskip=0.25in]{geometry}
+\usepackage{pgffor}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\newcommand{\p}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\B}{\mathbb{P}}
+\newcommand{\w}{\overline}
+\topmargin-3em
+\oddsidemargin0cm
+\textwidth16cm
+%\textheight27cm
+\evensidemargin-2cm
+\begin{document}
+\begin{center}
+\Large\textbf{Kodutöö nr. 9}\\
+\small{Joosep Näks ja Uku Hannes Arismaa}
+\end{center}
+
+\bigskip
+
+\noindent 1. Tõestada Lemma 7.17 pöördväide: kui $n\mid{n\choose k}$ iga $1\leq k< n$ korral, siis $n$ on algarv.
+
+\bigskip
+
+\noindent 2. Leida kõik täisarvud $a,b,c$, mille korral $(a,b,c)=44$ ja $[a,b,c]=2024$. 
+
+\bigskip
+Viin antud arvud standardkujudele: $44=2^2\cdot11$, $2024=2^8\cdot11\cdot23$. Seega kõigi kolme arvu $a$, $b$ ja $c$ standardkujud on $2^{l}\cdot11\cdot23^{k}$, kus ühel arvul $l=2$, teisel arvul $l=3$ ja kolmandal $l\in\{2,3\}$, samuti ühel arvul $k=0$, teisel $k=1$ ja kolmandal $k\in\{0,1\}$. Seega on võimalikud kõik järgnevad kolmikud ja nende permutatsioonid. \\
+\begin{tabular}{c|c|c|c|c|c|c}
+\diagbox{l}{k}&(0,0,1)&(0,1,1))&(0,1,0))&(1,0,0))&(1,0,1))&(1,1,0))\\
+\hline
+(1,1,2)&(44,44,2024)&(44,1012,2024)&(44,1012,88)&(1012,44,88)&(1012,44,2024)&(1012,1012,88)\\
+\hline
+(1,2,2)&(44,88,2024)&(44,2024,2024)&(44,2024,88)&(1012,88,88)&(1012,88,2024)&(1012,2024,88)\\
+\end{tabular}
+\bigskip
+
+\noindent 3. Terviseamet ostis spetsiaalselt strateegiliste võtmeisikute vaktsineerimiseks 1936\euro{} eest vaktsiine, 20\euro{} AstraZeneca, 72\euro{} Pfizeri ja 108\euro{} Moderna pudeli eest. Kui palju neid võtmeisikuid maksimaalselt olla võis, kui kõiki pudeleid oli algarv tükki ja konsulteeritud matemaatikud kinnitasid, et piisab suvalisest neid tingimusi rahuldavast pudelikombinatsioonist?
+
+\bigskip
+
+\noindent 4. Leida kõik algarvud $p$, mille korral $\frac{(2^{p-1}-1)}{p}$ on täisruut.
+
+\bigskip
+Kui $p=2$, siis $\frac{2^{2-1}-1}{2}=\frac12$, mis ei ole täisruut.\\
+Kõik teised algarvud on paaritud ehk $2^{p-1}$ on täisruut, nii et arvu saab lahti kirjutada järgnevalt: $\frac{(2^{p-1}-1)}{p}=\frac{(2^{\frac{p-1}2}-1)(2^{\frac{p-1}2}+1)}{p}$. Kui see arv on täisarv, peab Eukleidese lemma tõttu $p$ jagama kas arvu $(2^{\frac{p-1}2}-1)$ või arvu $(2^{\frac{p-1}2}+1)$. Samuti on näha, et $(2^{\frac{p-1}2}-1,2^{\frac{p-1}2}+1)=1$, kuna need arvud on järjestikused paaritud arvud ja nende suurim ühistegur peaks jagama nende vahet, kuid vahe on 2 ehk ainus võimalik tegur oleks 1, see aga ei sobi kuna tegu on paaritute arvudega. Kuna nendel arvudel puudub ühistegur, peavad mõlemad olema ise täisruudud, et nende korrutis oleks täisruut.\\
+Seega juhul kui $p$ jagab esimest nendest arvudest, saame et $2^{\frac{p-1}2}-1=px^2$ ja $2^{\frac{p-1}2}+1=y^2$. Viimase saab lahti kirjutada kujule $2^{\frac{p-1}2}=(y-1)(y+1)$, mis tähendab, et kaks arvu, mille vahe on 2, peavad mõlemad olema 2 astmed. See kehtib vaid $y=1$ ja $y=3$ puhul. Esimesel nendest võimalustest tuleks $p=1$, mis ei ole algarv, ning teisel võimalusel $p=7$, mis on üks võimalik vastus.\\
+Teine juht on see, kui $p$ jagab teist saadud teguritest, sel juhul saame et $2^{\frac{p-1}2}-1=x^2$ ja $2^{\frac{p-1}2}+1=py^2$. Esimest nendest ümber kirjutades saab $2^{\frac{p-1}2}=x^2+1$. Märkan, et jäägiklassiringis $\Z_4$ ei ole ühegi liikme ruut 3 ehk arv $x^2+1$ ei saa jaguda neljaga. See tähendab et $\frac{p-1}2<2$. Siit saab, et võimalikud algarvulised $p$ väärtused on 2 ja 3, millest ainult 3 on paaritu.\\
+Seega ainsad $p$ väärtused, mis saaksid anda täisruutu, on 3 ja 7 ning läbi proovides need ka annavad vastavalt täisruudud 1 ja 9, seega need on ainsad sobivad algarvud.
+\bigskip
+
+\noindent 5. Olgu $p\in\B$, $n\in\N$, $(p,n)=1$ ja $n\not\equiv 1\pmod{p}$. Leida jäägiklassi $\overline{1+n+n^2+\ldots+n^{p-2}}\in\Z_p$ vähim esindaja. 
+
+\bigskip
+
+\noindent 6. Olgu $n\in\{1,2,\ldots,9\}$ number. Leida suurim ja vähim $n$ väärtus, mille korral ükski arv, mis on saadud numbrite $1,\ldots,n$ permuteerimisel, ei jagu arvuga 11. 
+
+\bigskip
+Kiirel läbivaatlusel on näha, et $n=1$ ja $n=2$ puhul ei jagu ükski permutatsioon arvuga 11 kuna kõik võimalikud permutatsioonid on 1, 12 ja 21.\\
+Arvuga 11 jaguvuse kontrollimiseks saab liita arvu numbrid kokku vahelduvate märkidega ning kontrollida kas tulemus jagub arvuga 11. Kuna kontrollime jaguvust kõigi permutatsioonide hulgas piisab, kui saame jagada arvu numbrid kahte hulka, kus hulkade summad on võrdsed või erinevad 11 kordse arvu võrra ning kus hulkade võimsuste vahe on ülimalt 1. Nii on lihtne näha et 3, 4, 7 ja 8 puhul saab jagada numbrid kahte võrdse summaga hulka:\\
+\begin{tabular}{c|c|c|c|c}
+n&3&4&7&8\\
+\hline
+I&1+2=3&2+3=5&3+5+6=14&1+4+5+8=18\\
+II&3&1+4=5&1+7+2+4=14&2+1+6+7=18
+\end{tabular}\\
+Teiste $n$ väärtuste puhul ei saa summaks 0 saada, kuna kõigi numbrite $1,..,n$ summa on paaritu arv ehk seda ei saa kaheks võrdseks summaks jagada. Seega tuleb teistel summade vaheks saada 11 või mõni kõrgem 11 kordne arv, kusjuures 22 ei ole samuti võimalik kuna kui arvude vahe on paaritu, ei saa ka nende summa paaris olla. Arvu 5 puhul suurim võimalik vahe mida saab tekitada on $5+4+3-2-1=9<11$ ehk ükski $n=5$ permutatsioon ei saa jaguda arvuga 11. Samuti $n=6$ puhul on suurim vahe $6+5+4-3-2-1=9<11$ ehk samuti pole jaguvus võimalik. Viimaks $n=9$ puhul saab moodustada summad $1+2+5+9=17$ ja $3+4+6+7+8=28$, mille vahe on 11, ehk leidub permutatsioone, mis jaguvad arvuga 11.\\
+Seega vähim $n$ väärtus, mille korral ükski permutatsioon ei jagu arvuga 11 on $n=1$ ja suurim on $n=6$.
+\bigskip
+
+\noindent 7. Lahendada \emph{diofantiline} võrrand $x^{13}+12x+13y^6=1$.
+
+\bigskip
+
+\noindent 8. Leida, mitu pööratavat elementi on ringides $\Z_{2028}$ ja $\Z_{39}\times \Z_{52}$. Kas ringid $\Z_{2028}$ ja $\Z_{39}\times \Z_{52}$ on isomorfsed? Miks?
+
+\bigskip
+Tegurdades saan et $2028=4\cdot3\cdot13^2$ ehk kuna arvudel 4, 169 ja 3 on paarikaupa suurimaks ühisteguriks 1, on $\Z_{2028}$ isomorfne ringiga $\Z_4\times\Z_{3}\times\Z_{169}$, seega leian viimase ringi pööratavaid elemente. 
+\bigskip
+
+\noindent 9. Lahendada diofantiline võrrand $\varphi(5x) = \varphi(6x)$.
+
+
+\bigskip
+
+\noindent 10. Leida kõik naturaalarvud $n$, mille korral $\frac{n}{\tau(n)}$ on algarv. 
+
+\bigskip
+
+\noindent 11. Lahendada kongruentside s\"usteem 
+\[
+\left\{
+\begin{array}{ll}
+3x^2\equiv 12 & \pmod{16}\\
+4x^4\equiv 4 & \pmod{125}.
+\end{array}
+\right.
+\]
+
+\bigskip
+
+\noindent 12. Lahendada kongruents $$2x^4+6x^3+4x^2-5x+12\equiv 0 \pmod{4459}.$$ 
+
+\end{document}
