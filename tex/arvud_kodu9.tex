@@ -37,6 +37,9 @@
 
 \noindent 1. Tõestada Lemma 7.17 pöördväide: kui $n\mid{n\choose k}$ iga $1\leq k< n$ korral, siis $n$ on algarv.
 
+
+\bigskip
+Kui väide kehtiks kordarvuga, siis sellel kordarvul peaks olema mingi algtegur, mille väärtuse $k$ omandab. Sellise $k$ väärtuse korral saame, et $n\mid \frac{n(n-1)...(n-k+1)}{1\cdot2\cdot...\cdot k}$ ning $k\mid n$. Kuna $k$ järjestikusest arvust ainult ühte jagab $k$, peab see olema $n$. Kui $k$ on $n$ algtegurduses astmes $a$, siis jaguvuse vasakul pool esineb see selles astmes, aga paremal pool täpselt astmes $a-1 $, kuna ainult $n$ algtegurdudses see esineda saab ning sealt jagame ühe maha. See on aga vastuolu, kuna jagades mõlemad pooled läbi $k^{a-1}$, saame et vasakule poole jääb mingi $k$ kordne, aga paremal pool ei tohiks ühtki arvu jagada $k$, mis on vastuolu.
 \bigskip
 
 \noindent 2. Leida kõik täisarvud $a,b,c$, mille korral $(a,b,c)=44$ ja $[a,b,c]=2024$. 
@@ -54,7 +57,11 @@ Viin antud arvud standardkujudele: $44=2^2\cdot11$, $2024=2^8\cdot11\cdot23$. Se
 
 \noindent 3. Terviseamet ostis spetsiaalselt strateegiliste võtmeisikute vaktsineerimiseks 1936\euro{} eest vaktsiine, 20\euro{} AstraZeneca, 72\euro{} Pfizeri ja 108\euro{} Moderna pudeli eest. Kui palju neid võtmeisikuid maksimaalselt olla võis, kui kõiki pudeleid oli algarv tükki ja konsulteeritud matemaatikud kinnitasid, et piisab suvalisest neid tingimusi rahuldavast pudelikombinatsioonist?
 
+
 \bigskip
+Selleks, et saada maksimaalselt vaktsiine, tuleb osta maksimaalselt AstraZeneca vaktsiine. Kuna 1936 ei jagu 20ga, siis tuleb osta ka natuke teisi vaktsiine. Selleks, et ülejäänud arv jaguks 20ga peab ostma kas 3 pudelit Pfizerit või 2 pudelit Modernat. Siis saaks ülejäänud raha eest osta 86 pudelit AstraZenecat. See pole algarv, seega tuleb osta veel vähemalt [20,72] või [20,108] euro eest vähem AstaZenecat. Kui osta ainult [20,72] jagu vähem, ei ole Astra Zenecat ikka algarv. Vaktsiinide arvult järgmine parim variant on osta [20,108] Modernat. Tuleb välja, et siis on kõik kordajad algarvud, kui esialgse 20 kordsuse saavutamiseks osta Pfizerit, ehk kokku oleks 59 pudelit AstraZenecat, 3 Pfizerit ning 5 Modernat. 
+\bigskip
+\pagebreak
 
 \noindent 4. Leida kõik algarvud $p$, mille korral $\frac{(2^{p-1}-1)}{p}$ on täisruut.
 
@@ -68,6 +75,9 @@ Seega ainsad $p$ väärtused, mis saaksid anda täisruutu, on 3 ja 7 ning läbi 
 
 \noindent 5. Olgu $p\in\B$, $n\in\N$, $(p,n)=1$ ja $n\not\equiv 1\pmod{p}$. Leida jäägiklassi $\overline{1+n+n^2+\ldots+n^{p-2}}\in\Z_p$ vähim esindaja. 
 
+
+\bigskip
+Geomeetrilise jada summa valemist saame selle jäägiklassi kirjutada kui $\overline{\frac{1-n^{p-1}}{1-n}}$ Kuna $n\not\equiv 1$, siis $1-n\not\equiv 0 \pmod{p}$, seega saame sellega jagamise asendada selle pöördelemendiga $k$ korrutamisega, saame jäägiklassi $\overline{(1-n^{p-1})k}=\overline{k}(\overline{1}-\overline{n^{p-1}})$. Kuna $(p,n)=1$, siis FVT järgi $n^{p-1}\equiv 1\pmod{p}$, seega on esialgne jäägiklass $\overline{0}$, mille vähim naturaalarvuline esindaja on $p$. 
 \bigskip
 
 \noindent 6. Olgu $n\in\{1,2,\ldots,9\}$ number. Leida suurim ja vähim $n$ väärtus, mille korral ükski arv, mis on saadud numbrite $1,\ldots,n$ permuteerimisel, ei jagu arvuga 11. 
@@ -84,9 +94,12 @@ II&3&1+4=5&1+7+2+4=14&2+1+6+7=18
 Teiste $n$ väärtuste puhul ei saa summaks 0 saada, kuna kõigi numbrite $1,..,n$ summa on paaritu arv ehk seda ei saa kaheks võrdseks summaks jagada. Seega tuleb teistel summade vaheks saada 11 või mõni kõrgem 11 kordne arv, kusjuures 22 ei ole samuti võimalik kuna kui arvude vahe on paaritu, ei saa ka nende summa paaris olla. Arvu 5 puhul suurim võimalik vahe mida saab tekitada on $5+4+3-2-1=9<11$ ehk ükski $n=5$ permutatsioon ei saa jaguda arvuga 11. Samuti $n=6$ puhul on suurim vahe $6+5+4-3-2-1=9<11$ ehk samuti pole jaguvus võimalik. Viimaks $n=9$ puhul saab moodustada summad $1+2+5+9=17$ ja $3+4+6+7+8=28$, mille vahe on 11, ehk leidub permutatsioone, mis jaguvad arvuga 11.\\
 Seega vähim $n$ väärtus, mille korral ükski permutatsioon ei jagu arvuga 11 on $n=1$ ja suurim on $n=6$.
 \bigskip
+\pagebreak
 
 \noindent 7. Lahendada \emph{diofantiline} võrrand $x^{13}+12x+13y^6=1$.
 
+\bigskip
+Vaatame võrrandit mooduli 13 järgi. Saame $x^{13}-x\equiv1 \pmod{13}$. Valem ei kehti, kui $x=0$ igal teisel juhul teame FVTst, et $x^{12}\equiv x \pmod{13}$, seega iga teise $x$ väärtuse korral saame $0\equiv 1 \pmod{13}$, mis on vastuolu, seega ei leidu $x$ väärtust, mis sobiks lahendisse, seega ei leidu lahendit.
 \bigskip
 
 \noindent 8. Leida, mitu pööratavat elementi on ringides $\Z_{2028}$ ja $\Z_{39}\times \Z_{52}$. Kas ringid $\Z_{2028}$ ja $\Z_{39}\times \Z_{52}$ on isomorfsed? Miks?
@@ -101,10 +114,50 @@ Ringid $\Z_{2028}$ ja $\Z_{39}\times\Z_{52}$ ei ole isomorfsed, sest neis on eri
 
 
 \bigskip
+$r=\varphi(x)$ Kui $5\mid x$, siis $ \varphi(5x)=5r$, vastasel juhul $\varphi(5x)=4r$. Kui $6\mid x$, siis $\varphi(6x)=6r$, kui ainult $3\mid x$, siis $\varphi(6x)=3r$, kui ainult $2\mid x$, siis $\varphi(6x)=4r$ ning kui kumbki ei jaga, siis $\varphi(6x)=2r$. Nendest variantidest kattuvad ainult $4r$, seega peab olema, et $2\mid x$ ning $5\nmid x$ ning $3\nmid x$.
+\bigskip
+\pagebreak
 
 \noindent 10. Leida kõik naturaalarvud $n$, mille korral $\frac{n}{\tau(n)}$ on algarv. 
 
 \bigskip
+On näha, et töötavad kõik arvud kujul $2^3\cdot p$, kus $p>2$ on algarv, kuna $\tau(2^3\cdot p)=8$ ehk $\frac{2^3\cdot p}{\tau(2^3\cdot p)}=p$. Samuti töötavad kõik arvud kujul $2^2\cdot3\cdot p$, kus $p>3$ on algarv, kuna $\frac{2^2\cdot3\cdot p}{\tau(2^2\cdot3\cdot p)}=p$. Samuti saab väikeste arvude läbivaatlusel, et sobivad 8, 9, 12, 18 ja 24. Väidan, et rohkem sobivaid arve pole.
+
+Kui $n=p_1^{k_1}...p_s^{k_s}$, saame üldisust kitsendamata $\frac{n}{\tau(n)}=p_1$, kust saame $p_1^{k_1}...p_s^{k_s}=p_1(k_1+1)\cdot...\cdot(k_s+1)$, kust $p_1$ taandamisel saame $p_1^{k_1-1} ... p_s^{k_s}=(k_1+1)\cdot...\cdot(k_s+1)$. Kui alustame $p_1^1$, siis saame vasakule poole 1 ning paremale 2. Kui me suurendame $p_1$ astendajat, siis parem pool suureneb $p_1$ korda ehk vähemalt 2 korda, parem pool suureneb vähem. Kui korrutada $p_1^x$ läbi uue algarvuga $p_s$, saame vasaku poole $p_s$ kordse kasbvu ning parema poole kahekordistumise. Seega saab parem pool kasvada kiiremini va siis, kui $p_s=2$, mis saab juhtuda maksimaalselt ühe korra. Seega nii $n$ moodustades alustades $p_1$-st saame uurida, mis hetkel parem pool on suurem kui vasak. Sellest hetkest alates tingimus enam kehtida ei saa, kuna parem pool on ja jääb liiga suureks. Kui esialgset $p_1$ korrutada 5 või suurema algarvuga, siis saame, et vasak pool on 5 ning parem 4, seega sellisel kujul arvud ei sobi. Samuti ei sobi, et $p_1$ on suuremas astmes kui 1 ning 5 või suurem. $p_1^1$ puhul $1=2$, seega peame vasakut poolt veel suurendama. 
+
+Kui $p_1=2$, siis vasakul pool on 1 ja paremal 2. 
+
+\quad Korrutades $n$ läbi 2ga saame vasakule 2 ning paremale 3. 
+
+\quad\quad Korrutades uuesti 2ga, leiame vastuse $n=8$.
+
+\quad\quad Korrutades aga 3ga saame sobiva vastuse $n=12$.
+
+\quad Korrutades $n$ läbi kolmega saame vasakule 3 ning paremale 6.
+
+\quad\quad Veelkord 3ga korrutades saame sobiva vastuse $n=18$.
+
+Kui $p_1=3$, siis vasakul pool on 1 ja paremal 2. Siit analoogselt minnes satuma paljude eelnevalt leitud $n$ peale. Ainus uus tulemus on enne varju jäänud $n=9$.
+
+Kui $p_1>3$, siis vasakul pool on 1 ja paremal 2. 
+
+\quad korrutades 2ga saame vasakule 2 ning paremale 4.
+
+\quad\quad Korrutades uuesti kahega, saame vasakule 4 ning paremale 6.
+
+\quad \quad \quad 3. korda kahega korrutades saame üldkujul lahendi $n=8p_1$
+
+\quad\quad\quad Korrutades 3ga saame üldkujul lahendi $n=12p_1$
+
+Nüüd kuna siin lisamise järjekord pole oluline, pole kõiki vahepeal 3 lisamisi mõtet läbi mängida.
+
+\quad Kohe 3ga korrutades saame vasakule 3 ning paremale 4.
+
+\quad \quad Veelkord kolmega korrutades saame vasakule 9 ning paremale 6.
+
+Kuna eelenevalt näitasime, et suuremate algarvudega $n$ korrutamine ajab vasaku poole lõhki ning oleme väiksemate algarvudega proovides kõik kriitilised punktid leidnud, saame väita, et rohekem lahendeid ei ole ning kõik algselt leitud $n$ on olemas.
+\bigskip
+\pagebreak
 
 \noindent 11. Lahendada kongruentside s\"usteem 
 \[
@@ -117,6 +170,27 @@ Ringid $\Z_{2028}$ ja $\Z_{39}\times\Z_{52}$ ei ole isomorfsed, sest neis on eri
 \]
 
 \bigskip
+Esimeses võrrandis korrutan mõlemad pooled läbi arvuga -5, saan uue võrrandi $x^2\equiv4\pmod{16}$. Vaadates kõigepealt võrrandit mooduli 2 järgi on ilmne et $x^2\equiv0\pmod2$ ainus lahend on 0 ehk lõplikud lahendid on 2 kordsed. Proovin läbi paarisarvud, ning saan et lahenditeks on 2, 6, 10 ja 14.\\
+
+Teises võrrandis vaatlen kõigepealt korrutan mõlemad pooled 4 pöördarvuga läbi et saada võrrand $x^4\equiv1\pmod{125}$. Vaatan võrrandit mooduli 5 järgi. On näha et $x\equiv0\pmod5$ ei sobi lahendiks, muude väärtuste puhul kehtib võrrand FVT tõttu. Vaatlen neid lahendeid nüüd mooduli 25 järgi. Märgin $f(x)=x^4-1$ ja $f'(x)=4x^3$\\
+Vaatleme juhtu $x\equiv1\pmod5$. Saan $f'(1)=4\equiv-1\pmod5$ ja $f(1)=0$, ning $\frac{0}{5}=0$. Seega $x\equiv1+5y$ leidmiseks leian $-y+0\equiv0\pmod5$ lahedi, milleks on 0, ehk olen leidnud lahendi $x\equiv1\pmod{25}$. Vaatan seda ka kolmandas astmes mooduli järgi. Selleks on vaja samuti $-b+0\equiv0\pmod5$ lahendit, milleks on 0. Seega on üheks lõplikuks lahendiks $x\equiv1\pmod{125}$.\\
+Vaatleme juhtu $x\equiv2\pmod5$. Saan $f'(2)=32\equiv2\pmod5$ ja $f(2)=15$, ning $\frac{15}{5}=3$. Seega $x\equiv2+5y$ leidmiseks leian $2y+3\equiv0\pmod5$ lahedi, milleks on 1, ehk olen leidnud lahendi $x\equiv7\pmod{25}$. Vaatan seda ka kolmandas astmes mooduli järgi. Selle jaoks $f'(7)\equiv2\pmod5$ ja $f(7)=2400$,  \mbox{$\frac{2400}{25}=96\equiv1\pmod5$}. Koostan võrrandi $2b+1\equiv0\pmod5$, mille lahendiks on 2. Seega on üheks lõplikuks lahendiks $x\equiv57\pmod{125}$.\\
+Vaatleme juhtu $x\equiv3\pmod5$. Saan $f'(3)=108\equiv3\pmod5$ ja $f(3)=80$, ning $\frac{80}{5}=16\equiv1\pmod5$. Seega $x\equiv3+5y$ leidmiseks leian $3y+1\equiv0\pmod5$ lahedi, milleks on -2, ehk olen leidnud lahendi $x\equiv-7\pmod{25}$. Vaatan seda ka kolmandas astmes mooduli järgi. Selle jaoks $f'(-7)\equiv3\pmod5$ ja $f(-7)=2400$, $\frac{2400}{25}=96\equiv1\pmod5$. Koostan võrrandi $3b+1\equiv0\pmod5$, mille lahendiks on 3. Seega on üheks lõplikuks lahendiks $x\equiv68\equiv-57\pmod{125}$.\\
+Vaatleme juhtu $x\equiv4\pmod5$. Saan $f'(4)=256\equiv1\pmod5$ ja $f(4)=255$, ning \mbox{$\frac{255}{5}=51\equiv1\pmod5$}. Seega $x\equiv4+5y$ leidmiseks leian $y+1\equiv0\pmod5$ lahedi, milleks on -1, ehk olen leidnud lahendi \mbox{$x\equiv-1\pmod{25}$}. Vaatan seda ka kolmandas astmes mooduli järgi. Selle jaoks $f'(-1)\equiv1\pmod5$ ja $f(-1)=0$, $\frac{0}{25}=0$. Koostan võrrandi $b+0\equiv0\pmod5$, mille lahendiks on 0. Seega on üheks lõplikuks lahendiks $x\equiv-1\pmod{125}$.\\
+
+Seega on nüüd olemas mooduli 16 järgi lahendid 2, 6, 10 ja 14 ning mooduli 125 järgi lahendid 1, 57, -57 ja -1. HJT annab et lahendid on kujul $x=a\cdot125\cdot5+b\cdot16\cdot86=625a+1376b$. Selle abil saan lõplikud lahendid mooduli $16\cdot125=2000$ järgi:\\
+\begin{center}
+\begin{tabular}{c|cccc}
+\diagbox{b}{a}&2&6&10&14\\
+\hline
+1&626&1126&1626&126\\
+57&1682&182&682&1182\\
+-57&818&1318&1818&318\\
+-1&1874&374&874&1374
+\end{tabular}
+\bigskip
+\end{center}
+\pagebreak
 
 \noindent 12. Lahendada kongruents $$2x^4+6x^3+4x^2-5x+12\equiv 0 \pmod{4459}.$$ 
 
@@ -159,8 +233,11 @@ $\w{-1}$&$\w{2}$&$\w{-3}$&$\w{0}$&$\w{2}$&$\w{3}$\\
 \bigskip
 \end{center}
 Ehk 7 järgi on lahendid 2, 3 ja 4. Leian funktsiooni tuletise: $f'(x)\equiv x^3-3x^2+x+2\pmod7$.\\
-Vaatlen kõigepealt lahendit 2 kõrgemate astmete puhul. Saan $f'(2)\equiv0\pmod7$ ja $f(2)=98$ ehk $\frac{f(2)}{7}=\frac{98}{7}=14\equiv0\pmod7$. Sellest tuleneb, et kui tahame leida lahendeid kujul $x\equiv2+7y\pmod{7^2}$, siis $y$ saab leida võrrandist $0y+0\equiv0\pmod{7}$. Selleks sobivad kõik $0\leq y<7$ ehk $7^2$ järgi on lahendid . Järgise astme järgi lahendite leidmise jaoks on vaja kõigi $a\in\{2,9,16,23,30,37,44\}$ puhul leida $f'(a)b+\frac{f(a)}{7^2}\equiv0\pmod7$ lahendid kuid kuna $f'(a)\equiv f'(2)=0\pmod7$, ei sõltu võrrand arvust $b$ ehk tuleb kontrollida, milliste $a$ väärtuste puhul $7^3\mid f(a)$. $f(2)\equiv98\pmod{7^3},f(9)\equiv294\pmod{7^3},f(16)\equiv196\pmod{7^3},f(23)\equiv147\pmod{7^3},f(30)\equiv147\pmod{7^3},f(37)\equiv196\pmod{7^3},f(44)\equiv294\pmod{7^3}$. Seega mooduli $7^3$ järgi lahendeid kujul $a+7^2b$ ei leidu.\\
+Vaatlen kõigepealt lahendit 2 kõrgemate astmete puhul. Saan $f'(2)\equiv0\pmod7$ ja $f(2)=98$ ehk $\frac{f(2)}{7}=\frac{98}{7}=14\equiv0\pmod7$. Sellest tuleneb, et kui tahame leida lahendeid kujul $x\equiv2+7y\pmod{7^2}$, siis $y$ saab leida võrrandist $0y+0\equiv0\pmod{7}$. Selleks sobivad kõik $0\leq y<7$ ehk $7^2$ järgi on lahendid . Järgise astme järgi lahendite leidmise jaoks on vaja kõigi $a\in\{2,9,16,23,30,37,44\}$ puhul leida \mbox{$f'(a)b+\frac{f(a)}{7^2}\equiv0\pmod7$} lahendid kuid kuna $f'(a)\equiv f'(2)=0\pmod7$, ei sõltu võrrand arvust $b$ ehk tuleb kontrollida, milliste $a$ väärtuste puhul $7^3\mid f(a)$. $f(2)\equiv98\pmod{7^3},$ \mbox{$f(9)\equiv294\pmod{7^3},$} \mbox{$f(16)\equiv196\pmod{7^3},$} $f(23)\equiv147\pmod{7^3},$ $f(30)\equiv147\pmod{7^3},$ \mbox{$f(37)\equiv196\pmod{7^3},$} \mbox{$f(44)\equiv294\pmod{7^3}$}. Seega mooduli $7^3$ järgi lahendeid kujul $a+7^2b$ ei leidu.\\
+
 Järgmiseks vaatlen lahendit 3 kõrgemate astmete puhul. Saan $f'(3)\equiv-2\pmod7$ ja $f(3)=357$, $\frac{357}{7}=51\equiv2\pmod7$. Seega lahendite kujul $x\equiv3+7y\pmod{7^2}$ jaoks tuleb leida $y$ võrrandist $-2y+2\equiv0\pmod7$. Selle ainus lahend on $y\equiv1\pmod7$. Seega mooduli $7^2$ järgi ainus lahend on $x\equiv3+7\cdot1=10\pmod{7^2}$. Kontrollin seda ka kolmanda 7 astme järgi. $f'(10)\equiv-2\pmod7$ ja $f(10)=26362$ ehk $\frac{26362}{7^2}=538\equiv-1\pmod7$. Seega lahendite kujul $x\equiv10+7^2b\pmod{7^3}$ on vaja leida $b$ võrrandist $-2b-1\equiv0\pmod{7}$, mille ainsaks lahendiks on $x\equiv3\pmod{7}$. Seega siit saab ainsaks lahendiks kujul $x=4+7y$ järgi $x\equiv157\pmod{7^3}$.\\
-Viimaseks vaatlen lahendit 4 kõrgemate astmete puhul. Saan $f'(4)\equiv1\pmod7$ ja $f(4)=952$, kus $\frac{952}{7}=156\equiv3\pmod7$. Seega lahendite jaoks kujul $x\equiv4+7y\pmod{7^2}$ tuleb leida $y$ võrrandist $y+3\equiv0\pmod7$, mille ainsaks lahendiks on $y\equiv-3\pmod7$. Seega leidsin lahendi $x\equiv4-7\cdot3=-17\pmod{7^2}$. Järgmiseks leian vastava lahendi kolmanda astme järgi. $f'(-17)\equiv1\pmod7$ ja $f(-17)=138817$ ning $\frac{138817}{7^2}=2833\equiv-2\pmod7$. Seega tuleb lahendada võrrand $b-2\equiv0\pmod7$, mille ainsaks lahendiks on $b\equiv2\pmod7$. Seega olen leidnud lahendi $x\equiv-17+2\cdot49=81$.\\
+
+Viimaseks vaatlen lahendit 4 kõrgemate astmete puhul. Saan $f'(4)\equiv1\pmod7$ ja $f(4)=952$, kus $\frac{952}{7}=156\equiv3\pmod7$. Seega lahendite jaoks kujul $x\equiv4+7y\pmod{7^2}$ tuleb leida $y$ võrrandist \mbox{$y+3\equiv0\pmod7$}, mille ainsaks lahendiks on $y\equiv-3\pmod7$. Seega leidsin lahendi \mbox{$x\equiv4-7\cdot3=-17\pmod{7^2}$}. Järgmiseks leian vastava lahendi kolmanda astme järgi. $f'(-17)\equiv1\pmod7$ ja $f(-17)=138817$ ning $\frac{138817}{7^2}=2833\equiv-2\pmod7$. Seega tuleb lahendada võrrand $b-2\equiv0\pmod7$, mille ainsaks lahendiks on $b\equiv2\pmod7$. Seega olen leidnud lahendi $x\equiv-17+2\cdot49=81$.\\
+
 Kokkuvõttes olen saanud et võrrandil on mooduli 13 järgi lahendid -6 ja -5 ning mooduli $7^3$ järgi lahendid 157 ja 81. HJT-st saame, et lõplikud lahendid on $x\equiv3244\pmod{4459}$, $x\equiv1529\pmod{4459}$, $x\equiv424\pmod{4459}$ ja $x\equiv2139\pmod{4459}$.
 \end{document}
