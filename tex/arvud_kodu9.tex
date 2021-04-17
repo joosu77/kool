@@ -92,7 +92,9 @@ Seega vähim $n$ väärtus, mille korral ükski permutatsioon ei jagu arvuga 11 
 \noindent 8. Leida, mitu pööratavat elementi on ringides $\Z_{2028}$ ja $\Z_{39}\times \Z_{52}$. Kas ringid $\Z_{2028}$ ja $\Z_{39}\times \Z_{52}$ on isomorfsed? Miks?
 
 \bigskip
-Tegurdades saan et $2028=4\cdot3\cdot13^2$ ehk kuna arvudel 4, 169 ja 3 on paarikaupa suurimaks ühisteguriks 1, on $\Z_{2028}$ isomorfne ringiga $\Z_4\times\Z_{3}\times\Z_{169}$, seega leian viimase ringi pööratavaid elemente. 
+Ringi $\Z_{2028}$ pööratavate elementide leidmiseks leian elementide koguse, millel on arvuga 2028 ühistegur suurem kui üks. Tegurdades saan et $2028=2^2\cdot3\cdot13^2$, seega omavad ühistegurit arvuga 2028 arvud, mis on 2, 3 või 13 kordsed. Selliseid elemente on $\Z_{2028}$ ringis $\frac{2028}{2}+\frac{2028}{3}+\frac{2028}{13}-\frac{2028}{2\cdot3}-\frac{2028}{3\cdot13}-\frac{2028}{13\cdot2}+\frac{2028}{2\cdot3\cdot13}=1014+676+156-338-52-78+26=1404$. Seega on pööratavaid elemente ehk elemente, mille suurim ühistegur arvuga 2028 on 1, kokku $2028-1404=624$ tükki.\\
+Ringi $\Z_{39}\times\Z_{52}$ pööratavate elementide leidmiseks leian kõigepealt eraldi $\Z_{39}$ ja $\Z_{52}$ pööratavad elemendid. Tegurdades saan $39=3\cdot13$ ja $52=2^3\cdot13$. Seega on $\Z_{39}$ pööratavaid elemente $39-\left(\frac{39}{3}+\frac{39}{13}-\frac{39}{3\cdot13}\right)=24$ ja $\Z_{52}$ pööratavaid elemente on $52-\left(\frac{52}{2}+\frac{52}{13}-\frac{52}{2\cdot13}\right)=24$. Seega on ringis $\Z_{39}\times\Z_{52}$ on $24\cdot24=576$ pööratavat elementi.\\
+Ringid $\Z_{2028}$ ja $\Z_{39}\times\Z_{52}$ ei ole isomorfsed, sest neis on erinev kogus pööratavaid elemente.
 \bigskip
 
 \noindent 9. Lahendada diofantiline võrrand $\varphi(5x) = \varphi(6x)$.
@@ -118,4 +120,47 @@ Tegurdades saan et $2028=4\cdot3\cdot13^2$ ehk kuna arvudel 4, 169 ja 3 on paari
 
 \noindent 12. Lahendada kongruents $$2x^4+6x^3+4x^2-5x+12\equiv 0 \pmod{4459}.$$ 
 
+\bigskip
+Tegurdades saan $4459=7^3\cdot13$, lahendan kongruentsi eraldi moodulite $7^3$ ja 13 järgi.\\
+Moodul 13 järgi Horneri skeem:\\
+\begin{center}
+\begin{tabular}{c|ccccc}
+&$\w{2}$&$\w{6}$&$\w{4}$&$\w{-5}$&$\w{-1}$\\
+\hline
+$\w0$&$\w{2}$&$\w{6}$&$\w{4}$&$\w{-5}$&$\w{-1}$\\
+$\w1$&$\w{2}$&$\w{8}$&$\w{-1}$&$\w{-6}$&$\w{-7}$\\
+$\w2$&$\w{2}$&$\w{-3}$&$\w{-2}$&$\w{4}$&$\w{7}$\\
+$\w3$&$\w{2}$&$\w{-1}$&$\w{1}$&$\w{-2}$&$\w{-7}$\\
+$\w4$&$\w{2}$&$\w{1}$&$\w{-5}$&$\w{1}$&$\w{3}$\\
+$\w5$&$\w{2}$&$\w{3}$&$\w{6}$&$\w{-1}$&$\w{-6}$\\
+$\w6$&$\w{2}$&$\w{5}$&$\w{-5}$&$\w{4}$&$\w{-3}$\\
+$\w{-6}$&$\w{2}$&$\w{-6}$&$\w{1}$&$\w{2}$&$\w{0}$\\
+$\w{-5}$&$\w{2}$&$\w{-4}$&$\w{-2}$&$\w{5}$&$\w{0}$\\
+$\w{-4}$&$\w{2}$&$\w{-2}$&$\w{-1}$&$\w{-1}$&$\w{3}$\\
+$\w{-3}$&$\w{2}$&$\w{0}$&$\w{4}$&$\w{-4}$&$\w{-2}$\\
+$\w{-2}$&$\w{2}$&$\w{2}$&$\w{0}$&$\w{-5}$&$\w{9}$\\
+$\w{-1}$&$\w{2}$&$\w{4}$&$\w{0}$&$\w{-5}$&$\w{4}$\\
+\end{tabular}
+\bigskip
+\end{center}
+Ehk 13 järgi on lahendid -6 ja -5. Moodul 7 järgi Horneri skeem:\\
+\begin{center}
+\begin{tabular}{c|ccccc}
+&$\w{2}$&$\w{-1}$&$\w{-3}$&$\w{2}$&$\w{-2}$\\
+\hline
+$\w0$&$\w{2}$&$\w{-1}$&$\w{-3}$&$\w{2}$&$\w{-2}$\\
+$\w1$&$\w{2}$&$\w{1}$&$\w{-2}$&$\w{0}$&$\w{-2}$\\
+$\w2$&$\w{2}$&$\w{3}$&$\w{3}$&$\w{1}$&$\w{0}$\\
+$\w3$&$\w{2}$&$\w{-2}$&$\w{-2}$&$\w{-4}$&$\w{0}$\\
+$\w{-3}$&$\w{2}$&$\w{0}$&$\w{-3}$&$\w{-3}$&$\w{0}$\\
+$\w{-2}$&$\w{2}$&$\w{2}$&$\w{0}$&$\w{2}$&$\w{2}$\\
+$\w{-1}$&$\w{2}$&$\w{-3}$&$\w{0}$&$\w{2}$&$\w{3}$\\
+\end{tabular}
+\bigskip
+\end{center}
+Ehk 7 järgi on lahendid 2, 3 ja 4. Leian funktsiooni tuletise: $f'(x)\equiv x^3-3x^2+x+2\pmod7$.\\
+Vaatlen kõigepealt lahendit 2 kõrgemate astmete puhul. Saan $f'(2)\equiv0\pmod7$ ja $f(2)=98$ ehk $\frac{f(2)}{7}=\frac{98}{7}=14\equiv0\pmod7$. Sellest tuleneb, et kui tahame leida lahendeid kujul $x\equiv2+7y\pmod{7^2}$, siis $y$ saab leida võrrandist $0y+0\equiv0\pmod{7}$. Selleks sobivad kõik $0\leq y<7$ ehk $7^2$ järgi on lahendid . Järgise astme järgi lahendite leidmise jaoks on vaja kõigi $a\in\{2,9,16,23,30,37,44\}$ puhul leida $f'(a)b+\frac{f(a)}{7^2}\equiv0\pmod7$ lahendid kuid kuna $f'(a)\equiv f'(2)=0\pmod7$, ei sõltu võrrand arvust $b$ ehk tuleb kontrollida, milliste $a$ väärtuste puhul $7^3\mid f(a)$. $f(2)\equiv98\pmod{7^3},f(9)\equiv294\pmod{7^3},f(16)\equiv196\pmod{7^3},f(23)\equiv147\pmod{7^3},f(30)\equiv147\pmod{7^3},f(37)\equiv196\pmod{7^3},f(44)\equiv294\pmod{7^3}$. Seega mooduli $7^3$ järgi lahendeid kujul $a+7^2b$ ei leidu.\\
+Järgmiseks vaatlen lahendit 3 kõrgemate astmete puhul. Saan $f'(3)\equiv-2\pmod7$ ja $f(3)=357$, $\frac{357}{7}=51\equiv2\pmod7$. Seega lahendite kujul $x\equiv3+7y\pmod{7^2}$ jaoks tuleb leida $y$ võrrandist $-2y+2\equiv0\pmod7$. Selle ainus lahend on $y\equiv1\pmod7$. Seega mooduli $7^2$ järgi ainus lahend on $x\equiv3+7\cdot1=10\pmod{7^2}$. Kontrollin seda ka kolmanda 7 astme järgi. $f'(10)\equiv-2\pmod7$ ja $f(10)=26362$ ehk $\frac{26362}{7^2}=538\equiv-1\pmod7$. Seega lahendite kujul $x\equiv10+7^2b\pmod{7^3}$ on vaja leida $b$ võrrandist $-2b-1\equiv0\pmod{7}$, mille ainsaks lahendiks on $x\equiv3\pmod{7}$. Seega siit saab ainsaks lahendiks kujul $x=4+7y$ järgi $x\equiv157\pmod{7^3}$.\\
+Viimaseks vaatlen lahendit 4 kõrgemate astmete puhul. Saan $f'(4)\equiv1\pmod7$ ja $f(4)=952$, kus $\frac{952}{7}=156\equiv3\pmod7$. Seega lahendite jaoks kujul $x\equiv4+7y\pmod{7^2}$ tuleb leida $y$ võrrandist $y+3\equiv0\pmod7$, mille ainsaks lahendiks on $y\equiv-3\pmod7$. Seega leidsin lahendi $x\equiv4-7\cdot3=-17\pmod{7^2}$. Järgmiseks leian vastava lahendi kolmanda astme järgi. $f'(-17)\equiv1\pmod7$ ja $f(-17)=138817$ ning $\frac{138817}{7^2}=2833\equiv-2\pmod7$. Seega tuleb lahendada võrrand $b-2\equiv0\pmod7$, mille ainsaks lahendiks on $b\equiv2\pmod7$. Seega olen leidnud lahendi $x\equiv-17+2\cdot49=81$.\\
+Kokkuvõttes olen saanud et võrrandil on mooduli 13 järgi lahendid -6 ja -5 ning mooduli $7^3$ järgi lahendid 157 ja 81. HJT-st saame, et lõplikud lahendid on $x\equiv3244\pmod{4459}$, $x\equiv1529\pmod{4459}$, $x\equiv424\pmod{4459}$ ja $x\equiv2139\pmod{4459}$.
 \end{document}
