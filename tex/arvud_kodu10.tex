@@ -58,6 +58,15 @@ Mitu korda peab pakki niimoodi segama, et kaardid oleksid
 j\"alle esialgses j\"arjekorras? 
 
 \bigskip
+Märkan, et segamine on ekvivalentne kujutusega $f(\w a)=\w{2a}$ ringis $\Z_{41}$, kuna esimesed 20 kohta uues pakis saavad lihtsalt väärtuse vanast pakist kaks korda suuremalt asukohalt, uue paki teise poole jaoks vaatlen, mis nende väärtustega juhtuks leitud kujutuse puhul. Kuna need väärtused on suuremad, kui $\frac{41}{2}$, tuleb neist lahutada 41 vähemalt üks kord et saada vähim naturaalarvuline $\Z_{41}$ esindaja, ning rohkem kui üks kord pole vaja lahutada kuna suurim tekkiv arv on $40\cdot2<41\cdot2$. Seega saan $f(20+a)=2(20+a)-41=2a-1$, mis annabki paarituid arve, nagu vaja.\\
+\indent Kuna on vaja leida, mitu korda kujutust rakendada tuleb, et saavutada algne element, taandub ülesanne elemendi 2. Vaatlen 2 astmeid:\\
+\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c}
+k&0&1&2&3&4&5&6&7&8&9&10\\
+\hline
+$\w{2^k}$&1&2&4&8&16&-9&-18&5&10&20&-1
+\end{tabular}\\
+On lihtne näha, et edasi järgmised 10 väärtust tabelis on samade arvude vastandarvud ning seega esimene kord kui 1 tuleb tulemuseks, on $2^20$ ehk 2 järk on 20 ning pakki tuleb ka segada 20 korda antud meetodil et saada algse järjestusega pakk tagasi.
+\bigskip
 
 \noindent 3. Näidata otse, {\bf kõiki} jäägiklassiringi $\mathbb{Z}_{30}$ elemente järjest astendades, et mooduli $30$ järgi ei leidu algjuuri. 
 
@@ -93,7 +102,7 @@ $$
 \noindent 8. Olgu $p$ algarv kujul $4k+3$ ja $a\in\Z$. Tõestada, et $a$ on algjuur mooduli $p$ järgi parajasti siis, kui $\overline{-a}$ järk rühmas  $U(\Z_p)$ on $\frac{p-1}{2}$. 
 
 \bigskip
-Olgu $a$ algjuur mooduli $p$ järgi. Siis tema järk on $\varphi(p)=p-1$. Kuna tegu on algarvuga kujul $4k+3$, on tegu paaritu arvuga, ehk $p-1$ on paarisarv. Tean, et $-1$ on $\Z_p$ pööratav element, kuna $(p-1,p-2)=1$, sest tegu on järjestike arvudega ning nende suurim ühistegur peaks jagama nende vahet ja ainus arv mis jagab arvu 1 on 1. Kuna $a$ on algtegur, on arvud $a^1,a^2,..,a^{p-1}$ kõik erinevad ning nende hulka kuulub ka $-1$  $(-1)^2=1$
+Olgu $a$ algjuur mooduli $p$ järgi. Siis tema järk on $\varphi(p)=p-1$. Kuna tegu on algarvuga kujul $4k+3$, on tegu paaritu arvuga, ehk $p-1$ on paarisarv. Kuna $a$ on algtegur, on arvud $a^1,a^2,..,a^{p-1}$ kõik erinevad ning nende hulka kuulub ka $-1$  $(-1)^2=1$
 \bigskip
 
 \noindent 9${^*}$. Leida kõik naturaalarvud $n$, mille korral $\frac{2^n+1}{n^2}$ on täisarv. 
