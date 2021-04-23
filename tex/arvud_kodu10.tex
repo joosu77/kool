@@ -74,13 +74,15 @@ j\"alle esialgses j\"arjekorras?
 
 \bigskip
 Märkan, et segamine on ekvivalentne kujutusega $f(\w a)=\w{2a}$ ringis $\Z_{41}$, kuna esimesed 20 kohta uues pakis saavad lihtsalt väärtuse vanast pakist kaks korda suuremalt asukohalt, uue paki teise poole jaoks vaatlen, mis nende väärtustega juhtuks leitud kujutuse puhul. Kuna need väärtused on suuremad, kui $\frac{41}{2}$, tuleb neist lahutada 41 vähemalt üks kord et saada vähim naturaalarvuline $\Z_{41}$ esindaja, ning rohkem kui üks kord pole vaja lahutada kuna suurim tekkiv arv on $40\cdot2<41\cdot2$. Seega saan $f(20+a)=2(20+a)-41=2a-1$, mis annabki paarituid arve, nagu vaja.\\
-\indent Kuna on vaja leida, mitu korda kujutust rakendada tuleb, et saavutada algne element, taandub ülesanne elemendi 2. Vaatlen 2 astmeid:\\
+Kuna on vaja leida, mitu korda kujutust rakendada tuleb, et saavutada algne element, taandub ülesanne elemendi 2. Vaatlen 2 astmeid:
+\begin{center}
 \begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c}
 k&0&1&2&3&4&5&6&7&8&9&10\\
 \hline
 $\w{2^k}$&1&2&4&8&16&-9&-18&5&10&20&-1
 \end{tabular}\\
-On lihtne näha, et edasi järgmised 10 väärtust tabelis on samade arvude vastandarvud ning seega esimene kord kui 1 tuleb tulemuseks, on $2^20$ ehk 2 järk on 20 ning pakki tuleb ka segada 20 korda antud meetodil et saada algse järjestusega pakk tagasi.
+\end{center}
+On lihtne näha, et edasi järgmised 10 väärtust tabelis on samade arvude vastandarvud ning seega esimene kord kui 1 tuleb tulemuseks, on $2^{20}$ ehk 2 järk on 20 ning pakki tuleb ka segada 20 korda antud meetodil et saada algse järjestusega pakk tagasi.
 \bigskip
 
 \noindent 3. Näidata otse, {\bf kõiki} jäägiklassiringi $\mathbb{Z}_{30}$ elemente järjest astendades, et mooduli $30$ järgi ei leidu algjuuri. 
@@ -102,6 +104,7 @@ Paneme tähele, et  $\w{29}^{2}=\w{1}$, seega on selle järk liiga väike, et ol
 
 Teised $\Z_{30}$ elemendid ei ole pööratavad ehk ei saa olla algjuured.
 \bigskip
+\pagebreak
 
 \noindent 4. Leida kõik algjuured moodulite $8$, $9$, $12$, $14$ ja $18$ järgi. 
 
@@ -125,6 +128,7 @@ Otsime vähimat $x$ nii, et $\w{a}^x=\w{1}$ rühmas $ U(\Z_{mn}) $. See on samav
 \bigskip
 Kui korrutada võrrandi $ab\equiv1\pmod n$ mõlemad pooled arvuga $(ab)^{k-1}$ läbi, kus $k$ on positiivne täisarv, saame $(ab)^k\equiv1\pmod n$ ehk $a^kb^k\equiv1\pmod n$. Eeldame, et $b$ ei ole algjuur. Sel juhul on tema järk $m$ väiksem kui arvu $a$ järk $t$, ehk $b^m\equiv1\pmod n$. Võttes teisendatud võrrandis $k=m$, saame et $a^m\cdot1\equiv1\pmod n$ ehk $a^m\equiv1\pmod n$, kuid definitsiooni järgi on $t$ vähim naturaalarv, mille puhul kehtib $a^t\equiv1\pmod n$, ehk kuna $m<t$, oleme saanud vastuolu, nii et arvude $a$ ja $b$ järgud peavad samad olema, ehk kui $a$ on algjuur, on ka $b$ algjuur.
 \bigskip
+\pagebreak
 
 \noindent 7. Kasutades fakti, et algarvulise mooduli järgi leidub algjuuri, tõestada \\\emph{Wilsoni teoreem}:
 $p\in\N$ on algarv siis ja ainult siis, kui 
@@ -142,7 +146,7 @@ Kui $p$ on algarv, siis saame samaväärse väite $\w{(p-1)!}=\w{-1}$ $\Z_p$-s. 
 \noindent 8. Olgu $p$ algarv kujul $4k+3$ ja $a\in\Z$. Tõestada, et $a$ on algjuur mooduli $p$ järgi parajasti siis, kui $\overline{-a}$ järk rühmas  $U(\Z_p)$ on $\frac{p-1}{2}$. 
 
 \bigskip
-Olgu $a$ algjuur mooduli $p$ järgi. Märkan, et $(-a)^t=a^t\cdot(-1)^t$ ehk paarisarvuliste $t$ väärtuste puhul on $a^t$ ja $ (-a)^t$ võrdsed ning paaritute väärtuste puhul vastandarvud. Seega saab $(-a)^t\equiv1\pmod p$ kehtida vaid juhul, kui $a^t\equiv1\pmod p$ või $a^t\equiv-1\pmod p$. Esimene võimalus, kus see juhtuda saab on juht kus $\w{a^{\frac{p-1}{2}}}=\w{-1}$ ehk $t=\frac{p-1}2=\frac{4k+3-1}{2}=2k+1$, mis on paaritu arv iga $k$ väärtuse puhul, ehk $\w{-a}$ järk on alati $\frac{p-1}2$.\\
+Olgu $a$ algjuur mooduli $p$ järgi. Märkan, et $(-a)^t=a^t\cdot(-1)^t$ ehk paarisarvuliste $t$ väärtuste puhul on $a^t$ ja $ (-a)^t$ võrdsed ning paaritute väärtuste puhul vastandarvud. Seega saab $(-a)^t\equiv1\pmod p$ kehtida vaid juhul, kui $a^t\equiv1\pmod p$ või $a^t\equiv-1\pmod p$. Märkan, et $\w{a^{\frac{p-1}{2}}}$ on alati $-1$, sest $(-1)^2=1$ ehk $-1$ indeks on pool 1 indeksist ning kuna $\text{ind}_p1=p-1$, on ka $\text{ind}_p-1=\frac{p-1}{2}$. Seega esimene kord, kui $a^t$ on $-1$ või 1 on juhul kui $t=\frac{p-1}2=\frac{4k+3-1}{2}=2k+1$, mis on paaritu arv iga $k$ väärtuse puhul, ehk $\w{-a}$ järk on alati $\frac{p-1}2$.\\
 \indent Teistpidi eeldame et $\w{-a}$ järk on $\frac{p-1}2$. Nagu enne näidatud, peab $\w{(-a)^k}$ olema $\w1$ või $\w{-1}$, et saaks $\w{a^k}$ olla 1. Kuna $\w{(-a)^k}=1$ sobib vaid juhul, kui $k$ on $\frac{p-1}2$ kordne, saab $\w{(-a)^k}=\w{-1}$ kehtida vaid juhul kui $k$ on $\frac{p-1}4$ kordne. Kuna $\frac {p-1}2=\frac{4k+3-1}{2}=2k+1$, kehtib $\w1=\w{(-a)^\frac{p-1}{2}}=\w{(-1)^\frac{p-1}{2}}\cdot\w{a^\frac{p-1}{2}}=-\w{a^\frac{p-1}{2}}$, saame et $\w{a^\frac{p-1}{2}}=-1$ ehk ei saa kehtida $\w{a^\frac{p-1}{4}}=1$ (kuna poolte ruutu võtmisel saaks võrrandi, mis oleks eelmisega vastuolus), kuid kui $\w{a^\frac{p-1}{2}}=-1$ pooled ruutu võtta, saab et $\w{a^{p-1}}=1$, ning kuna arvust $p-1$ väiksemaid $\frac{p-1}4$ kordseid pole, tähendab et $a$ järk on $p-1$ ehk ta on algjuur.
 \bigskip
 \end{document}
