@@ -39,6 +39,21 @@
 
 \bigskip
 
+Tegurdades saame $\varphi(58)=28=2^2\cdot7$. Paneme tähele, et $\w{19}^{4}=\w{53}$ ning $\w{19}^{14}=\w{-1}$, seega $\w{19}$ on algjuur ehk tema järk on 28.
+
+
+$\w{29}$ ei kuulu sellesse rühma, kuna pole pööratav.
+
+Paneme tähele, et $\w{19}^{15}=\w{39}$, seega kuna $(15,28)=1$, on $\w{39}$ algjuur ning järguga 28.
+
+$\w{40}$ ei kuulu sellesse rühma, kuna pole pööratav.
+
+Paneme tähele, et $\w{19}^{7}=\w{41}$, seega kõige varem $\w{41}^{4}=\w{1}$ ning $\w{41}$ järk on 4. 
+
+Paneme tähele, et $\w{19}^{26}=\w{9}$, seega kõige varem $\w{9}^{14}=\w{1}$ ning $\w{9}$ järk on 14.
+
+\bigskip
+
 \noindent 2. Olgu meil 40-st m\"angukaardist koosnev kaardipakk (näiteks \v{s}veitsi regionaalsest kaardimängust \emph{Kaiserspiel}). 
 Nummerdame kaardid \"ulemi\-se\-st alumiseni numbritega $1,2,\ldots,40$. 
 V\~otame pakist \"ulemise poole ja asetame lauale alumisest 
@@ -71,6 +86,22 @@ On lihtne näha, et edasi järgmised 10 väärtust tabelis on samade arvude vast
 \noindent 3. Näidata otse, {\bf kõiki} jäägiklassiringi $\mathbb{Z}_{30}$ elemente järjest astendades, et mooduli $30$ järgi ei leidu algjuuri. 
 
 \bigskip
+Paneme tähele, et  $\w{7}^{4}=\w{1}$, seega on selle järk liiga väike, et olla algjuur. 
+
+Paneme tähele, et  $\w{11}^{2}=\w{1}$, seega on selle järk liiga väike, et olla algjuur. 
+
+Paneme tähele, et  $\w{13}^{4}=\w{1}$, seega on selle järk liiga väike, et olla algjuur. 
+
+Paneme tähele, et  $\w{17}^{4}=\w{1}$, seega on selle järk liiga väike, et olla algjuur. 
+
+Paneme tähele, et  $\w{19}^{2}=\w{1}$, seega on selle järk liiga väike, et olla algjuur. 
+
+Paneme tähele, et  $\w{23}^{4}=\w{1}$, seega on selle järk liiga väike, et olla algjuur. 
+
+Paneme tähele, et  $\w{29}^{2}=\w{1}$, seega on selle järk liiga väike, et olla algjuur. 
+
+Teised $\Z_{30}$ elemendid ei ole pööratavad ehk ei saa olla algjuured.
+\bigskip
 
 \noindent 4. Leida kõik algjuured moodulite $8$, $9$, $12$, $14$ ja $18$ järgi. 
 
@@ -82,6 +113,10 @@ Tegurdan moodulid: $8=2^3$, $9=3^2$, $12=2^2\cdot3$, $14=2\cdot7$, $18=2\cdot3^2
 \bigskip
 
 \noindent 5. Olgu $a\in\Z$, $m,n\geq 2$ kõik kolm paarikaupa ühistegurita. Tõestada, et elemendi $\overline{a}$ järk rühmas $U(\Z_{mn})$ on vähim ühiskordne tema järkudest rühmades $U(\Z_{m})$ ja $U(\Z_{n})$. Kas väide jääb kehtima, kui mõni eeldustest on rikutud?
+
+\bigskip
+Otsime vähimat $x$ nii, et $\w{a}^x=\w{1}$ rühmas $ U(\Z_{mn}) $. See on samaväärne ülesandega $(\w{a}^x,\w{a}^x)=(\w{1},\w{1})$ rühmas $U(\Z_{m}) \times U(\Z_{n})$. Teoreemist 7.6 saame, et $\w{a}$ järgud rühmades $U(\Z_{m})$ ning $U(\Z_{n})$ peavad jagama arvu $x$. Kuna otsime vähimat $x$, siis saamegi, et tegelikult otsisimegi nende järkude vähimat ühiskordset. Kui $m$ või $n$ on 1, siis kuna kõik $\w{a}$ on $\Z_1$ esimest järku, saame, et otistav ühistegur on sama, mis  $\w{a}$ järk teises rühmas, ning nende rühmade otsekorrutis on ekvivalentne teise rühmaga, seega väide kehtib. Kui $a$ ei ole $m,n$ ühistegurita, ei saa ta kuuluda  $ U(\Z_{mn}) $. Kui $m,n$ pole ühistegurita, siis saame võttes $a=3,m=2,n=2$, et $\w{a}$ järk $U(\Z_2)$ on 1, $[1,1]=1$, aga $\w{a}$ järk $U(\Z_{2\cdot 2})=2$, mis on vastuolu.
+
 
 \bigskip
 
@@ -98,16 +133,16 @@ $$
 $$
 
 \smallskip
+Kui $p$ poleks algarv, leiduks sellel mingi sellest väiksem vähim algtegur, mis jagab nii $p$ kui ka $(p-1)!$, mis tähendab, et $((p-1)!,p)\neq 1$, seega ei saa $(p-1)!\equiv -1 \pmod{p}$, kuna sellisel juhul oleks need ühistegurita. 
+
+Kui $p$ on algarv, siis saame samaväärse väite $\w{(p-1)!}=\w{-1}$ $\Z_p$-s. Kuna $p$ on algarv, on kõik $\Z_p\setminus \w{0}$ elemendid pööratavad, seega ka mingi algjuure $a$ mingid (unikaalsed) astmed. Saame $\w{(p-1)!}=\w{1}\cdot \w{2}\cdot ...\cdot \w{p-2}\cdot \w{p-1}=\Pi_{i \in U(\Z_p)}i=\Pi_{i \in \{1,2,...,p-2,p-1\}} a^i=a^{\frac{p(p-1)}{2}} $. Kasutades fakti, et $a^{\frac{p-1}{2}}=\w{-1}$, saame $a^{\frac{p(p-1)}{2}}=(-1)^p $, mis iga algarvu peale 2 korral on $-1$, kuid ringis $\Z_2$ on -1 ja 1 sama element, ehk võrrand siiski kehtib ka 2 puhul.
+
+\bigskip
 
 \noindent 8. Olgu $p$ algarv kujul $4k+3$ ja $a\in\Z$. Tõestada, et $a$ on algjuur mooduli $p$ järgi parajasti siis, kui $\overline{-a}$ järk rühmas  $U(\Z_p)$ on $\frac{p-1}{2}$. 
 
 \bigskip
-Olgu $a$ algjuur mooduli $p$ järgi. Siis tema järk on $\varphi(p)=p-1$. Kuna tegu on algarvuga kujul $4k+3$, on tegu paaritu arvuga, ehk $p-1$ on paarisarv. Kuna $a$ on algtegur, on arvud $a^1,a^2,..,a^{p-1}$ kõik erinevad ning nende hulka kuulub ka $-1$  $(-1)^2=1$
+Olgu $a$ algjuur mooduli $p$ järgi. Märkan, et $(-a)^t=a^t\cdot(-1)^t$ ehk paarisarvuliste $t$ väärtuste puhul on $a^t$ ja $ (-a)^t$ võrdsed ning paaritute väärtuste puhul vastandarvud. Seega saab $(-a)^t\equiv1\pmod p$ kehtida vaid juhul, kui $a^t\equiv1\pmod p$ või $a^t\equiv-1\pmod p$. Esimene võimalus, kus see juhtuda saab on juht kus $\w{a^{\frac{p-1}{2}}}=\w{-1}$ ehk $t=\frac{p-1}2=\frac{4k+3-1}{2}=2k+1$, mis on paaritu arv iga $k$ väärtuse puhul, ehk $\w{-a}$ järk on alati $\frac{p-1}2$.\\
+\indent Teistpidi eeldame et $\w{-a}$ järk on $\frac{p-1}2$. Nagu enne näidatud, peab $\w{(-a)^k}$ olema $\w1$ või $\w{-1}$, et saaks $\w{a^k}$ olla 1. Kuna $\w{(-a)^k}=1$ sobib vaid juhul, kui $k$ on $\frac{p-1}2$ kordne, saab $\w{(-a)^k}=\w{-1}$ kehtida vaid juhul kui $k$ on $\frac{p-1}4$ kordne. Kuna $\frac {p-1}2=\frac{4k+3-1}{2}=2k+1$, kehtib $\w1=\w{(-a)^\frac{p-1}{2}}=\w{(-1)^\frac{p-1}{2}}\cdot\w{a^\frac{p-1}{2}}=-\w{a^\frac{p-1}{2}}$, saame et $\w{a^\frac{p-1}{2}}=-1$ ehk ei saa kehtida $\w{a^\frac{p-1}{4}}=1$ (kuna poolte ruutu võtmisel saaks võrrandi, mis oleks eelmisega vastuolus), kuid kui $\w{a^\frac{p-1}{2}}=-1$ pooled ruutu võtta, saab et $\w{a^{p-1}}=1$, ning kuna arvust $p-1$ väiksemaid $\frac{p-1}4$ kordseid pole, tähendab et $a$ järk on $p-1$ ehk ta on algjuur.
 \bigskip
-
-\noindent 9${^*}$. Leida kõik naturaalarvud $n$, mille korral $\frac{2^n+1}{n^2}$ on täisarv. 
-
-\bigskip
-
-\noindent 10${^{**}}$. Olgu $p$ algarv ja olgu iga naturaalarvu $i$ korral $r_i$ jääk, mis tekib arvu $i^i$ jagamisel arvuga $p$. Tõestada, et jada $(r_i)$ on perioodiline ja leida selle perioodi minimaalne pikkus. 
 \end{document}
