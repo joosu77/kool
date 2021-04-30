@@ -1,0 +1,113 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[estonian]{babel}
+\usepackage{t1enc}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{lscape}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{diagbox}
+\usepackage[official]{eurosym}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage{xcolor}
+\usepackage[shortlabels]{enumitem}
+\usepackage[a4paper,margin=1in,footskip=0.25in]{geometry}
+\usepackage{pgffor}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\newcommand{\p}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\B}{\mathbb{P}}
+\newcommand{\w}{\overline}
+\topmargin-3em
+\oddsidemargin0cm
+\textwidth16cm
+%\textheight27cm
+\evensidemargin-2cm
+\begin{document}
+\begin{center}
+\Large\textbf{Kodutöö nr. 11}\\
+\small{Joosep Näks ja Uku Hannes Arismaa}
+\end{center}
+
+\bigskip
+
+\bigskip
+
+\noindent 1. Leida kõik algjuured mooduli $58$ järgi.
+
+\bigskip
+
+\noindent 2. Teha kindlaks, kas mooduli $n$ järgi leidub algjuuri ja kui leidub, siis leida nende arv ja üks algjuur, kui $a)\, n=166,$ $b)\, n=167$, $c)\, n=168$.
+
+\bigskip
+Teoreemi 7.21 põhjal on teada, et mooduli $n$ järgi leidub algjuuri, kui $n$ esitub kujul 2, 4, $p^k$ või $2p^k$, kus $p>2$ on algarv. Tegurdades saab $166=2\cdot83$ ja $168=2^3\cdot3\cdot7$ ning 167 on ise algarv. Seega mooduli 168 järgi algjuuri ei leidu, 166 ja 167 järgi leidub. Teoreemi 7.27 põhjal kui mooduli $n$ järgi leidub algjuuri, on neid $\varphi(\varphi(n))$ tükki ehk mooduli 166 järgi on $\varphi(\varphi(166))=40$ algjuurt ning mooduli 167 järgi on $\varphi(\varphi(167))=82$ algjuurt.\\
+Mooduli 166 järgi algjuure leidmiseks leian kõigepealt algjuure mooduli 83 järgi. Kuna $83-1=2\cdot41$, on järelduse 7.24 põhjal arv $a$ algjuur parajasti siis, kui $a^{41}\not\equiv1\pmod{83}$ ja $a^2\not\equiv1\pmod{83}$. Proovin $a=2$: $2^{41}\equiv-1\pmod{83}$ ja $2^{2}\equiv4\pmod{83}$ ehk 2 sobib algjuureks. Teoreemi 7.18 järgi kui 2 on algjuur mooduli 83 järgi siis mooduli $2\cdot83=166$ järgi on algjuur paaritu arv arvudest 2 ja $2+83=85$ ehk 85 on algjuur mooduli 166 järgi.\\
+Mooduli 167 järgi kuna $167-1=83\cdot2$, on $a$ algjuur parajasti siis, kui \mbox{$a^{83}\not\equiv1\pmod{167}$} ja \mbox{$a^2\not\equiv1\pmod{167}$}. Proovin $a=2$: $2^{83}\equiv1\pmod{167}$ ehk 2 ei sobi algjuureks, proovin $a=3$: $3^{83}\equiv1\pmod{167}$ ehk 3 samuti ei sobi algjuureks, proovin $a=4$: $4^{83}\equiv1\pmod{167}$, proovin $a=5$: $5^{83}\equiv-1\pmod{167}$ ja $5^5\equiv25\pmod{167}$ ehk 5 on algjuur mooduli 167 järgi.
+\bigskip
+
+\noindent 3. Teha kindlaks, kas mooduli $n$ järgi leidub algjuuri ja kui leidub, siis leida nende arv ja üks algjuur, kui $a)\, n=337,$ $b)\, n=338$, $c)\, n=339$.
+
+\bigskip
+
+\noindent 4. Lahendada kongruents $1-x+x^2-x^3+x^4+\ldots-x^{2023} \equiv 0 \pmod{58}$. 
+
+\bigskip
+Korrutan võrrandi mõlemad pooled läbi elemendiga $x+1$. Sellega ei saa samaväärset võrrandit, kuna $x+1$ võib olla nullitegur, kuid kõik esialgse võrrandi lahendid on ka uue võrrandi lahendite hulgas, nii et lõpus kontrollin lahendite sobivust. Paremale poolele jääb ikka 0, aga vasakule poolele tekib summa $(1+x)-(x+x^2)+(x^2+x^3)-...-(x^{2023}+x^{2024})$. Siin on näha, et sulud lahti tehes on igas sulus teine liidetav järgmise sulu esimese liidetava vastandarv ehk kõik peale esimese ja viimase liidetava taanduvad maha ning alles jääb võrrand $1-x^{2024}\equiv0\pmod{58}$ ehk $x^{2024}\equiv1\pmod{58}$. Kuna $\varphi(58)=28$, kehtib FVT järgi $x^{28}\equiv1\pmod{58}$ ehk $x^{2024}=x^{28\cdot72+8}\equiv x^8\pmod{58}$.
+
+Teoreemi 7.6 põhjal kehtib $x^8\equiv1\pmod{58}$ parajasti siis, kui $m\mid 8$, kus $m$ on elemendi $x$ järk. Seega on lahenditeks elemendid, mille järk on 1, 2, 4 või 8. Lagrange'i teoreemi tõttu aga peab elemendi järk ka rühma järku jagama ehk kuna $8\nmid28$, ei leidu elemente, mille järk oleks 8. Ainus esimest järku element on 1. Esimesest ülesandest saan, et üks algjuur mooduli 58 järgi on 2. Teoreemi 7.36 põhjal on $m$ järku elemendid parajasti need elemendid $b$, mille puhul kehtib $(\text{ind}_2b,\varphi(58))=\frac{\varphi(58)}{m}$ ehk $(\text{ind}_2b,28)=\frac{28}{m}$.
+
+Seega teist järku elemendid on elemendid, mille indeksi suurim ühistegur arvuga 28 on 14. 14 kordseid indekseid on kaks tükki, 14 ja 28 ning ainult 14 annab suurimaks ühisteguriks arvuga 28 arvu 14 ehk 14 on lahendi indeks. Esimese ülesande tabeli põhjal on selleks lahendiks $-1$.
+
+Neljandat järku elemendid on elemendid, mille indeksi suurim ühistegur arvuga 28 on 7. Kuna lisaks arvule 7 on 28 ainus algtegur 2, on sobivad indeksid kõik paaritud 7 kordsed arvud ehk 7 ja 21. Esimese ülesande tabeli põhjal on nendele indeksitele vastavad arvud 17 ja 41.
+
+Seega olen saanud lahendid $1$, 17, 41 ja $-1$. Kui $x+1\not=0$, saab algse võrrandiga samaväärse võrrandi korrutades arvuga $x+1$ läbi võrrandi mõlemad pooled ja ka mooduli, saades uue võrrandi $x^{2024}\equiv1\pmod{58(x+1)}$. $x+1=0$ kehtib vaid lahendi $x=-1$ juures, ning kui see algsesse võrrandisse sisse asendada, tekib summa, kus kõigi paaritu astmega liikmete märk vahetub ja kõigi liikmete absoluutväärtus on 1 ehk summas on 2024 korda 1 kokku liidetud ning $2024\equiv-7\not\equiv0\pmod{58}$ ehk $-1$ ei sobi lahendiks. Teiste lahendite jaoks proovin uut saadud võrrandit.
+
+$x=1$ puhul $1^{2024}\equiv1\pmod{58\cdot2}$ ehk 1 sobib lahendiks.
+
+$x=17$ puhul $\varphi(58\cdot(17+1))=336$ ning $17^{2024}\equiv17^{6\cdot336+8}\equiv17^8\equiv1\pmod{58(17+1)}$ ehk 17 sobib lahendiks.
+
+$x=41$ puhul $\varphi(58\cdot(41+1))=672$ ning $41^{2024}\equiv41^{3\cdot672+8}\equiv(41)^8\equiv1\pmod{58(41+1)}$ ehk 41 sobib lahendiks.
+\bigskip
+
+\noindent 5. Tõestada, et kui $n\geq 2$, siis iga Fermat' arvu $F_n = 2^{2^n}+1$ mistahes algtegur on kujul $k2^{n+1}+1$. 
+
+\bigskip
+Paneme tähele, et rühamas $U(\Z_{F_n})$ $\w{2}^x= \w{2^x}$, kuni $x<2^n$, seejärel saame, et $\w{2}^{2^n}= \w{-1} $, mida omakorda $\w{2}$ga korrutades fikseerime lõpuks $\w{2}$ järgu kui $2^{n+1}$. Vaadates sama protsessi $F_n$ algtegureile (mis kõik peavad olema paaritud) vastavate jäägiklasside otsekorrutises, saame $(\w{2}\times ... \times \w{2})^{2^{n}}=(\w{-1}\times ...\times \w{-1})$ ning $(\w{2}\times ... \times \w{2})^{2^{n+1}}=(\w{1}\times ...\times \w{1})$. Näeme, et igale algtegurile vastavas rühmas, peab $\w{2}$ järk jagama $2^{n+1}$ (Lemma 7.6). Kui see on aga väiksem, peaks see samuti jagama $2^{n}$, millisel juhul, poleks $\w{2}^{2^n}$ selles rühmas $\w{-1}$, seega on igale algtegurile vastavas rühmas $\w{2}$ järk täpselt $2^{n+1}$. Lagrange'i teoreemi järgi peab  $2^{n+1}$ jagama selle rühma järku, milleks on $\varphi(p^m)=(p-1)p^{m-1}$. Kuna $p$ oli paaritu, siis saame Eukleidese lemmast, et $2^{n+1}\mid p-1\Leftrightarrow k2^{n+1}+1=p$.
+
+
+\bigskip
+
+\noindent 6. Leida kõik algarvud $p$, mille järgi on olemas täpselt 16 erinevat algjuurt. 
+
+\bigskip
+Teoreemi 7.27 leidub mooduli $p$ järgi täpselt $\varphi(\varphi(p))$ algjuurt. Leian kõigepealt kõik võimalikud $\varphi(x)=16$ lahendid. Kuna $\varphi$ funktsiooni arvutusvalem on $\varphi(p_1^{k_1}p_2^{k_2}..p_s^{k_s})=p_1^{k_1-1}(p_1-1)p_2^{k_2-1}(p_2-1)..p_s^{k_s-1}(p_s-1)$, peavad kõik $\varphi(x)$ algtegurid $p_i$ olema kas ise arvu $x$ algtegurid või peab $p_i-1$ olema arvu $x$ tegur. Arvu 16 teguriteks on 1, 2, 4, 8 ja 16. Nendest endast on algarv vaid 2 ning nendest 1 võrra suurematest arvudest on algarvud 2, 3, 5 ja 17. Seega saab 2 esineda arvu $x$ algtegurina ükskõik millise astmega ning 3, 5 ja 17 saavad esineda astmega 1.
+
+Esiteks kui $x$ on mingi 2 aste, siis $2^{k-1}(2-1)=16$ ehk $k=5$ ning $x=32$. Kuid lõpuks peab kehtima $\varphi(p)=p-1=x$, kuid $32+1=33$ ei ole algarv ehk siit ei saa sobivat vastust.\\
+Kui $x$ tegurite hulgas on 2 ja 3, siis $2^{k-1}(2-1)\cdot3^{1-1}(3-1)=16$ kust saab $k=4$ ehk $x=48$. Kuid jällegi $48+1=49$ ei ole algarv ehk see ei ole sobiv vastus. Kui võtta algtegurite hulka ka 5, saab $2^{k-1}3^0(3-2)5^0(5-1)=16$ kus $k=2$ ehk $x=60$, ning 61 on algarv ehk see on üks sobilikest $p$ väärtustest. 17 ei saa kolmega koos algtegurite hulka võtta, kuna $17-1$ on juba ise 16.\\
+Kui 3 välja jätta ja ainult 2 ja 5 kasutada $x$ algteguriteks, saab $2^{k-1}5^0(5-1)=16$, kust saab $k=3$ ehk $x=40$ ning kuna 41 on algarv, sobib see $p$ väärtuseks.\\
+Kui võtta 2 ja 17 algteguriteks, saab $2^{k-1}\cdot17^0(17-1)=16$, kus $k=1$ ehk $x=34$, kuid $34+1=35$ ei ole jällegi algarv. Siin saaks ka 2 tegurite hulgast välja jätta, kuna $17-1$ on ise 16 ehk 17 sobiks ise $x$ väärtuseks kuid $17+1=18$ ei ole algarv ehk see ei sobi $p$ väärtuseks.
+
+Seega on kokkuvõttes kaks sobivat $p$ väärtust: 61 ja 41. 
+\bigskip
+
+\noindent 7. Tõestada, et kui algarvulise mooduli $p$ järgi leidub täpselt $k\geq 2$ algjuurt, siis mistahes $k-1$ {\bf erineva} algjuure korrutis on samuti algjuur. 
+
+\bigskip
+Kui mooduli $p$ järgi leidub algjuur $a$ järguga $j$, siis $a^j=\w{1}$, seega leidub sellel üheselt määratud pöördelement $a^{j-1}$ (märkus: iga algjuure aste on erinev element, seega tavaliselt meil siin probleeme ei teki, erandiks on juht $j-1=j$, aga siis tuleb välja, et $p=3$ ning $k$ on sellisel juhul liiga väike), mis eelmise nädala tulemuste põhjal on samuti algjuur. Seega saab kõikide algjuurte korrutises igale algjuurele läbi seada vastavusse pöördelemendi, saades korrutiseks $\w{1}$. Sellest mistahes $k-1$ erineva algjuure korrutise saamiseks peame identifitseerima selle algjuure, mida me korrutisse ei taha ning kõikide algjuurte korrutise ($\w{1}$) korrutama selle algjuure pöördelemendiga, mis on ka algjuur, saades kokku algjuure.
+
+\noindent 8. Olgu $n$ naturaalarv. Tõestada, et $$\prod\limits_{\substack{1\leq a \leq n\\(a,n)=1}}a\equiv\begin{cases}
+\phantom{-}0\pmod{1};\\
+\phantom{-}1\pmod{n},\text{ kui mooduli }n>1 \text{ järgi ei leidu algjuuri;}\\
+-1\pmod{n},\text{ kui mooduli }n>1 \text{ järgi leidub algjuuri.}
+\end{cases}$$
+
+\bigskip
+Juhul kui mooduli $n$ järgi leidub algjuuri, saab võtta mingi algjuure $b$ ning kuna $b^1, b^2,.., b^{\varphi(n)}$ on kõik $\Z_n$ pööratavad elemendid, saab võrrandi vasaku poole ümber kirjutada kujule: $$\prod\limits_{\substack{1\leq a \leq n\\(a,n)=1}}a=\prod\limits_{1\leq i \leq \varphi(n)}b^i=b^{\frac{\varphi(n)(\varphi(n)+1)}{2}}$$ Kui $n$ järgi leidub algjuuri, peab $n$ olema kujul 2, 4, $p^k$ või $2p^k$, kus $p>2$. Kui $n=2$, saab läbi proovimisel, et vasakpoolse korrutise tulemus on 1 ning see on mooduli 2 järgi kongruentne arvuga $-1$. Kui $n$ on $p^k$ või $2p^k$, siis $\varphi(n)$ tegurite hulgas on $p-1$, mis on paarisarv, ning kui $n=4$ siis $\varphi(4)=2$, mis on samuti paarisarv ehk $\frac{\varphi(n)}2$ on täisarv ja $b^{\frac{\varphi(n)(\varphi(n)+1)}{2}}=b^{\varphi^2(n)+\frac{\varphi(n)}{2}}\equiv b^{\frac{\varphi(n)}{2}}\pmod n$. Viimane on aga kongruentne arvuga $-1$, sest kui $t$ on arvu $-1$ indeks alusel $b$, siis $b^t\equiv-1$ ning kui mõlemad pooled ruutu võtta, saab $b^{2t}\equiv1$ ehk $\varphi(n)\mid2t$ ehk $\frac{\varphi(n)}{2}\mid t$ ning kuna $t$ on elemendi indeks, peab kehtima $1\leq t\leq\varphi(n)$ ehk $t$ saab olla vaid $\frac{\varphi(n)}{2}$ või $\varphi(n)$ ning $b^{\varphi(n)}=1$ ehk $b^{\frac{\varphi(n)}{2}}\equiv-1\pmod n$. Seega kui mooduli $n$ järgi leidub algjuuri, on vasakpoolne korrutis kongruentne arvuga $-1$ mooduli $n$ järgi.
+
+
+\end{document}

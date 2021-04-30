@@ -1,0 +1,78 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[estonian]{babel}
+\usepackage{t1enc}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{lscape}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{diagbox}
+\usepackage[official]{eurosym}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage[shortlabels]{enumitem}
+\usepackage[a4paper,margin=1in,footskip=0.25in]{geometry}
+\usepackage{pgffor}
+\usepackage{xcolor}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\newcommand{\p}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\B}{\mathbb{P}}
+\newcommand{\w}{\overline}
+\topmargin-3em
+\oddsidemargin0cm
+\textwidth16cm
+%\textheight27cm
+\evensidemargin-2cm
+\begin{document}
+\begin{center}
+\Large\textbf{Kontrolltöö}\\
+\end{center}
+
+%{\Large
+
+\noindent 1. (5 p) Leida kõik täisarvud $a,b,c$, mille korral $(a,b,c)=10$ ja $[a,b,c]=2020$.
+
+\bigskip
+
+\bigskip
+Viin antud arvud standardkujudele: $10=2\cdot5$, $2020=2^2\cdot5\cdot101$. Seega kõigi kolme arvu $a$, $b$ ja $c$ standardkujud on $2^{l}\cdot5\cdot101^{k}$, kus ühel arvul $l=1$, teisel arvul $l=2$ ja kolmandal $l\in\{1,2\}$, samuti ühel arvul $k=0$, teisel $k=1$ ja kolmandal $k\in\{0,1\}$. Seega on võimalikud kõik järgnevad kolmikud ja nende permutatsioonid ning kuna SÜT ja VÜK on määratud märgi tapsusega, sobivad kõigist nendest kolmikutest ka variandid, kus mingi kogus arvudest $a$, $b$ ja $c$ on asendatud nende vastandarvudega.\\
+\begin{tabular}{c|c|c|c|c|c|c}
+\diagbox{l}{k}&(0,0,1)&(0,1,1)&(0,1,0)&(1,0,0)&(1,0,1)&(1,1,0)\\
+\hline
+(1,1,2)&\textcolor{red}{(10,10,2020)}&\textcolor{red}{(10,1010,2020)}&\textcolor{red}{(10,1010,20)}&(1010,10,20)&(1010,10,2020)&\textcolor{red}{(1010,1010,20)}\\
+\hline
+(1,2,2)&\textcolor{red}{(10,20,2020)}&\textcolor{red}{(10,2020,2020)}&(10,2020,20)&\textcolor{red}{(1010,20,20)}&\textcolor{red}{(1010,20,2020)}&(1010,2020,20)\\
+\end{tabular}
+\bigskip
+\bigskip
+
+\noindent 2. (8 p) Leida $F_{n+1}^2\pmod{F_n}$ ja $F_{n}^2\pmod{F_{n+1}}$, kus $F_n$ on $n$. Fibonacci arv.  
+
+\bigskip
+Fibonacci arvud lahti kirjutades saan $F_{n+1}^2=(F_{n-1}+F_n)^2=F_{n-1}^2+2F_{n-1}F_n+F_n^2\equiv F_{n-1}^2\pmod{F_n}$. Teise kuju vaatlemiseks vaatan arvu $F_n^2-F_{n-1}^2=(F_n-F_{n-1})(F_n+F_{n-1})$ ehk see arv jagub arvudega $F_n+F_{n-1}=F_{n+1}$ ja $F_n-F_{n-1}=F_{n-2}$ ning kui $F_{n+1}\mid F_n^2-F_{n-1}^2$, on see samaväärne kongruentsiga $F_n^2\equiv F_{n-1}^2\pmod{F_{n+1}}$ ning samuti teisest jaguvusest saab $F_n^2\equiv F_{n-1}^2\pmod{F_{n-2}}$.\\
+Seega olen leidnud kolm samasust: $F_{n+1}^2\equiv F_{n-1}^2\pmod{F_n}$, $F_n^2\equiv F_{n-1}^2\pmod{F_{n+1}}$ ja $F_n^2\equiv F_{n-1}^2\pmod{F_{n-2}}$.
+
+Esimene leitud samaväärsuse põhjal on esimene leitav arv $n=k$ puhul on sama, mis teine leitav arv $n=k+1$ puhul, kuna $F_{k+1}^2\equiv F_{k-1}^2\pmod{F_k}$, kus kongruentsi vasakpoolne arv on esimene leitav arv ning kui $k$ asemele võtta $k+1$ saab $F_{k+2}^2\equiv F_{k}^2\pmod{F_{k+1}}$. Seega piisab vaid esimese arvu leidmisest.
+
+Väidan, et kui $n$ on paarisarv, kehtib $F_{n+1}^2\equiv1\pmod{F_n}$ ning kui $n$ on paaritu, kehtib $F_{n+1}^2\equiv-1\pmod{F_n}$.\\
+Baas: väikeste $n$ väärtuste puhul saab läbi vaadates, et $F_{n+1}^2\pmod{F_n}$ on $n=1$ puhul 0 ehk 1, $n=2$ puhul samuti 0 ehk sama mis -1, $n=3$ puhul tuleb 1\\
+Samm paarisarvude jaoks: eeldan, et $n$ on paarisarv ja $F_{n+1}^2\equiv1\pmod{F_n}$. Siis asendades $k=n+2$, saab $F_{k-1}^2\equiv1\pmod{F_{k-2}}$ ning kolmanda leitud samasuse põhjal $1\equiv F_{k-1}^2\equiv F_k^2\pmod{F_{k-2}}$. Seejärel teen asenduse $t=k+1$ ning saan $1\equiv F_{n+2}^2\pmod{F_{n}}$
+% ja teistpidi $F_n^2=(F_{n+1}-F_{n-1})^2=F_{n+1}^2-2F_{n+1}F_{n-1}+F_{n-1}^2\equiv F_{n-1}^2\pmod{F_{n+1}}$ 
+\bigskip
+
+\noindent 3. (7 p) Sõnastada ja tõestada teoreem $\tau$- ja $\sigma$-funktsioonide arvutusvalemitest.
+
+\bigskip
+Teoreem: kui $n>1$ ja $n=p_1^{k_1}...p_s^{k_s}$, siis $\tau(n)=(k_1+1)...(k_s+1)$ ja $\sigma(n)=\frac{p_1^{k_1+1}-1}{p_1-1}\cdot...\cdot\frac{p_s^{k_s+1}-1}{p_s-1}$.
+
+1. Lause 1.21 tõttu on jagajad arvud $p_1^{l_1}...p_s^{l_s}$, kus $0\leq l_i\leq k_i$ iga $i=1,..,s$ kohta. Aritmeetika põhiteoreemi tõttu on iga $l$ väärtuste kombinatsiooni kohta täpselt üks arv ja iga $l_i$ jaoks on $k_i+1$ erinevat väärtust ehk kokku on erinevaid võimalusi jagajate leidmiseks $(k_1+1)...(k_s+1)$.
+
+2. Vaatleme korrutist $(1+p_1+p_1^2+..+p_1^{k_1})(1+p_2+...+p_2^{k_2})...(1+p_s+...+p_s^{k_s})$ vaatlen summat mis tekib, kui sulud avada. On näha, et sulud lahti tehes tekkiva summa igas liikmes on $s$ tegurit, iga tegur vastavalt ühest sulust võetud. Seega on tekkivas summas igas liikmes $s$ tegurit, iga teguri valimiseks on $k_i+1$ võimalust, ehk tekkivate summa liikmete kogus on ülimalt $(k_1+1)(k_2+1)...(k_s+1)=\tau(n)$. Teiselt poolt on iga $n$ tegur esindatud selles summas, kuna kui võtta suvaline $n$ tegur $p_1^{l_1}...p_s^{l_s}$, saab esimesest sulust võtta $l_1$nda liikme, teisest $l_2$nda liikme jne ning saada vastav tegur kätte. Seega on saadud summas kõik $n$ tegurid ühe kordselt esindatud ehk summa on $\sigma(n)$. Kasutades geomeetrilise jada summa valemit saab ka lõpliku tulemuse $\sigma(n)=\frac{p_1^{k_1+1}-1}{p_1-1}\cdot...\cdot\frac{p_s^{k_s+1}-1}{p_s-1}$.\\
+
+%}
+\end{document}
