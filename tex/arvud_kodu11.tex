@@ -99,6 +99,8 @@ Seega on kokkuvõttes kaks sobivat $p$ väärtust: 61 ja 41.
 
 \bigskip
 Kui mooduli $p$ järgi leidub algjuur $a$ järguga $j$, siis $a^j=\w{1}$, seega leidub sellel üheselt määratud pöördelement $a^{j-1}$ (märkus: iga algjuure aste on erinev element, seega tavaliselt meil siin probleeme ei teki, erandiks on juht $j-1=j$, aga siis tuleb välja, et $p=3$ ning $k$ on sellisel juhul liiga väike), mis eelmise nädala tulemuste põhjal on samuti algjuur. Seega saab kõikide algjuurte korrutises igale algjuurele läbi seada vastavusse pöördelemendi, saades korrutiseks $\w{1}$. Sellest mistahes $k-1$ erineva algjuure korrutise saamiseks peame identifitseerima selle algjuure, mida me korrutisse ei taha ning kõikide algjuurte korrutise ($\w{1}$) korrutama selle algjuure pöördelemendiga, mis on ka algjuur, saades kokku algjuure.
+\bigskip
+\pagebreak
 
 \noindent 8. Olgu $n$ naturaalarv. Tõestada, et $$\prod\limits_{\substack{1\leq a \leq n\\(a,n)=1}}a\equiv\begin{cases}
 \phantom{-}0\pmod{1};\\
@@ -109,5 +111,7 @@ Kui mooduli $p$ järgi leidub algjuur $a$ järguga $j$, siis $a^j=\w{1}$, seega 
 \bigskip
 Juhul kui mooduli $n$ järgi leidub algjuuri, saab võtta mingi algjuure $b$ ning kuna $b^1, b^2,.., b^{\varphi(n)}$ on kõik $\Z_n$ pööratavad elemendid, saab võrrandi vasaku poole ümber kirjutada kujule: $$\prod\limits_{\substack{1\leq a \leq n\\(a,n)=1}}a=\prod\limits_{1\leq i \leq \varphi(n)}b^i=b^{\frac{\varphi(n)(\varphi(n)+1)}{2}}$$ Kui $n$ järgi leidub algjuuri, peab $n$ olema kujul 2, 4, $p^k$ või $2p^k$, kus $p>2$. Kui $n=2$, saab läbi proovimisel, et vasakpoolse korrutise tulemus on 1 ning see on mooduli 2 järgi kongruentne arvuga $-1$. Kui $n$ on $p^k$ või $2p^k$, siis $\varphi(n)$ tegurite hulgas on $p-1$, mis on paarisarv, ning kui $n=4$ siis $\varphi(4)=2$, mis on samuti paarisarv ehk $\frac{\varphi(n)}2$ on täisarv ja $b^{\frac{\varphi(n)(\varphi(n)+1)}{2}}=b^{\varphi^2(n)+\frac{\varphi(n)}{2}}\equiv b^{\frac{\varphi(n)}{2}}\pmod n$. Viimane on aga kongruentne arvuga $-1$, sest kui $t$ on arvu $-1$ indeks alusel $b$, siis $b^t\equiv-1$ ning kui mõlemad pooled ruutu võtta, saab $b^{2t}\equiv1$ ehk $\varphi(n)\mid2t$ ehk $\frac{\varphi(n)}{2}\mid t$ ning kuna $t$ on elemendi indeks, peab kehtima $1\leq t\leq\varphi(n)$ ehk $t$ saab olla vaid $\frac{\varphi(n)}{2}$ või $\varphi(n)$ ning $b^{\varphi(n)}=1$ ehk $b^{\frac{\varphi(n)}{2}}\equiv-1\pmod n$. Seega kui mooduli $n$ järgi leidub algjuuri, on vasakpoolne korrutis kongruentne arvuga $-1$ mooduli $n$ järgi.
 
-
+Vaatleme juhtu, kui $n$ järgi leidub algjuuri. Vasakpoolses korrutises on kõik arvud $\Z_n$ pööratavad elemendid, ehk neil leiduvad pöördelemendid, millega saab neid paari panna ja kõigi paaride korrutised on 1. Probleeme tekitavad vaid elemendid, mis on ise enda pöördelemendid, ehk võrrandi $x^2\equiv1\pmod n$ lahendid. Uurin neid lahendeid. Teoreemi 6.10 järgi kui tegurdada $n=p_1^{k_1}p_2^{k_2}..p_s^{k_s}$, siis võrrand $x^2\equiv1\pmod n$ on samaväärne võrrandite süsteemiga
+$$\begin{cases}x^2\equiv1\pmod{p_1^{k_1}}\\x^2\equiv1\pmod{p_2^{k_2}}\\\dots\\x^2\equiv1\pmod{p_s^{k_s}}\\\end{cases}$$
+Uurin võrrandit $x^2\equiv1\pmod {p^k}$. Juhul kui $p=2$, on kahekasanda praktikumi tulemuste põhjal lahenditeks $k=1$ puhul vaid 1, $k=2$ puhul 1 ja -1 ning $k>2$ puhul $1, 2^{k-1}-1, 2^{k-1}+1,-1$. Kui $p>2$, leidub mooduli $p^k$ järgi algjuuri. Otsin arve
 \end{document}
