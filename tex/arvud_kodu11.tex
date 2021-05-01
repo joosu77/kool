@@ -41,6 +41,24 @@
 \noindent 1. Leida kõik algjuured mooduli $58$ järgi.
 
 \bigskip
+Teeme indeksite tabeli eelmisest korrast teada oleva algjuure 19 järgi.
+
+\begin{equation*}
+\begin{array}{c| c c c c c }
+&1&3&5&7&9\\
+\hline
+0&28&13&18&20&26\\
+1&9&2&3&21&1\\
+2&5&24&8&11&\\
+3&25&22&10&19&15\\
+4&7&17&16&23&12\\
+5&6&4&27&14&
+\end {array}
+\end{equation*}
+
+Nenedest on algjuured need, mille indeksid on rühma järguga 28 ühistegurita ehk 3, 11, 15, 19, 21, 27, 21, 37, 39, 43, 47, 55.
+
+\bigskip
 
 \noindent 2. Teha kindlaks, kas mooduli $n$ järgi leidub algjuuri ja kui leidub, siis leida nende arv ja üks algjuur, kui $a)\, n=166,$ $b)\, n=167$, $c)\, n=168$.
 
@@ -53,13 +71,20 @@ Mooduli 167 järgi kuna $167-1=83\cdot2$, on $a$ algjuur parajasti siis, kui \mb
 \noindent 3. Teha kindlaks, kas mooduli $n$ järgi leidub algjuuri ja kui leidub, siis leida nende arv ja üks algjuur, kui $a)\, n=337,$ $b)\, n=338$, $c)\, n=339$.
 
 \bigskip
+Teoreemi 7.21 põhjal on teada, et mooduli $n$ järgi leidub algjuuri, kui $n$ esitub kujul 2, 4, $p^k$ või $2p^k$, kus $p>2$ on algarv. Tegurdades saab $338=2\cdot13^2$ ja $339=3\cdot113$ ning 337 on ise algarv. Seega mooduli 339 järgi algjuuri ei leidu, 338 ja 337 järgi leidub. Teoreemi 7.27 põhjal kui mooduli $n$ järgi leidub algjuuri, on neid $\varphi(\varphi(n))$ tükki ehk mooduli 338 järgi on $\varphi(\varphi(338))=48$ algjuurt ning mooduli 337 järgi on $\varphi(\varphi(337))=96$ algjuurt.\\
+Mooduli 338 järgi algjuure leidmiseks leian kõigepealt algjuure mooduli 13 järgi. Kuna $13-1=2^2\cdot3$, on järelduse 7.24 põhjal arv $a$ algjuur parajasti siis, kui $a^{6}\not\equiv1\pmod{13}$ ja $a^4\not\equiv1\pmod{13}$. Proovin $a=2$: $2^{6}\equiv-1\pmod{13}$ ja $2^{4}\equiv3\pmod{13}$ ehk 2 sobib algjuureks. Järelduse 7.15 järgi kui 2 on algjuur mooduli 13 järgi siis mooduli $13^2=169$ järgi on algjuur 2 või 2+13. $2^{13-1}\equiv 40\pmod{169}$, seega sobib algjuureks 2. Teoreemi 7.18 järgi kui 2 on algjuur mooduli 169 järgi siis mooduli $2\cdot169=338$ järgi on algjuur paaritu arv arvudest 2 ja $2+169=171$ ehk 171 on algjuur mooduli 338 järgi.\\
+Mooduli 337 järgi kuna $337-1=2^4\cdot3\cdot7$, on $a$ algjuur parajasti siis, kui \mbox{$a^{168}\not\equiv1\pmod{337}$}, \mbox{$a^{112}\not\equiv1\pmod{337}$} ja \mbox{$a^{48}\not\equiv1\pmod{337}$}. Proovin $a=10$: $10^{168}\equiv-1\pmod{337}$, $10^{112}\equiv128\pmod{337}$ ja $10^{48}\equiv175\pmod{337}$ ehk 10 on algjuur mooduli 337 järgi.
+
+
+\bigskip
+\pagebreak
 
 \noindent 4. Lahendada kongruents $1-x+x^2-x^3+x^4+\ldots-x^{2023} \equiv 0 \pmod{58}$. 
 
 \bigskip
 Korrutan võrrandi mõlemad pooled läbi elemendiga $x+1$. Sellega ei saa samaväärset võrrandit, kuna $x+1$ võib olla nullitegur, kuid kõik esialgse võrrandi lahendid on ka uue võrrandi lahendite hulgas, nii et lõpus kontrollin lahendite sobivust. Paremale poolele jääb ikka 0, aga vasakule poolele tekib summa $(1+x)-(x+x^2)+(x^2+x^3)-...-(x^{2023}+x^{2024})$. Siin on näha, et sulud lahti tehes on igas sulus teine liidetav järgmise sulu esimese liidetava vastandarv ehk kõik peale esimese ja viimase liidetava taanduvad maha ning alles jääb võrrand $1-x^{2024}\equiv0\pmod{58}$ ehk $x^{2024}\equiv1\pmod{58}$. Kuna $\varphi(58)=28$, kehtib FVT järgi $x^{28}\equiv1\pmod{58}$ ehk $x^{2024}=x^{28\cdot72+8}\equiv x^8\pmod{58}$.
 
-Teoreemi 7.6 põhjal kehtib $x^8\equiv1\pmod{58}$ parajasti siis, kui $m\mid 8$, kus $m$ on elemendi $x$ järk. Seega on lahenditeks elemendid, mille järk on 1, 2, 4 või 8. Lagrange'i teoreemi tõttu aga peab elemendi järk ka rühma järku jagama ehk kuna $8\nmid28$, ei leidu elemente, mille järk oleks 8. Ainus esimest järku element on 1. Esimesest ülesandest saan, et üks algjuur mooduli 58 järgi on 2. Teoreemi 7.36 põhjal on $m$ järku elemendid parajasti need elemendid $b$, mille puhul kehtib $(\text{ind}_2b,\varphi(58))=\frac{\varphi(58)}{m}$ ehk $(\text{ind}_2b,28)=\frac{28}{m}$.
+Teoreemi 7.6 põhjal kehtib $x^8\equiv1\pmod{58}$ parajasti siis, kui $m\mid 8$, kus $m$ on elemendi $x$ järk. Seega on lahenditeks elemendid, mille järk on 1, 2, 4 või 8. Lagrange'i teoreemi tõttu aga peab elemendi järk ka rühma järku jagama ehk kuna $8\nmid28$, ei leidu elemente, mille järk oleks 8. Ainus esimest järku element on 1. Esimesest ülesandest saan, et üks algjuur mooduli 58 järgi on 19. Teoreemi 7.36 põhjal on $m$ järku elemendid parajasti need elemendid $b$, mille puhul kehtib $(\text{ind}_{19}b,\varphi(58))=\frac{\varphi(58)}{m}$ ehk $(\text{ind}_{19}b,28)=\frac{28}{m}$.
 
 Seega teist järku elemendid on elemendid, mille indeksi suurim ühistegur arvuga 28 on 14. 14 kordseid indekseid on kaks tükki, 14 ja 28 ning ainult 14 annab suurimaks ühisteguriks arvuga 28 arvu 14 ehk 14 on lahendi indeks. Esimese ülesande tabeli põhjal on selleks lahendiks $-1$.
 
@@ -81,6 +106,7 @@ Paneme tähele, et rühamas $U(\Z_{F_n})$ $\w{2}^x= \w{2^x}$, kuni $x<2^n$, seej
 
 
 \bigskip
+\pagebreak
 
 \noindent 6. Leida kõik algarvud $p$, mille järgi on olemas täpselt 16 erinevat algjuurt. 
 
@@ -109,9 +135,16 @@ Kui mooduli $p$ järgi leidub algjuur $a$ järguga $j$, siis $a^j=\w{1}$, seega 
 \end{cases}$$
 
 \bigskip
-Juhul kui mooduli $n$ järgi leidub algjuuri, saab võtta mingi algjuure $b$ ning kuna $b^1, b^2,.., b^{\varphi(n)}$ on kõik $\Z_n$ pööratavad elemendid, saab võrrandi vasaku poole ümber kirjutada kujule: $$\prod\limits_{\substack{1\leq a \leq n\\(a,n)=1}}a=\prod\limits_{1\leq i \leq \varphi(n)}b^i=b^{\frac{\varphi(n)(\varphi(n)+1)}{2}}$$ Kui $n$ järgi leidub algjuuri, peab $n$ olema kujul 2, 4, $p^k$ või $2p^k$, kus $p>2$. Kui $n=2$, saab läbi proovimisel, et vasakpoolse korrutise tulemus on 1 ning see on mooduli 2 järgi kongruentne arvuga $-1$. Kui $n$ on $p^k$ või $2p^k$, siis $\varphi(n)$ tegurite hulgas on $p-1$, mis on paarisarv, ning kui $n=4$ siis $\varphi(4)=2$, mis on samuti paarisarv ehk $\frac{\varphi(n)}2$ on täisarv ja $b^{\frac{\varphi(n)(\varphi(n)+1)}{2}}=b^{\varphi^2(n)+\frac{\varphi(n)}{2}}\equiv b^{\frac{\varphi(n)}{2}}\pmod n$. Viimane on aga kongruentne arvuga $-1$, sest kui $t$ on arvu $-1$ indeks alusel $b$, siis $b^t\equiv-1$ ning kui mõlemad pooled ruutu võtta, saab $b^{2t}\equiv1$ ehk $\varphi(n)\mid2t$ ehk $\frac{\varphi(n)}{2}\mid t$ ning kuna $t$ on elemendi indeks, peab kehtima $1\leq t\leq\varphi(n)$ ehk $t$ saab olla vaid $\frac{\varphi(n)}{2}$ või $\varphi(n)$ ning $b^{\varphi(n)}=1$ ehk $b^{\frac{\varphi(n)}{2}}\equiv-1\pmod n$. Seega kui mooduli $n$ järgi leidub algjuuri, on vasakpoolne korrutis kongruentne arvuga $-1$ mooduli $n$ järgi.
+%Juhul kui mooduli $n$ järgi leidub algjuuri, saab võtta mingi algjuure $b$ ning kuna $b^1, b^2,.., b^{\varphi(n)}$ on kõik $\Z_n$ pööratavad elemendid, saab võrrandi vasaku poole ümber kirjutada kujule: $$\prod\limits_{\substack{1\leq a \leq n\\(a,n)=1}}a=\prod\limits_{1\leq i \leq \varphi(n)}b^i=b^{\frac{\varphi(n)(\varphi(n)+1)}{2}}$$ Kui $n$ järgi leidub algjuuri, peab $n$ olema kujul 2, 4, $p^k$ või $2p^k$, kus $p>2$. Kui $n=2$, saab läbi proovimisel, et vasakpoolse korrutise tulemus on 1 ning see on mooduli 2 järgi kongruentne arvuga $-1$. Kui $n$ on $p^k$ või $2p^k$, siis $\varphi(n)$ tegurite hulgas on $p-1$, mis on paarisarv, ning kui $n=4$ siis $\varphi(4)=2$, mis on samuti paarisarv ehk $\frac{\varphi(n)}2$ on täisarv ja $b^{\frac{\varphi(n)(\varphi(n)+1)}{2}}=b^{\varphi^2(n)+\frac{\varphi(n)}{2}}\equiv b^{\frac{\varphi(n)}{2}}\pmod n$. Viimane on aga kongruentne arvuga $-1$, sest kui $t$ on arvu $-1$ indeks alusel $b$, siis $b^t\equiv-1$ ning kui mõlemad pooled ruutu võtta, saab $b^{2t}\equiv1$ ehk $\varphi(n)\mid2t$ ehk $\frac{\varphi(n)}{2}\mid t$ ning kuna $t$ on elemendi indeks, peab kehtima $1\leq t\leq\varphi(n)$ ehk $t$ saab olla vaid $\frac{\varphi(n)}{2}$ või $\varphi(n)$ ning $b^{\varphi(n)}=1$ ehk $b^{\frac{\varphi(n)}{2}}\equiv-1\pmod n$. Seega kui mooduli $n$ järgi leidub algjuuri, on vasakpoolne korrutis kongruentne arvuga $-1$ mooduli $n$ järgi.
 
-Vaatleme juhtu, kui $n$ järgi leidub algjuuri. Vasakpoolses korrutises on kõik arvud $\Z_n$ pööratavad elemendid, ehk neil leiduvad pöördelemendid, millega saab neid paari panna ja kõigi paaride korrutised on 1. Probleeme tekitavad vaid elemendid, mis on ise enda pöördelemendid, ehk võrrandi $x^2\equiv1\pmod n$ lahendid. Uurin neid lahendeid. Teoreemi 6.10 järgi kui tegurdada $n=p_1^{k_1}p_2^{k_2}..p_s^{k_s}$, siis võrrand $x^2\equiv1\pmod n$ on samaväärne võrrandite süsteemiga
+%Vaatleme juhtu, kui $n$ järgi leidub algjuuri.
+Vasakpoolses korrutises on kõik arvud $\Z_n$ pööratavad elemendid, ehk neil leiduvad pöördelemendid, millega saab neid paari panna ja kõigi paaride korrutised on 1. Probleeme tekitavad vaid elemendid, mis on ise enda pöördelemendid, ehk võrrandi $x^2\equiv1\pmod n$ lahendid. Uurin neid lahendeid. Teoreemi 6.10 järgi kui $n$ esitub standardkujul $n=p_1^{k_1}p_2^{k_2}..p_s^{k_s}$, siis võrrand $x^2\equiv1\pmod n$ on samaväärne võrrandite süsteemiga
 $$\begin{cases}x^2\equiv1\pmod{p_1^{k_1}}\\x^2\equiv1\pmod{p_2^{k_2}}\\\dots\\x^2\equiv1\pmod{p_s^{k_s}}\\\end{cases}$$
-Uurin võrrandit $x^2\equiv1\pmod {p^k}$. Juhul kui $p=2$, on kahekasanda praktikumi tulemuste põhjal lahenditeks $k=1$ puhul vaid 1, $k=2$ puhul 1 ja -1 ning $k>2$ puhul $1, 2^{k-1}-1, 2^{k-1}+1,-1$. Kui $p>2$, leidub mooduli $p^k$ järgi algjuuri. Otsin arve
+Uurin võrrandit $x^2\equiv1\pmod {p^k}$. Juhul kui $p=2$, on kahekasanda praktikumi tulemuste põhjal lahenditeks $k=1$ puhul vaid 1, $k=2$ puhul 1 ja -1 ning $k>2$ puhul $1, 2^{k-1}-1, 2^{k-1}+1,-1$. Kui $p>2$, leidub mooduli $p^k$ järgi algjuuri. Teoreemi 7.6 põhjal on võrrandi lahenditeks elemendid, mille järk jagab arvu 2 ehk järk saab olla kas 1 või 2. Ainus element, mille järk on 1 on 1 ning ainus element, mille järk on 2 on $-1${\color{red}TODO: Tõestada}.
+
+Seega kui 2 ei ole algtegurite hulgas, saab HJT-st $2^s$ lahendit, mida saab iga astendatud algteguri $p_i^{k_i}$ järgi pooleks teha kaheks hulgaks: $2^{s-1}$ lahendit, mis on mooduli $p_i^{k_i}$ järgi kongruentsed arvuga $-1$ ning $2^{s-1}$ lahendit, mis on kongruentsed arvuga 1. Kuni $s>1$, on $2^{s-1}$ paarisarv ehk kui esimeses loetletud hulgas kõik lahendid omavahel kokku korrutada, on korrutise tulemus kongruentne arvuga $(-1)^{2^{s-1}}=1$ mooduli $p_i^{k_i}$ järgi ning seega ka kõigi lahendite kokku korrutamine on kongruentne arvuga 1 kõigi moodulite $p_i^{k_i}$ järgi ehk ka mooduli $n$ järgi. Kui $s=1$, koosneb süsteem vaid ühest võrrandist, ning selle kaks lahendit on 1 ja $-1$, mille kokku korrutamine annab mooduli $n$ järgi tulemuse $-1$.
+
+Kui eelmises lõigus käsitletud tulemuste hulka lisada sellised $n$ väärtused, kus $p_1=2$ ja $k_1=1$, siis lisatud võrrandil on vaid 1 lahend ehk süsteemi lahendite kogus ei muutu ning see lahend on kongruentne nii 1 kui ka $-1$ga mooduli 2 järgi ehk see ei muuda lahendite kongruentsust mooduli $n$ järgi. Kui 2 aste $k_1=2$, siis on 2 lahendit, 1 ja $-1$, ehk sarnaselt teiste algteguritega kui 2 on ainus algtegur, on korrutise tulemus on kongruentne $-1$ga mooduli 2 järgi ning kui on teisi algtegureid veel, on kokku paarisarv selliseid lahendeid, mis on kongruentsed $-1$ga ehk korrutis on kongruentne 1ga mooduli 2 järgi. Kui 2 aste on suurem kui 2, on lahendeid 4: $1, 2^{k-1}-1, 2^{k-1}+1,-1$. Need kokku korrutades saab $-((2^{k-1})^2-1)=1-2^k\cdot2^{k-2}\equiv1\pmod{2^k}$ ehk olenemata teiste algtegurite kogusest on lahendite korrutis mooduli $2^k$ järgi 1. Samuti on siin paarisarv lahendeid, ehk kui leidub teisi algtegureid, on eelmise lõigu põhjal korrutis ka nende moodulite järgi 1.
+
+Seega olen saanud, et kui $n$ esitub kujul $p^k$, $2p^k$, 2 või 4, on otsitav korrutis kongruentne arvuga $-1$ mooduli $n$ järgi ning igal muul juhul kongruentne arvuga 1. Need on ka parajasti need $n$ kujud, milliste moodulite järgi leidub algjuuri, ehk kui mooduli $n$ järgi leidub algjuuri, on korrutise tulemus kongruentne arvuga $-1$ ning kui ei leidu algjuuri, kongruentne arvuga 1, mida oligi tarvis näidata.
 \end{document}
