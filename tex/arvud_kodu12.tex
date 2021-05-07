@@ -116,7 +116,11 @@ Vaatlen teist võrrandit. Võtan jällegi mõlemast poolest indeksi alusel 3: $\
 \bigskip
 Juhul, kui $a=0$, on alati 1 lahend, milleks on $x=0$, kuna $\Z_p$ kõik elemendid peale $\w0$ on pööratavad ning pööratavate elementide korrutamisel saab tulemuseks alati pööratava elemendi. Muudel juhtudel pole $x=0$ kunagi lahend, kuna see annab iga mooduli järgi tulemuseks 0, seega saame edasi vaadata vaid pööratavaid $x$ ja $a$ väärtuseid.
 
-Kui $x_0$ on mingi $x^{12}\equiv a\pmod p$ lahend, on $x_0^{-1}$ võrrandi $x^{12}\equiv a^{-1}\pmod p$ lahend. Kui võrrandil $x^{12}\equiv a\pmod p$ leidub veel lahendeid, saab iga sellise lahendi $x'$ kohta ühe võrrandi $x^{12}\equiv1\pmod p$ lahendi kuna kui võrranditesse lahendid $x'$ ja $x_0^{-1}$ sisse panna ning võrrandite pooled kokku korrutada saab $(x')^{12}\cdot{(x_0^{-1})^{12}}\equiv a\cdot a^{-1}\pmod p$ ehk $(x'\cdot x_0^{-1})^{12}\equiv1\pmod p$. Seega on iga lahendi $x'$ kohta $a=1$ võrrandi lahend $x'\cdot x_0^{-1}$ ning need on kõik erinevad kuna kui leidub kaks $x'$ väärtust $x_1'$ ja $x_2'$, mis annavad sama $a=1$ lahendi, siis kehtib $x_1'\cdot x_0^{-1}=x_2'\cdot x_0^{-1}$ ning kui mõlemad pooled arvuga $x_0$ läbi korrutada, saab $x_1'=x_2'$ ehk need on samad arvud. Seega on võrrandi $x^{12}\equiv1\pmod p$ lahendite hulk vähemalt samasuur nagu ühegi võrrandi $x^{12}\equiv a\pmod p$ lahendite hulk.
+Kui $x_0$ on mingi $x^{12}\equiv a\pmod p$ lahend, on $x_0^{-1}$ võrrandi $x^{12}\equiv a^{-1}\pmod p$ lahend. Kui võrrandil $x^{12}\equiv a\pmod p$ leidub veel lahendeid, saab iga sellise lahendi $x'$ kohta ühe võrrandi $x^{12}\equiv1\pmod p$ lahendi kuna kui vastavatesse võrranditesse lahendid $x'$ ja $x_0^{-1}$ sisse panna ning võrrandite pooled kokku korrutada saab $(x')^{12}\cdot{(x_0^{-1})^{12}}\equiv a\cdot a^{-1}\pmod p$ ehk $(x'\cdot x_0^{-1})^{12}\equiv1\pmod p$. Seega on iga lahendi $x'$ kohta $a=1$ võrrandi lahend $x'\cdot x_0^{-1}$ ($x'$ saab ka olla sama mis $x_0$, mis puhul tuleb lahend $x_0\cdot x_0^{-1}=1$). Sellised saadud lahendid on kõik erinevad kuna kui leidub kaks $x'$ väärtust $x_1'$ ja $x_2'$, mis annavad sama $a=1$ võrrandi lahendi, siis kehtib $x_1'\cdot x_0^{-1}=x_2'\cdot x_0^{-1}$ ning kui mõlemad pooled arvuga $x_0$ läbi korrutada, saab $x_1'=x_2'$ ehk need on samad arvud. Seega on võrrandi $x^{12}\equiv1\pmod p$ lahendite hulk vähemalt samasuur nagu ühegi võrrandi $x^{12}\equiv a\pmod p$ lahendite hulk.
+
+Väide töötab ka vastupidi, kui võrrandil $x^{12}\equiv a\pmod p$ leidub mingi lahend $x_0$, saab iga võrrandi $x^{12}\equiv1\pmod p$ lahendi $x'$ kohta ühe $x^{12}\equiv a\pmod p$ lahendi kujul $x'\cdot x_0$ kuna lahendid sisse pannes ja võrrandite pooled kokku korrutades saab $(x')^{12}\cdot (x_0)^{12}\equiv 1\cdot a\pmod p$ ehk $(x'\cdot x_0)^{12}\equiv a\pmod p$. Seega kui võrrandil $x^{12}\equiv a\pmod p$ leidub lahendeid, on neid täpselt samapalju nagu võrrandil $x^{12}\equiv 1\pmod p$.
+
+On ka võimalus et võrrandil $x^{12}\equiv a\pmod p$ ei ole lahendeid, näiteks võrrandil $x^{12}\equiv2\pmod 3$ saab väärtuseid läbi proovides et lahendid puuduvad.
 
 Uurin võrrandi $x^{12}\equiv1\pmod p$ lahendite kogust. Teoreemi 7.6 põhjal on selle võrrandi lahendid arvud, mille järk on arvu 12 tegur ehk 1, 2, 3, 4, 6 või 12. Kui mingi tegur $d$ ei jaga arvu $p-1$, ei leidu Lagrange'i teoreemi tõttu ühtegi seda järku elementi. Kui aga leidub, seda järku elemendid teoreemis 7.12 tõestatud võrduse 25 põhjal $\{c^k\mid 1\leq k\leq d, (k,d)=1\}$, kus $c$ on mingi algjuur, ning selliste elementide kogus on $\varphi(d)$.
 
@@ -130,9 +134,9 @@ Oleksid võimalikud ka sellised moodulid, mille korral $p-1$ jagub arvuga 3 kuid
 
 On ka sellised moodulid, mille korral $p-1$ jagub arvuga 2 kuid mitte arvuga 4 ega 3 ehk näiteks $p=11$, mis puhul on lahendite kogus 2.
 
-Viimaks oleksid ka moodulid, mille korral $p-1$ ei jagu ei 2 ega 3ga, kuid selleks jällega $p$ olema paarisarv.
+Viimaks oleksid ka moodulid, mille korral $p-1$ ei jagu ei 2 ega 3ga, kuid selleks jällegi $p$ olema paarisarv.
 
-
+Kokkuvõttes on võimalikud lahendite kogused 0, 1, 2, 4, 6 ja 12.
 \bigskip
 
 \noindent 9${^*}$. Olgu $p>2$ algarv ja $A$ rühma $\Z_p^*$ alamrühm, kusjuures $6\mid |A|$. Tõestada, et leiduvad $a,b,c\in A$ nii, et $a+b=c$. 
