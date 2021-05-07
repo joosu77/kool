@@ -1,0 +1,143 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[estonian]{babel}
+\usepackage{t1enc}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{lscape}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{diagbox}
+\usepackage[official]{eurosym}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage{xcolor}
+\usepackage[shortlabels]{enumitem}
+\usepackage[a4paper,margin=1in,footskip=0.25in]{geometry}
+\usepackage{pgffor}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\newcommand{\p}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\B}{\mathbb{P}}
+\newcommand{\w}{\overline}
+\newcommand{\ind}{\mathrm{ind}}
+\newcommand{\db}[2]{\slashbox{#1}{#2}}
+\topmargin-3em
+\oddsidemargin0cm
+\textwidth16cm
+%\textheight27cm
+\evensidemargin-2cm
+\begin{document}
+\begin{center}
+\Large\textbf{Kodutöö nr. 12}\\
+\small{Joosep Näks ja Uku Hannes Arismaa}
+\end{center}
+
+\bigskip
+
+\bigskip
+
+\noindent 1. Leida arvu $9$ indeks \emph{kõigil} võimalikel alustel mooduli 22 järgi. 
+
+\bigskip
+
+\noindent 2. Koostada indeksite tabel alusel 3 mooduli 25 järgi. 
+
+\bigskip
+Kontrollin esiteks, et 3 on algjuur. Kuna $\varphi(25)=20=2^2\cdot5$, on vaja kontrollida, et $3^4$ ja $3^10$ ei oleks kongruentsed ühega mooduli 25 järgi ning esimene on kongruentne arvuga 6 ja teine arvuga $-1$ ehk tõepoolest on tegu algjuurega. Tabeli moodustamiseks leian väärtused $3^1$ kuni $3^{20}$:\\\\
+\begin{tabular}{c|ccccccccccccccccccccc}
+k&1&2&3&4&5&6&7&8&9&10&11&12&13&14&15&16&17&18&19&20\\
+\hline
+$\w{3^k}$&3&9&2&6&18&4&12&11&8&24&22&16&23&19&7&21&13&14&17&1
+\end{tabular}\\\\
+Ning selle põhjal saab indeksite tabeli:\\\\
+\begin{tabular}{|c|cccccccccc|}
+\hline
+&0&1&2&3&4&5&6&7&8&9\\
+\hline
+0&&20&3&1&6&&4&15&9&2\\
+1&&8&7&17&18&&12&19&5&14\\
+2&&16&11&13&10&&&&&\\
+\hline
+\end{tabular}
+\bigskip
+
+\noindent 3. Leida  $\mathrm{ind}_{2}3$ mooduli 25 järgi. Kasutades saadud indeksit, koostada indeksite tabel alusel 2 mooduli 25 järgi.
+
+\bigskip
+
+\noindent 4. Leida kõigi rühma $U(\Z_{37})$ elementide järgud ja kõik algjuured mooduli 37 järgi indeksite tabeli abil. Kontrollida vastust ilma astendamist kasutamata. 
+
+\bigskip
+Leian kõigepealt algjuure mooduli 37 järgi. Kuna $\varphi(37)=36=6^2$, peab vaid kontrollima, kas $a^6$ on kongruentne arvuga 1, et teada saada, kas $a$ on algjuur. Proovin $a=2$, sel juhul $a^6\equiv-10\not\equiv1\pmod{37}$ ehk 2 on algjuur. Et saada indeksid, leian väärtused $2^1$ kuni $2^{18}$ (teine pool astmetest on samade arvude vastandarvud ehk neid pole vaja välja kirjutada):\\
+\begin{tabular}{c|ccccccccccccccccccccc}
+k&1&2&3&4&5&6&7&8&9&10&11&12&13&14&15&16&17&18\\
+\hline
+$\w{2^k}$&2&4&8&16&32&27&17&34&31&25&13&26&15&30&23&9&18&36\\
+\end{tabular}\\\\
+Arvestades, et teoreemi 7.36 põhjal on elemendi $b$ järk $\frac{36}{(\ind_2 b,36)}$ ehk saan moodustada leitud astmete põhjal indeksite ja järkude tabeli:\\\\
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\db{ind}{järk}&0&1&2&3&4&5&6&7&8&9\\
+\hline
+0&&\db{36}{1}&\db{1}{36}&\db{26}{18}&\db{2}{1}&\db{23}{36}&\db{27}{4}&\db{32}{9}&\db{3}{12}&\db{16}{9}\\
+\hline
+1&\db{24}{3}&\db{30}{6}&\db{28}{9}&\db{11}{36}&\db{33}{12}&\db{13}{36}&\db{4}{9}&\db{7}{36}&\db{17}{36}&\db{35}{36}\\
+\hline
+2&\db{25}{36}&\db{22}{18}&\db{31}{36}&\db{15}{12}&\db{29}{36}&\db{10}{18}&\db{12}{3}&\db{6}{6}&\db{34}{18}&\db{21}{12}\\
+\hline
+3&\db{14}{18}&\db{9}{4}&\db{5}{36}&\db{20}{9}&\db{8}{9}&\db{19}{36}&\db{18}{2}&&&\\
+\hline
+\end{tabular}\\\\
+Algjuured on arvud, mille järk on 36 ehk 2, 5, 13, 15, 17, 18, 19, 20, 22, 24, 32 ja 35.
+\bigskip
+
+\noindent 5. Lahendada kongruents $2020\cdot x^{2022}\equiv 2033\pmod{37}$ indeksite tabeli abil.  
+
+\bigskip
+
+\noindent 6. Milline kongruentsidest $12^{x^3}\equiv 3^2\pmod{25}$ ja $13^{x^2}\equiv 2^4\pmod{25}$ on lahen\-duv? Leida selle üldlahend.  
+
+\bigskip
+Vaatlen esimest võrrandit. Teisest ülesandest näen, et 3 on algjuur mooduli 25 järgi. Seega lause 7.30 järgi saan võrrandi mõlemast poolest võtta indeksi aluse 3 järgi ning tulemuseks on samaväärne võrrand mooduli $\varphi(25)=20$ järgi: $\ind_{3}12^{x^3}\equiv\ind_{3}3^2\pmod{20}$. Indeksi omaduste järgi saab astme indeksi ette tuua: $x^3\cdot\ind_{3}12\equiv2\cdot\ind_{3}3\pmod{20}$. Teise ülesande tabelist näen, et arvu 12 indeks on 7 ja arvu 3 indeks on 1 ehk võrrandist jääb alles $7x^3\equiv2\pmod{20}$. Kuna $4\mid 20$, on kõik lahendid ka lahendid mooduli 4 järgi, kuid proovides läbi kõik $x$ väärtused mooduli 4 järgi on näha, et ükski lahend ei sobi, ehk ka algsel võrrandil puuduvad lahendid.
+
+Vaatlen teist võrrandit. Võtan jällegi mõlemast poolest indeksi alusel 3: $\ind_{3}13^{x^2}\equiv\ind_{3}2^4\pmod{20}$ ehk kasutades indeksi omadusi ja teise ülesande tabelit saab $x^2\cdot 17\equiv4\cdot3\pmod{20}$. Korrutan mõlemad pooled läbi arvuga $-7$: $x^2\equiv-4\pmod{20}$. Tegurdades saan $20=2^2\cdot5$ ehk saan võrrandi jagada võrrandisüsteemiks $$\begin{cases}x^2\equiv-4\pmod{4}\\x^2\equiv-4\pmod{5}\end{cases}$$ Läbi proovides saan esimese võrrandi lahenditeks $x\equiv0\pmod4$ ja $x\equiv2\pmod4$ ehk $x\equiv0\pmod2$ ning teise võrrandi lahenditeks $x\equiv1\pmod5$ ja $x\equiv-1\pmod5$. Seega on HJT põhjal esialgse võrrandi lahendid $x\equiv6\pmod{10}$ ja $x\equiv 4\pmod{10}$.
+\bigskip
+
+\noindent 7. Leida, milliste arvude $1\leq a\leq 27$ korral on kongruents $x^{15}\equiv a\pmod{p}$ lahenduv korraga \emph{kõigi} moodulite $p=7,13,27$ järgi.
+
+\bigskip
+
+\noindent 8. Olgu $p>2$ algarv ja $a\in\Z$. Leida kongruentsi $x^{12}=a \pmod{p}$ kõik võimalikud lahendite arvud ja tuua iga juhu kohta näide, mis seda realiseerib. 
+
+\bigskip
+Juhul, kui $a=0$, on alati 1 lahend, milleks on $x=0$, kuna $\Z_p$ kõik elemendid peale $\w0$ on pööratavad ning pööratavate elementide korrutamisel saab tulemuseks alati pööratava elemendi. Muudel juhtudel pole $x=0$ kunagi lahend, kuna see annab iga mooduli järgi tulemuseks 0, seega saame edasi vaadata vaid pööratavaid $x$ ja $a$ väärtuseid.
+
+Kui $x_0$ on mingi $x^{12}\equiv a\pmod p$ lahend, on $x_0^{-1}$ võrrandi $x^{12}\equiv a^{-1}\pmod p$ lahend. Kui võrrandil $x^{12}\equiv a\pmod p$ leidub veel lahendeid, saab iga sellise lahendi $x'$ kohta ühe võrrandi $x^{12}\equiv1\pmod p$ lahendi kuna kui võrranditesse lahendid $x'$ ja $x_0^{-1}$ sisse panna ning võrrandite pooled kokku korrutada saab $(x')^{12}\cdot{(x_0^{-1})^{12}}\equiv a\cdot a^{-1}\pmod p$ ehk $(x'\cdot x_0^{-1})^{12}\equiv1\pmod p$. Seega on iga lahendi $x'$ kohta $a=1$ võrrandi lahend $x'\cdot x_0^{-1}$ ning need on kõik erinevad kuna kui leidub kaks $x'$ väärtust $x_1'$ ja $x_2'$, mis annavad sama $a=1$ lahendi, siis kehtib $x_1'\cdot x_0^{-1}=x_2'\cdot x_0^{-1}$ ning kui mõlemad pooled arvuga $x_0$ läbi korrutada, saab $x_1'=x_2'$ ehk need on samad arvud. Seega on võrrandi $x^{12}\equiv1\pmod p$ lahendite hulk vähemalt samasuur nagu ühegi võrrandi $x^{12}\equiv a\pmod p$ lahendite hulk.
+
+Uurin võrrandi $x^{12}\equiv1\pmod p$ lahendite kogust. Teoreemi 7.6 põhjal on selle võrrandi lahendid arvud, mille järk on arvu 12 tegur ehk 1, 2, 3, 4, 6 või 12. Kui mingi tegur $d$ ei jaga arvu $p-1$, ei leidu Lagrange'i teoreemi tõttu ühtegi seda järku elementi. Kui aga leidub, seda järku elemendid teoreemis 7.12 tõestatud võrduse 25 põhjal $\{c^k\mid 1\leq k\leq d, (k,d)=1\}$, kus $c$ on mingi algjuur, ning selliste elementide kogus on $\varphi(d)$.
+
+Seega suurim võimalik lahendite kogus on võrrandil $x^{12}\equiv1\pmod p$, kus $12\mid p-1$ ehk näiteks $p=13$ ning lahendite kogus sel juhul on teoreemis 7.12 tõestatud võrduse 24 põhjal $\sum_{d|12}\varphi(d)=12$.
+
+Teised võimalikud lahendite kogused sellisel kujul võrrandite puhul on kõigepealt moodulid $p$, mille puhul $p-1$ jagub arvuga 6 kuid mitte 12 ehk näiteks $p=7$, mille korral on lahendite kogus $\sum_{d|6}\varphi(d)=6$.
+
+Veel on sellised moodulid, mille korral $p-1$ jagub arvuga 4 kuid mitte arvuga 12 ehk näiteks $p=5$, mille korral on lahendite kogus 4.
+
+Oleksid võimalikud ka sellised moodulid, mille korral $p-1$ jagub arvuga 3 kuid mitte arvuga 6, kuid sel juhul peaks $p=3k+1$, kus $k$ on paaritu arv, kuid kuna 3 ja $k$ on paaritud, on ka nende korrutis paaritu ehk sellele 1 liites saab paarisarvu ning ainus paaris algarv on 2, mis ei sobi $p$ väärtuseks.
+
+On ka sellised moodulid, mille korral $p-1$ jagub arvuga 2 kuid mitte arvuga 4 ega 3 ehk näiteks $p=11$, mis puhul on lahendite kogus 2.
+
+Viimaks oleksid ka moodulid, mille korral $p-1$ ei jagu ei 2 ega 3ga, kuid selleks jällega $p$ olema paarisarv.
+
+
+\bigskip
+
+\noindent 9${^*}$. Olgu $p>2$ algarv ja $A$ rühma $\Z_p^*$ alamrühm, kusjuures $6\mid |A|$. Tõestada, et leiduvad $a,b,c\in A$ nii, et $a+b=c$. 
+
+\bigskip
+
+\noindent 10${^{*}}$. Olgu $n\in\N$. Tõestada, et leidub lõpmata palju selliseid algarve $p$, et mooduli $p$ järgi vähim positiivne algjuur $a>n$.
+\end{document}
