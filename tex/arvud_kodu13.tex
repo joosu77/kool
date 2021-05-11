@@ -1,0 +1,116 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[estonian]{babel}
+\usepackage{t1enc}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{lscape}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{diagbox}
+\usepackage[official]{eurosym}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage{xcolor}
+\usepackage[shortlabels]{enumitem}
+\usepackage[a4paper,margin=1in,footskip=0.25in]{geometry}
+\usepackage{pgffor}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\newcommand{\p}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\B}{\mathbb{P}}
+\newcommand{\w}{\overline}
+\newcommand{\ind}{\mathrm{ind}}
+\newcommand{\db}[2]{\slashbox{#1}{#2}}
+\newcommand{\leg}[2]{\left(\frac{#1}{#2}\right)}
+\topmargin-3em
+\oddsidemargin0cm
+\textwidth16cm
+%\textheight27cm
+\evensidemargin-2cm
+\begin{document}
+\begin{center}
+\Large\textbf{Kodutöö nr. 13}\\
+\small{Joosep Näks ja Uku Hannes Arismaa}
+\end{center}
+
+
+\bigskip
+
+\noindent 1. Leida otse, pööratavate elementide ruute järjest välja arvutades, kõik ruutj\"a\"agid mooduli $29$ j\"argi.
+
+\bigskip
+
+\noindent 2. Leida kõik ruutj\"a\"agid mooduli $31$ j\"argi Euleri kriteeriumi abil.
+
+\bigskip
+Euleri kriteeriumi põhjal on Legendre'i sümbol $\leg a{31}$ kongruentne arvuga $a^{15}$ mooduli 31 järgi ning arv $a$ on ruutjääk parajasti siis kui $\leg a{31}=1$. Kui aga $a^{15}\equiv-1$, siis kuna $31\equiv3\pmod4$, saab lause 8.8 põhjal et $(-a)^{15}\equiv1$ ehk on vaja leida vaid esimesed pooled $a^{15}$ väärtused ning kui $\leg a{31}=-1$, siis on $-a$ ruutjääk. Seega leian $a^{15}\pmod{31}$ väärtused:\\
+\begin{tabular}{c|ccccccccccccccccccc}
+$a$&1&2&3&4&5&6&7&8&9&10&11&12&13&14&15\\
+\hline
+$\w{a^{15}}$&1&1&-1&1&1&-1&1&1&1&1&-1&-1&-1&1&-1
+\end{tabular}\\
+Ehk ruutjäägid on $1,2,4,5,7,8,9,10,14,16,18,19,20,25,28$.
+\bigskip
+
+\noindent 3. Leida kõik ruutj\"a\"agid mooduli $37$ j\"argi Legendre'i sümboli omaduste abil.
+
+\bigskip
+
+\noindent 4. Millised järgmistest kongruentsidest on lahenduvad ja mitu lahendit neil on (kui üldse on):
+
+\begin{tabular}{p{6cm}p{6cm}}
+a) $x^2\equiv -1 \pmod{103}$;&b) $x^2\equiv 8 \pmod{101}$;\\
+c) $x^2\equiv -8 \pmod{1999}$;&d) $x^2\equiv 8 \pmod{2021}$;\\
+e) $x^2\equiv 2 \pmod{2020}$;&f) $x^2\equiv 25 \pmod{2024}$.\\
+\end{tabular}
+
+\bigskip
+Antud kongruentsidel leidub lahendeid, kui vastavad Legendre'i sümbolite väärtused on 1. Leian sümbolite väärtused:
+
+a) 103 on algarv ja $103\equiv3\pmod4$ ehk lause 8.8 põhjal $\leg {-1}{103}=-1$ ning lahendeid ei leidu.
+
+b) 101 on algarv ja $101\equiv-3\pmod8$ ehk teoreemi 8.11 põhjal $\leg {2}{101}=-1$ ning teoreemi 8.8 põhjal $\leg {8}{101}=\leg {2\cdot2^2}{101}=\leg {2}{101}=-1$ ehk lahendeid ei leidu.
+
+c) 1999 on algarv, $1999\equiv-1\pmod4$ ja $1999\equiv-1\pmod8$ ehk $\leg {-1}{1999}=-1$ ja $\leg {2}{1999}=1$ ning kokku pannes $\leg{-8}{1999}=\leg{-1}{1999}\leg{2\cdot2^2}{1999}=-1$ ehk lahendeid ei leidu.
+
+d) $2021=43\cdot47$ ehk võrrandi saab teha kahest võrrandist koosnevaks süsteemiks, üks mooduli 43 ja teine mooduli 47 järgi. Vaatlen kõigepealt võrrandit mooduli 43 järgi. $43\equiv3\pmod8$ ehk \mbox{$\leg8{43}=\leg2{43}=-1$} ehk sellel võrrandil lahendid puuduvad ning seega ka kogu võrrandi süsteemil ja algselt võrrandil lahendid puuduvad.
+
+e) $2020=2^2\cdot5\cdot101$ ehk võrrandi saab jagada kolmest võrrandist koosnevaks süsteemiks, üks mooduli 4, teine mooduli 5 ja kolmas mooduli 101 järgi. Vaatlen esiteks võrrandit mooduli 5 järgi. $5\equiv-3\pmod8$ ehk $\leg 25=-1$ ehk võrrandil puuduvad lahendid ning ka algsel võrrandil puuduvad lahendid.
+
+f) $2024=2^3\cdot11\cdot23$ ehk võrrandi saab jällegi jagada võrrandisüsteemiks.\\
+Uurin esiteks võrrandit mooduli $2^3=8$ järgi. Saan teisendada võrrandi kujule $x^2\equiv1\pmod8$ ning 8. nädala 8. ülesande tulemuse põhjal on sellel võrrandil 4 lahendit.\\
+Järgmiseks uurin võrrandit mooduli 11 järgi. Teisendan võrrandi kujule $x^2\equiv3\pmod{11}$ ning kuna $11\equiv-1\pmod{12}$, on $\leg 3{11}=1$ ehk lahendeid leidub. Kui mingi lahend $b$ leidub, on ka $-b$ lahend kuna $(-b)^2=b^2$ ning lause 2.9 põhjal on lahendeid ülimalt 2 ehk sellel võrrandil on 2 lahendit.\\
+Viimaks uurin võrrandit mooduli 23 järgi. Teisendan võrrandi kujule $x^2\equiv2\pmod{23}$ ning kuna \mbox{$23\equiv-1\pmod8$}, siis $\leg {2}{23}=1$ ehk lahendeid leidub ning eelmise võrrandiga samadel põhjustel on lahendeid 2 tükki.\\
+Kokkuvõttes on võrrandisüsteemis esimesel võrrandil 4 lahendit ning teisel ja kolmandal 2 ehk HJT põhjal on süsteemil kokku $4\cdot2\cdot2=16$ lahendit.
+
+\bigskip
+
+\noindent 5. Leida kõik algarvud $p$, mille korral $-p$ on ruutjääk mooduli $11$ järgi. 
+
+\bigskip
+
+\noindent 6. Olgu $p>2$ algarv. Tõestada, et iga algjuur mooduli $p$ järgi on mitteruutjääk mooduli $p$ järgi. Kas kehtib ka vastupidine väide? Miks?
+
+\bigskip
+Lemma 8.5 põhjal kui $c$ on algjuur mooduli $p>2$ järgi siis $\leg {c^k}p=(-1)^k$ ehk $\leg cp=-1$ ehk $c$ ei ole ruutjääk.
+
+Järelduse 8.6 põhjal mooduli $p>2$ järgi leidub $\frac {p-1}2$ mitteruutjääki. Algjuuri leidub $\varphi(\varphi(p))=\varphi(p-1)$ tükki. Arvutusvalemi põhjal saab lahti teha $$\varphi(n)=\varphi(p_1^{k_1}\cdot...\cdot p_s^{k_s})=p_1^{k_1-1}\cdot...\cdot p_s^{k_s-1}(p_1-1)...(p_s-1)=n\cdot\frac{p_1-1}{p_1}\cdot...\cdot\frac{p_s-1}{p_s}$$
+Kuna $p$ on paaritu algarv, on $p-1$ tegurite hulgas 2 ehk $\varphi(p-1)=(p-1)\cdot\frac12\cdot\frac{p_2-1}{p_2}\cdot...\cdot\frac{p_s-1}{p_s}$ mis tähendab et kui 2 on $p-1$ ainus tegur, on $\varphi(\varphi(p))=\frac{p-1}2$ ehk kuna kõik algjuured on mitteruutjäägid ja algjuuri ning mitteruutjääke on sama palju, siis ka kõik mitteruutjäägid on algjuured. Kuid üldjuhul on arvul $p-1$ ka muid tegureid peale 2, ning sel juhul on algjuuri vähem kui mitteruutjääke ehk iga mitteruutjääk ei pruugi algjuur olla.
+\bigskip
+
+\noindent 7. Olgu $p>2$ algarv. Tõestada, et 6 on ruutjääk mooduli $p$ järgi parajasti siis, kui $p\equiv \pm1,\pm5\pmod{24}$. 
+
+\bigskip
+
+\noindent 8. Olgu $p>2$ algarv ja $r$ ruutjääk mooduli $p$ järgi. Tõestada, et leidub teine ruutjääk $s$ sama mooduli järgi nii, et $s-r$ on mitteruutjääk. Näidata, et kui võtta $s=a^2$, $0\leq a\leq p-1$ arvu a juhuslikult valides, siis tõenäosus eelmainitud ruutjääki saada läheneb mooduli $p$ suurenedes arvule $\frac12$. 
+
+\bigskip
+Oletame vastuväiteliselt et kui $r$ on ruutjääk mooduli $p$ järgi, siis iga teise ruutjäägi $s$ puhul on ka $s-r$ ruutjääk. See aga tähendab et kuna ka $s-r$ on ruutjääk, saab selle võtta $s$ asemele ehk ka $(s-r)-r=s-2r$ on ruutjääk ning seda korrates saab et kõik arvud kujul $s-nr$ on ruutjäägid. Algarvulise mooduli järgi on kõik arvud peale $p$ kordsete pööratavad, ning $p$ kordsed arvud ei ole ruutjäägid ehk $r$ on ka pööratav arv. Seega saab võtta $n=sr^{-1}$ ja saada et $s-sr^{-1}r=0$ on ruutjääk, kuid 0 ei ole kunagi ruutjääk ehk saime vastuolu.
+
+Tõenäosuse leidmiseks vaatan kõik variandid läbi. Kui arv $a^2-r$ on mitteruutjääk siis $\frac{1-\leg {a^2-r}p}2=1$ ning vastasel juhul $\frac{1-\leg {a^2-r}p}2=0$ ehk kui kokku summeerida $\frac{1-\leg {a^2-r}p}2$ väärtused kõigi $a$ väärtuste puhul, saab mitteruutjääkide koguse.
+\bigskip
+\end{document}
