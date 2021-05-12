@@ -44,6 +44,15 @@
 
 \bigskip
 
+\begin{tabular}{c|cccccccccccccccccc}
+     $x$& 1&2&3&4&5&6&7&8&9&10& 11&12&13&14 \\
+     \hline
+     $x^2$& 1&4&9&16&25&7&20&6&23&13& 5&28&24&22
+\end{tabular}
+
+Ülejäänud tabelis oleks samad ruutjäägid, kuna $(-x)^2=x^2$.
+\bigskip
+
 \noindent 2. Leida kõik ruutj\"a\"agid mooduli $31$ j\"argi Euleri kriteeriumi abil.
 
 \bigskip
@@ -59,6 +68,12 @@ Ehk ruutjäägid on $1,2,4,5,7,8,9,10,14,16,18,19,20,25,28$.
 \noindent 3. Leida kõik ruutj\"a\"agid mooduli $37$ j\"argi Legendre'i sümboli omaduste abil.
 
 \bigskip
+Teame, et 1 on ruutjääk, seega saame seda läbi korrutades täisruutudega teisi ruutjääke. Nii saame veel 4, 9, 16, 25 ning $36=-1$. Kuna -1 on täisruut, saame sellega täisruudu läbi korrutades uue täisruudu. Nii saame $-25=12=3\cdot2^2$, seega on täisruut ka $3\cdot 3^2=27$. Analoogselt $-16=21=7\cdot3$, seega on täisruut ka $7\cdot2^2=28$. Saame veel $-3=34$, $-7=30$, $-4=33$ ning $-27=10$. Kusjuures $33=3\cdot11$, seega on algjuur ka 11 ning $-11=26$. Kokku saimegi vajalikud 18 algjuurt.
+
+
+\bigskip
+
+\pagebreak
 
 \noindent 4. Millised järgmistest kongruentsidest on lahenduvad ja mitu lahendit neil on (kui üldse on):
 
@@ -92,6 +107,11 @@ Kokkuvõttes on võrrandisüsteemis esimesel võrrandil 4 lahendit ning teisel j
 \noindent 5. Leida kõik algarvud $p$, mille korral $-p$ on ruutjääk mooduli $11$ järgi. 
 
 \bigskip
+Mooduli 11 järgi on ruutjäägid 1, 4, 9, 5 ning 3. Lemma 8.4 põhjal on ka kõik ruutjääkidega kongruentsed arvud mooduli 11 järgi ruutjäägid ehk $-p$ peab olema kongruentne ühega neist. Seega peab $p$ olema kongruentne $-1=10$, $-4=7$, $-9=2$, $-5=6$ või $-3=8$ mooduli 11 järgi. Nendest arvudest saab moodustada teoreem 2.6 põhjal 5 aritmeetilist jada, mis igaüks sisaldavad lõpmatu arvu algarve. 
+
+\bigskip
+
+\pagebreak
 
 \noindent 6. Olgu $p>2$ algarv. Tõestada, et iga algjuur mooduli $p$ järgi on mitteruutjääk mooduli $p$ järgi. Kas kehtib ka vastupidine väide? Miks?
 
@@ -105,6 +125,16 @@ Kuna $p$ on paaritu algarv, on $p-1$ tegurite hulgas 2 ehk $\varphi(p-1)=(p-1)\c
 \noindent 7. Olgu $p>2$ algarv. Tõestada, et 6 on ruutjääk mooduli $p$ järgi parajasti siis, kui $p\equiv \pm1,\pm5\pmod{24}$. 
 
 \bigskip
+Legendre'i sümboli omadustest saame, et 6 on ruutjääk parajasti siis, kui 2 ja 3 Legendre'i sümbolid on samamärgilised. 
+
+Selleks, et 2 ja 3 Legendre'i sümbolid oleks mõlemad 1, peab $p\equiv\pm1\pmod{12}$ ning $p\equiv\pm1\pmod{8}$. Mooduli 4 järgi saab see olla ainult siis, kui $p$ on mõlema mooduli järgi kongruentne sama arvuga. HJT järgi vastavad meil mõlemale olukorrale üks jäägiklass mooduli 24 järgi, milleks sobivad $\w{1}$ ning $\w{-1}.$ 
+
+Analoogse aruteluga jõuame olukorrast, kus 2 ja 3 Legendre'i sümbolid peavad mõlemad olema -1, lahenditeni $\w{5}$ ning $\w{-5}$ mooduli 24 järgi.
+
+
+\bigskip
+
+\pagebreak
 
 \noindent 8. Olgu $p>2$ algarv ja $r$ ruutjääk mooduli $p$ järgi. Tõestada, et leidub teine ruutjääk $s$ sama mooduli järgi nii, et $s-r$ on mitteruutjääk. Näidata, et kui võtta $s=a^2$, $0\leq a\leq p-1$ arvu a juhuslikult valides, siis tõenäosus eelmainitud ruutjääki saada läheneb mooduli $p$ suurenedes arvule $\frac12$. 
 
