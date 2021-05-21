@@ -1,0 +1,69 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[estonian]{babel}
+\usepackage{t1enc}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{lscape}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{diagbox}
+\usepackage[official]{eurosym}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage{xcolor}
+\usepackage[shortlabels]{enumitem}
+\usepackage[a4paper,margin=1in,footskip=0.25in]{geometry}
+\usepackage{pgffor}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\newcommand{\p}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\B}{\mathbb{P}}
+\newcommand{\w}{\overline}
+\newcommand{\ind}{\mathrm{ind}}
+\newcommand{\db}[2]{\slashbox{#1}{#2}}
+\newcommand{\leg}[2]{\left(\frac{#1}{#2}\right)}
+\topmargin-3em
+\oddsidemargin0cm
+\textwidth16cm
+%\textheight27cm
+\evensidemargin-2cm
+\begin{document}
+\begin{center}
+\Large\textbf{Homework 11}\\
+\small{Joosep Näks}
+\end{center}
+
+In all sections for big O notation I will be using the definition that $$f(n)=O(g(n))\Leftrightarrow\limsup_{n\to\infty}\frac{|f(n)|}{g(n)}<\infty$$ and for small o notation I will be using the definition that $$f(n)=o(g(n))\Leftrightarrow\lim_{n\to\infty}\frac{f(n)}{g(n)}=0$$.
+
+a) Take the limit 
+\begin{gather*}
+\begin{aligned}
+\lim_{n\to\infty}\frac{f(n)}{g(n)}=&\lim_{n\to\infty}\frac{n^{2.5}}{3n^3+2n^2+5n\log_2(n)+1}\\
+=&\lim_{n\to\infty}\frac{n^{2.5}n^{-2.5}}{(3n^3+2n^2+5n\log_2(n)+1)n^{-2.5}}\\
+=&\lim_{n\to\infty}\frac{1}{3n^{0.5}+2n^{-0.5}+5n^{-1.5}\log_2(n)+n^{-2.5}}\\
+\end{aligned}
+\end{gather*}
+In the denominator of the last limit $3n^{0.5}$ goes to infinity as $n$ goes to infinity and the rest of the terms are all positive for any positive $n$ so the denominator goes to infinity while the numerator is finite, meaning that the limit is 0. This means that both $f(n)=O(g(n))$ and $f(n)=o(g(n))$. If we take the inverse of the fraction i nthe limit we get infinity since the numerator goes to infinity and the denominator is finite, meaning that neither $g(n)=O(f(n))$ nor $g(n)=o(f(n))$ hold.
+
+b) Take the limit 
+\begin{gather*}
+\begin{aligned}
+\lim_{n\to\infty}\frac{f(n)}{g(n)}=&\lim_{n\to\infty}\frac{\log_2(n)\cdot\log_2\log_2(n)}{n^{\frac13}}\\
+\lim_{n\to\infty}\frac{f(n)}{g(n)}=&\lim_{n\to\infty}\frac{\log_2(n)\cdot\log_2\log_2(n)}{n^{\frac13}}\\
+\end{aligned}
+\end{gather*}
+
+c) Take the limit 
+\begin{gather*}
+\begin{aligned}
+\lim_{n\to\infty}\frac{f(n)}{g(n)}=&\lim_{n\to\infty}\frac{2^{(n^2)}}{100^{5n}}\leq\lim_{n\to\infty}\frac{2^{(n^2)}}{128^{5n}}\\
+=&\lim_{n\to\infty}\frac{2^{(n^2)}}{2^{7\cdot5n}}\\
+=&\lim_{n\to\infty}2^{n^2-35n}=\infty\\
+\end{aligned}
+\end{gather*}
+Meaning that neither $f(n)=O(g(n))$ nor $f(n)=o(g(n))$ hold. If we take the inverse however, it is easy to see that the limit goes to 0, meaning that both $g(n)=O(f(n))$ and $g(n)=o(f(n))$ hold.
+\end{document}

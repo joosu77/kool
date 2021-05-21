@@ -1,0 +1,121 @@
+% --- LaTeX CV Template - S. Venkatraman ---
+
+% --- Set document class and font size ---
+
+\documentclass[letterpaper, 11pt]{article}
+
+% --- Package imports ---
+
+\usepackage{hyperref, enumitem, longtable, amsmath, array}
+
+% --- Page layout settings ---
+
+% Set page margins
+\usepackage[left=0.7in, right=0.8in, bottom=.8in, top=0.8in, headsep=0in, footskip=.2in]{geometry}
+
+% Set line spacing
+\renewcommand{\baselinestretch}{1.2}
+
+% --- Page formatting settings ---
+
+% Set link colors
+\usepackage[dvipsnames]{xcolor}
+\hypersetup{colorlinks=true, linkcolor=MidnightBlue, urlcolor=MidnightBlue}
+
+% Set font to Libertine, including math support
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+
+% Remove page numbering
+\pagenumbering{gobble}
+
+% Define font size and color for section headings
+\newcommand{\headingfont}{\Large\color{OliveGreen}}
+
+% --- CV section settings ---
+
+% Note: each section of this table (Education, Awards, Publications etc.) is 
+% stored in a two-column table. The left-hand column is narrow (1 inch) and is 
+% meant to store dates. The right-hand column is wide (5.2 inches) and stores 
+% the main text.  Sections in which each entry might have multiple lines 
+% (e.g., Education) are stored in a 'SectionTable' environment). Sections in 
+% which each entry might just have one line are stored in a 'SectionTableSingleSpace'
+% environment. The only difference between the two environments is the line 
+% spacing between each entry. Both environments take one argument, which is the
+% title of the section. See main document for how these environments are used.
+
+% Define settings for left-hand column in which dates are printed
+\newcolumntype{R}{>{\raggedleft}p{1in}}
+
+% Define 'SectionTable' environment
+\newenvironment{SectionTable}[1]{
+	\renewcommand*{\arraystretch}{1.7}
+	\setlength{\tabcolsep}{10pt}
+	\begin{longtable}{Rp{5.0in}} & #1 \\}
+{\end{longtable}\vspace{-.3cm}}
+
+% Define 'SectionTableSingleSpace' environment
+\newenvironment{SectionTableSingleSpace}[1]{
+	\renewcommand*{\arraystretch}{1.2}
+	\setlength{\tabcolsep}{10pt}
+	\begin{longtable}{Rp{5.2in}} & #1 \\[0.6em]}
+{\end{longtable}\vspace{-.3cm}}
+
+% --- Document starts here ---
+
+\begin{document}
+
+% --- Name and contact information ---
+
+\begin{SectionTable}{\Huge Joosep Näks} & 
+Meil: joosep.naks@gmail.com   $\;\boldsymbol{\cdot}\;$ 
+Tel: +372 56915051 \newline
+Sünniaeg: 04.12.1999
+\end{SectionTable}
+
+% --- Section: Education ---
+
+\begin{SectionTable}{\headingfont Hariduskäik}
+2019 -- ... & 
+\textbf{Tartu Ülikool}\newline
+Bakalauruseõpe informaatika erialal matemaatika kõrvalerialaga\\
+
+2016 -- 2019 & 
+\textbf{Reaalkool}\newline
+Gümnaasiumiharidus\\
+
+\end{SectionTable}
+
+% --- Section: Oskused
+
+\begin{SectionTable}{\headingfont Oskused}
+& \textbf{Programmeerimiskeeled} \newline
+Kasutan igapäevaselt: C++, Python, Java, Bash\newline
+Olen tuttav: C, JavaScript, PHP, SQL\\
+& \textbf{Keeled} \newline
+Eesti keel (emakeelena)\newline
+Inglise keel (C1 tase)
+\end{SectionTable}
+
+% --- Section: Other interests/hobbies ---
+
+\begin{SectionTable}{\headingfont Veel tõike}
+
+&\vspace{-3em} \begin{itemize}
+\item Olen osalenud programmeerimisvõistlustel:
+\begin{itemize}
+\item Balti informaatika olümpiaad 2019
+\item NWERC 2019
+\item NWERC 2020
+\item IEEEXtreme 13.0
+\item IEEEXtreme 14.0
+\end{itemize}
+
+\item Olen osalenud gümnaasiumis olümpiaadide riigivoorudes ainetes: matemaatika, informaatika, füüsika, astronoomia
+\item Olen tegelenud robootikaga põhikoolis alates 5. klassist
+\end{itemize}
+\end{SectionTable}
+
+% --- End of CV! ---
+
+\end{document}
