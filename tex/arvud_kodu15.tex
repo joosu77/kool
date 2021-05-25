@@ -1,0 +1,123 @@
+\documentclass[a4paper, 10pt]{article}
+%\usepackage[estonian]{babel}
+\usepackage{t1enc}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{lscape}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{diagbox}
+\usepackage[official]{eurosym}
+\usepackage{mathtools}
+\usepackage{systeme}
+\usepackage{polynom}
+\usepackage{xcolor}
+\usepackage[shortlabels]{enumitem}
+\usepackage[a4paper,margin=1in,footskip=0.25in]{geometry}
+\usepackage{pgffor}
+\everymath{\displaystyle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\newcommand{\p}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\B}{\mathbb{P}}
+\newcommand{\w}{\overline}
+\newcommand{\ind}{\mathrm{ind}}
+\newcommand{\db}[2]{\slashbox{#1}{#2}}
+\newcommand{\leg}[2]{\left(\frac{#1}{#2}\right)}
+\topmargin-3em
+\oddsidemargin0cm
+\textwidth16cm
+%\textheight27cm
+\evensidemargin-2cm
+\begin{document}
+\begin{center}
+\Large\textbf{Kodutöö nr. 15}\\
+\small{Joosep Näks ja Uku Hannes Arismaa}
+\end{center}
+
+
+\bigskip
+
+\noindent 1. Uurida Fermat' testi abil, kas $41041$, $41071$ ja $41081$ on alg- või kordarvud.
+
+\bigskip
+Lihtsad testid meile nende arvude kohta midagi ei ütle. 
+
+Märkame, et $7^{41040}\equiv29316\pmod{41041}$, seega 41041 pole algarv.
+
+Märkame, et $7^{41070}\equiv30659\pmod{41071}$, seega 41071 pole algarv.
+
+Samas $2^{41080}\equiv1\pmod{41081}$,$3^{41080}\equiv1\pmod{41081}$,$5^{41080}\equiv1\pmod{41081}$,$7^{41080}\equiv1\pmod{41081}$, seega on mõitlikult tõenäoline, et 41081 on algarv.
+
+
+\bigskip
+
+\noindent 2. Kontrollida eelmise ülesande tulemust Milleri-Rabini testi abil. 
+
+\bigskip
+Arvude 41041 ja 41071 kohta andis Fermat' test kindla tulemuse et need on kordarvud ehk neid pole vaja kontrollida. Vaatlen arvu $41081=5135\cdot2^3+1$:\\
+\begin{tabular}{c|c|c|c}
+$n$&$2^{5135}$&$2^{2\cdot5135}$&$2^{4\cdot5135}$\\
+\hline
+41081&1
+\end{tabular}\\\\\\
+\begin{tabular}{c|c|c|c}
+$n$&$3^{5135}$&$3^{2\cdot5135}$&$3^{4\cdot5135}$\\
+\hline
+41081&1707&38179&-1
+\end{tabular}\\\\\\
+\begin{tabular}{c|c|c|c}
+$n$&$5^{5135}$&$5^{2\cdot5135}$&$5^{4\cdot5135}$\\
+\hline
+41081&1&-1
+\end{tabular}\\
+Ehk tegu tõenäoliselt tõesti on algarvuga.
+\bigskip
+
+\noindent 3. Kasutades loengukonspekti näites 9.8 toodud skeemi ja avalikku võtit $(9379,277)$, tuvastada digiallkirja õigsus tekstil $7176 5538 0434 3341 5340$, mille originaal on KAJA KALLAS. 
+
+\bigskip
+Dekodeerimiseks jagame teksti plokkideks, saame 7176, 5538, 434, 3341, 5340. Tõestes need arvud antud mooduli järgi astmesse 277, saame arvud 1025, 1809, 18, 120, 119, millest saame tähed JYRI RATAS. Tundub, et digiallkiri on ebakorrektne.
+\bigskip
+
+\noindent 4. Kasutades loengukonspekti näites 9.8 toodud skeemi kaheksatäheliste (st. kuueteist\-numbriliste) blokkide jaoks ja mooduli väiksust, dekodeerida avaliku võtmega \linebreak $(9727957916830399,667)$ kodeeritud RSA sõnum $$1861759116915468 7692439834395019 9026409364739925.$$ 
+
+\bigskip
+Tegurdades avalikus võtmes arv $n$, saab $n=9727957916830399=97635481\cdot99635479$ ehk $\varphi(n)=(97635481-1)\cdot(99635479-1)=9727957719559440$. Kuna salajane astendaja on avaliku astendaja pöördarv mooduli $\varphi(n)$ järgi, saan leida salajase astendaja: $d\equiv667^{-1}\equiv5863026991398643\pmod{9727957719559440}$. Järgmiseks jagan krüpteeritud sõnumi blokkideks ja astendan need salajase astendajaga mooduli $n$ järgi:
+\begin{gather*}
+1861759116915468^{5863026991398643}\equiv19\ 05\ 05\ 00\ 15\ 14\ 00\ 01\pmod{9727957916830399}\\ 7692439834395019^{5863026991398643}\equiv12\ 12\ 05\ 19\ 00\ 11\ 09\ 18\pmod{9727957916830399}\\ 9026409364739925^{5863026991398643}\equiv22\ 05\ 19\ 00\ 08\ 01\ 08\ 01\pmod{9727957916830399}
+\end{gather*}
+Ehk sõnum on "see on alles kirves haha"
+\bigskip
+\pagebreak
+
+\noindent 5. Te olete salakirjade saatmiseks kokku leppinud loengukonspekti näitega 9.8 sarnase, aga sümmeetrilise ning neljatäheliste blokkidega skeemi, kus arvu\-tused $c=s^d\pmod{n}$ ja $s=c^e\pmod{n}$ on asendatud arvutustega $c=s-v\pmod{n}$ ja $s=c+v\pmod{n}$, seejuures $n=98765678$. Salajase võtme $v$ leiate Diffie-Hellmani võtmevahetuse abil, valides rühmaks $\Z_{96168173}$ ja algjuureks arvu 2. Te olete saanud ühissaladuse leidmiseks sõnumi $60848048$ ja otsustate võtta oma astendajaks arvu $1794$. Dekodeerida salasõnum $$30513994 21412012 13413108 26402004 17543094.$$
+
+\bigskip
+Esmalt leiame jagatud saladuse. Selleks peame lihtsalt leidma, et $60848048^{1794}\equiv90403685\pmod{96168173}$.
+
+Nüüd jagame Algse teksti 8 tähelisteks plokkideks (2 plokki arvutuse kohta) , saades 30513994, 21412012, 13413108, 26402004, 17543094, Liites nendele jagatud numbri ning tähtedesse teisendades saame sõnumi
+
+VOTAME SEEKORD KIRKA
+
+
+\bigskip
+
+\noindent 6. Kuidas murda RSA kodeeringut \emph{ilma algteguriteks lahutamist kasutamata}, kui mooduli $n=pq$ jaoks on teada Euleri funktsiooni väärtus $\varphi(n)$ (aga arvud $p$ ja $q$ on ikkagi veel salajased)? Kasutage seda meetodit ülesande 4 salasõnumi dekodeerimiseks teades, et $\varphi(n)=9727957719559440$.
+
+
+\bigskip
+Võrranditest $n=pq$ ja $\varphi(n)=(p-1)(q-1)$ saab avaldada $q^2+q(\varphi(n)-n-1)+n=0$ ehk ruutvõrrandi lahendades saab $q=\frac{n+1-\varphi(n)\pm\sqrt{(\varphi(n)-n-1)^2-4n}}2$ ehk $q_1=97635481$ ja $q_2=99635479$. Ning kontrollides $97635481\cdot99635479=9727957916830399=n$ ehk ma olen leidnud $p$ ja $q$ väärtused ning edasi saab sõnumi leida sama moodi nagu ülesandes 4.
+\bigskip
+
+%\noindent 7. Olgu $p>5$ algarv. Tõestada, et arv $n=\frac{4^p+1}{5}$ on kordarv, mida Milleri-Rabini test alusel 2 ei tuvasta. 
+
+\bigskip
+
+%\noindent 8. Leida suuruselt kolmas Carmichaeli arv ilma liigselt arvutusvahendeid kasutamata. Tõestage, et teil on õigus. Tõestuseta võib kasutada fakte, et Carmichaeli arvud on \linebreak paaritud, ruuduvabad (st nende algtegurid on kõik erinevad) ja et neil on vähemalt kolm algtegurit. 
+
+\bigskip
+
+\end{document}

@@ -1,5 +1,5 @@
 \documentclass[a4paper, 10pt]{article}
-\usepackage[estonian]{babel}
+%\usepackage[estonian]{babel}
 \usepackage{t1enc}
 \usepackage{amsthm}
 \usepackage{amscd}
@@ -53,9 +53,15 @@ b) Take the limit
 \begin{gather*}
 \begin{aligned}
 \lim_{n\to\infty}\frac{f(n)}{g(n)}=&\lim_{n\to\infty}\frac{\log_2(n)\cdot\log_2\log_2(n)}{n^{\frac13}}\\
-\lim_{n\to\infty}\frac{f(n)}{g(n)}=&\lim_{n\to\infty}\frac{\log_2(n)\cdot\log_2\log_2(n)}{n^{\frac13}}\\
+\stackrel{L'H}=&\lim_{n\to\infty}\frac{(\log_2(n)\cdot\log_2\log_2(n))'}{(n^{\frac13})'}\\
+=&\lim_{n\to\infty}\frac{\frac{\ln(\frac{\ln{n}}{\ln(2)})+1}{n\ln^2(2)}}{\frac13 n^{-\frac23}}\\
+=&\lim_{n\to\infty}\frac{\ln(\frac{\ln{n}}{\ln(2)})+1}{\frac13n^{\frac13}\ln^2(2)}\\
+\stackrel{L'H}=&\lim_{n\to\infty}\frac{(\ln(\frac{\ln{n}}{\ln(2)})+1)'}{(\frac13n^{\frac13}\ln^2(2))'}\\
+=&\lim_{n\to\infty}\frac{\frac{1}{n\ln(n)}}{\frac19n^{-\frac23}\ln^2(2)}\\
+=&\lim_{n\to\infty}\frac{9}{n^{\frac13}\ln^2(2)\ln(n)}=0\\
 \end{aligned}
 \end{gather*}
+which means that both $f(n)=O(g(n))$ and $f(n)=o(g(n))$ hold. If we take the inverse however, the limit goes to infinity, meaning that neither $g(n)=O(f(n))$ nor $g(n)=o(f(n))$ hold.
 
 c) Take the limit 
 \begin{gather*}
