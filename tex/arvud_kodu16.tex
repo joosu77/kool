@@ -57,6 +57,9 @@ Parema poole saab ümber kirjutada kui $(mn)!=\prod_{i=0}^{n-1}\prod_{j=1}^{m}(j
 \noindent 3. Leida diofantilise võrrandi $4x+12y+16z = 2024$ positiivsete lahendite arv. 
 
 \bigskip
+Ülesanne on samaväärne ülesandega $x+3y+4z=506$. Saame lahendeid hakata loendama, kui alustame seisust, kus $x=y=z=1$, ning uurime, kui mitu väärtust saab olla $y$-l iga võimaliku z väärtuse korral. $x$ väärtus on alati eelmise kahe põhjal üheselt määratud. Kui $z=1$, siis on $y$ jaoks $\frac{506-4-3-1}{3}+1=167$ väärtust. Suurendades $z$ 1 võrra saame $\frac{498-4}{3}+1=165$ väärtust. Veel 1 võrra $z$ suurendades saame 164 väärtust. Kokku on juba 493 väärtust. Seega saime, et kui meil on $z$ vahemikus 1-4, siis on meil 496 väärtustust, mille korral saame soovitud tulemuse. suurendades $z$ võiamlike väärtuste piire 3 võrra (5-7), saame $y$ võiamlike väärtuste arvuks samad tulemused, lihtsalt 4 võrra väiksemad. Nii saame konstrueerida aritmeetilise jada, kus alguses on 1 võimalus, kui $z=124$ ning iga järgmine elemet kuni $496=4+12*41$ on eelmisest 12 võrra suurem. Matemaatika järgi on selle jada summa 10500.
+
+\bigskip
 
 \noindent 4. Leida kõik algarvud $p$, mille korral $p^2\mid 5^{p^2}+1$.
 
@@ -64,7 +67,12 @@ Parema poole saab ümber kirjutada kui $(mn)!=\prod_{i=0}^{n-1}\prod_{j=1}^{m}(j
 Vaatan arvu $5^{p^2}+1$ mooduli $p$ järgi. Et see saaks jaguda arvuga $p^2$, peab see olema kongruentne arvuga 0. Kui $p=5$, siis $5^{p^2}+1\equiv1\not\equiv0\pmod p$. Muudel juhtudel saab FVT põhjal \mbox{$5^{p^2}+1\equiv5^{p^2-(p-1)(p+1)}+1=5^1+1=6\pmod p$}. Ainsad algarvulised moodulid, mille järgi 6 saab olla kongruentne nulliga on 2 ja 3. Proovin need läbi: $5^{2^2}+1=626\equiv2\pmod{2^2}$ ja $5^{3^2}+1=1953126\equiv0\pmod{3^2}$ ehk ainus algarv, mille puhul jaguvus kehtib, on $p=3$.
 \bigskip
 
+\pagebreak
+
 \noindent 5. Leida ringi $\Z_{40336800}$ kõigi selliste elementide $\overline{x}$ arv, mille korral $x^2\equiv 0\pmod{40336800}$. 
+
+\bigskip
+Peam lihtsalt näitama, kui mitme $x^2$ korral see 40336800-ga jagub. Selleks peavad $x^2$ algtegurduses leiduma need algarvud, mis on 40336800 algtegurduses (2,3,5,7), ning need peavad leiduma vähemalt selles astmes, mis need leiduvad 40336800 algetegurduses (vastavalt 5,1,2,5) ühtlasi, peavad need seega ka leiduma $x$ algtegurduses, kusjuures väiksemas astmes kui 40336800 omas. Nii saame , et $x$ algtegurduses peab olema minimaalselt $2^3$, $3$, $5$, $7^3$. Kõik selle arvu kordsed sobivad samuti $x$-ks. Neid on 40336800-st väiksemaid $\frac{40336800}{2^3\cdot5\cdot3\cdot7^3}=980$. Saimegi vastuse. 
 
 \bigskip
 
@@ -85,6 +93,8 @@ Ehk $x^3$ võimalikud väärtused on 0, 1, 3, 5, 8, 12 ning $y^4$ võimalikud v�
 \noindent 7. Olgu $n\equiv -1\pmod{8}$. Tõestada, et $\sigma(n)\equiv 0 \pmod{8}$. 
 
 \bigskip
+
+\pagebreak
 
 \noindent 8. Lahendada kongruents $$x^4-6x^3-7x^2+96x+6\equiv 0 \pmod{1125}.$$
 
@@ -116,9 +126,18 @@ Seega olen leidnud lahendid $x\equiv8\pmod9$ ja $x\equiv1\pmod9$ ning $x\equiv71
 kui leidub, siis leida nende arv ja \"uks algjuur, kui \\
 {${}_{}$}\hskip1.5cm
  a) $n=2661$, \hskip0.5cm b) $n=2662$, \hskip0.5cm c) $n=2663$, \hskip0.5cm d) $n=2664$.
+ 
+\bigskip
+a) $2661=3\cdot887$, seega algjuuri ei leidu.
+
+b) $2662=2\cdot11^3$, seega algjuuri leidub. 
+
+c) 2663 on algarv ehk algjuuri leidub.
+
+d) $2664=4\cdot 666$, seega algjuuri ei leidu.
+
 
 \bigskip
-
 \noindent 10. Leida kõik algarvud $p$, mille järgi eksisteerib täpselt 32 algjuurt.
 
 \bigskip
@@ -151,6 +170,11 @@ Leitud $n$ väärtustest on vaid 96 ja 102 sellised, et $n+1$ oleks algarv ehk s
 \noindent 11. Tõestada, et iga naturaalarvude paari $(a,b)$ korral leidub naturaalarv $n$ nii, et arvul $n^2+an+b$ on vähemalt 2021 jagajat. (Vihje: $n^2+an+b \equiv 0\pmod{p}\Longleftrightarrow a^2-4b$ on ruutjääk mooduli $p$ järgi.)
 
 \bigskip
+ Kui $ a^2-4b$ on ruutjääk mooduli $p$ järgi, ning $p>2$, siis saame leida $n=(-a\pm\sqrt{a^2-4b} )2^{-1}$, mille asendades valemisee $n^2+an+b$, saame, et $n^2+an+b\equiv0\pmod{p}$. Nüüd märkame ,et tähistades ümber $x:=a^2-4b$, siis teame, et algarve kujul $1+4x$ on lõpmata palju. Siit teame, et need algarvud annavad nii $x$ kui ka 4 järgi jäägi 1. Lahutades $x$ algteguriteks saame $(\frac{x}{p})=(\frac{q_1}{p})\cdot...\cdot(\frac{q_s}{p})$. Kui mõni neist algteguritest on $p$, siis saame korrutiseks 0, mis tähendaks, et $\sqrt{x}\equiv0\pmod{p}$, mis $n$ leidmiseks mooduli $p$ järgi on piisav. Kuna $p\equiv1\pmod{4}$, saame need legendre'i sümbolid ümber pöörata, saades korrutise $(\frac{p}{q_!})\cdot...\cdot(\frac{p}{q_s})$. Kuna $p\equiv 1\pmod{x}$, siis peab ka iga $x$ algteguri korral kehtima, et  $p\equiv 1\pmod{q}$. Seega saame enda korrutises kõik Legendre'i sümbolid väärtustada ühtedega saades korrutiseks ühe. Seega on $x$ ruutjääk mooduli $p$ järgi siis, kui $p$ on kujul $1+4x$. Nüüd peame lihtsalt valima 2021 sellist $p$, leidma iga ühe järgi  ühe sobiva $n$ ning need HJT järgi kokku panema üheks suureks $n$-ks, mille järgi saabki arvutada sobiva $n^2+an+b$.
+
+\bigskip
+\pagebreak
+
 
 \noindent 12. Kasutades loengukonspekti näites 9.8 toodud skeemi kaheksatäheliste (st. kuueteist\-numbriliste) blokkide jaoks ja mooduli väiksust, dekodeerida avaliku võtmega $(9591149766518863,2021)$ kodeeritud RSA sõnum $$3358877268877051 8580786695769838 8157730396723143.$$ 
 
